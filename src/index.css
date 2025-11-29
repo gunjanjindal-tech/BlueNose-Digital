@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+:root {
+  --bn-primary: #0E6388;
+  --bn-accent: #4BC1E8;
+  --bn-gold: #F5C248;
+  --bn-dark: #2E2E2E;
+}
+
+@keyframes rotateRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotate-ring {
+  animation: rotateRing 14s linear infinite;
+  transform-origin: center;
+}
+
+.ring-rotate {
+  animation: rotateRing 18s linear infinite;
+}
