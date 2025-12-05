@@ -1,10 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
 export default function Hero() {
 
+  const iframeRef = useRef(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleMute = () => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    // YouTube Player API message format
+    iframe.contentWindow.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: muted ? "unMute" : "mute",
+        args: [],
+      }),
+      "*"
+    );
+
+    setMuted(!muted);
+  };
+
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-20 pb-20">
+    
+    <section className="relative w-full overflow-hidden bg-white pt-20 pb-20 px-1">
 
       {/* Premium Headline */}
       <div className="text-center">
@@ -32,27 +54,52 @@ export default function Hero() {
           }}
         >
           {/* YOUR HERO IMAGE */}
-          <img
-            src="https://i.pinimg.com/736x/d2/26/e6/d226e66a00ad4af15f01072694bd9ebf.jpg"
-            className="w-full h-full object-cover opacity-[.95]"
-          />
+ <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl">
+      {/* YouTube iframe */}
+      <iframe
+        ref={iframeRef}
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/nBXBZdPK-lo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&loop=1&playlist=nBXBZdPK-lo&enablejsapi=1"
+        title="video"
+        frameBorder="0"
+        allow="autoplay; encrypted-media;"
+        allowFullScreen
+      ></iframe>
+
+      {/* Sound Toggle Icon */}
+      <button
+        onClick={toggleMute}
+        className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm"
+      >
+        {muted ? "🔇" : "🔊"}
+      </button>
+    </div>
+  );
+}
+
+
         </motion.div>
 
         {/* FLOATING STATS ON IMAGE */}
-        <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 flex gap-10 md:gap-20 bg-white/70 backdrop-blur-xl px-10 py-5 rounded-full shadow-xl">
-          <div className="text-center">
-            <p className="text-3xl font-bold text-[#0E6388]">12+</p>
-            <p className="text-xs text-gray-600">Years</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-bold text-[#0E6388]">800+</p>
-            <p className="text-xs text-gray-600">Projects</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-bold text-[#0E6388]">500+</p>
-            <p className="text-xs text-gray-600">Clients</p>
-          </div>
-        </div>
+       <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 flex gap-10 md:gap-20 bg-white/70 backdrop-blur-xl px-10 py-5 rounded-full shadow-xl">
+
+  <div className="text-center">
+    <p className="text-3xl font-bold text-[#0E6388]">120+</p>
+    <p className="text-xs text-gray-600 whitespace-nowrap">Global Clients</p>
+  </div>
+
+  <div className="text-center">
+    <p className="text-3xl font-bold text-[#0E6388]">5K+</p>
+    <p className="text-xs text-gray-600 whitespace-nowrap">Campaigns Delivered</p>
+  </div>
+
+  <div className="text-center">
+    <p className="text-3xl font-bold text-[#0E6388]">320%</p>
+    <p className="text-xs text-gray-600 whitespace-nowrap">ROI Growth Avg.</p>
+  </div>
+
+</div>
+
 
       </div>
 

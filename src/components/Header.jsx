@@ -9,26 +9,25 @@ export default function Header() {
 
   const services = [
     { name: "Social Media Marketing", link: "/services/smm" },
-    { name: "Branding & Identity", link: "/services/branding" },
+    { name: "Branding & Identity", link: "/services/brand-identity" },
     { name: "Influencer Marketing", link: "/services/influencer-marketing" },
     { name: "Video Editing", link: "/services/video-editing" },
-    { name: "UGC Content Creation", link: "/services/ugc" },
+    { name: "UGC Content Creation", link: "/services/ugc-content" },
     { name: "Photography & Shoots", link: "/services/photography" },
   ];
 
-  const clients = [
+const clients = [
     { name: "The Garden Retreat", link: "/work/garden-retreat" },
     { name: "Adda Indian Eatery", link: "/work/adda-indian-eatery" },
     { name: "Triveeni Events", link: "/work/triveeni-events" },
     { name: "Pita Nutso", link: "/work/pita-nutso" },
-    { name: "Nayya Pizza & Grill", link: "/work/nayya" },
+    { name: "Nayya Pizza & Grill", link: "/work/nayya-Pizza" },
     { name: "Beaver Bank Station", link: "/work/beaver-bank" },
     { name: "Sake Cafe | Sushi Bar", link: "/work/sake" },
-    { name: "Hearthstone Inn", link: "/work/hearthstone" },
+   { name: "Hearthstone Inn", link: "/work/hearthstone" },
     { name: "Besharam Bar & Grill", link: "/work/besharam" },
     { name: "Rivaaj Resto-Bar", link: "/work/rivaaj" },
   ];
-
   useEffect(() => {
     if (window.innerWidth >= 1024) setOpen(false);
   }, []);

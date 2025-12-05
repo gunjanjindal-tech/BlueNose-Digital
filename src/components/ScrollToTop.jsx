@@ -1,29 +1,38 @@
-import { useState, useEffect } from "react";
-import { ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 300);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const scroll = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 
   return (
-    <button
-      onClick={scroll}
-      className={`
-        fixed right-6 bottom-6 z-50 p-3 rounded-full shadow-lg
-        bg-[var(--bn-primary)] text-white flex items-center justify-center
-        transform transition-transform duration-200
-        ${visible ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"}
-      `}
-      aria-label="Scroll to top"
-    >
-      <ArrowUp className="w-5 h-5" />
-    </button>
+    <>
+      {visible && (
+        <button
+          onClick={scrollUp}
+          className="fixed bottom-6 right-6 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition-all z-50"
+        >
+          ↑
+        </button>
+      )}
+    </>
   );
 }

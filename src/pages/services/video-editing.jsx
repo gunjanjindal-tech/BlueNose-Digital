@@ -1,31 +1,260 @@
+import { useState } from "react";
+import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
+import Testimonials from "../../components/DetailedServiceComponents/Testimonials";
+import ServiceClientLogos from "../../components/DetailedServiceComponents/ServiceClientLogos";
+import PlatformSlider from "../../components/PlatformSlider";
+import { Link } from "react-router-dom";
+import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
+import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+
 export default function VideoEditing() {
-  return (
-    <section className="relative text-white py-28 px-6">
 
-      <div className="absolute inset-0 bg-black"></div>
-      <div className="absolute inset-0 opacity-25" style={{backgroundImage:"radial-gradient(circle at 20% 30%, #0E6388 0%, transparent 60%), radial-gradient(circle at 80% 70%, #4BC1E8 0%, transparent 70%)"}} />
+  // ----------------- VIDEO EDITING VIDEOS -----------------
+  const videoEditingVideos = [
+    { 
+      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
+      views: "14.3K"
+    },
+    { 
+      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414820/Video_Production_2_slp4ms.mp4",
+      views: "3.7K"
+    },
+    { 
+      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_production_4_ha90ws.mp4",
+      views: "16.5K"
+    },
+    { 
+      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_Production_1_xiz4sn.mov",
+      views: "5.2K"
+    },
+  ];
 
-      <div className="relative z-10 max-w-6xl mx-auto space-y-14">
+  // ----------------- GROWTH CHART DATA -----------------
+  const editingSpeedData = [
+    { name: "Jan", value: 22 },
+    { name: "Feb", value: 35 },
+    { name: "Mar", value: 52 },
+    { name: "Apr", value: 70 },
+  ];
 
-        <h1 className="text-4xl md:text-6xl font-extrabold">Video Editing</h1>
+  const retentionData = [
+    { name: "Jan", value: 18 },
+    { name: "Feb", value: 28 },
+    { name: "Mar", value: 45 },
+    { name: "Apr", value: 62 },
+  ];
 
-        <div className="h-[430px] rounded-3xl overflow-hidden bg-white/10 border border-white/10 shadow-xl">
-          <video src="/videos/edit1.mp4" autoPlay loop muted className="w-full h-full object-cover"/>
-        </div>
+  const conversionsData = [
+    { name: "Jan", value: 10 },
+    { name: "Feb", value: 17 },
+    { name: "Mar", value: 25 },
+    { name: "Apr", value: 41 },
+  ];
 
-        <div className="grid md:grid-cols-2 gap-10 text-white/85">
-          <ul className="space-y-4 list-disc pl-4">
-            <li>Reels / Promos / Motion Graphics Videos</li>
-            <li>Cinematic Color Grading + Sound Design</li>
-            <li>Text Animation + Fast Delivery</li>
-            <li>AI Enhancement & Post-Production</li>
-          </ul>
 
-          <button className="px-7 py-3 rounded-full bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] font-semibold">
-            Edit My Videos →
-          </button>
+  // ---------------- BARRIER CARD ----------------
+  function BarrierCard({ title, desc }) {
+    const [open, setOpen] = useState(false);
+
+    return (
+      <div
+        onClick={() => setOpen(!open)}
+        className="
+        group p-8 rounded-2xl cursor-pointer
+        bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]
+        text-white shadow-xl transition-all duration-300
+        hover:-translate-y-2
+      "
+      >
+        <p className="font-semibold text-lg">{title}</p>
+
+        <div
+          className={`
+            mt-4 overflow-hidden rounded-xl bg-white text-[#063349] p-4 
+            transition-all duration-300
+
+            md:max-h-0 md:opacity-0 
+            md:group-hover:max-h-40 md:group-hover:opacity-100
+
+            ${open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+          `}
+        >
+          <p className="text-sm">{desc}</p>
         </div>
       </div>
-    </section>
+    );
+  }
+
+  // ---------------- PAGE RETURN ----------------
+  return (
+    <div className="bg-white text-[#0E3D55]">
+
+      {/* ✦ HERO */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+
+          <h1 className="text-3xl sm:text-3xl md:text-5xl font-extrabold 
+            text-transparent bg-clip-text bg-gradient-to-r 
+            from-[#0E3D55] via-[#0F587A] to-[#11719A]">
+            Turn Raw Footage Into High-Impact  
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+              {" "}Converting Videos
+            </span>
+          </h1>
+
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
+            From cinematic edits to social-first content — we edit videos that retain viewers, 
+            boost conversions, and strengthen your brand identity across platforms.
+          </p>
+
+        </div>
+      </section>
+
+      {/* ✦ GROWTH CHARTS */}
+      <section className="pb-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-3 gap-10">
+
+            <GrowthChart
+              title="Editing Output Efficiency"
+              percent="+70%"
+              data={editingSpeedData}
+              gradientId="speedGradient"
+            />
+
+            <GrowthChart
+              title="Viewer Retention Boost"
+              percent="+62%"
+              data={retentionData}
+              gradientId="retainGradient"
+            />
+
+            <GrowthChart
+              title="Conversion Improvement"
+              percent="+41%"
+              data={conversionsData}
+              gradientId="convertGradient"
+            />
+          </div>
+
+          <div className="flex justify-center mt-14">
+            <Link
+              to="/contact"
+              className="px-7 py-3 text-lg rounded-full bg-gradient-to-r 
+                from-[#4BC1E8] to-[#0E6388] text-white hover:opacity-90"
+            >
+              Start Your Video Project →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ✦ CLIENT LOGOS */}
+      <section className="w-full bg-white flex justify-center">
+        <div className="w-full">
+          <ServiceClientLogos />
+        </div>
+      </section>
+
+      {/* ✦ BARRIERS */}
+      <section className="pt-15 md:pt-20">
+        <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-transparent 
+          bg-clip-text bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] 
+          text-center mb-14">
+          Barriers Before{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r 
+            from-[#4BC1E8] to-[#0E6388]">
+            Working With Us
+          </span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mt-10 px-8">
+          
+          {[
+            "Editing that failed to capture brand tone or personality.",
+            "Low retention because videos lacked pacing and story flow.",
+            "Inconsistent quality due to working with multiple editors.",
+            "Social videos that looked great but didn’t convert.",
+            "Cluttered visuals and poor audio mixing hurting watch time.",
+            "Delays from freelancers or unreliable editing processes.",
+            "Videos not optimized for Instagram, TikTok, or YouTube.",
+            "No clear strategy behind how edits support business goals.",
+            "High editing costs with no measurable performance results."
+          ].map((text, idx) => (
+            <BarrierCard key={idx} title={text} desc={text} />
+          ))}
+
+        </div>
+      </section>
+
+      {/* ✦ WHAT SETS US APART */}
+      <PlatformSlider />
+
+      {/* ✦ PRICING */}
+      <PricingPlans />
+
+      {/* ✦ TESTIMONIALS */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-8 text-center">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold 
+            text-transparent bg-clip-text bg-gradient-to-r 
+            from-[#0E3D55] via-[#0F587A] to-[#11719A]">
+            Our rating based on 2 verified
+            <span className="text-transparent bg-clip-text bg-gradient-to-r 
+              from-[#4BC1E8] to-[#0E6388]">
+              {" "}client reviews
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+
+            {/* LEFT CARD */}
+            <div className="bg-white p-10 rounded-3xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] text-left">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#111]">Bluenose</h2>
+                  <Link to="/about" className="text-sm text-[#0E3D55] underline hover:text-[#0E6388]">
+                    View our profile
+                  </Link>
+                </div>
+
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-xl sm:text-2xl font-bold text-[#111]">4.9</span>
+                  <span className="text-yellow-400 text-xl sm:text-2xl">★★★★★</span>
+                </div>
+
+                <div className="flex flex-wrap gap-3 mt-6">
+                  {[
+                    "High-quality work",
+                    "Timely",
+                    "Communicative",
+                    "Professional",
+                    "Project Management",
+                  ].map((tag, i) => (
+                    <span key={i} className="bg-[#F3F4F6] text-[#111] px-4 py-2 rounded-full text-sm font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT SLIDER */}
+            <Testimonials />
+
+          </div>
+        </div>
+      </section>
+
+      {/* ✦ VIDEO EDITING — VIDEO GRID */}
+      <ServiceVideosSection 
+        title="Video Editing"
+        videos={videoEditingVideos}
+      />
+
+    </div>
   );
 }

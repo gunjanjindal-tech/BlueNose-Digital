@@ -25,7 +25,7 @@ export default function HowWeWork() {
 
 
   return (
-<section className="py-24 bg-white text-[#063349]">
+<section className="sm:py-15 md:py-20 bg-white text-[#063349]">
   <div className="max-w-7xl mx-auto px-6 text-center mb-14">
     <p className=" text-transparent bg-clip-text
     bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
@@ -44,7 +44,7 @@ export default function HowWeWork() {
 
 
 {/* PROCESS GRID with GRADIENT BLUE CARDS */}
-<div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+<div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-2">
 
   {[
     {
@@ -76,7 +76,7 @@ export default function HowWeWork() {
       className="
         rounded-3xl p-10 text-white shadow-[0_15px_40px_rgba(0,0,0,0.2)]
         transition-all duration-300 hover:shadow-[0_22px_55px_rgba(0,0,0,0.30)]
-        border border-white/10
+       
       "
       style={{
         background:"linear-gradient(to bottom right, #4BC1E8, #0E6388)"

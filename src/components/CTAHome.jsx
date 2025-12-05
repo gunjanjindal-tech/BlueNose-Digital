@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
-    <section className="py-28"
+    <section className="py-20"
       style={{ background:"linear-gradient(180deg,#FFFFFF,#F6FBFF,#FFFFFF)" }}
     >
       <div className="max-w-3xl mx-auto text-center px-6">
 
         {/* FIXED CLIP — added pb + leading for breathing */}
         <h2 className="
-          text-4xl md:text-5xl font-extrabold 
+          text-3xl md:text-5xl font-extrabold 
           text-transparent bg-clip-text 
           bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
           leading-[1.25] pb-2      /* ❗ FIXED G CUT PROBLEM */
@@ -25,9 +25,7 @@ export default function CTA() {
         <Link to="/contact">
           <button className="
             px-12 py-4 text-lg font-semibold rounded-full shadow-xl
-            bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-            hover:shadow-[0_0_40px_#4BC1E8] hover:scale-105
-            transition-transform duration-300
+            bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] cursor-pointer text-white
           ">
             Book a Strategy Call →
           </button>

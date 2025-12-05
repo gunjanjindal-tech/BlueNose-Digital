@@ -10,7 +10,7 @@ export default function ClientsMarquee() {
   ];
 
   return (
-    <section className="py-14 bg-white text-center">
+    <section className="py-10 bg-white text-center">
 
       {/* Heading */}
       <h2
@@ -20,7 +20,7 @@ export default function ClientsMarquee() {
         bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
         drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]
       ">
-        Brands That Chose Us —  <span  className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">And Grew With Us</span> 
+    Leading Brands Choose Us for  <span  className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">Their Digital Growth</span> 
       </h2>
 
       {/* Just logo marquee – NO background strip */}

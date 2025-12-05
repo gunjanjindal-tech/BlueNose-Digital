@@ -8,14 +8,13 @@ export default function StatsSection() {
     { metric: "50+", label: "Brands", desc: "Companies who trusted us to grow their business" },
     { metric: "24/7", label: "Support", desc: "We resolve issues across time zones without delay" },
   ];
-
   return (
     <section className="py-28 bg-white text-[#0E3D55] px-6">
 
       {/* Heading */}
      <h2
   className="
-    text-center text-4xl md:text-5xl font-extrabold mb-10 leading-[1.2] pb-2
+    text-center text-3xl md:text-5xl font-extrabold mb-10 leading-[1.2] pb-2
     text-transparent bg-clip-text
     bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
     drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]

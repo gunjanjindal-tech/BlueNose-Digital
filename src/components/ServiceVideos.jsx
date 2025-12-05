@@ -14,7 +14,7 @@ export default function ServiceVideos() {
   const serviceVideos = {
   SMM: [
   { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov", 
+    url:"https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov", 
     views: "12.4K" 
   },
   { 
@@ -22,11 +22,11 @@ export default function ServiceVideos() {
     views: "8.9K" 
   },
   { 
-    url: "/videos/smm3.mp4",  // keeping original file as you requested
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4" ,
     views: "15.2K" 
   },
   { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4",  
+    url: "/videos/smm4.mp4",  
     views: "5.7K" 
   },
 ],
@@ -156,14 +156,15 @@ UGC: [
 
 
       {/* SECTION HEADER */}
-      <div className="text-center mb-6 relative z-10">
-        <p className="flex items-center justify-center gap-2 text-lg font-medium">
-          <span className="text-[#4BC1E8] text-2xl">→</span>
-          <Link to="/services" className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
-            Our Services
-          </Link>
-        </p>
-      </div>
+     <div className="text-center mb-6 relative z-10">
+  <p className="flex items-center justify-center gap-2 text-lg font-medium">
+    <span className="text-[#4BC1E8] text-2xl">→</span>
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+      Our Services
+    </span>
+  </p>
+</div>
+
 
       <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-12 relative z-10">
         Explore Our{" "}

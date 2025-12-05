@@ -8,38 +8,38 @@ export default function HomeServicesSlider() {
     {
       title: "Social Media Marketing (SMM)",
       desc: "From page management to content calendars, we create viral, engaging and brand aligned content that grows visibility, trust and conversions.",
-      video: "/videos/smm3.mp4",
-      link: "/services/smm",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
     },
     {
       title: "Branding & Identity",
       desc: "Logo, color palette, tone, visual communication and brand story — we craft a brand that people remember and connect with emotionally.",
-      video: "/videos/branding2.mp4",
-      link: "/services/branding",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
     },
     {
       title: "Influencer Marketing",
       desc: "We collaborate with creators that match your niche, execute campaigns and track performance to drive engagement and conversions efficiently.",
-      video: "/videos/influencer3.mp4",
-      link: "/services/influencer-marketing",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
     },
     {
       title: "Video Editing",
       desc: "High–quality cinematic edits, short-form reels, transitions, promotional clips & story-driven video editing.",
-      video: "/videos/edit4.mp4",
-      link: "/services/video-editing",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
     },
     {
       title: "UGC Content Creation",
       desc: "Authentic conversion-focused content by real creators for ads, branding and product promotions.",
-      video: "/videos/ugc3.mp4",
-      link: "/services/ugc",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov",
     },
     {
       title: "Photography & Creative Shoots",
       desc: "Product photography, event coverage & creative visual media that elevates brand perception.",
-      video: "/videos/photo1.mp4",
-      link: "/services/photography",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
+      link: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
     },
   ];
 
@@ -60,7 +60,7 @@ const slider = {
 
  <h2
   className="
-    text-center text-4xl md:text-5xl font-extrabold mb-5 leading-[1.2] pb-2
+    text-center text-3xl md:text-5xl font-extrabold mb-5 leading-[1.2] pb-2
     text-transparent bg-clip-text
     bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
     drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]

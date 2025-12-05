@@ -26,33 +26,23 @@ export default function WorkGallery() {
   return (
 <section className="py-28 px-6 bg-white">
   <h1 className="text-center text-4xl md:text-6xl font-extrabold mb-2 text-[#0E3D55]">
-    Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">Gallery</span>
-      </h1>
-      <p className="text-center text-lg md:text-2xl text-[#0E3D55]/80 max-w-3xl mx-auto mb-20 leading-relaxed tracking-wide">
-  Campaigns that performed. Strategies that scaled. Brands that grew
-</p>
+    Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+      Gallery
+    </span>
+  </h1>
 
+  <p className="text-center text-lg md:text-2xl text-[#0E3D55]/80 max-w-3xl mx-auto mb-20 leading-relaxed tracking-wide">
+    Campaigns that performed. Strategies that scaled. Brands that grew.
+  </p>
 
-  {/* BLOCK 1 — 3 cards */}
-  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-20">
-    {clients.slice(0,3).map((c,i)=> <Card key={i} data={c}/>)}
-  </div>
-
-  {/* BLOCK 2 — 2 cards */}
-  <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
-    {clients.slice(3,5).map((c,i)=> <Card key={i} data={c}/>)}
-  </div>
-
-  {/* BLOCK 3 — 3 cards */}
-  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-20">
-    {clients.slice(5,8).map((c,i)=> <Card key={i} data={c}/>)}
-  </div>
-
-  {/* BLOCK 4 — 2 cards */}
-  <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-    {clients.slice(8,10).map((c,i)=> <Card key={i} data={c}/>)}
+  {/* ⭐ Final Clean 3-Column Responsive Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    {clients.map((c, i) => (
+      <Card key={i} data={c} />
+    ))}
   </div>
 </section>
+
   );
 }
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function WhyChooseUs() {
 
   // WHITE CARD STYLE
@@ -58,7 +60,7 @@ export default function WhyChooseUs() {
             <p className="mb-6 opacity-90 leading-relaxed">
               Ready-to-post graphics, captions & growth systems.
             </p>
-            <img src="/whychoose/social-toolkit.png" className="rounded-xl shadow-lg" />
+            <img src="/whychooseus/socialmedia.webp" className=" w-10 h-10 object-cover rounded-full border-2 border-white" />
           </div>
 
           {/* Card 2 */}
@@ -69,7 +71,7 @@ export default function WhyChooseUs() {
             <p className="mb-6 opacity-90 leading-relaxed">
               Learn brand positioning & conversion execution.
             </p>
-            <img src="/whychoose/bootcamp.png" className="rounded-xl shadow-lg" />
+            <img src="/whychooseus/bootcamp.jpeg" className=" w-10 h-10 object-cover rounded-full border-2 border-white" />
           </div>
 
         </div>
@@ -84,9 +86,9 @@ export default function WhyChooseUs() {
               VIP guidance, reviews & strategy support.
             </p>
             <div className="flex gap-2 -space-x-3">
-              <img src="/p1.jpg" className="w-10 h-10 rounded-full border-2 border-white"/>
-              <img src="/p2.jpg" className="w-10 h-10 rounded-full border-2 border-white"/>
-              <img src="/p3.jpg" className="w-10 h-10 rounded-full border-2 border-white"/>
+              <img src="/p1.jpeg" className="w-10 h-10 object-contain rounded-full border-2 border-white"/>
+              <img src="/p2.jpeg" className="w-10 h-10 object-cover  rounded-full border-2 border-white"/>
+              <img src="/p3.jpeg" className="w-10 h-10 object-cover  rounded-full border-2 border-white"/>
             </div>
           </div>
 
@@ -96,9 +98,13 @@ export default function WhyChooseUs() {
             <p className="mb-6 opacity-90 leading-relaxed">
               AI-assisted posting & ad performance maximizer.
             </p>
-            <button className="px-5 py-2 rounded-full bg-[#0E6388] text-white hover:opacity-90">
-              View Portfolio →
-            </button>
+            <Link 
+  to="/work-gallery"
+  className=" text-center px-5 py-4 rounded-full text-white 
+    bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] shadow hover:opacity-90 text-sm"
+>
+  View Portfolio →
+</Link>
           </div>
 
           {/* Card 5 */}

@@ -52,14 +52,16 @@ export default function Contact() {
     })}
   </script>
 </Helmet>
-    <section className="py-28 px-6 bg-white">
+     <section className="py-20">
+  <div className="max-w-7xl mx-auto px-6 text-center">
 
       {/* PAGE TITLE */}
       <motion.h1
         variants={fade}
         initial="hidden"
         animate="show"
-        className="text-center text-4xl md:text-6xl font-extrabold text-[#0E3D55]"
+        className="text-5xl md:text-5xl font-extrabold text-transparent bg-clip-text
+    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] leading-tight"
       >
         Let’s{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
@@ -70,15 +72,8 @@ export default function Contact() {
       {/* TAGLINE */}
       <p
         className="
-          text-[#0A3A53]/80 
-          text-lg md:text-2xl 
-          font-medium 
-          mt-4 
-          mb-16
-          max-w-3xl 
-          mx-auto 
-          text-center 
-          leading-relaxed 
+         text-center max-w-3xl mx-auto mt-4 mb-15 text-transparent bg-clip-text
+    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] text-lg leading-relaxed
         "
       >
         Building brands that stand out, scale fast, and stay unforgettable.
@@ -174,7 +169,7 @@ export default function Contact() {
             <div className="mt-10 rounded-xl overflow-hidden shadow-md border border-[#DDE8F3] h-[240px]">
   <iframe
     title="Office Location"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2813.369413710725!2d-63.629865923425734!3d44.65520187909901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a2241c86013c7%3A0x4d7b0dff78eaef65!2s19%20Alma%20Crescent%2C%20Halifax%2C%20NS%20B3N%202C4%2C%20Canada!5e0!3m2!1sen!2sca!4v1732705555555!5m2!1sen!2sca"
+    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d45405.76519008662!2d-63.6516953!3d44.6612053!3m2!1i1024!2i768!4f13.1!2m1!1sbluenose%20marketing%20halifax%20canada!5e0!3m2!1sen!2sin!4v1764141332327!5m2!1sen!2sin"
     className="w-full h-full border-0"
     loading="lazy"
     allowFullScreen
@@ -202,7 +197,7 @@ export default function Contact() {
             <form className="grid grid-cols-1 gap-6">
 
               <div>
-                <label className="font-semibold text-sm">Your Name</label>
+                <label className="font-semibold text-sm flex justify-start">Your Name</label>
                 <input
                   type="text"
                   className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] text-black border border-[#DDE8F3] focus:ring-2 focus:ring-[#4BC1E8]"
@@ -211,7 +206,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="font-semibold text-sm">Email Address</label>
+                <label className="font-semibold text-sm flex justify-start">Email Address</label>
                 <input
                   type="email"
                   className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] text-black border border-[#DDE8F3] focus:ring-2 focus:ring-[#4BC1E8]"
@@ -220,7 +215,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="font-semibold text-sm">Phone Number</label>
+                <label className="font-semibold text-sm flex justify-start">Phone Number</label>
                 <input
                   type="text"
                   className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] text-black border border-[#DDE8F3] focus:ring-2 focus:ring-[#4BC1E8]"
@@ -229,7 +224,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="font-semibold text-sm">Message</label>
+                <label className="font-semibold text-sm flex justify-start">Message</label>
                 <textarea
                   rows="5"
                   className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] text-black border border-[#DDE8F3] focus:ring-2 focus:ring-[#4BC1E8]"
@@ -239,7 +234,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-[#4BC1E8] text-white font-semibold shadow hover:bg-[#0E6388] transition flex items-center justify-center gap-2"
+                className="w-full py-3 rounded-xl  bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white font-semibold shadow hover:bg-[#0E6388] transition flex items-center justify-center gap-2 cursor-pointer"
               >
                 Send Message
                 <Send size={18} />
@@ -250,6 +245,8 @@ export default function Contact() {
 
         </div>
       </motion.div>
+        </div>
+     
       </section>
       </>
   );

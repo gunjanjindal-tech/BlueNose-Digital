@@ -47,17 +47,19 @@ export default function FAQSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
 
         {/* LEFT TITLE */}
-        <div>
-          <p className="text-[#4BC1E8] text-sm font-medium tracking-wide mb-3">→ FAQ'S</p>
+       <div className="text-center md:text-left">
+  <p className="text-[#4BC1E8] text-sm font-medium tracking-wide mb-3">
+    → FAQ'S
+  </p>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold">
-            Everything You Should
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
-              Know Before Starting
-            </span>
-          </h2>
-        </div>
+  <h2 className="text-3xl md:text-5xl font-extrabold">
+    Everything You Should
+    <br />
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+      Know Before Starting
+    </span>
+  </h2>
+</div>
 
         {/* FAQ LIST – NO HOVER / NO ANIMATION */}
         <div className="space-y-5">
