@@ -17,13 +17,13 @@ export default function Header() {
   ];
 
 const clients = [
-    { name: "The Garden Retreat", link: "/work/garden-retreat" },
+    { name: "The Garden Retreat", link: "/work/the-garden-retreat" },
     { name: "Adda Indian Eatery", link: "/work/adda-indian-eatery" },
     { name: "Triveeni Events", link: "/work/triveeni-events" },
     { name: "Pita Nutso", link: "/work/pita-nutso" },
     { name: "Nayya Pizza & Grill", link: "/work/nayya-Pizza" },
-    { name: "Beaver Bank Station", link: "/work/beaver-bank" },
-    { name: "Sake Cafe | Sushi Bar", link: "/work/sake" },
+  { name: "Beaver Bank Station", link: "/work/beaver-bank-station" },
+   { name: "Sake Cafe | Sushi Bar", link: "/work/sake-cafe" },
    { name: "Hearthstone Inn", link: "/work/hearthstone" },
     { name: "Besharam Bar & Grill", link: "/work/besharam" },
     { name: "Rivaaj Resto-Bar", link: "/work/rivaaj" },

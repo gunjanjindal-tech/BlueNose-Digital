@@ -1,11 +1,10 @@
-// src/pages/work/TriveeniEvents.jsx
+// src/pages/work/AddaIndianEatery.jsx
 import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 
-// ICONS (Lucide for consistency)
-import {
+    import {
   TrendingUp,
   PenTool,
   Video,
@@ -20,9 +19,10 @@ const icons = {
   reels: <Video className="w-full h-full" />,
   analytics: <BarChart3 className="w-full h-full" />,
   audience: <Users className="w-full h-full" />,
+  
 };
 
-export default function TriveeniEvents() {
+export default function AddaIndianEatery() {
   const sections = [
     "overview",
     "services-provided",
@@ -32,15 +32,16 @@ export default function TriveeniEvents() {
     "case-studies",
   ];
 
+
   const [active, setActive] = useState("overview");
 
-  // Scroll Tracking
+  // Scroll tracking for sidebar
   useEffect(() => {
     const observers = [];
 
     sections.forEach((id) => {
-      const sec = document.getElementById(id);
-      if (!sec) return;
+      const section = document.getElementById(id);
+      if (!section) return;
 
       const obs = new IntersectionObserver(
         (entries) => {
@@ -49,7 +50,7 @@ export default function TriveeniEvents() {
         { threshold: 0.35, rootMargin: "-120px 0px -200px 0px" }
       );
 
-      obs.observe(sec);
+      obs.observe(section);
       observers.push(obs);
     });
 
@@ -59,37 +60,43 @@ export default function TriveeniEvents() {
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
 
-{/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
-<section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl 
-px-6 py-20 mb-20">
+{/* ===============================  
+        HERO SECTION — SAME AS BEAVER  
+================================== */}
+<section
+  className="min-h-[80vh] w-full flex items-center 
+  bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
+  text-white rounded-3xl px-6 py-20 mb-20"
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-
-  <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-
-    {/* LEFT TEXT */}
+    {/* LEFT */}
     <div>
-      <div className="inline-block bg-white/20 text-white px-4 py-2 
-      rounded-full text-sm font-semibold mb-5 shadow-sm">
-        1.3M+ Views in 90 Days • Organic Cultural Event Growth
+      <div
+        className="inline-block bg-white/20 text-white px-4 py-2 
+        rounded-full text-sm font-semibold mb-5 shadow-sm"
+      >
+        214K+ Views in 90 Days • Emotional Storytelling Strategy for Adda Indian Eatery
       </div>
 
       <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-        Triveeni{" "}
-        <span className="bg-clip-text text-transparent 
-        bg-white">
-          Events
+        Adda Indian{" "}
+        <span
+          className="bg-clip-text text-transparent 
+          bg-white"
+        >
+          Eatery
         </span>
       </h1>
 
       <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
-        A community-driven Instagram strategy celebrating Indian festivals, 
-        culture, and vibrant traditions with a Reels-first content approach.
+        Building a culturally emotional brand identity for Adda using storytelling,
+        cinematic reels, and high-engagement social strategies.
       </p>
 
       <div className="flex flex-wrap gap-4 mt-8">
-        {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
-          <div 
+        {["Strategic Planning", "Performance Pulse", "Content Power"].map((tag, i) => (
+          <div
             key={i}
             className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
             shadow text-white text-sm font-medium"
@@ -100,20 +107,22 @@ px-6 py-20 mb-20">
       </div>
 
       <Link to="/contact">
-        <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-          text-white font-semibold rounded-full shadow-lg">
+        <button
+          className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
+          text-white font-semibold rounded-full shadow-lg"
+        >
           Book A Callback
         </button>
       </Link>
     </div>
 
-    {/* RIGHT LOGO */}
+    {/* RIGHT IMAGE (Logo Container Same as Beaver) */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+      <div className="rounded-3xl shadow-xl bg-white/70 p-6 flex items-center justify-center">
         <img
-          src="/client/logo-2.png"
-          className="w-72 md:w-80 object-contain"
-          alt="Triveeni Logo"
+          src="/client/logo-4.png"
+          className="w-64 md:w-72 object-contain"
+          alt="Adda Indian Eatery Logo"
         />
       </div>
     </div>
@@ -122,9 +131,10 @@ px-6 py-20 mb-20">
 </section>
 
 
-      {/* ------------ GRID LAYOUT ------------ */}
+      {/* ---------------- MAIN GRID (Sidebar + Content) ---------------- */}
       <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12">
 
+        {/* Sidebar */}
         <BlueSidebar
           sections={[
             { name: "Overview", id: "overview" },
@@ -137,49 +147,58 @@ px-6 py-20 mb-20">
           active={active}
         />
 
-        {/* ------------ RIGHT CONTENT ------------ */}
+        {/* ---------------- RIGHT CONTENT ---------------- */}
         <div className="space-y-16">
 
-          {/* ------------ OVERVIEW ------------ */}
-          <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+          {/* ---------------- OVERVIEW ---------------- */}
+        <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-black/10">
 
-            <p className="mt-6 leading-relaxed text-[#063349]/85">
-              Triveeni Events is a women-led cultural event company curating stunning Indian festivals, celebrations and community gatherings across the Atlantic region.
+             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+           
+
+            <p className="mt-6 text-black/80 leading-relaxed">
+              Adda Indian Eatery is a lively and affordable Indian restaurant offering authentic 
+              flavors and a vibrant dining experience rooted in the cultural spirit of “adda” — 
+              a place where people bond, laugh, and share food together.
             </p>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Their audience includes families, students, working professionals and community members who cherish Indian traditions, dance, music and festive culture.
+            <p className="mt-4 text-black/80 leading-relaxed">
+              They target young adults, students, friend groups, couples, and food lovers who enjoy 
+              authentic Indian cuisine served in a warm and energetic environment.
             </p>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Our mission was to build a strong Instagram brand presence using storytelling, cultural highlights and high-visibility reels.
+            <p className="mt-4 text-black/80 leading-relaxed">
+              Our mission was to position Adda as a culturally memorable Indian food destination 
+              through emotional storytelling, cinematic food visuals, and community-driven content.
             </p>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              We adopted a Reels-first strategy with trend-backed optimization, allowing Triveeni to generate over 1.3M views organically.
+            <p className="mt-4 text-black/80 leading-relaxed">
+              We focused on a Reels-first approach to maximize organic reach and engagement while 
+              establishing an emotional connection through relatable stories.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
-              {[
-                { v: 1300000, t: "Total Views", sign: "+" },
-                { v: 439000, t: "Accounts Reached", sign: "+" },
-                { v: 89, t: "Organic Reach (%)", sign: "%" },
-                { v: 130, t: "Avg. Monthly Growth (%)", sign: "%" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
-                >
-                  <div className="text-2xl font-bold">
-                    <Counter end={s.v} duration={5000} />
-                    {s.sign}
-                  </div>
-                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
-                </div>
-              ))}
-            </div>
+            {/* Stats */}
+           <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
+                         {[
+                           { v: 1300000, t: "Total Views", sign: "+" },
+                           { v: 439000, t: "Accounts Reached", sign: "+" },
+                           { v: 89, t: "Organic Reach (%)", sign: "%" },
+                           { v: 130, t: "Avg. Monthly Growth (%)", sign: "%" },
+                         ].map((s, i) => (
+                           <div
+                             key={i}
+                             className="p-6 w-[250px] rounded-2xl shadow-md text-white
+                               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                           >
+                             <div className="text-2xl font-bold">
+                               <Counter end={s.v} duration={5000} />
+                               {s.sign}
+                             </div>
+                             <p className="mt-2 text-white/85 text-sm">{s.t}</p>
+                           </div>
+                         ))}
+                       </div>
+
           </section>
 
 {/* ------------ SERVICES PROVIDED ------------ */}
@@ -219,48 +238,49 @@ px-6 py-20 mb-20">
   </div>
 </section>
 
-          
-          {/* ------------ CHALLENGE ------------ */}
-          <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
+
+          {/* ---------------- CHALLENGE ---------------- */}
+      <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold leading-[1.3] bg-clip-text text-transparent 
               bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
               Challenge
             </h2>
 
+            
             <div className="mt-6 p-10 rounded-3xl text-white 
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              
-              <p>• Build a strong presence in a culturally competitive niche.</p>
-              <p>• Increase reach without relying on paid promotions.</p>
-              <p>• Showcase diverse events while maintaining cultural authenticity.</p>
+              <p>
+                We reviewed Adda’s existing Instagram presence and identified the need for 
+                emotionally-driven content to differentiate the brand from other Indian restaurants.
+              </p>
 
-              <p className="font-semibold text-white text-xl pt-2">Key challenges included:</p>
+              <p className="font-semibold text-white text-xl">Key challenges included:</p>
 
-              <ul className="space-y-3 text-white/95">
-                <li>• Low initial engagement</li>
-                <li>• Highly saturated event content space</li>
-                <li>• Need for cost-effective growth solutions</li>
-                <li>• Positioning as the top cultural event brand</li>
-                <li>• Creating viral-worthy reels consistently</li>
+              <ul className="space-y-3 text-white/95 list-disc ml-4">
+                <li>Standing out in a saturated Indian restaurant niche</li>
+                <li>Building emotional connection beyond food visuals</li>
+                <li>Creating viral, relatable storytelling content</li>
+                <li>Increasing engagement among young audiences</li>
+                <li>Capturing Indian “adda culture” authentically</li>
+                <li>Converting viewers into dine-in customers</li>
               </ul>
             </div>
           </section>
 
-          {/* ------------ APPROACH ------------ */}
-          <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
+          {/* ---------------- APPROACH ---------------- */}
+    <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-
-              <p>• Created culturally rooted content highlighting Indian celebrations.</p>
-              <p>• Prioritized reels with trending audio + meaningful storytelling.</p>
-              <p>• Leveraged community engagement and event-based momentum.</p>
+              <p>• Build awareness through cinematic food videos + relatable cultural storytelling.</p>
+              <p>• Analyze content performance and refine strategy for maximum engagement.</p>
+              <p>• Maximize reach through trends, community content, and emotional hooks.</p>
             </div>
           </section>
 
-          {/* ------------ KEY STRATEGY ------------ */}
-          <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
+          {/* ---------------- KEY STRATEGY ---------------- */}
+              <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
               bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
               Key Strategies Implemented
@@ -268,12 +288,12 @@ px-6 py-20 mb-20">
 
             <div className="mt-6 p-10 rounded-3xl text-white
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              <p>• Trend-backed Reels-first content cycle</p>
-              <p>• Explore-page dominance strategy</p>
-              <p>• Seasonal festival content planning</p>
-              <p>• SEO-optimized captions</p>
-              <p>• Audience-focused storytelling</p>
-              <p>• High-frequency community engagement</p>
+              <p>• Consistent posting schedule to build anticipation</p>
+              <p>• A/B testing of content styles & formats</p>
+              <p>• Emotional marketing focusing on friendship + culture</p>
+              <p>• Elevated brand identity as a cultural gathering spot</p>
+              <p>• Highly shareable content themes to boost organic growth</p>
+              <p>• Built a loyal, emotionally connected community</p>
             </div>
           </section>
 
@@ -383,8 +403,6 @@ px-6 py-20 mb-20">
     </div>
   );
 }
-/* ------------ SMALL COMPONENTS ------------ */
-
 function CaseStat({ v, t }) {
   return (
     <div className="bg-white text-black p-3 rounded-lg shadow text-center">
@@ -402,4 +420,3 @@ function CaseStatDark({ v, t }) {
     </div>
   );
 }
-

@@ -1,45 +1,46 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "Social Media Marketing (SMM)",
-      desc: "From page management to content calendars, we create viral, engaging and brand aligned content that grows visibility, trust and conversions.",
-          video: "/videos/smm3.mp4",
-       link: "/services/smm",
-    },
-    {
-      title: "Branding & Identity",
-      desc: "Logo, color palette, tone, visual communication and brand story — we craft a brand that people remember and connect with emotionally.",
-        video: "/videos/branding2.mp4",
-       link: "/services/branding",
-    },
-    {
-      title: "Influencer Marketing",
-      desc: "We collaborate with creators that match your niche, execute campaigns and track performance to drive engagement and conversions efficiently.",
-        video: "/videos/influencer3.mp4",
-      link: "/services/influencer-marketing",
-    },
-    {
-      title: "Video Editing",
-      desc: "High–quality cinematic edits, short-form reels, transitions, promotional clips & story-driven video editing.",
-        video: "/videos/edit4.mp4",
-      link: "/services/video-editing",
-    },
-    {
-      title: "UGC Content Creation",
-      desc: "Authentic conversion-focused content by real creators for ads, branding and product promotions.",
-        video: "/videos/ugc3.mp4",
-      link: "/services/ugc",
-    },
-    {
-      title: "Photography & Creative Shoots",
-      desc: "Product photography, event coverage, brand visuals & creative motion shots for premium brand presentation.",
-        video: "/videos/photo1.mp4",
-       link: "/services/photography",
-    },
-  ];
+const services = [
+  {
+    title: "Social Media Marketing (SMM)",
+    desc: "From page management to content calendars, we create viral, engaging and brand aligned content that grows visibility, trust and conversions.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
+    link: "/services/smm",
+  },
+  {
+    title: "Branding & Identity",
+    desc: "Logo, color palette, tone, visual communication and brand story — we craft a brand that people remember and connect with emotionally.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
+    link: "/services/brand-identity",   
+  },
+  {
+    title: "Influencer Marketing",
+    desc: "We collaborate with creators that match your niche, execute campaigns and track performance to drive engagement and conversions efficiently.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
+    link: "/services/influencer-marketing",
+  },
+  {
+    title: "Video Editing",
+    desc: "High–quality cinematic edits, short-form reels, transitions, promotional clips & story-driven video editing.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
+    link: "/services/video-editing",
+  },
+  {
+    title: "UGC Content Creation",
+    desc: "Authentic conversion-focused content by real creators for ads, branding and product promotions.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov",
+    link: "/services/ugc-content",   // FIXED
+  },
+  {
+    title: "Photography & Creative Shoots",
+    desc: "Product photography, event coverage, brand visuals & creative motion shots for premium brand presentation.",
+    video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
+    link: "/services/photography",
+  },
+];
 
   return (
     <>

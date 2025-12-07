@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopOnRoute from "./components/ScrollToTopOnRoute"; 
 import Home from "./pages/Home";
-import Services from "./pages/Services";
+import ServicesPage from "./pages/Services";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
@@ -25,7 +25,12 @@ import TriveeniEvents from "./pages/work/TriveeniEvents";
 import PitaNutso from "./pages/work/PitaNutso";
 import NayyaPizza from "./pages/work/NayyaPizza";
 import Hearthstone from "./pages/work/Hearthstone";
-
+import BesharamBarGrill from "./pages/work/BesharamBarGrill";
+import BeaverBankStation from "./pages/work/BeaverBankStation";
+import AddaIndianEatery from "./pages/work/AddaIndianEatery";
+import TheGardenRetreat from "./pages/work/TheGardenRetreat";
+import RivaazRestroBar from "./pages/work/RivaazRestroBar";
+import SakeCafe from "./pages/work/SakeCafe";
 
 function App() {
   return (
@@ -36,7 +41,7 @@ function App() {
     
         {/* MAIN PAGES */}
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+       <Route path="/services" element={<ServicesPage />} />
         <Route path="/work-gallery" element={<WorkGallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />       
@@ -57,6 +62,12 @@ function App() {
         <Route path="/work/pita-nutso" element={<PitaNutso />} />
         <Route path="/work/nayya-pizza" element={<NayyaPizza />} />
         <Route path="/work/hearthstone" element={<Hearthstone />} />
+        <Route path="/work/besharam" element={<BesharamBarGrill />} />
+<Route path="/work/beaver-bank-station" element={<BeaverBankStation />} />
+        <Route path="/work/adda-indian-eatery" element={<AddaIndianEatery />} />      
+        <Route path="/work/the-garden-retreat" element={<TheGardenRetreat />} />      
+        <Route path="/work/rivaaj" element={<RivaazRestroBar />} />
+        <Route path="/work/sake-cafe" element={<SakeCafe />} />
 
       </Routes>
       <Footer />

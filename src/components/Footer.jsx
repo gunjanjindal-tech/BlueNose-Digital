@@ -1,10 +1,11 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer
       className="text-white relative overflow-hidden pt-16"
-      style={{ backgroundColor: "#000" }}  // ✨ same as Hero
+      style={{ backgroundColor: "#000" }}
     >
 
       {/* 🌌 Hero-Style Gradient Lighting */}
@@ -17,7 +18,7 @@ export default function Footer() {
       ></div>
 
       {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-6 py-14  grid grid-cols-1 md:grid-cols-[1.3fr_0.9fr_1fr_1.4fr] gap-12 items-start z-10">
+      <div className="relative max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-[1.3fr_0.9fr_1fr_1.4fr] gap-12 items-start z-10">
 
         {/* LOGO & ABOUT */}
         <div className="col-span-1">
@@ -35,42 +36,65 @@ export default function Footer() {
         </div>
 
         {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-white/80">
-            {["Home","Services","Case Studies","About","Contact"].map(link=>(
-              <li key={link}>
-                <a href={`/${link.toLowerCase().replace(" ","-")}`} className="hover:text-[#4BC1E8] transition">{link}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* QUICK LINKS */}
+<div>
+  <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+ <ul className="space-y-2 text-white/80">
+  <li><Link to="/" className="hover:text-[#4BC1E8] transition">Home</Link></li>
+  <li><Link to="/services" className="hover:text-[#4BC1E8] transition">Services</Link></li>
+  <li><Link to="/work-gallery" className="hover:text-[#4BC1E8] transition">Work Gallery</Link></li>
+  <li><Link to="/about" className="hover:text-[#4BC1E8] transition">About</Link></li>
+  <li><Link to="/contact" className="hover:text-[#4BC1E8] transition">Contact</Link></li>
+</ul>
+</div>
 
-        {/* CONTACT UPDATED */}
+
+        {/* CONTACT WITH CLICK-ACTIONS */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <div className="space-y-4 text-white/80 text-sm">
 
-            <p className="flex gap-3"><Phone className="w-5 text-[#4BC1E8]"/> +1 902-718-9007</p>
-            <p className="flex gap-3"><Mail className="w-5 text-[#4BC1E8]"/> sales@bluenosemarketing.com</p>
-            <p className="flex gap-3"><MapPin className="w-5 text-[#4BC1E8]"/> 19 Alma Crescent, Halifax, NS B3N 2C4, Canada</p>
+            {/* 📞 Click to Call */}
+            <a href="tel:+19027189007" className="flex gap-3 hover:text-white transition">
+              <Phone className="w-5 text-[#4BC1E8]" />
+              +1 902-718-9007
+            </a>
+
+            {/* 📧 Click to Email */}
+            <a
+              href="mailto:sales@bluenosemarketing.com"
+              className="flex gap-3 hover:text-white transition"
+            >
+              <Mail className="w-5 text-[#4BC1E8]" />
+              sales@bluenosemarketing.com
+            </a>
+
+            {/* 📍 Address */}
+            <a
+              href="https://maps.google.com/?q=19 Alma Crescent, Halifax, NS B3N 2C4, Canada"
+              target="_blank"
+              className="flex gap-3 hover:text-white transition"
+            >
+              <MapPin className="w-5 text-[#4BC1E8]" />
+              19 Alma Crescent, Halifax, NS B3N 2C4, Canada
+            </a>
 
           </div>
         </div>
 
-        {/* MAP — Halifax Nova Scotia */}
+        {/* MAP */}
         <div className="rounded-xl overflow-hidden shadow-lg">
           <iframe
-  src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d45405.76519008662!2d-63.6516953!3d44.6612053!3m2!1i1024!2i768!4f13.1!2m1!1sbluenose%20marketing%20halifax%20canada!5e0!3m2!1sen!2sin!4v1764141332327!5m2!1sen!2sin"
-  width="100%"
-  height="230"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d45405.76519008662!2d-63.6516953!3d44.6612053!3m2!1i1024!2i768!4f13.1!2m1!1sbluenose%20marketing%20halifax%20canada!5e0!3m2!1sen!2sin!4v1764141332327!5m2!1sen!2sin"
+            width="100%"
+            height="230"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
+
       </div>
 
       {/* COPYRIGHT */}

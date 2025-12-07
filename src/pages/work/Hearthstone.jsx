@@ -1,8 +1,31 @@
 // src/pages/work/Hearthstone.jsx
 import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter";
-import BlueSidebar from "../../components/BlueSidebar";
 import { Link } from "react-router-dom";
+import BlueSidebar from "../../components/BlueSidebar";
+
+// ICONS (same as Besharam)
+import {
+  TrendingUp,
+  Palette,
+  Video,
+  Camera,
+  BarChart3,
+  Gauge,
+  CalendarDays,
+  Megaphone,
+} from "lucide-react";
+
+const icons = {
+  strategy: <TrendingUp className="w-full h-full" />,
+  branding: <Palette className="w-full h-full" />,
+  videography: <Video className="w-full h-full" />,
+  photography: <Camera className="w-full h-full" />,
+  analytics: <BarChart3 className="w-full h-full" />,
+  algorithm: <Gauge className="w-full h-full" />,
+  calendar: <CalendarDays className="w-full h-full" />,
+  marketing: <Megaphone className="w-full h-full" />,
+};
 
 export default function Hearthstone() {
   const sections = [
@@ -16,7 +39,7 @@ export default function Hearthstone() {
 
   const [active, setActive] = useState("overview");
 
-  // Sidebar Highlight on Scroll
+  // Scroll tracking
   useEffect(() => {
     const observers = [];
 
@@ -39,47 +62,73 @@ export default function Hearthstone() {
   }, []);
 
   return (
-    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
+    <div className="bg-white text-[#063349] font-inter px-6 pt-6 py-20">
 
-      {/* ---------------- HERO ---------------- */}
-      <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        <div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-transparent
-            bg-clip-text bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-            Hearthstone Inn
-          </h1>
+{/* ------------ HERO SECTION (RIVAAJ STYLE) ------------ */}
+<section className="min-h-[80vh] w-full flex items-center 
+ bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20">
 
-          <p className="text-xl mt-4 text-[#063349]/80">
-            1.6K+ Views in 60 Days — Building Brand Presence From Scratch
-          </p>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-          <div className="flex flex-wrap gap-4 mt-8">
-            {["Audience Connect", "Visibility Boost", "Growth Strategy"].map((item, i) => (
-              <div key={i}
-                className="bg-white px-6 py-3 rounded-full border border-[#D7ECF6] shadow text-[#063349]">
-                {item}
-              </div>
-            ))}
+    {/* LEFT */}
+    <div className="self-start">
+      <div className="inline-block bg-white/20 text-white px-4 py-2 
+      rounded-full text-sm font-semibold mb-5 shadow-sm">
+        1.6K+ Views in 60 Days • Boutique Hotel Presence Strategy
+      </div>
+
+      <h1 className="inline-block text-4xl md:text-5xl font-extrabold">
+        Hearthstone{" "}
+        <span className="bg-clip-text text-transparent 
+        bg-white">
+          Inn
+        </span>
+      </h1>
+
+      <p className="text-xl mt-4 text-white/90 leading-relaxed">
+        Building boutique hospitality presence through premium visuals, 
+        hotel storytelling, and community-focused digital branding.
+      </p>
+
+      <div className="flex flex-wrap gap-4 mt-8">
+        {["Audience Connect", "Visibility Boost", "Growth Strategy"].map((tag, i) => (
+          <div 
+            key={i}
+            className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
+            shadow text-white text-sm font-medium"
+          >
+            {tag}
           </div>
+        ))}
+      </div>
 
-          <Link to="/contact">
-            <button className="mt-8 px-8 py-3 bg-gradient-to-r 
-            from-[#4BC1E8] to-[#0E6388] text-white font-semibold rounded-full shadow-lg">
-              Book A Callback
-            </button>
-          </Link>
-        </div>
+      <Link to="/contact">
+        <button className="mt-8 px-8 py-3 bg-gradient-to-r 
+        from-[#4BC1E8] to-[#0E6388] text-white font-semibold rounded-full shadow-lg">
+          Book A Callback
+        </button>
+      </Link>
+    </div>
 
-        <div className="flex justify-center pt-6">
-<img src="/src/assets/hearthstone.png" className="w-72 md:w-96 object-contain" />
-        </div>
-      </section>
+    {/* RIGHT LOGO */}
+    <div className="flex justify-center">
+      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+        <img
+          src="/client/logo-6.png"
+          className="w-72 md:w-80 object-contain"
+          alt="Hearthstone Logo"
+        />
+      </div>
+    </div>
 
-      {/* ---------------- SIDEBAR + CONTENT GRID ---------------- */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-10 mt-16">
+  </div>
+</section>
 
-        {/* LEFT SIDEBAR */}
+
+      {/* ------------ GRID LAYOUT ------------ */}
+      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12 mt-16">
+
+        {/* Sidebar */}
         <BlueSidebar
           sections={[
             { name: "Overview", id: "overview" },
@@ -92,293 +141,264 @@ export default function Hearthstone() {
           active={active}
         />
 
-        {/* RIGHT CONTENT */}
+        {/* ------------ RIGHT CONTENT ------------ */}
         <div className="space-y-16">
 
-          {/* ---------------- OVERVIEW ---------------- */}
-          <section id="overview"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-
+          {/* ------------ OVERVIEW ------------ */}
+          <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
 
             <p className="mt-6 leading-relaxed text-[#063349]/85">
-              Hearthstone Inn is a boutique hotel in Dartmouth, Nova Scotia, offering
-              stunning Lake Banook views, pet-friendly accommodations, and elegant event spaces.
+              Hearthstone Inn is a boutique hotel located in Dartmouth, Nova Scotia, offering serene Lake Banook views, pet-friendly stays, and elegant event spaces.
             </p>
 
             <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Target audience includes boutique travelers, wedding couples, event organizers, 
-              tourists, pet owners, and business travelers.
+              Their target audience includes boutique travelers, couples, wedding planners, tourists, and business guests.
             </p>
 
             <p className="mt-4 leading-relaxed text-[#063349]/85">
-              The goal was to build their brand identity on Instagram from zero and increase visibility.
+              The mission was to build their Instagram brand identity from zero and increase reach through lifestyle-driven visuals.
             </p>
 
             <p className="mt-4 leading-relaxed text-[#063349]/85">
-              We showcased hotel charm, amenities, weddings, events, and scenic lake views.
+              We highlighted hotel charm, amenities, weddings, events, and scenic locations to shape strong brand recall.
             </p>
 
             {/* Metrics */}
-            <div className="grid sm:grid-cols-2 gap-4 mt-8 place-items-center">
-              {[ 
-                { v: 1600, label: "Total Views (60 Days)", sign: "+" },
-                { v: 78, label: "Avg. Non-Follower Engagement", sign: "%" },
-                { v: 94.6, label: "Posts Engagement Rate", sign: "%" },
-                { v: 53, label: "Accounts Reached", sign: "+" },
-              ].map((m, i) => (
-                <div key={i}
-                  className="p-4 w-[250px] rounded-2xl shadow-md text-white
+            <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
+              {[
+                { v: 1600, t: "Total Views (60 Days)", sign: "+" },
+                { v: 78, t: "Avg. Non-Follower Engagement (%)", sign: "%" },
+                { v: 94.6, t: "Posts Engagement Rate (%)", sign: "%" },
+                { v: 53, t: "Accounts Reached", sign: "+" },
+              ].map((s, i) => (
+                <div key={i} className="p-6 w-[250px] rounded-2xl shadow-md text-white
                   bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]">
                   
                   <div className="text-2xl font-bold">
-                    <Counter end={m.v} duration={4500} />{m.sign}
+                    <Counter end={s.v} duration={3600} />
+                    {s.sign}
                   </div>
 
-                  <p className="text-white/85 text-sm mt-1">{m.label}</p>
+                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* ---------------- SERVICES PROVIDED ---------------- */}
-          <section id="services-provided"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Services Provided</h2>
+          {/* ------------ SERVICES PROVIDED ------------ */}
+          <section id="services-provided" className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
+            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+              Services Provided
+            </h2>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10">
               {[
-                "Social Media Strategy & Account Setup",
-                "Brand Identity Development",
-                "Property Videography & Photography",
-                "Professional Hotel Photography",
-                "Analytics & Performance Tracking",
-                "Algorithm Optimization",
-                "Content Calendar Planning",
-                "Hospitality Marketing Strategy",
-              ].map((s, i) => (
-                <div key={i}
-                  className="px-5 py-4 rounded-2xl text-white shadow-lg
-                  bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]">
-                  {s}
+                { name: "Social Media Strategy & Account Setup", icon: icons.strategy },
+                { name: "Brand Identity Development", icon: icons.branding },
+                { name: "Property Videography & Photography", icon: icons.videography },
+                { name: "Professional Hotel Photography", icon: icons.photography },
+                { name: "Analytics & Performance Tracking", icon: icons.analytics },
+                { name: "Algorithm Optimization", icon: icons.algorithm },
+                { name: "Content Calendar Planning", icon: icons.calendar },
+                { name: "Hospitality Marketing Strategy", icon: icons.marketing },
+              ].map((service, i) => (
+                <div
+                  key={i}
+                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
+                    shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                >
+                  <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
+                    {service.icon}
+                  </div>
+
+                  <p className="font-semibold text-base leading-tight">
+                    {service.name}
+                  </p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* ---------------- CHALLENGE ---------------- */}
-          <section id="challenge"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-            
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Challenge</h2>
+          {/* ------------ CHALLENGE ------------ */}
+          <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
+            <h2
+              className="text-4xl font-extrabold leading-[1.3] -mt-3 bg-clip-text text-transparent 
+                bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
+              Challenge
+            </h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-4">
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               <p>We studied Besharam's brand identity, audience patterns, and existing content performance.</p>
 
+              <p>They needed powerful visuals for fusion dishes, cocktails, and energy-rich ambience.</p>
+
+              <p className="font-semibold text-white text-xl pt-2">Key challenges:</p>
               <ul className="space-y-3 text-white/95">
-                <li>• Create an Instagram audience from zero</li>
-                <li>• Build visual identity for boutique hotel</li>
-                <li>• Competition in local hospitality industry</li>
-                <li>• Highlight weddings, lounge, lake view & events</li>
-                <li>• Lack of professional content initially</li>
-                <li>• New account = reach limitations</li>
-                <li>• Build trust through consistent visual tone</li>
-                <li>• Increase organic reach without ads</li>
+                <li>• Build an Instagram audience from zero</li>
+                <li>• Create a visual identity for the boutique hotel experience</li>
+                <li>• Compete in the local hospitality & hotel market</li>
+                <li>• Highlight weddings, lounge, lake views & events</li>
+                <li>• Overcome limited existing professional content</li>
+                <li>• Improve reach organically without paid ads</li>
+                <li>• Maintain consistent brand tone & messaging</li>
               </ul>
             </div>
           </section>
 
-          {/* ---------------- APPROACH ---------------- */}
-          <section id="approach"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-
+          {/* ------------ APPROACH ------------ */}
+          <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-4">
-
-              <p>• Built brand presence using premium visuals.</p>
-              <p>• Created event, wedding & hospitality-focused content.</p>
-              <p>• Used trending audio + data-driven posting strategy.</p>
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              <p>• Built presence with premium photography + hotel lifestyle visuals</p>
+              <p>• Created content around events, weddings & hospitality storytelling</p>
+              <p>• Used trending audio and strategic posting windows for maximum reach</p>
             </div>
           </section>
 
-          {/* ---------------- KEY STRATEGY ---------------- */}
-          <section id="key-strategy"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-            
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">
+          {/* ------------ KEY STRATEGY ------------ */}
+          <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
+            <h2
+              className="text-4xl font-extrabold leading-[1.3] -mt-1 bg-clip-text text-transparent
+                bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
               Key Strategies Implemented
             </h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-4">
-
-              <p>• Boutique hotel photography focus</p>
-              <p>• Pet-friendly content strategy</p>
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              <p>• Boutique hotel–focused visual storytelling</p>
+              <p>• Pet-friendly content series for unique positioning</p>
               <p>• Wedding & event venue highlight reels</p>
               <p>• Local geotag optimization (Dartmouth, Lake Banook)</p>
-              <p>• Strong visual brand consistency</p>
+              <p>• Strong brand consistency across posts</p>
             </div>
           </section>
 
-          {/* ---------------- OTHER CASE STUDIES ---------------- */}
-          <section id="case-studies" className="">
+          {/* ------------ CASE STUDIES ------------ */}
+          <section id="case-studies" className="mt-16">
+ <h2
+  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+  text-transparent bg-clip-text 
+  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+>
+  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
+</h2>
+          <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
+            
 
-  <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text
-    bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-    Read Other Case Studies Of Company
-  </h2>
 
-  <div className="grid sm:grid-cols-2 gap-8 mt-10 place-items-center">
+  {/* CARD 1 — TRIVEENI */}
+<div className="relative bg-[#F7FBCF] px-6 py-6 w-[400px] rounded-2xl shadow-lg">
 
-    {/* Card 1 – Hearthstone */}
-    <div className="
-      bg-[#0E3D55] text-white 
-      px-6 py-6 
-      w-[300px] sm:w-[360px]
-      rounded-2xl shadow-lg
-    ">
-      <h3 className="text-xl font-bold">Hearthstone Inn</h3>
-      <p className="mt-2 text-white/90 text-sm">
-        1.6K+ Views in 60 Days: Building Brand Presence for Hearthstone Inn from Scratch
-      </p>
+  <h3 className="text-xl font-bold">Triveeni Events</h3>
+  <p className="mt-2 text-black/70 text-sm">
+    1.3M+ Views in 90 Days
+  </p>
 
-      <div className="grid grid-cols-2 gap-3 mt-5 text-black">
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">1.6K</p>
-          <p className="text-xs text-black/70">Total Views (60 Days)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">78%</p>
-          <p className="text-xs text-black/70">Avg. Non-Follower Engagement</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">94.6%</p>
-          <p className="text-xs text-black/70">Posts Engagement Rate</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">53</p>
-          <p className="text-xs text-black/70">Accounts Reached</p>
-        </div>
-      </div>
-    </div>
-
-    {/* Card 2 – Rivaaj */}
-    <div className="
-      bg-[#AF873D] text-white 
-      px-6 py-6 
-      w-[300px] sm:w-[360px]
-      rounded-2xl shadow-lg
-    ">
-      <h3 className="text-xl font-bold">Rivaaj Resto-Bar</h3>
-      <p className="mt-2 text-white/90 text-sm">
-        48.9K+ Views in 30 Days: Launching Bedford's First Cultural Resto-Bar
-      </p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-black">
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">48.9K</p>
-          <p className="text-xs text-black/70">Total Views (30 Days)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">403</p>
-          <p className="text-xs text-black/70">Total Interactions</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">74</p>
-          <p className="text-xs text-black/70">New Followers (30 Days)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">17</p>
-          <p className="text-xs text-black/70">Content Shared</p>
-        </div>
-      </div>
-    </div>
-
-    {/* Card 3 – Pita Nutso */}
-    <div className="
-      bg-[#F7F0DE] text-black 
-      px-6 py-6 
-      w-[300px] sm:w-[360px]
-      rounded-2xl shadow-lg mb-12
-    ">
-      <h3 className="text-xl font-bold">Pita Nutso</h3>
-      <p className="mt-2 text-black/70 text-sm">
-        36.1K+ Views in 90 Days: Organic Growth Strategy for Pita Nutso
-      </p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-black">
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">36.1K</p>
-          <p className="text-xs text-black/70">Total Views (90 Days)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">52</p>
-          <p className="text-xs text-black/70">Content Shares</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">276</p>
-          <p className="text-xs text-black/70">Total Interactions</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">66%</p>
-          <p className="text-xs text-black/70">Avg. Non-Follower Engagement</p>
-        </div>
-      </div>
-    </div>
-
-    {/* Card 4 – Besharam Bar & Grill */}
-    <div className="
-      bg-[#073B4C] text-white 
-      px-6 py-6 
-      w-[300px] sm:w-[360px]
-      rounded-2xl shadow-lg mb-12
-    ">
-      <h3 className="text-xl font-bold">Besharam Bar and Grill</h3>
-      <p className="mt-2 text-white/90 text-sm">
-        60K+ Views in 60 Days: Bold Fusion Strategy
-      </p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-black">
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">60K</p>
-          <p className="text-xs text-black/70">Total Views (60 Days)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">9.6K</p>
-          <p className="text-xs text-black/70">Followers (+157 Growth)</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">59</p>
-          <p className="text-xs text-black/70">Content Shares</p>
-        </div>
-
-        <div className="bg-white p-3 rounded-lg shadow text-center">
-          <p className="font-bold">62%</p>
-          <p className="text-xs text-black/70">Avg. Non-Follower Engagement</p>
-        </div>
-      </div>
-    </div>
-
+  {/* Stats grid */}
+  <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+    <CaseStat v="1.3M+" t="Total Views" />
+  <CaseStat v="439K+" t="Accounts Reached" className="whitespace-nowrap" />
+    <CaseStat v="89%" t="Organic Reach" />
+    <CaseStat v="130%" t="Growth Rate" />
   </div>
-</section>
 
+  {/* LOGO BOTTOM RIGHT */}
+  <img 
+    src="/client/logo-2.png"
+    className="absolute left-74 bottom-2 w-[100px]"
+  />
+</div>
+
+
+
+  {/* CARD 2 — BEAVER BANK */}
+  <div className="relative bg-[#FB8C00] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
+
+    <h3 className="text-xl font-bold">Beaver Bank Station</h3>
+    <p className="mt-2 text-white/90 text-sm">79K+ Views in 90 Days</p>
+
+    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+      <CaseStatDark v="79K+" t="Total Views" />
+      <CaseStatDark v="48K+" t="Accounts Reached"/>
+      <CaseStatDark v="439" t="Interactions" />
+      <CaseStatDark v="39%" t="Engagement" />
+    </div>
+
+    <img 
+      src="/client/logo-5.png"
+      className="absolute left-74 bottom-2 w-[100px]"
+  />
+ 
+  </div>
+
+
+  {/* CARD 3 — HEARTHSTONE */}
+  <div className="relative bg-[#142758] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg ">
+
+    <h3 className="text-xl font-bold">Hearthstone Inn</h3>
+    <p className="mt-2 text-white/90 text-sm">1.6K+ Views</p>
+
+    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+      <CaseStatDark v="1.6K+" t="Total Views" />
+      <CaseStatDark v="78%" t="Engagement" />
+      <CaseStatDark v="94.6%" t="ER Rate" />
+      <CaseStatDark v="53" t="Accounts" />
+    </div>
+
+    <img 
+      src="/client/logo-6.png"
+        className="absolute left-74 bottom-2 w-[100px]"
+    />
+  </div>
+
+
+  {/* CARD 4 — RIVAAJ */}
+  <div className="relative bg-[#B28829] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg ">
+
+    <h3 className="text-xl font-bold">Rivaaj Resto-Bar</h3>
+    <p className="mt-2 text-white/90 text-sm">48.9K+ Views</p>
+
+    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+      <CaseStatDark v="48.9K" t="Total Views" />
+      <CaseStatDark v="403" t="Interactions" />
+      <CaseStatDark v="74" t="New Followers" />
+      <CaseStatDark v="17" t="Shares" />
+    </div>
+
+    <img 
+      src="/client/logo-17.png"
+       className="absolute left-72 bottom-5 w-[110px]"
+    />
+  </div>
+
+</div>
+    </section>
 
         </div>
       </section>
+    </div>
+  );
+}
+
+/* ------------ SMALL COMPONENTS ------------ */
+function CaseStat({ v, t }) {
+  return (
+    <div className="bg-white text-black p-3 rounded-lg shadow text-center">
+      <p className="font-bold">{v}</p>
+      <p className="text-xs text-black/70">{t}</p>
+    </div>
+  );
+}
+
+function CaseStatDark({ v, t }) {
+  return (
+    <div className="bg-white/20 text-white p-3 rounded-lg shadow text-center">
+      <p className="font-bold">{v}</p>
+      <p className="text-xs text-white/80">{t}</p>
     </div>
   );
 }

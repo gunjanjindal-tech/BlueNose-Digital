@@ -1,28 +1,36 @@
-// src/pages/work/TriveeniEvents.jsx
+// src/pages/work/BesharamBarGrill.jsx
 import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 
-// ICONS (Lucide for consistency)
+// ICONS
 import {
   TrendingUp,
-  PenTool,
+  Palette,
   Video,
+  Camera,
   BarChart3,
-  Users,
+  Gauge,
+  CalendarDays,
+  Megaphone,
 } from "lucide-react";
 
+
+// ICON GROUP
 const icons = {
   strategy: <TrendingUp className="w-full h-full" />,
-  pen: <PenTool className="w-full h-full" />,
-  optimization: <PenTool className="w-full h-full" />,
-  reels: <Video className="w-full h-full" />,
+  branding: <Palette className="w-full h-full" />,
+  videography: <Video className="w-full h-full" />,
+  photography: <Camera className="w-full h-full" />,
   analytics: <BarChart3 className="w-full h-full" />,
-  audience: <Users className="w-full h-full" />,
+  algorithm: <Gauge className="w-full h-full" />,
+  calendar: <CalendarDays className="w-full h-full" />,
+  marketing: <Megaphone className="w-full h-full" />,
 };
 
-export default function TriveeniEvents() {
+
+export default function BesharamBarGrill() {
   const sections = [
     "overview",
     "services-provided",
@@ -34,7 +42,7 @@ export default function TriveeniEvents() {
 
   const [active, setActive] = useState("overview");
 
-  // Scroll Tracking
+  // Scroll tracking
   useEffect(() => {
     const observers = [];
 
@@ -57,38 +65,35 @@ export default function TriveeniEvents() {
   }, []);
 
   return (
-    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
+    <div className="bg-white text-[#063349] font-inter px-6 pt-6 py-20">
 
-{/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
+{/* ------------ HERO SECTION (RIVAAJ STYLE) ------------ */}
 <section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl 
-px-6 py-20 mb-20">
+ bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20 mb-20">
 
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-  <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-
-    {/* LEFT TEXT */}
-    <div>
-      <div className="inline-block bg-white/20 text-white px-4 py-2 
-      rounded-full text-sm font-semibold mb-5 shadow-sm">
-        1.3M+ Views in 90 Days • Organic Cultural Event Growth
+    {/* LEFT */}
+    <div className="self-start">
+      <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full 
+      text-sm font-semibold mb-5 shadow-sm">
+        60K+ Views in 60 Days • Bold Fusion Strategy for Besharam Bar & Grill
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-        Triveeni{" "}
-        <span className="bg-clip-text text-transparent 
-        bg-white">
-          Events
+      <h1 className="inline-block text-4xl md:text-5xl font-extrabold">
+        Besharam{" "}
+        <span className="bg-clip-text text-transparent  bg-white">
+          Bar & Grill
         </span>
       </h1>
 
-      <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
-        A community-driven Instagram strategy celebrating Indian festivals, 
-        culture, and vibrant traditions with a Reels-first content approach.
+      <p className="text-xl mt-4 text-white/90 leading-relaxed">
+        A bold, high-impact social media strategy positioning Besharam Bar & Grill 
+        as a modern, vibrant fusion hotspot through visually rich and trendy content.
       </p>
 
       <div className="flex flex-wrap gap-4 mt-8">
-        {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
+        {["Strategic Flow", "Branding Essence", "Performance Boost"].map((tag, i) => (
           <div 
             key={i}
             className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
@@ -109,11 +114,11 @@ px-6 py-20 mb-20">
 
     {/* RIGHT LOGO */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+      <div className="rounded-3xl shadow-xl bg-white/70 p-6 flex items-center justify-center">
         <img
-          src="/client/logo-2.png"
-          className="w-72 md:w-80 object-contain"
-          alt="Triveeni Logo"
+          src="/client/logo-16.png"
+          className="w-64 md:w-72 object-contain"
+          alt="Besharam Logo"
         />
       </div>
     </div>
@@ -122,9 +127,11 @@ px-6 py-20 mb-20">
 </section>
 
 
-      {/* ------------ GRID LAYOUT ------------ */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12">
 
+      {/* ------------ GRID LAYOUT ------------ */}
+      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12 mt-16">
+
+        {/* Sidebar */}
         <BlueSidebar
           sections={[
             { name: "Overview", id: "overview" },
@@ -145,64 +152,59 @@ px-6 py-20 mb-20">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
 
             <p className="mt-6 leading-relaxed text-[#063349]/85">
-              Triveeni Events is a women-led cultural event company curating stunning Indian festivals, celebrations and community gatherings across the Atlantic region.
+              Besharam Bar and Grill is a bold Indian fusion restaurant offering vibrant platters,
+              signature cocktails, and modern dining experiences.
             </p>
 
             <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Their audience includes families, students, working professionals and community members who cherish Indian traditions, dance, music and festive culture.
+              Target audience includes food lovers, cocktail seekers, young professionals,
+              and celebration groups.
             </p>
 
             <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Our mission was to build a strong Instagram brand presence using storytelling, cultural highlights and high-visibility reels.
-            </p>
-
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              We adopted a Reels-first strategy with trend-backed optimization, allowing Triveeni to generate over 1.3M views organically.
+              Our mission was to amplify their Instagram presence using bold visuals and storytelling.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
-              {[
-                { v: 1300000, t: "Total Views", sign: "+" },
-                { v: 439000, t: "Accounts Reached", sign: "+" },
-                { v: 89, t: "Organic Reach (%)", sign: "%" },
-                { v: 130, t: "Avg. Monthly Growth (%)", sign: "%" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
-                >
-                  <div className="text-2xl font-bold">
-                    <Counter end={s.v} duration={5000} />
-                    {s.sign}
-                  </div>
-                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
-                </div>
-              ))}
+        {[
+  { v: 60000, t: "Total Views (60 Days)", sign: "+" },
+  { v: 9600, t: "Followers (+157 Growth)", sign: "+" },
+  { v: 59, t: "Content Shares", sign: "+" },
+  { v: 62, t: "Avg. Non-Follower Engagement (%)", sign: "%" },
+].map((s, i) => (
+  <div key={i} className="p-6 w-[250px] rounded-2xl shadow-md text-white
+    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]">
+    
+    <div className="text-2xl font-bold">
+      <Counter end={s.v} duration={3600} loop={false} />
+      {s.sign}
+    </div>
+
+    <p className="mt-2 text-white/85 text-sm">{s.t}</p>
+  </div>
+))}
+
             </div>
           </section>
 
-{/* ------------ SERVICES PROVIDED ------------ */}
-<section
-  id="services-provided"
-  className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
->
-  <h2
-    className="text-4xl font-extrabold bg-clip-text text-transparent 
-    bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
-  >
+          {/* ------------ SERVICES PROVIDED ------------ */}
+          <section id="services-provided" className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
+  <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
+    bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
     Services Provided
   </h2>
 
   <div className="grid sm:grid-cols-2 gap-6 mt-10">
+
     {[
-      { name: "Social Media Strategy", icon: icons.strategy },
-      { name: "Adda Diaries Content Creation", icon: icons.pen },
-      { name: "Reels Production & Editing", icon: icons.reels },
+      { name: "Social Media Strategy & Account Setup", icon: icons.strategy },
+      { name: "Brand Identity Development", icon: icons.branding },
+      { name: "Property Videography & Photography", icon: icons.videography },
+      { name: "Professional Hotel Photography", icon: icons.photography },
       { name: "Analytics & Performance Tracking", icon: icons.analytics },
-      { name: "Algorithm Optimization", icon: icons.optimization },
-      { name: "Community Engagement", icon: icons.audience },
-      { name: "Storytelling & Emotional Marketing", icon: icons.pen },
+      { name: "Algorithm Optimization", icon: icons.algorithm },
+      { name: "Content Calendar Planning", icon: icons.calendar },
+      { name: "Hospitality Marketing Strategy", icon: icons.marketing },
     ].map((service, i) => (
       <div
         key={i}
@@ -213,35 +215,37 @@ px-6 py-20 mb-20">
           {service.icon}
         </div>
 
-        <p className="font-semibold text-base leading-tight">{service.name}</p>
+        <p className="font-semibold text-base leading-tight">
+          {service.name}
+        </p>
       </div>
     ))}
+
   </div>
 </section>
 
-          
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold leading-[1.3] bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-              Challenge
-            </h2>
+           <h2
+  className="text-4xl font-extrabold leading-[1.3] -mt-3 bg-clip-text text-transparent 
+  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+>
+  Challenge
+</h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              
-              <p>• Build a strong presence in a culturally competitive niche.</p>
-              <p>• Increase reach without relying on paid promotions.</p>
-              <p>• Showcase diverse events while maintaining cultural authenticity.</p>
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              <p>We studied Besharam's brand identity, audience patterns, and existing content performance.</p>
 
-              <p className="font-semibold text-white text-xl pt-2">Key challenges included:</p>
+              <p>They needed powerful visuals for fusion dishes, cocktails, and energy-rich ambience.</p>
+
+              <p className="font-semibold text-white text-xl pt-2">Key challenges:</p>
 
               <ul className="space-y-3 text-white/95">
-                <li>• Low initial engagement</li>
-                <li>• Highly saturated event content space</li>
-                <li>• Need for cost-effective growth solutions</li>
-                <li>• Positioning as the top cultural event brand</li>
-                <li>• Creating viral-worthy reels consistently</li>
+                <li>• Stand out in competitive restaurant market</li>
+                <li>• Present fusion concept visually</li>
+                <li>• Highlight cocktails effectively</li>
+                <li>• Create viral engagement</li>
+                <li>• Improve organic reach</li>
               </ul>
             </div>
           </section>
@@ -250,30 +254,28 @@ px-6 py-20 mb-20">
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-
-              <p>• Created culturally rooted content highlighting Indian celebrations.</p>
-              <p>• Prioritized reels with trending audio + meaningful storytelling.</p>
-              <p>• Leveraged community engagement and event-based momentum.</p>
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              <p>• Built hype through bold visuals and modern bar content.</p>
+              <p>• Showcased signature dishes & cocktails using story-led reels.</p>
+              <p>• Increased reach with trends, hooks, and optimal timing.</p>
             </div>
           </section>
 
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-              Key Strategies Implemented
-            </h2>
-
-            <div className="mt-6 p-10 rounded-3xl text-white
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              <p>• Trend-backed Reels-first content cycle</p>
-              <p>• Explore-page dominance strategy</p>
-              <p>• Seasonal festival content planning</p>
-              <p>• SEO-optimized captions</p>
-              <p>• Audience-focused storytelling</p>
-              <p>• High-frequency community engagement</p>
+ <h2
+  className="text-4xl font-extrabold leading-[1.3] -mt-1
+  bg-clip-text text-transparent
+  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+>
+  Key Strategies Implemented
+</h2>
+            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              <p>• Fusion-centered content direction</p>
+              <p>• Explore-page optimized reels</p>
+              <p>• Bold cocktail showcasing</p>
+              <p>• Data-driven content cycles</p>
+              <p>• Brand consistency across posts</p>
             </div>
           </section>
 
@@ -378,13 +380,16 @@ px-6 py-20 mb-20">
 </div>
     </section>
 
+
+
+
         </div>
       </section>
     </div>
   );
 }
-/* ------------ SMALL COMPONENTS ------------ */
 
+/* ------------ SMALL COMPONENTS ------------ */
 function CaseStat({ v, t }) {
   return (
     <div className="bg-white text-black p-3 rounded-lg shadow text-center">
@@ -402,4 +407,3 @@ function CaseStatDark({ v, t }) {
     </div>
   );
 }
-

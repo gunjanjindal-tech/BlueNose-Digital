@@ -3,6 +3,25 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Counter from "../../components/Counter";
 import BlueSidebar from "../../components/BlueSidebar";
+
+import {
+  TrendingUp,
+  Sliders,
+  Video,
+  BarChart3,
+  Users,
+  Utensils,
+} from "lucide-react";
+
+const icons = {
+  strategy: <TrendingUp className="w-full h-full" />,
+  optimization: <Sliders className="w-full h-full" />,
+  analytics: <BarChart3 className="w-full h-full" />,
+  audience: <Users className="w-full h-full" />,
+  food: <Utensils className="w-full h-full" />,
+  reels: <Video className="w-full h-full" />,
+};
+
 export default function PitaNutso() {
   const sections = [
     "overview",
@@ -15,7 +34,7 @@ export default function PitaNutso() {
 
   const [active, setActive] = useState("overview");
 
-  // Sidebar Active Scroll Detect
+  // scroll tracking
   useEffect(() => {
     const observers = [];
 
@@ -27,10 +46,7 @@ export default function PitaNutso() {
         (entries) => {
           if (entries[0].isIntersecting) setActive(id);
         },
-        {
-          threshold: 0.35,
-          rootMargin: "-120px 0px -200px 0px",
-        }
+        { threshold: 0.35, rootMargin: "-120px 0px -200px 0px" }
       );
 
       obs.observe(sec);
@@ -40,361 +56,350 @@ export default function PitaNutso() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
-  // ICONS (now white like Triveeni)
-  const icons = {
-    strategy: (
-      <svg className="w-7 h-7" fill="none" stroke="white" strokeWidth="1.5">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 20l4-4 4 4 4-4 4 4" />
-      </svg>
-    ),
-    optimization: (
-      <svg className="w-7 h-7" fill="none" stroke="white" strokeWidth="1.5">
-        <path d="M3 12h18" />
-        <path d="M7 8h10M7 16h10" />
-      </svg>
-    ),
-    reels: (
-      <svg className="w-7 h-7" fill="none" stroke="white" strokeWidth="1.5">
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <path d="M10 9l5 3-5 3V9z" />
-      </svg>
-    ),
-    analytics: (
-      <svg className="w-7 h-7" fill="none" stroke="white" strokeWidth="1.5">
-        <path d="M4 18V9m5 9V6m5 12V3m5 15v-8" />
-      </svg>
-    ),
-    audience: (
-      <svg className="w-7 h-7" fill="none" stroke="white" strokeWidth="1.5">
-        <circle cx="12" cy="7" r="3" />
-        <path d="M5 21v-2a7 7 0 0 1 14 0v2" />
-      </svg>
-    ),
-  };
-
   return (
-    <div className="bg-white text-[#063349] font-inter pb-20">
+    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
+      {/* -------------------------------- HERO SECTION -------------------------------- */}
+    <section className="min-h-[80vh] w-full flex items-center 
+ bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20 mb-20">
+        <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
-      {/* ---------------- HERO (Matching Triveeni Theme) ---------------- */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-            Pita Nutso
-          </h1>
+          {/* LEFT */}
+          <div>
+            <div className="inline-block bg-white/20 text-white px-4 py-2 
+            rounded-full text-sm font-semibold mb-5 shadow-sm">
+              36.1K+ Views in 90 Days • Mediterranean Brand Presence Strategy
+            </div>
 
-          <p className="text-xl mt-4 text-[#063349]/80">
-            36.1K+ Views in 90 Days — Organic Growth Strategy for Pita Nutso
-          </p>
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+              Pita{" "}
+              <span className="bg-clip-text text-transparent 
+               bg-white">
+                Nutso
+              </span>
+            </h1>
 
-          <div className="flex flex-wrap gap-4 mt-8">
-            {["Brand Roadmap", "Design Impact", "Performance Pulse"].map((tag, i) => (
-              <div
-                key={i}
-                className="bg-white px-6 py-3 rounded-full border border-[#D7ECF6] shadow text-[#063349]"
+            <p className="text-xl mt-4 text-white/85 leading-relaxed">
+              A Mediterranean-focused branding system built through appetizing visuals,
+              identity shaping, and organic performance-driven strategies.
+            </p>
+
+            <div className="flex flex-wrap gap-4 mt-8">
+              {["Brand Roadmap", "Design Impact", "Performance Pulse"].map(
+                (tag, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
+                    shadow text-white text-sm font-medium"
+                  >
+                    {tag}
+                  </div>
+                )
+              )}
+            </div>
+
+            <Link to="/contact">
+              <button
+                className="mt-8 px-8 py-3 bg-gradient-to-r 
+                from-[#4BC1E8] to-[#0E6388] text-white font-semibold 
+                rounded-full shadow-lg"
               >
-                {tag}
-              </div>
-            ))}
+                Book A Callback
+              </button>
+            </Link>
           </div>
 
-          <Link to="/contact">
-            <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-              text-white font-semibold rounded-full shadow-lg">
-              Book A Callback
-            </button>
-          </Link>
-        </div>
-
-        <div className="flex justify-center">
-          <img src="/src/assets/3.png" className="w-72 md:w-96 object-contain" />
+          {/* RIGHT LOGO */}
+          <div className="flex justify-center">
+            <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+              <img
+                src="/client/logo-3.png"
+                className="w-60 md:w-[300px] object-contain"
+                alt="Pita Nutso Logo"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ---------------- MAIN GRID ---------------- */}
+      {/* -------------------------------- GRID LAYOUT -------------------------------- */}
       <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12">
 
-        {/* ---------------- BLUE SIDEBAR (Same as Triveeni) ---------------- */}
-       <BlueSidebar
-                 sections={[
-                   { name: "Overview", id: "overview" },
-                   { name: "Services Provided", id: "services-provided" },
-                   { name: "Challenge", id: "challenge" },
-                   { name: "Approach", id: "approach" },
-                   { name: "Key Strategy", id: "key-strategy" },
-                   { name: "Other Case Studies", id: "case-studies" },
-                 ]}
-                 active={active}
-               />
-       
+        {/* SIDEBAR */}
+        <BlueSidebar
+          sections={[
+            { name: "Overview", id: "overview" },
+            { name: "Services Provided", id: "services-provided" },
+            { name: "Challenge", id: "challenge" },
+            { name: "Approach", id: "approach" },
+            { name: "Key Strategy", id: "key-strategy" },
+            { name: "Other Case Studies", id: "case-studies" },
+          ]}
+          active={active}
+        />
 
-        {/* ---------------- RIGHT CONTENT ---------------- */}
+        {/* -------------------------------- RIGHT CONTENT -------------------------------- */}
         <div className="space-y-16">
 
-          {/* ---------------- OVERVIEW ---------------- */}
-    <section
-  id="overview"
-  className="scroll-mt-32 p-8 bg-white rounded-2xl shadow border border-[#D7ECF6]"
->
-  <h2 className="text-3xl font-bold text-[#0E3D55]">Overview</h2>
+          {/* ------------ OVERVIEW ------------ */}
+          <section
+            id="overview"
+            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
+          >
+            <h2 className="text-4xl font-extrabold text-[#0E3D55]">
+              Overview
+            </h2>
 
-  <p className="mt-4 text-base text-[#063349]/85 leading-relaxed">
-    Pita Nutso is a fast-casual restaurant specializing in fresh, flavorful Mediterranean cuisine 
-    including shawarma, bowls, wraps, and sides.
-  </p>
+            <p className="mt-6 text-[#063349]/85 leading-relaxed">
+              Pita Nutso is a fast-casual Mediterranean restaurant serving shawarma, bowls,
+              wraps, and customizable fresh toppings with bold Middle-Eastern flavors.
+            </p>
 
-  <p className="mt-3 text-base text-[#063349]/85 leading-relaxed">
-    The target audience includes young professionals seeking quick quality meals, food enthusiasts 
-    exploring Mediterranean flavors, students looking for affordable dining options, and busy 
-    individuals who value fresh, customizable meals.
-  </p>
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
+              Their audience includes students, professionals, health-conscious eaters,
+              and Mediterranean food lovers looking for fast yet high-quality meals.
+            </p>
 
-  <p className="mt-3 text-base text-[#063349]/85 leading-relaxed">
-    Our goal was to establish Pita Nutso as a go-to destination on Instagram for Mediterranean 
-    cuisine through authentic, engaging content.
-  </p>
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
+              Our objective was to establish Pita Nutso’s brand presence with high-performing
+              Mediterranean food content built around freshness and flavor.
+            </p>
 
-  <p className="mt-3 text-base text-[#063349]/85 leading-relaxed">
-    We focused on diverse content—appetizing food visuals, customer experiences, and menu highlights—
-    maximizing organic reach while building a loyal foodie community.
-  </p>
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
+              We used engaging, appetizing visuals and crisp formats to strengthen digital identity.
+            </p>
 
-  {/* Compact Stats */}
-  <div className="grid sm:grid-cols-2 gap-4 mt-8 place-items-center">
-    {[
-      { v: 36100, t: "Total Views (90 Days)", sign: "+" },
-      { v: 52, t: "Content Shares", sign: "+" },
-      { v: 276, t: "Total Interactions", sign: "+" },
-      { v: 66, t: "Avg. Non-Follower Engagement", sign: "%" },
-    ].map((s, i) => (
-      <div
-        key={i}
-        className="p-4 w-[250px] rounded-2xl shadow-md text-white 
-        bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
-      >
-        <div className="text-2xl font-bold">
-          <Counter end={s.v} duration={8600} />{s.sign}
-        </div>
-        <p className="text-white/85 text-sm mt-1">{s.t}</p>
-      </div>
-    ))}
-  </div>
-</section>
+            {/* Stats */}
+            <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
+              {[
+                { v: 36100, t: "Total Views (90 Days)", sign: "+" },
+                { v: 52, t: "Content Shares", sign: "+" },
+                { v: 276, t: "Total Interactions", sign: "+" },
+                { v: 66, t: "Avg. Non-Follower Engagement (%)", sign: "%" },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="p-6 w-[250px] rounded-2xl shadow-md text-white
+                  bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                >
+                  <div className="text-2xl font-bold">
+                    <Counter end={s.v} duration={6000} />
+                    {s.sign}
+                  </div>
+                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
+          {/* ------------ SERVICES PROVIDED ------------ */}
+          <section
+            id="services-provided"
+            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
+          >
+            <h2
+              className="text-4xl font-extrabold bg-clip-text text-transparent 
+            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
+              Services Provided
+            </h2>
 
+            <div className="grid sm:grid-cols-2 gap-6 mt-10">
+              {[
+                { name: "Social Media Strategy", icon: icons.strategy },
+                { name: "Content Creation & Optimization", icon: icons.pen },
+                { name: "Reels Production & Editing", icon: icons.reels },
+                { name: "Analytics & Performance Tracking", icon: icons.analytics },
+                { name: "Audience Growth Management", icon: icons.audience },
+                { name: "Viral Food Content Strategy", icon: icons.food },
+              ].map((service, i) => (
+                <div
+                  key={i}
+                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
+                  shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                >
+                  <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
+                    {service.icon}
+                  </div>
 
+                  <p className="font-semibold text-base leading-tight">
+                    {service.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-          {/* ---------------- SERVICES PROVIDED ---------------- */}
-     <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-  <h2 className="text-4xl font-extrabold text-[#0E3D55]">Services Provided</h2>
+          {/* ------------ CHALLENGE ------------ */}
+          <section
+            id="challenge"
+            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
+          >
+            <h2
+              className="text-4xl font-extrabold bg-clip-text text-transparent
+            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
+              Challenge
+            </h2>
 
-  <div className="grid sm:grid-cols-2 gap-6 mt-10">
-    {[
-      { name: "Social Media Strategy", icon: icons.strategy },
-      { name: "Algorithm Optimization", icon: icons.optimization },
-      { name: "Analytics & Performance Tracking", icon: icons.analytics },
-      { name: "Community Engagement Management", icon: icons.audience },
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="
-          px-5 py-4 
-          min-w-[280px] max-w-[320px]
-          rounded-2xl flex items-center gap-4 text-white 
-          shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]
-        "
-      >
-        <div className="w-6 h-6">{item.icon}</div>
+            <div
+              className="mt-6 p-10 text-white rounded-3xl
+            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+            >
+              <p>• Competing in a highly saturated Mediterranean fast-casual market</p>
+              <p>• Establishing brand recall with a smaller follower base</p>
+              <p>• Creating appetite-triggering visual storytelling</p>
 
-        <p className="font-semibold text-base leading-tight">
-          {item.name}
-        </p>
-      </div>
-    ))}
-  </div>
-</section>
+              <p className="font-semibold text-xl pt-2">Key challenges included:</p>
 
+              <ul className="space-y-3 text-white/95">
+                <li>• Gaining traction without paid promotions</li>
+                <li>• Standing out among Mediterranean competitors</li>
+                <li>• Delivering visuals that trigger cravings instantly</li>
+                <li>• Optimizing low-budget content workflows</li>
+                <li>• Driving in-store footfall organically</li>
+              </ul>
+            </div>
+          </section>
 
+          {/* ------------ APPROACH ------------ */}
+          <section
+            id="approach"
+            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
+          >
+            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
 
-          {/* ---------------- CHALLENGE ---------------- */}
- <section
-  id="challenge"
-  className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
->
-  <h2 className="text-4xl font-extrabold text-[#0E3D55]">Challenge</h2>
+            <div
+              className="mt-6 p-10 text-white rounded-3xl
+            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+            >
+              <p>• Focused on high-performing Mediterranean food visuals</p>
+              <p>• Optimized content formats based on audience behavior analytics</p>
+              <p>• Strengthened brand identity using freshness-focused storytelling</p>
+            </div>
+          </section>
 
-  {/* Gradient box — SAME as Key Strategy */}
-  <div
-    className="mt-6 p-10 rounded-3xl text-white 
-      bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
-  >
-    <p className="leading-relaxed">
-      • We started by reviewing Pita Nutso's existing Instagram presence,
-      brand identity, and growth objectives.
-    </p>
+          {/* ------------ KEY STRATEGIES ------------ */}
+          <section
+            id="key-strategy"
+            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
+          >
+            <h2
+              className="text-4xl font-extrabold bg-clip-text text-transparent
+            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
+              Key Strategies Implemented
+            </h2>
 
-    <p className="leading-relaxed">
-      • The client was operating in a competitive fast-casual and Mediterranean
-      food market and needed sustainable organic growth to increase brand
-      awareness and drive foot traffic.
-    </p>
+            <div
+              className="mt-6 p-10 rounded-3xl text-white
+            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+            >
+              <p>• High-shareability Mediterranean food reels</p>
+              <p>• Strong call-to-action captions</p>
+              <p>• Ingredient-focused close-ups for visual richness</p>
+              <p>• Shawarma + bowls + wraps content pillars</p>
+            </div>
+          </section>
 
-    <p className="font-bold text-white text-lg">
-      Key challenges included:
-    </p>
+          {/* ------------ CASE STUDIES ------------ */}
+          <section id="case-studies" className="mt-16">
+            <h2
+              className="text-4xl font-extrabold text-center bg-clip-text text-transparent 
+            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+            >
+              Explore Our Other Client{" "}
+              <span className="bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
 
-    <ul className="space-y-3 leading-relaxed text-white/95 ml-4 list-disc">
-      <li>Building momentum from a smaller follower base</li>
-      <li>Standing out in competitive Mediterranean and fast-casual dining market</li>
-      <li>Showcasing menu variety effectively</li>
-      <li>Limited budget for content production and advertising</li>
-      <li>Creating appetizing content that drives cravings and visits</li>
-      <li>Highlighting customization options and fresh ingredients</li>
-      <li>Converting Instagram engagement into actual restaurant visits and orders</li>
-      <li>Building brand recognition in local market</li>
-    </ul>
-  </div>
-</section>
+            <div className="grid sm:grid-cols-2 gap-10 mt-10">
 
+              {/* HEARTHSTONE */}
+              <div className="relative bg-[#142758] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold">Hearthstone Inn</h3>
+                <p className="mt-2 text-white/90 text-sm">1.6K+ Views</p>
 
+                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+                  <CaseStatDark v="1.6K+" t="Total Views" />
+                  <CaseStatDark v="78%" t="Engagement" />
+                  <CaseStatDark v="94.6%" t="ER Rate" />
+                  <CaseStatDark v="53" t="Accounts" />
+                </div>
 
+                <img src="/client/logo-6.png" className="absolute left-72 bottom-2 w-[100px]" />
+              </div>
 
-          {/* ---------------- APPROACH ---------------- */}
-         <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-  <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+              {/* BESHARAM */}
+              <div className="relative bg-[#073B4C] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold">Besharam Bar & Grill</h3>
+                <p className="mt-2 text-white/90 text-sm">60K+ Views</p>
 
-  <div className="mt-6 p-10 rounded-3xl text-white 
-    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+                  <CaseStatDark v="60K" t="Total Views" />
+                  <CaseStatDark v="9.6K" t="Followers" />
+                  <CaseStatDark v="59" t="Shares" />
+                  <CaseStatDark v="62%" t="Engagement" />
+                </div>
 
-    <p className="leading-relaxed">
-      • Build awareness through appetizing content that showcases Pita Nutso's menu variety and quality. 
-      Establish visual identity and content foundation.
-    </p>
+                <img src="/client/logo-16.png" className="absolute left-72 bottom-2 w-[100px]" />
+              </div>
 
-    <p className="leading-relaxed">
-      • Analyzed performance data and refined content strategy based on audience engagement patterns. 
-      Focused on formats that drove highest engagement.
-    </p>
+              {/* RIVAAJ */}
+              <div className="relative bg-[#B28829] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold">Rivaaj Resto-Bar</h3>
+                <p className="mt-2 text-white/90 text-sm">48.9K+ Views</p>
 
-    <p className="leading-relaxed">
-      • Maximized reach through refined content strategy and proven engagement formulas. 
-      Achieved significant growth in non-follower engagement.
-    </p>
+                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+                  <CaseStatDark v="48.9K" t="Total Views" />
+                  <CaseStatDark v="403" t="Interactions" />
+                  <CaseStatDark v="74" t="Followers" />
+                  <CaseStatDark v="17" t="Shares" />
+                </div>
 
-  </div>
-</section>
+                <img src="/client/logo-17.png" className="absolute left-72 bottom-2 w-[110px]" />
+              </div>
 
+              {/* TRIVEENI */}
+              <div className="relative bg-[#F7FBCF] text-black px-6 py-6 w-[400px] rounded-2xl shadow-lg">
+                <h3 className="text-xl font-bold">Triveeni Events</h3>
+                <p className="mt-2 text-black/70 text-sm">1.3M+ Views</p>
 
-          {/* ---------------- KEY STRATEGY ---------------- */}
-         <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-  <h2 className="text-4xl font-extrabold text-[#0E3D55]">Key Strategies Implemented:</h2>
+                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
+                  <CaseStat v="1.3M+" t="Views" />
+                  <CaseStat v="439K+" t="Accounts" />
+                  <CaseStat v="89%" t="Organic" />
+                  <CaseStat v="130%" t="Growth" />
+                </div>
 
-  <div className="mt-6 p-10 rounded-3xl text-white 
-    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+                <img src="/client/logo-2.png" className="absolute left-72 bottom-2 w-[100px]" />
+              </div>
 
-    <p className="leading-relaxed">
-      • Optimized posting schedule based on local audience engagement times
-    </p>
-
-    <p className="leading-relaxed">
-      • Maintained consistent visual quality and brand aesthetic
-    </p>
-
-    <p className="leading-relaxed">
-      • Optimized captions with engaging descriptions and calls-to-action
-    </p>
-
-    <p className="leading-relaxed">
-      • Launched content strategy featuring shawarma, bowls, wraps, and sides
-    </p>
-
-  </div>
-</section>
-
-
-          {/* ---------------- CASE STUDIES ---------------- */}
-          <section id="case-studies">
-  <h2 className="text-4xl font-extrabold text-center text-[#0E3D55]">
-    Read Other Case Studies Of Company
-  </h2>
-
-  <div className="grid md:grid-cols-2 gap-8 mt-10 place-items-center">
-
-    {/* Card 1 */}
-    <div
-      className="bg-[#B71C1C] text-white 
-      px-6 py-6 w-[280px] sm:w-[320px]
-      rounded-2xl shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Sake Cafe | Sushi Bar & Grill</h3>
-      <p className="mt-2 text-white/85 text-sm">9.7K+ Views in 60 Days</p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-sm">
-        <div className="bg-white/20 p-3 rounded-xl">9.7K Views</div>
-        <div className="bg-white/20 p-3 rounded-xl">83.6% Engagement</div>
-        <div className="bg-white/20 p-3 rounded-xl">54% Non-Follower</div>
-        <div className="bg-white/20 p-3 rounded-xl">276 Interactions</div>
-      </div>
-    </div>
-
-    {/* Card 2 */}
-    <div
-      className="bg-[#F3DDBC] text-black 
-      px-6 py-6 w-[280px] sm:w-[320px]
-      rounded-2xl shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Pita Nutso</h3>
-      <p className="mt-2 text-black/70 text-sm">36.1K+ Views in 90 Days</p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-sm">
-        <div className="bg-white p-3 rounded-xl shadow text-center">36.1K+</div>
-        <div className="bg-white p-3 rounded-xl shadow text-center">52 Shares</div>
-        <div className="bg-white p-3 rounded-xl shadow text-center">276 Interactions</div>
-        <div className="bg-white p-3 rounded-xl shadow text-center">66% Engagement</div>
-      </div>
-    </div>
-
-    {/* Card 3 */}
-    <div
-      className="bg-[#102458] text-white 
-      px-6 py-6 w-[280px] sm:w-[320px]
-      rounded-2xl shadow-lg mb-12"
-    >
-      <h3 className="text-xl font-bold">Hearthstone Inn</h3>
-      <p className="mt-2 text-white/85 text-sm">1.6K+ Views in 60 Days</p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-sm">
-        <div className="bg-white/20 p-3 rounded-xl">1.6K Views</div>
-        <div className="bg-white/20 p-3 rounded-xl">78% Non-Follower</div>
-        <div className="bg-white/20 p-3 rounded-xl">94.6% Rate</div>
-        <div className="bg-white/20 p-3 rounded-xl">53 Reached</div>
-      </div>
-    </div>
-
-    {/* Card 4 */}
-    <div
-      className="bg-[#1B5E20] text-white 
-      px-6 py-6 w-[280px] sm:w-[320px]
-      rounded-2xl shadow-lg mb-12"
-    >
-      <h3 className="text-xl font-bold">The Garden Retreat</h3>
-      <p className="mt-2 text-white/90 text-sm">67K+ Views in 60 Days</p>
-
-      <div className="grid grid-cols-2 gap-3 mt-5 text-sm">
-        <div className="bg-white/20 p-3 rounded-xl">67K Views</div>
-        <div className="bg-white/20 p-3 rounded-xl">74 Shared</div>
-        <div className="bg-white/20 p-3 rounded-xl">13K Followers</div>
-        <div className="bg-white/20 p-3 rounded-xl">49% Engagement</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
+            </div>
+          </section>
         </div>
       </section>
+    </div>
+  );
+}
+
+/* -------- CASE STAT COMPONENTS -------- */
+
+function CaseStat({ v, t }) {
+  return (
+    <div className="bg-white text-black p-3 rounded-lg shadow text-center">
+      <p className="font-bold">{v}</p>
+      <p className="text-xs text-black/70">{t}</p>
+    </div>
+  );
+}
+
+function CaseStatDark({ v, t }) {
+  return (
+    <div className="bg-white/20 text-white p-3 rounded-lg shadow text-center">
+      <p className="font-bold">{v}</p>
+      <p className="text-xs text-white/80">{t}</p>
     </div>
   );
 }

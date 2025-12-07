@@ -1,10 +1,9 @@
-// src/pages/work/TriveeniEvents.jsx
 import React, { useEffect, useState } from "react";
-import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
+import Counter from "../../components/Counter";
 
-// ICONS (Lucide for consistency)
+// ICONS
 import {
   TrendingUp,
   PenTool,
@@ -16,13 +15,12 @@ import {
 const icons = {
   strategy: <TrendingUp className="w-full h-full" />,
   pen: <PenTool className="w-full h-full" />,
-  optimization: <PenTool className="w-full h-full" />,
   reels: <Video className="w-full h-full" />,
   analytics: <BarChart3 className="w-full h-full" />,
   audience: <Users className="w-full h-full" />,
 };
 
-export default function TriveeniEvents() {
+export default function RivaazRestroBar() {
   const sections = [
     "overview",
     "services-provided",
@@ -34,7 +32,6 @@ export default function TriveeniEvents() {
 
   const [active, setActive] = useState("overview");
 
-  // Scroll Tracking
   useEffect(() => {
     const observers = [];
 
@@ -59,72 +56,67 @@ export default function TriveeniEvents() {
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
 
-{/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
-<section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl 
-px-6 py-20 mb-20">
+      {/* -------------------------------- HERO SECTION -------------------------------- */}
+     <section className="min-h-[80vh] w-full flex items-center 
+ bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20">
 
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-  <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+          {/* LEFT */}
+          <div className="self-start">
+            <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
+              48.9K+ Views in 30 Days • Cultural Dining Launch Strategy
+            </div>
 
-    {/* LEFT TEXT */}
-    <div>
-      <div className="inline-block bg-white/20 text-white px-4 py-2 
-      rounded-full text-sm font-semibold mb-5 shadow-sm">
-        1.3M+ Views in 90 Days • Organic Cultural Event Growth
-      </div>
+            <h1 className="inline-block text-4xl md:text-5xl font-extrabold">
+              Rivaaj{" "}
+              <span className="bg-clip-text text-transparent  bg-white">
+                Resto-Bar
+              </span>
+            </h1>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-        Triveeni{" "}
-        <span className="bg-clip-text text-transparent 
-        bg-white">
-          Events
-        </span>
-      </h1>
+            <p className="text-xl mt-4 text-white/90 leading-relaxed">
+              Launching Bedford's first cultural resto-bar through authentic storytelling, 
+              cultural branding, and emotionally rich Instagram positioning.
+            </p>
 
-      <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
-        A community-driven Instagram strategy celebrating Indian festivals, 
-        culture, and vibrant traditions with a Reels-first content approach.
-      </p>
+            <div className="flex flex-wrap gap-4 mt-8">
+              {["Strategic Flow", "Impactful Content", "Community Building"].map((tag, i) => (
+                <div 
+                  key={i} 
+                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-white"
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
 
-      <div className="flex flex-wrap gap-4 mt-8">
-        {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
-          <div 
-            key={i}
-            className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-            shadow text-white text-sm font-medium"
-          >
-            {tag}
+            <Link to="/contact">
+              <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
+                text-white font-semibold rounded-full shadow-lg">
+                Book A Callback
+              </button>
+            </Link>
           </div>
-        ))}
-      </div>
 
-      <Link to="/contact">
-        <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-          text-white font-semibold rounded-full shadow-lg">
-          Book A Callback
-        </button>
-      </Link>
-    </div>
+          {/* RIGHT LOGO */}
+          <div className="flex justify-center">
+            <div className="rounded-3xl shadow-xl flex items-center justify-center p-4 bg-white/70">
+              <img
+                src="/client/logo-17.png"
+                className="w-72 md:w-80 object-contain"
+                alt="Rivaaj Logo"
+              />
+            </div>
+          </div>
 
-    {/* RIGHT LOGO */}
-    <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
-        <img
-          src="/client/logo-2.png"
-          className="w-72 md:w-80 object-contain"
-          alt="Triveeni Logo"
-        />
-      </div>
-    </div>
+        </div>
+      </section>
 
-  </div>
-</section>
+      {/* -------------------------------- PAGE GRID -------------------------------- */}
+      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12 mt-16">
 
-
-      {/* ------------ GRID LAYOUT ------------ */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12">
-
+        {/* SIDEBAR */}
         <BlueSidebar
           sections={[
             { name: "Overview", id: "overview" },
@@ -137,35 +129,38 @@ px-6 py-20 mb-20">
           active={active}
         />
 
-        {/* ------------ RIGHT CONTENT ------------ */}
+        {/* -------------------------------- RIGHT CONTENT -------------------------------- */}
         <div className="space-y-16">
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
 
-            <p className="mt-6 leading-relaxed text-[#063349]/85">
-              Triveeni Events is a women-led cultural event company curating stunning Indian festivals, celebrations and community gatherings across the Atlantic region.
-            </p>
+            <div className="mt-6 space-y-4 text-[#063349]/85 leading-relaxed">
+              <p>
+                Rivaaj Bedford is the community’s first cultural resto-bar, rooted in the essence 
+                of Indian tradition. “Rivaaj” represents tradition, rituals, and cultural heritage — 
+                creating a warm, welcoming environment for all.
+              </p>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Their audience includes families, students, working professionals and community members who cherish Indian traditions, dance, music and festive culture.
-            </p>
+              <p>
+                The target audience includes Indian diaspora, cultural explorers, families celebrating 
+                traditions, food enthusiasts, and locals looking for authentic Indian cultural dining.
+              </p>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              Our mission was to build a strong Instagram brand presence using storytelling, cultural highlights and high-visibility reels.
-            </p>
+              <p>
+                Our objective was to build a cultural brand identity through emotional storytelling, 
+                authentic cuisine showcases, and community-driven engagement.
+              </p>
+            </div>
 
-            <p className="mt-4 leading-relaxed text-[#063349]/85">
-              We adopted a Reels-first strategy with trend-backed optimization, allowing Triveeni to generate over 1.3M views organically.
-            </p>
-
+            {/* Stats */}
             <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
               {[
-                { v: 1300000, t: "Total Views", sign: "+" },
-                { v: 439000, t: "Accounts Reached", sign: "+" },
-                { v: 89, t: "Organic Reach (%)", sign: "%" },
-                { v: 130, t: "Avg. Monthly Growth (%)", sign: "%" },
+                { v: 48900, t: "Total Views (30 Days)", sign: "+" },
+                { v: 403, t: "Total Interactions", sign: "+" },
+                { v: 74, t: "New Followers (30 Days)", sign: "+" },
+                { v: 17, t: "Content Shared", sign: "+" },
               ].map((s, i) => (
                 <div
                   key={i}
@@ -173,8 +168,7 @@ px-6 py-20 mb-20">
                     bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
                 >
                   <div className="text-2xl font-bold">
-                    <Counter end={s.v} duration={5000} />
-                    {s.sign}
+                    <Counter end={s.v} duration={5000} />{s.sign}
                   </div>
                   <p className="mt-2 text-white/85 text-sm">{s.t}</p>
                 </div>
@@ -182,66 +176,58 @@ px-6 py-20 mb-20">
             </div>
           </section>
 
-{/* ------------ SERVICES PROVIDED ------------ */}
-<section
-  id="services-provided"
-  className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
->
-  <h2
-    className="text-4xl font-extrabold bg-clip-text text-transparent 
-    bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
-  >
-    Services Provided
-  </h2>
+          {/* ------------ SERVICES PROVIDED ------------ */}
+          <section
+            id="services-provided"
+            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
+          >
+            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+              Services Provided
+            </h2>
 
-  <div className="grid sm:grid-cols-2 gap-6 mt-10">
-    {[
-      { name: "Social Media Strategy", icon: icons.strategy },
-      { name: "Adda Diaries Content Creation", icon: icons.pen },
-      { name: "Reels Production & Editing", icon: icons.reels },
-      { name: "Analytics & Performance Tracking", icon: icons.analytics },
-      { name: "Algorithm Optimization", icon: icons.optimization },
-      { name: "Community Engagement", icon: icons.audience },
-      { name: "Storytelling & Emotional Marketing", icon: icons.pen },
-    ].map((service, i) => (
-      <div
-        key={i}
-        className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-        shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
-      >
-        <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
-          {service.icon}
-        </div>
+            <div className="grid sm:grid-cols-2 gap-6 mt-10">
+              {[
+                { name: "Social Media Strategy", icon: icons.strategy },
+                { name: "Cultural Content Creation", icon: icons.pen },
+                { name: "Traditional Food Videography", icon: icons.reels },
+                { name: "Analytics & Performance Tracking", icon: icons.analytics },
+                { name: "Cultural Photography & Storytelling", icon: icons.pen },
+                { name: "Brand Identity Development", icon: icons.audience },
+              ].map((service, i) => (
+                <div
+                  key={i}
+                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
+                  shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                >
+                  <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
+                    {service.icon}
+                  </div>
 
-        <p className="font-semibold text-base leading-tight">{service.name}</p>
-      </div>
-    ))}
-  </div>
-</section>
+                  <p className="font-semibold text-base leading-tight">{service.name}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-          
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold leading-[1.3] bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-              Challenge
-            </h2>
+            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Challenge</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              
-              <p>• Build a strong presence in a culturally competitive niche.</p>
-              <p>• Increase reach without relying on paid promotions.</p>
-              <p>• Showcase diverse events while maintaining cultural authenticity.</p>
+
+              <p>• Introduce a culturally rich dining concept to the Bedford market.</p>
+              <p>• Balance cultural authenticity with broad audience appeal.</p>
+              <p>• Build an emotional connection using culture, traditions, and storytelling.</p>
 
               <p className="font-semibold text-white text-xl pt-2">Key challenges included:</p>
 
               <ul className="space-y-3 text-white/95">
-                <li>• Low initial engagement</li>
-                <li>• Highly saturated event content space</li>
-                <li>• Need for cost-effective growth solutions</li>
-                <li>• Positioning as the top cultural event brand</li>
-                <li>• Creating viral-worthy reels consistently</li>
+                <li>• Launching a brand-new concept</li>
+                <li>• Educating audience about “Rivaaj” meaning & cultural value</li>
+                <li>• Creating emotional ‘Welcome Home’ identity</li>
+                <li>• Showcasing both food and cultural experience</li>
               </ul>
             </div>
           </section>
@@ -253,9 +239,15 @@ px-6 py-20 mb-20">
             <div className="mt-6 p-10 rounded-3xl text-white 
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
 
-              <p>• Created culturally rooted content highlighting Indian celebrations.</p>
-              <p>• Prioritized reels with trending audio + meaningful storytelling.</p>
-              <p>• Leveraged community engagement and event-based momentum.</p>
+              <p>
+                • Build brand identity rooted in Indian culture, rituals, and traditional dining experience.
+              </p>
+              <p>
+                • Establish emotional positioning through bilingual captions, cultural references, and warm visuals.
+              </p>
+              <p>
+                • Create a content strategy showcasing cuisine, ambiance, culture, and storytelling.
+              </p>
             </div>
           </section>
 
@@ -268,16 +260,15 @@ px-6 py-20 mb-20">
 
             <div className="mt-6 p-10 rounded-3xl text-white
               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
-              <p>• Trend-backed Reels-first content cycle</p>
-              <p>• Explore-page dominance strategy</p>
-              <p>• Seasonal festival content planning</p>
-              <p>• SEO-optimized captions</p>
-              <p>• Audience-focused storytelling</p>
-              <p>• High-frequency community engagement</p>
+              <p>• Cultural storytelling explaining traditions & rituals</p>
+              <p>• Cuisine showcases with cultural significance</p>
+              <p>• Bilingual captions (Hindi + English)</p>
+              <p>• Geo-targeted optimization for Bedford</p>
+              <p>• Warm, emotional brand aesthetic</p>
             </div>
           </section>
 
-          {/* ------------ CASE STUDIES ------------ */}
+        {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
  <h2
   className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
