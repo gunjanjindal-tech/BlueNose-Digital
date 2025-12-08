@@ -74,9 +74,7 @@ const icons = {
           "
         >
           We Build Brands That Stand Out —{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
             And Scale Fast
-          </span>
         </motion.h1>
 
         {/* SUBTEXT */}
@@ -105,7 +103,8 @@ const icons = {
                 p-8 rounded-3xl 
                 text-white "
               style={{
-                background: "linear-gradient(135deg, #4BC1E8, #0E6388)",
+                background: "rgb(14, 99, 136)"
+ 
               }}
             >
               <div className="text-4xl font-extrabold">{s.value}</div>
@@ -199,7 +198,7 @@ const icons = {
     {/* TEXT */}
     <div className="flex flex-col justify-center">
       <h2 className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text 
-        bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+        bg-gradient-to-r from-[#0E3D55] to-[#11719A] leading-[1.3]">
         Message from Our Founder
       </h2>
 
@@ -238,9 +237,8 @@ const icons = {
 <div className="max-w-7xl mx-auto text-center mt-20">
   <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text 
     bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
-    What  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
-           We Do
-          </span>
+    What We Do
+         
   </h2>
 
   <p className="text-transparent bg-clip-text
@@ -268,8 +266,8 @@ const icons = {
           text-white
         "
         style={{
-          background: "linear-gradient(135deg, #4BC1E8, #0E6388)",
-        }}
+    background: "rgb(14, 99, 136)"
+  }}
       >
         {/* ICON CENTER */}
         <div className="flex items-center justify-center mb-6">
@@ -343,12 +341,14 @@ function Timeline() {
 
   return (
     <section className="sm:py-15 md:py-20 bg-white">
-      <h2 className="text-center text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text 
-        bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] mb-16">
-        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
-            Journey
-          </span>
-      </h2>
+     <h2
+  className="text-center text-4xl md:text-5xl font-extrabold 
+             leading-[1.4] text-transparent bg-clip-text 
+             bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] 
+             mb-16">
+  Our Journey
+</h2>
+
 
       <div className="relative max-w-6xl mx-auto px-6">
 
@@ -369,15 +369,18 @@ function Timeline() {
               `}
             >
               {/* Blue Dot */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-[#4BC1E8] 
-                shadow-[0_0_10px_#4BC1E8]"></div>
+              <div
+  className="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full 
+             bg-[#0E6388] shadow-[0_0_10px_#0E6388]">
+</div>
+
 
               {/* Card */}
               <div
                 className="md:w-1/2 p-5 rounded-2xl shadow-lg text-white"
-                style={{
-                  background: "linear-gradient(135deg, #4BC1E8, #0E6388)",
-                }}
+               style={{
+    background: "rgb(14, 99, 136)"
+  }}
               >
                 <p className="text-lg font-extrabold text-white">
                   {e.date}
@@ -399,5 +402,3 @@ function Timeline() {
     </section>
   );
 }
-
-

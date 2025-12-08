@@ -61,10 +61,13 @@ export default function PhotographyShoots() {
         onClick={() => setOpen(!open)}
         className="
           group p-8 rounded-2xl cursor-pointer
-          bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]
+         
           text-white shadow-xl transition-all duration-300
           hover:-translate-y-2
         "
+        style={{
+    background: "rgb(14, 99, 136)"
+  }}
       >
         <p className="font-semibold text-lg">{title}</p>
 
@@ -93,11 +96,10 @@ export default function PhotographyShoots() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl sm:text-3xl md:text-5xl font-extrabold 
-            text-transparent bg-clip-text bg-gradient-to-r 
-            from-[#0E3D55] via-[#0F587A] to-[#11719A]">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl font-extrabold 
+           text-[#0E6388]">
             Visuals That Tell Your Story —  
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+            <span className="text-[#0E6388]">
               {" "}And Sell Your Brand
             </span>
           </h1>
@@ -143,10 +145,12 @@ export default function PhotographyShoots() {
           <div className="flex justify-center mt-14">
             <Link
               to="/contact"
-              className="px-7 py-3 text-lg rounded-full bg-gradient-to-r 
-                from-[#4BC1E8] to-[#0E6388] text-white hover:opacity-90"
+              className="px-7 py-3 text-lg rounded-full text-white hover:opacity-90"
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
-              Book Photography Consultation →
+              Contact Us Now →
             </Link>
           </div>
 
@@ -165,12 +169,10 @@ export default function PhotographyShoots() {
       {/* ✦ BARRIERS SECTION */}
       <section className="pt-15 md:pt-20">
 
-        <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold 
-          text-transparent bg-clip-text bg-gradient-to-r 
-          from-[#0E3D55] via-[#0F587A] to-[#11719A] text-center mb-14">
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-extrabold 
+         text-[#0E6388] text-center mb-14">
           Barriers Before{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r 
-            from-[#4BC1E8] to-[#0E6388]">
+          <span className="text-[#0E6388]">
             Working With Us
           </span>
         </h2>
@@ -205,12 +207,10 @@ export default function PhotographyShoots() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold 
-            text-transparent bg-clip-text bg-gradient-to-r 
-            from-[#0E3D55] via-[#0F587A] to-[#11719A]">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold 
+            text-[#0E6388]">
             Our rating based on 2 verified
-            <span className="text-transparent bg-clip-text bg-gradient-to-r 
-              from-[#4BC1E8] to-[#0E6388]">
+            <span className="text-[#0E6388]">
               {" "}client reviews
             </span>
           </h2>

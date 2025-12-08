@@ -62,10 +62,13 @@ export default function BrandIdentity() {
         onClick={() => setOpen(!open)}
         className="
           group p-8 rounded-2xl cursor-pointer
-          bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]
+        
           text-white shadow-xl transition-all duration-300
           hover:-translate-y-2
         "
+        style={{
+    background: "rgb(14, 99, 136)"
+  }}
       >
         <p className="font-semibold text-lg">{title}</p>
 
@@ -93,8 +96,7 @@ export default function BrandIdentity() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text
-            bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] leading-tight">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl font-extrabold text-[#0E6388] leading-tight">
             Build a Brand Identity That People Instantly Recognize
           </h1>
 
@@ -140,8 +142,10 @@ export default function BrandIdentity() {
           <div className="flex justify-center mt-14">
             <Link
               to="/contact"
-              className="px-7 py-3 text-lg rounded-full bg-gradient-to-r 
-                from-[#4BC1E8] to-[#0E6388] text-white hover:opacity-90"
+              className="px-7 py-3 text-lg rounded-full  text-white hover:opacity-90"
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               Contact Us Now →
             </Link>
@@ -159,11 +163,10 @@ export default function BrandIdentity() {
 
       {/* ===================== BARRIERS SECTION ========================= */}
       <section className="pt-15 md:pt-20">
-        <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-transparent 
-          bg-clip-text bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] 
+        <h2 className="text-3xl sm:text-3xl md:text-4xl font-extrabold text-[#0E6388]
           leading-tight text-center mb-14">
           Barriers to Strong Branding Before{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+          <span className=" text-[#0E6388]">
             Working With Us
           </span>
         </h2>
@@ -196,12 +199,10 @@ export default function BrandIdentity() {
       {/* ===================== TESTIMONIALS ========================= */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold 
-            text-transparent bg-clip-text bg-gradient-to-r 
-            from-[#0E3D55] via-[#0F587A] to-[#11719A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold 
+            text-[#0E6388] leading-tight">
             Our rating based on 2 verified{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r 
-              from-[#4BC1E8] to-[#0E6388]">
+            <span className="text-[#0E6388]">
               client reviews
             </span>
           </h2>

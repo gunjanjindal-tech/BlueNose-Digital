@@ -28,7 +28,10 @@ export default function ScrollToTop() {
       {visible && (
         <button
           onClick={scrollUp}
-          className="fixed bottom-6 right-6 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition-all z-50"
+          className="fixed bottom-6 right-6 text-white px-4 py-3 rounded-full shadow-lg hover:scale-110 transition-all z-50"
+          style={{
+    background: "rgb(14, 99, 136)"
+  }}
         >
           ↑
         </button>

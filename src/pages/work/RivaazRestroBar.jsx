@@ -58,24 +58,24 @@ export default function RivaazRestroBar() {
 
       {/* -------------------------------- HERO SECTION -------------------------------- */}
      <section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20">
+ bg-[#ad863e] text-white rounded-3xl px-6 py-20">
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
           <div className="self-start">
-            <div className="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
+            <div className="inline-block bg-white/20 text-black px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
               48.9K+ Views in 30 Days • Cultural Dining Launch Strategy
             </div>
 
-            <h1 className="inline-block text-4xl md:text-5xl font-extrabold">
+            <h1 className="inline-block text-4xl md:text-5xl font-extrabold text-black">
               Rivaaj{" "}
-              <span className="bg-clip-text text-transparent  bg-white">
+              <span className="text-black">
                 Resto-Bar
               </span>
             </h1>
 
-            <p className="text-xl mt-4 text-white/90 leading-relaxed">
+            <p className="text-xl mt-4 text-black leading-relaxed">
               Launching Bedford's first cultural resto-bar through authentic storytelling, 
               cultural branding, and emotionally rich Instagram positioning.
             </p>
@@ -84,7 +84,7 @@ export default function RivaazRestroBar() {
               {["Strategic Flow", "Impactful Content", "Community Building"].map((tag, i) => (
                 <div 
                   key={i} 
-                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-white"
+                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-black"
                 >
                   {tag}
                 </div>
@@ -92,19 +92,19 @@ export default function RivaazRestroBar() {
             </div>
 
             <Link to="/contact">
-              <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-                text-white font-semibold rounded-full shadow-lg">
-                Book A Callback
+              <button className="mt-8 px-8 py-3 bg-white
+                text-black font-semibold rounded-full shadow-lg">
+                Contact Us Now →
               </button>
             </Link>
           </div>
 
           {/* RIGHT LOGO */}
           <div className="flex justify-center">
-            <div className="rounded-3xl shadow-xl flex items-center justify-center p-4 bg-white/70">
+            <div >
               <img
                 src="/client/logo-17.png"
-                className="w-72 md:w-80 object-contain"
+                className="w-72 md:w-100 object-contain"
                 alt="Rivaaj Logo"
               />
             </div>
@@ -134,7 +134,7 @@ export default function RivaazRestroBar() {
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
             <div className="mt-6 space-y-4 text-[#063349]/85 leading-relaxed">
               <p>
@@ -165,7 +165,10 @@ export default function RivaazRestroBar() {
                 <div
                   key={i}
                   className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                   "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={5000} />{s.sign}
@@ -181,12 +184,12 @@ export default function RivaazRestroBar() {
             id="services-provided"
             className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
           >
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Services Provided
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-6 mt-10">
+            <div className="grid sm:grid-cols-2 gap-6 mt-10"
+            >
               {[
                 { name: "Social Media Strategy", icon: icons.strategy },
                 { name: "Cultural Content Creation", icon: icons.pen },
@@ -198,7 +201,10 @@ export default function RivaazRestroBar() {
                 <div
                   key={i}
                   className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                  shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  shadow-lg"
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {service.icon}
@@ -212,10 +218,13 @@ export default function RivaazRestroBar() {
 
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Challenge</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Challenge</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>• Introduce a culturally rich dining concept to the Bedford market.</p>
               <p>• Balance cultural authenticity with broad audience appeal.</p>
@@ -234,10 +243,13 @@ export default function RivaazRestroBar() {
 
           {/* ------------ APPROACH ------------ */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>
                 • Build brand identity rooted in Indian culture, rituals, and traditional dining experience.
@@ -253,13 +265,15 @@ export default function RivaazRestroBar() {
 
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Key Strategies Implemented
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Cultural storytelling explaining traditions & rituals</p>
               <p>• Cuisine showcases with cultural significance</p>
               <p>• Bilingual captions (Hindi + English)</p>
@@ -270,13 +284,15 @@ export default function RivaazRestroBar() {
 
         {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
- <h2
-  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-  text-transparent bg-clip-text 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
->
-  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
-</h2>
+<h2
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
+            >
+              Explore Our Other Client{" "}
+              <span className="text-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
           <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
             
 

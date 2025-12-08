@@ -24,13 +24,13 @@ const iconUnmute = (
 
 
   return (
-    <section className="py-20 bg-white text-[#0E3D55]">
+    <section className="py-20 bg-white text-[#0E6388]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold mb-14">
+        <h2 className="text-center text-3xl sm:text-4xl font-extrabold mb-14">
           {title}{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+          <span className="text-[#0E6388]">
             Videos
           </span>
         </h2>

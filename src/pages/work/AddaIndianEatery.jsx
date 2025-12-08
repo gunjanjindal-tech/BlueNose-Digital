@@ -58,14 +58,14 @@ export default function AddaIndianEatery() {
   }, []);
 
   return (
-    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
+    <div className="bg-white text-[#063349]/85 font-inter px-6 pt-6 pb-20">
 
 {/* ===============================  
         HERO SECTION — SAME AS BEAVER  
 ================================== */}
 <section
   className="min-h-[80vh] w-full flex items-center 
-  bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
+  bg-[#FFC100]
   text-white rounded-3xl px-6 py-20 mb-20"
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -79,17 +79,17 @@ export default function AddaIndianEatery() {
         214K+ Views in 90 Days • Emotional Storytelling Strategy for Adda Indian Eatery
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
         Adda Indian{" "}
         <span
-          className="bg-clip-text text-transparent 
-          bg-white"
+          className="bg-clip-text
+          bg-white text-white"
         >
           Eatery
         </span>
       </h1>
 
-      <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
+      <p className="text-xl mt-4 text-white leading-relaxed max-w-xl">
         Building a culturally emotional brand identity for Adda using storytelling,
         cinematic reels, and high-engagement social strategies.
       </p>
@@ -108,20 +108,20 @@ export default function AddaIndianEatery() {
 
       <Link to="/contact">
         <button
-          className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-          text-white font-semibold rounded-full shadow-lg"
+          className="mt-8 px-8 py-3 text-black
+          bg-white font-semibold rounded-full shadow-lg"
         >
-          Book A Callback
+          Contact Us Now →
         </button>
       </Link>
     </div>
 
     {/* RIGHT IMAGE (Logo Container Same as Beaver) */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl bg-white/70 p-6 flex items-center justify-center">
+      <div className=" p-2 flex items-center justify-center">
         <img
           src="/client/logo-4.png"
-          className="w-64 md:w-72 object-contain"
+          className="w-64 md:w-100 object-contain"
           alt="Adda Indian Eatery Logo"
         />
       </div>
@@ -151,28 +151,28 @@ export default function AddaIndianEatery() {
         <div className="space-y-16">
 
           {/* ---------------- OVERVIEW ---------------- */}
-        <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-black/10">
+        <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-black/10">
 
-             <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
            
 
-            <p className="mt-6 text-black/80 leading-relaxed">
+            <p className="mt-6 text-[#063349]/85 leading-relaxed">
               Adda Indian Eatery is a lively and affordable Indian restaurant offering authentic 
               flavors and a vibrant dining experience rooted in the cultural spirit of “adda” — 
               a place where people bond, laugh, and share food together.
             </p>
 
-            <p className="mt-4 text-black/80 leading-relaxed">
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
               They target young adults, students, friend groups, couples, and food lovers who enjoy 
               authentic Indian cuisine served in a warm and energetic environment.
             </p>
 
-            <p className="mt-4 text-black/80 leading-relaxed">
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
               Our mission was to position Adda as a culturally memorable Indian food destination 
               through emotional storytelling, cinematic food visuals, and community-driven content.
             </p>
 
-            <p className="mt-4 text-black/80 leading-relaxed">
+            <p className="mt-4 text-[#063349]/85 leading-relaxed">
               We focused on a Reels-first approach to maximize organic reach and engagement while 
               establishing an emotional connection through relatable stories.
             </p>
@@ -188,7 +188,9 @@ export default function AddaIndianEatery() {
                            <div
                              key={i}
                              className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                               bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                               " style={{
+    background: "rgb(14, 99, 136)"
+  }}
                            >
                              <div className="text-2xl font-bold">
                                <Counter end={s.v} duration={5000} />
@@ -206,10 +208,7 @@ export default function AddaIndianEatery() {
   id="services-provided"
   className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
 >
-  <h2
-    className="text-4xl font-extrabold bg-clip-text text-transparent 
-    bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
-  >
+<h2 className="text-4xl font-extrabold text-[#0E6388]">
     Services Provided
   </h2>
 
@@ -226,7 +225,10 @@ export default function AddaIndianEatery() {
       <div
         key={i}
         className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-        shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+        shadow-lg"
+        style={{
+    background: "rgb(14, 99, 136)"
+  }}
       >
         <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
           {service.icon}
@@ -241,14 +243,16 @@ export default function AddaIndianEatery() {
 
           {/* ---------------- CHALLENGE ---------------- */}
       <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold leading-[1.3] bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+           <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Challenge
             </h2>
 
             
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+           shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>
                 We reviewed Adda’s existing Instagram presence and identified the need for 
                 emotionally-driven content to differentiate the brand from other Indian restaurants.
@@ -269,10 +273,13 @@ export default function AddaIndianEatery() {
 
           {/* ---------------- APPROACH ---------------- */}
     <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+           <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Build awareness through cinematic food videos + relatable cultural storytelling.</p>
               <p>• Analyze content performance and refine strategy for maximum engagement.</p>
               <p>• Maximize reach through trends, community content, and emotional hooks.</p>
@@ -281,13 +288,15 @@ export default function AddaIndianEatery() {
 
           {/* ---------------- KEY STRATEGY ---------------- */}
               <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+          <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Key Strategies Implemented
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Consistent posting schedule to build anticipation</p>
               <p>• A/B testing of content styles & formats</p>
               <p>• Emotional marketing focusing on friendship + culture</p>
@@ -300,12 +309,14 @@ export default function AddaIndianEatery() {
           {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
  <h2
-  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-  text-transparent bg-clip-text 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
->
-  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
-</h2>
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
+            >
+              Explore Our Other Client{" "}
+              <span className="text-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
           <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
             
 

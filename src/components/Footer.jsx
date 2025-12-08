@@ -28,54 +28,59 @@ export default function Footer() {
             digital strategy, performance ads, brand identity & web systems.
           </p>
 
+          {/* Social Icons with RGB Color */}
           <div className="flex gap-3 mt-5">
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition"><Instagram className="w-5 h-5"/></a>
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition"><Facebook className="w-5 h-5"/></a>
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition"><Linkedin className="w-5 h-5"/></a>
+            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+              <Instagram className="w-5 h-5 text-[#0E6388]" />
+            </a>
+            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+              <Facebook className="w-5 h-5 text-[#0E6388]" />
+            </a>
+            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+              <Linkedin className="w-5 h-5 text-[#0E6388]" />
+            </a>
           </div>
         </div>
 
         {/* QUICK LINKS */}
-      {/* QUICK LINKS */}
-<div>
-  <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
- <ul className="space-y-2 text-white/80">
-  <li><Link to="/" className="hover:text-[#4BC1E8] transition">Home</Link></li>
-  <li><Link to="/services" className="hover:text-[#4BC1E8] transition">Services</Link></li>
-  <li><Link to="/work-gallery" className="hover:text-[#4BC1E8] transition">Work Gallery</Link></li>
-  <li><Link to="/about" className="hover:text-[#4BC1E8] transition">About</Link></li>
-  <li><Link to="/contact" className="hover:text-[#4BC1E8] transition">Contact</Link></li>
-</ul>
-</div>
-
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-white/80">
+            <li><Link to="/" className="hover:text-[#4BC1E8] transition">Home</Link></li>
+            <li><Link to="/services" className="hover:text-[#4BC1E8] transition">Services</Link></li>
+            <li><Link to="/work-gallery" className="hover:text-[#4BC1E8] transition">Work Gallery</Link></li>
+            <li><Link to="/about" className="hover:text-[#4BC1E8] transition">About</Link></li>
+            <li><Link to="/contact" className="hover:text-[#4BC1E8] transition">Contact</Link></li>
+          </ul>
+        </div>
 
         {/* CONTACT WITH CLICK-ACTIONS */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <div className="space-y-4 text-white/80 text-sm">
 
-            {/* 📞 Click to Call */}
+            {/* Phone */}
             <a href="tel:+19027189007" className="flex gap-3 hover:text-white transition">
-              <Phone className="w-5 text-[#4BC1E8]" />
+              <Phone className="w-5 h-5 text-[#0E6388]" />
               +1 902-718-9007
             </a>
 
-            {/* 📧 Click to Email */}
+            {/* Email */}
             <a
               href="mailto:sales@bluenosemarketing.com"
               className="flex gap-3 hover:text-white transition"
             >
-              <Mail className="w-5 text-[#4BC1E8]" />
+              <Mail className="w-5 h-5 text-[#0E6388]" />
               sales@bluenosemarketing.com
             </a>
 
-            {/* 📍 Address */}
+            {/* Address */}
             <a
               href="https://maps.google.com/?q=19 Alma Crescent, Halifax, NS B3N 2C4, Canada"
               target="_blank"
               className="flex gap-3 hover:text-white transition"
             >
-              <MapPin className="w-5 text-[#4BC1E8]" />
+              <MapPin className="w-8 h-8 text-[#0E6388]" />
               19 Alma Crescent, Halifax, NS B3N 2C4, Canada
             </a>
 
@@ -107,6 +112,7 @@ export default function Footer() {
           <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
         </div>
       </div>
+
     </footer>
   );
 }

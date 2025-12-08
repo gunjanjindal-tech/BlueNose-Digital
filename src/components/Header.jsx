@@ -121,7 +121,10 @@ const clients = [
               href="/catalogue.pdf"
               download
               className="px-5 py-2 rounded-full text-white 
-    bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] shadow hover:opacity-90 text-sm"
+shadow hover:opacity-90 text-sm"
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               E-Catalogue
             </a>

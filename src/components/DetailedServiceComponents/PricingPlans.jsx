@@ -109,10 +109,9 @@ export default function PricingPlans() {
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* Heading */}
-        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text
-          bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]">
+        <h1 className="text-4xl font-extrabold  text-[#0E6388]">
           Find Your Perfect Plan for
-          <span className="bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] bg-clip-text text-transparent">
+          <span className=" text-[#0E6388]">
             {" "}Faster, Smarter Growth
           </span>
         </h1>
@@ -124,15 +123,22 @@ export default function PricingPlans() {
             ["semi", "Semi-annual 12% off"],
             ["annual", "Annual 30% off"],
           ].map(([key, label]) => (
-            <button
-              key={key}
-              onClick={() => setBilling(key)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all border
-                ${billing === key
-                  ? "bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white shadow-md"
-                  : "bg-white text-[#0E3D55] border-[#B5D9E8]"
-                }`}
-            >
+           <button
+  key={key}
+  onClick={() => setBilling(key)}
+  className={`px-6 py-2 rounded-full text-sm font-semibold transition-all border
+    ${
+      billing === key
+        ? "text-white shadow-md border-transparent"
+        : "bg-white text-[#0E3D55] border-[#B5D9E8]"
+    }`}
+  style={
+    billing === key
+      ? { background: "rgb(14, 99, 136)" }
+      : {}
+  }
+>
+
               {label}
             </button>
           ))}
@@ -164,15 +170,15 @@ export default function PricingPlans() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="relative p-8 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.10)]
                 text-white flex flex-col justify-between h-full"
-              style={{
-                background: "linear-gradient(135deg, #4BC1E8, #0E6388)",
-              }}
+             style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
 
               {/* BEST VALUE Badge */}
               {billing === "annual" && i === 2 && (
                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 
-                  bg-white text-[#0E6388] text-xs font-semibold px-4 py-1 rounded-full shadow-md">
+                  bg-white text-[#0E6388] border-1 text-xs font-semibold px-4 py-1 rounded-full shadow-md">
                   ⭐ Best Value
                 </span>
               )}

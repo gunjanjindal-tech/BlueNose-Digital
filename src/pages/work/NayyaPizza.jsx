@@ -61,7 +61,7 @@ export default function NayyaPizza() {
 
       {/* -------------------------------- HERO — SAME AS RIVAAJ -------------------------------- */}
       <section className="min-h-[80vh] w-full flex items-center 
-       bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20">
+       bg-[#FF6B01] text-white rounded-3xl px-6 py-20">
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -96,20 +96,19 @@ export default function NayyaPizza() {
             </div>
 
             <Link to="/contact">
-              <button className="mt-8 px-8 py-3 bg-gradient-to-r 
-              from-[#4BC1E8] to-[#0E6388]
-              text-white font-semibold rounded-full shadow-lg">
-                Book A Callback
+              <button className="mt-8 px-8 py-3 bg-white
+              text-black font-semibold rounded-full shadow-lg">
+                Contact Us Now →
               </button>
             </Link>
           </div>
 
           {/* RIGHT LOGO */}
           <div className="flex justify-center">
-            <div className="bg-white/70 rounded-full shadow-xl flex items-center justify-center p-4">
+            <div className="flex items-center justify-center p-4">
               <img
                 src="/client/logo-1.png"
-                className="w-72 md:w-80 object-contain"
+                className="w-72 md:w-100 object-contain"
                 alt="Nayya Pizza Logo"
               />
             </div>
@@ -138,7 +137,7 @@ export default function NayyaPizza() {
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
             <div className="mt-6 space-y-4 text-[#063349]/85 leading-relaxed">
               <p>
@@ -172,7 +171,10 @@ export default function NayyaPizza() {
                 <div
                   key={i}
                   className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={5000} />{s.sign}
@@ -185,8 +187,7 @@ export default function NayyaPizza() {
 
           {/* ------------ SERVICES PROVIDED ------------ */}
           <section id="services-provided" className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Services Provided
             </h2>
 
@@ -202,7 +203,10 @@ export default function NayyaPizza() {
                 <div
                   key={i}
                   className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                    shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                    shadow-lg "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {service.icon}
@@ -216,13 +220,15 @@ export default function NayyaPizza() {
 
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Challenge
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               
               <p>• Competing in a heavily crowded pizza & fast-food niche.</p>
               <p>• Creating consistent viral traction with a small initial follower base.</p>
@@ -242,10 +248,13 @@ export default function NayyaPizza() {
 
           {/* ------------ APPROACH ------------ */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+             shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>• Hyper-focused on trend-driven, scroll-stopping reels.</p>
               <p>• Balanced entertainment + food storytelling + humor.</p>
@@ -256,13 +265,15 @@ export default function NayyaPizza() {
 
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-transparent bg-clip-text
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Key Strategies Implemented
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+             shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>• High-volume viral reel production</p>
               <p>• Fast-paced editing for retention boost</p>
@@ -275,12 +286,12 @@ export default function NayyaPizza() {
 
           {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
-            <h2
-              className="text-4xl font-extrabold text-center leading-[1.3]
-              text-transparent bg-clip-text bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+           <h2
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
             >
               Explore Our Other Client{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+              <span className="text-[#0E6388]">
                 Case Studies
               </span>
             </h2>

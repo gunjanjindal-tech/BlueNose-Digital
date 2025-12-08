@@ -15,12 +15,11 @@ export default function ClientsMarquee() {
       {/* Heading */}
       <h2
         className="
-        text-3xl md:text-5xl font-extrabold mb-4 leading-[1.2] pb-2
-        text-transparent bg-clip-text
-        bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
-        drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]
+        text-3xl md:text-4xl font-extrabold mb-4 leading-[1.2] pb-2
+        text-[#0E6388]
+        ]
       ">
-    Leading Brands Choose Us for  <span  className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">Their Digital Growth</span> 
+    Leading Brands Choose Us for  <span  className="text-[#0E6388]]">Their Digital Growth</span> 
       </h2>
 
       {/* Just logo marquee – NO background strip */}

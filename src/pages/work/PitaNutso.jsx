@@ -60,25 +60,24 @@ export default function PitaNutso() {
     <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
       {/* -------------------------------- HERO SECTION -------------------------------- */}
     <section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20 mb-20">
+ bg-[#FDF1D9] text-white rounded-3xl px-6 py-20 mb-20">
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
           <div>
-            <div className="inline-block bg-white/20 text-white px-4 py-2 
+            <div className="inline-block bg-white/20 text-black px-4 py-2 
             rounded-full text-sm font-semibold mb-5 shadow-sm">
               36.1K+ Views in 90 Days • Mediterranean Brand Presence Strategy
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
               Pita{" "}
-              <span className="bg-clip-text text-transparent 
-               bg-white">
+              <span className="text-black">
                 Nutso
               </span>
             </h1>
 
-            <p className="text-xl mt-4 text-white/85 leading-relaxed">
+            <p className="text-xl mt-4 text-black leading-relaxed">
               A Mediterranean-focused branding system built through appetizing visuals,
               identity shaping, and organic performance-driven strategies.
             </p>
@@ -89,7 +88,7 @@ export default function PitaNutso() {
                   <div
                     key={i}
                     className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-                    shadow text-white text-sm font-medium"
+                    shadow text-black text-sm font-medium"
                   >
                     {tag}
                   </div>
@@ -99,21 +98,20 @@ export default function PitaNutso() {
 
             <Link to="/contact">
               <button
-                className="mt-8 px-8 py-3 bg-gradient-to-r 
-                from-[#4BC1E8] to-[#0E6388] text-white font-semibold 
+                className="mt-8 px-8 py-3 bg-white text-black font-semibold 
                 rounded-full shadow-lg"
               >
-                Book A Callback
+                Contact Us Now →
               </button>
             </Link>
           </div>
 
           {/* RIGHT LOGO */}
           <div className="flex justify-center">
-            <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+            <div >
               <img
                 src="/client/logo-3.png"
-                className="w-60 md:w-[300px] object-contain"
+                className="w-60 md:w-80 object-contain"
                 alt="Pita Nutso Logo"
               />
             </div>
@@ -145,7 +143,7 @@ export default function PitaNutso() {
             id="overview"
             className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
           >
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Overview
             </h2>
 
@@ -178,8 +176,10 @@ export default function PitaNutso() {
               ].map((s, i) => (
                 <div
                   key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                  bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  className="p-6 w-[250px] rounded-2xl shadow-md text-white"
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={6000} />
@@ -197,8 +197,7 @@ export default function PitaNutso() {
             className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
           >
             <h2
-              className="text-4xl font-extrabold bg-clip-text text-transparent 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold text-[#0E6388]"
             >
               Services Provided
             </h2>
@@ -215,7 +214,10 @@ export default function PitaNutso() {
                 <div
                   key={i}
                   className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                  shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  shadow-lg "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {service.icon}
@@ -235,15 +237,17 @@ export default function PitaNutso() {
             className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
           >
             <h2
-              className="text-4xl font-extrabold bg-clip-text text-transparent
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold text-[#0E6388]"
             >
               Challenge
             </h2>
 
             <div
               className="mt-6 p-10 text-white rounded-3xl
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+           "
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               <p>• Competing in a highly saturated Mediterranean fast-casual market</p>
               <p>• Establishing brand recall with a smaller follower base</p>
@@ -266,11 +270,14 @@ export default function PitaNutso() {
             id="approach"
             className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
           >
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div
               className="mt-6 p-10 text-white rounded-3xl
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+            shadow space-y-6"
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               <p>• Focused on high-performing Mediterranean food visuals</p>
               <p>• Optimized content formats based on audience behavior analytics</p>
@@ -284,15 +291,17 @@ export default function PitaNutso() {
             className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
           >
             <h2
-              className="text-4xl font-extrabold bg-clip-text text-transparent
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold text-[#0E6388]"
             >
               Key Strategies Implemented
             </h2>
 
             <div
               className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6"
+             shadow space-y-6"
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               <p>• High-shareability Mediterranean food reels</p>
               <p>• Strong call-to-action captions</p>
@@ -304,12 +313,11 @@ export default function PitaNutso() {
           {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
             <h2
-              className="text-4xl font-extrabold text-center bg-clip-text text-transparent 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold text-center text-[#0E6388]"
             >
               Explore Our Other Client{" "}
-              <span className="bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+              <span className="
+              text-[#0E6388]">
                 Case Studies
               </span>
             </h2>

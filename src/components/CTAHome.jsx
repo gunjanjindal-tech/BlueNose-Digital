@@ -10,9 +10,8 @@ export default function CTA() {
         {/* FIXED CLIP — added pb + leading for breathing */}
         <h2 className="
           text-3xl md:text-5xl font-extrabold 
-          text-transparent bg-clip-text 
-          bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
-          leading-[1.25] pb-2      /* ❗ FIXED G CUT PROBLEM */
+         text-[#0E6388]
+          leading-[1.25] pb-2     
         ">
           Let’s Build Something Powerful
         </h2>
@@ -25,9 +24,12 @@ export default function CTA() {
         <Link to="/contact">
           <button className="
             px-12 py-4 text-lg font-semibold rounded-full shadow-xl
-            bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] cursor-pointer text-white
-          ">
-            Book a Strategy Call →
+           cursor-pointer text-white
+          "
+          style={{
+    background: "rgb(14, 99, 136)"
+  }}>
+            Contact Us Now →
           </button>
         </Link>
 

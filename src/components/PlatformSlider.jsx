@@ -88,9 +88,8 @@ export default function PlatformShowcase() {
   return (
     <section className="py-20">
   <div className="max-w-7xl mx-auto px-6 text-center">
-      <h2 className="text-5xl md:text-5xl font-extrabold text-transparent bg-clip-text
-    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] leading-tight]">
-        What Sets Us  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+      <h2 className="text-5xl md:text-5xl font-extrabold  text-[#0E6388] leading-tight]">
+        What Sets Us  <span className=" text-[#0E6388]">
           {" "}Apart{" "}
         </span>
       </h2>
@@ -124,10 +123,9 @@ export default function PlatformShowcase() {
             p-10 rounded-3xl shadow-xl grid md:grid-cols-2 gap-10 items-center
             text-white
           "
-          style={{
-            background:
-              "linear-gradient(135deg, #4BC1E8 0%, #0E6388 100%)",
-          }}
+       style={{
+    background: "rgb(14, 99, 136)"
+  }}
         >
           {/* LEFT TEXT */}
           <div className="text-left">

@@ -46,7 +46,7 @@ export default function SakeCafe() {
 ================================== */}
 <section
   className="min-h-[80vh] w-full flex items-center 
-  bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] 
+  bg-[#b2222b] 
   text-white rounded-3xl px-6 py-20 mb-20"
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
@@ -94,20 +94,20 @@ export default function SakeCafe() {
       {/* CTA */}
       <Link to="/contact">
         <button
-          className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-          text-white font-semibold rounded-full shadow-lg"
+          className="mt-8 px-8 py-3 bg-white
+          text-black font-semibold rounded-full shadow-lg"
         >
-          Book A Callback
+          Contact Us Now →
         </button>
       </Link>
     </div>
 
     {/* RIGHT LOGO */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl bg-white/70 p-6 flex items-center justify-center">
+      <div >
         <img
-          src="/client/logo-7.png"
-          className="w-64 md:w-80 object-contain"
+          src="/detailed-client-logos/sake.png"
+          className="w-64 md:w-100 object-contain"
           alt="Sake Cafe Logo"
         />
       </div>
@@ -135,7 +135,7 @@ export default function SakeCafe() {
         <div className="space-y-16">
           {/* OVERVIEW */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
             <p className="mt-6 leading-relaxed text-[#063349]/85">
               Sake Cafe | Sushi Bar & Grill is a vibrant Japanese restaurant offering authentic sushi, grilled specialties, and a full dining experience from brunch through dinner, featuring signature Sake Nights.
             </p>
@@ -150,7 +150,10 @@ export default function SakeCafe() {
               {[{ v: 9700, t: "Total Views (60 Days)", sign: "+" }, { v: 83.6, t: "Posts Engagement Rate", sign: "%" }, { v: 54, t: "Avg. Non-Follower Engagement", sign: "%" }, { v: 276, t: "Total Interactions", sign: "+" }].map((s, i) => (
                 <div
                   key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  className="p-6 w-[250px] rounded-2xl shadow-md text-white "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} />
@@ -164,7 +167,7 @@ export default function SakeCafe() {
 
           {/* SERVICES */}
           <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Services Provided
             </h2>
 
@@ -179,7 +182,10 @@ export default function SakeCafe() {
               ].map((s, i) => (
                 <div
                   key={i}
-                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white shadow-lg "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {s.icon}
@@ -192,13 +198,15 @@ export default function SakeCafe() {
 
           {/* CHALLENGE */}
 <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-  <h2 className="text-4xl font-extrabold leading-[1.3] -mt-3 bg-clip-text text-transparent 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+  <h2 className="text-4xl font-extrabold leading-[1.3] -mt-3 text-[#0E6388]">
     Challenge
   </h2>
 
   <div className="mt-6 p-10 rounded-3xl text-white 
-    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+     shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
     <p>
       We started by reviewing Sake Cafe’s existing Instagram presence, brand identity,
@@ -229,8 +237,11 @@ export default function SakeCafe() {
 
           {/* APPROACH */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
-            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
+            <div className="mt-6 p-10 rounded-3xl text-white shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Build awareness through stunning sushi visuals</p>
               <p>• Scaled content showcasing full dining occasions</p>
               <p>• Promoted weekday specials effectively</p>
@@ -239,11 +250,13 @@ export default function SakeCafe() {
 
           {/* KEY STRATEGY */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold leading-[1.3] -mt-3 bg-clip-text text-transparent 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold leading-[1.3] -mt-3 text-[#0E6388]">
               Key Strategies Implemented
             </h2>
-            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            <div className="mt-6 p-10 rounded-3xl text-white shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Signature dish focus: Bento Boxes, Volcano Rolls</p>
               <p>• Professional sushi photography</p>
               <p>• Chef technique videos</p>
@@ -256,16 +269,17 @@ export default function SakeCafe() {
           {/* CASE STUDIES */}
    <section id="case-studies" className="mt-16">
  <h2
-  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-  text-transparent bg-clip-text 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
->
-  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
-</h2>
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
+            >
+              Explore Our Other Client{" "}
+              <span className="text-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
+
 <div className="grid sm:grid-cols-2 gap-10 mt-10">
             
-
-
   {/* CARD 1 — TRIVEENI */}
 <div className="relative bg-[#F7FBCF] px-6 py-6 w-[400px] rounded-2xl shadow-lg">
 

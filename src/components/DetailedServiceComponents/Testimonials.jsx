@@ -37,9 +37,12 @@ export default function Testimonials() {
             <div
               className="
                 p-10 rounded-3xl shadow-xl mx-auto
-                bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]
+               
                 text-white flex flex-col items-center
               "
+              style={{
+    background: "rgb(14, 99, 136)"
+  }}
             >
               {/* Stars */}
               <h3 className="text-4xl sm:text-5xl mb-4">⭐️⭐️⭐️⭐️⭐️</h3>

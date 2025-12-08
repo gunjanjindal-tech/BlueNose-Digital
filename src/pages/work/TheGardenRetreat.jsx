@@ -60,7 +60,7 @@ export default function TheGardenRetreat() {
 
       {/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
       <section className="min-h-[80vh] w-full flex items-center 
-     bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20 mb-20">
+     bg-[#2e5c2e] text-white rounded-3xl px-6 py-20 mb-20">
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -97,19 +97,19 @@ export default function TheGardenRetreat() {
             </div>
 
             <Link to="/contact">
-              <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-              text-white font-semibold rounded-full shadow-lg">
-                Book A Callback
+              <button className="mt-8 px-8 py-3
+              text-black bg-white font-semibold rounded-full shadow-lg">
+                Contact Us Now →
               </button>
             </Link>
           </div>
 
           {/* RIGHT LOGO */}
           <div className="flex justify-center">
-            <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+            <div>
               <img
                 src="/client/logo-8.png"
-                className="w-72 md:w-80 object-contain"
+                className="w-72 md:w-100 object-contain"
                 alt="Garden Retreat Logo"
               />
             </div>
@@ -139,7 +139,7 @@ export default function TheGardenRetreat() {
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
             <p className="mt-6 leading-relaxed text-[#063349]/85">
               The Garden Retreat is a premium continental dining destination in downtown Halifax, 
@@ -167,7 +167,9 @@ export default function TheGardenRetreat() {
                 <div
                   key={i}
                   className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                  bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+              "style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={5000} />{s.sign}
@@ -183,8 +185,7 @@ export default function TheGardenRetreat() {
             id="services-provided"
             className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
           >
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Services Provided
             </h2>
 
@@ -200,7 +201,10 @@ export default function TheGardenRetreat() {
                 <div
                   key={i}
                   className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                  shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                  shadow-lg "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {service.icon}
@@ -214,13 +218,15 @@ export default function TheGardenRetreat() {
 
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
-            bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Challenge
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+             shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>
                 The Garden Retreat faced competition in Halifax’s fine dining scene and needed 
@@ -241,10 +247,13 @@ export default function TheGardenRetreat() {
 
           {/* ------------ APPROACH ------------ */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+           shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Premium visuals showcasing continental cuisine & elevated plating</p>
               <p>• Cocktail filmmaking focused on artistry & elegance</p>
               <p>• Content pillars for brunch, dinner, cocktails & ambiance</p>
@@ -254,13 +263,15 @@ export default function TheGardenRetreat() {
 
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Key Strategies Implemented
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white
-            bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Luxury content flow for brunch, dinner & cocktails</p>
               <p>• Elegant food & drink cinematography</p>
               <p>• SEO-optimized captions + seasonal promotions</p>
@@ -273,12 +284,10 @@ export default function TheGardenRetreat() {
           <section id="case-studies" className="mt-16">
             <h2
               className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-              text-transparent bg-clip-text 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              text-[#0E6388]"
             >
               Explore Our Other Client{" "}
-              <span className="text-transparent bg-clip-text 
-              bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+              <span className="text-[#0E6388]">
                 Case Studies
               </span>
             </h2>

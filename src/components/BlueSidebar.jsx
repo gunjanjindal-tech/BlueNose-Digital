@@ -2,9 +2,15 @@ import React from "react";
 
 export default function BlueSidebar({ sections, active }) {
   return (
-    <div className="hidden md:block  bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] rounded-3xl p-3 mb-1 shadow-lg ">
-      <aside className="sticky top-[140px] p-6 text-white space-y-8 ">
-
+    <div
+  className="hidden md:block rounded-3xl p-3 mb-1 shadow-lg"
+  style={{
+    background: "rgb(14, 99, 136)"
+  }}
+>
+      <aside className="sticky top-[140px] p-6 text-white space-y-8 "
+      >
+       
         {sections.map((item) => {
           const isActive = active === item.id;
 

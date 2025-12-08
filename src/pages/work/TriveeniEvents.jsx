@@ -61,7 +61,7 @@ export default function TriveeniEvents() {
 
 {/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
 <section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl 
+ bg-[#FAFFD7]  text-black rounded-3xl 
 px-6 py-20 mb-20">
 
 
@@ -69,20 +69,20 @@ px-6 py-20 mb-20">
 
     {/* LEFT TEXT */}
     <div>
-      <div className="inline-block bg-white/20 text-white px-4 py-2 
+      <div className="inline-block bg-white/20 text-black px-4 py-2 
       rounded-full text-sm font-semibold mb-5 shadow-sm">
         1.3M+ Views in 90 Days • Organic Cultural Event Growth
       </div>
 
       <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
         Triveeni{" "}
-        <span className="bg-clip-text text-transparent 
-        bg-white">
+        <span className="text-black
+       ">
           Events
         </span>
       </h1>
 
-      <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
+      <p className="text-xl mt-4 text-black/90 leading-relaxed max-w-xl">
         A community-driven Instagram strategy celebrating Indian festivals, 
         culture, and vibrant traditions with a Reels-first content approach.
       </p>
@@ -92,7 +92,7 @@ px-6 py-20 mb-20">
           <div 
             key={i}
             className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-            shadow text-white text-sm font-medium"
+            shadow text-black text-sm font-medium"
           >
             {tag}
           </div>
@@ -100,19 +100,19 @@ px-6 py-20 mb-20">
       </div>
 
       <Link to="/contact">
-        <button className="mt-8 px-8 py-3 bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]
-          text-white font-semibold rounded-full shadow-lg">
-          Book A Callback
+        <button className="mt-8 px-8 py-3 bg-white
+          text-black font-semibold rounded-full shadow-lg">
+          Contact Us Now →
         </button>
       </Link>
     </div>
 
     {/* RIGHT LOGO */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+      <div>
         <img
           src="/client/logo-2.png"
-          className="w-72 md:w-80 object-contain"
+          className="w-72 md:w-100 object-contain"
           alt="Triveeni Logo"
         />
       </div>
@@ -142,7 +142,7 @@ px-6 py-20 mb-20">
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
             <p className="mt-6 leading-relaxed text-[#063349]/85">
               Triveeni Events is a women-led cultural event company curating stunning Indian festivals, celebrations and community gatherings across the Atlantic region.
@@ -170,7 +170,10 @@ px-6 py-20 mb-20">
                 <div
                   key={i}
                   className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                    bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                    "
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={5000} />
@@ -188,8 +191,7 @@ px-6 py-20 mb-20">
   className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
 >
   <h2
-    className="text-4xl font-extrabold bg-clip-text text-transparent 
-    bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+    className="text-4xl font-extrabold text-[#0E6388] "
   >
     Services Provided
   </h2>
@@ -207,7 +209,10 @@ px-6 py-20 mb-20">
       <div
         key={i}
         className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-        shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+        shadow-lg"
+        style={{
+    background: "rgb(14, 99, 136)"
+  }}
       >
         <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
           {service.icon}
@@ -222,13 +227,15 @@ px-6 py-20 mb-20">
           
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold leading-[1.3] bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold leading-[1.3] text-[#0E6388]">
               Challenge
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+               shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               
               <p>• Build a strong presence in a culturally competitive niche.</p>
               <p>• Increase reach without relying on paid promotions.</p>
@@ -248,10 +255,13 @@ px-6 py-20 mb-20">
 
           {/* ------------ APPROACH ------------ */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white 
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+             shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
 
               <p>• Created culturally rooted content highlighting Indian celebrations.</p>
               <p>• Prioritized reels with trending audio + meaningful storytelling.</p>
@@ -261,13 +271,15 @@ px-6 py-20 mb-20">
 
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Key Strategies Implemented
             </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white
-              bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+              shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Trend-backed Reels-first content cycle</p>
               <p>• Explore-page dominance strategy</p>
               <p>• Seasonal festival content planning</p>
@@ -279,13 +291,15 @@ px-6 py-20 mb-20">
 
           {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
- <h2
-  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-  text-transparent bg-clip-text 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
->
-  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
-</h2>
+<h2
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
+            >
+              Explore Our Other Client{" "}
+              <span className="text-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
           <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
             
 

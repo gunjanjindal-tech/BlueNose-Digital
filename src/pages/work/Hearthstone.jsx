@@ -66,7 +66,7 @@ export default function Hearthstone() {
 
 {/* ------------ HERO SECTION (RIVAAJ STYLE) ------------ */}
 <section className="min-h-[80vh] w-full flex items-center 
- bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white rounded-3xl px-6 py-20">
+ bg-[#233369] text-white rounded-3xl px-6 py-20">
 
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -103,19 +103,18 @@ export default function Hearthstone() {
       </div>
 
       <Link to="/contact">
-        <button className="mt-8 px-8 py-3 bg-gradient-to-r 
-        from-[#4BC1E8] to-[#0E6388] text-white font-semibold rounded-full shadow-lg">
-          Book A Callback
+        <button className="mt-8 px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg">
+          Contact Us Now →
         </button>
       </Link>
     </div>
 
     {/* RIGHT LOGO */}
     <div className="flex justify-center">
-      <div className="rounded-3xl shadow-xl p-4 bg-white/70">
+      <div >
         <img
           src="/client/logo-6.png"
-          className="w-72 md:w-80 object-contain"
+          className="w-72 md:w-100 object-contain"
           alt="Hearthstone Logo"
         />
       </div>
@@ -146,7 +145,7 @@ export default function Hearthstone() {
 
           {/* ------------ OVERVIEW ------------ */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Overview</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
             <p className="mt-6 leading-relaxed text-[#063349]/85">
               Hearthstone Inn is a boutique hotel located in Dartmouth, Nova Scotia, offering serene Lake Banook views, pet-friendly stays, and elegant event spaces.
@@ -173,7 +172,10 @@ export default function Hearthstone() {
                 { v: 53, t: "Accounts Reached", sign: "+" },
               ].map((s, i) => (
                 <div key={i} className="p-6 w-[250px] rounded-2xl shadow-md text-white
-                  bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]">
+                  "
+                style={{
+    background: "rgb(14, 99, 136)"
+  }}>
                   
                   <div className="text-2xl font-bold">
                     <Counter end={s.v} duration={3600} />
@@ -188,8 +190,7 @@ export default function Hearthstone() {
 
           {/* ------------ SERVICES PROVIDED ------------ */}
           <section id="services-provided" className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold bg-clip-text text-transparent 
-              bg-gradient-to-r from-[#0E3D55] to-[#11719A]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">
               Services Provided
             </h2>
 
@@ -207,7 +208,10 @@ export default function Hearthstone() {
                 <div
                   key={i}
                   className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                    shadow-lg bg-gradient-to-br from-[#4BC1E8] to-[#0E6388]"
+                    shadow-lg"
+                  style={{
+    background: "rgb(14, 99, 136)"
+  }}
                 >
                   <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
                     {service.icon}
@@ -224,13 +228,15 @@ export default function Hearthstone() {
           {/* ------------ CHALLENGE ------------ */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2
-              className="text-4xl font-extrabold leading-[1.3] -mt-3 bg-clip-text text-transparent 
-                bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold leading-[1.3] -mt-3 text-[#0E6388]"
             >
               Challenge
             </h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            <div className="mt-6 p-10 rounded-3xl text-white shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
                <p>We studied Besharam's brand identity, audience patterns, and existing content performance.</p>
 
               <p>They needed powerful visuals for fusion dishes, cocktails, and energy-rich ambience.</p>
@@ -250,9 +256,12 @@ export default function Hearthstone() {
 
           {/* ------------ APPROACH ------------ */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-[#0E3D55]">Approach</h2>
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            <div className="mt-6 p-10 rounded-3xl text-white shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Built presence with premium photography + hotel lifestyle visuals</p>
               <p>• Created content around events, weddings & hospitality storytelling</p>
               <p>• Used trending audio and strategic posting windows for maximum reach</p>
@@ -262,13 +271,15 @@ export default function Hearthstone() {
           {/* ------------ KEY STRATEGY ------------ */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
             <h2
-              className="text-4xl font-extrabold leading-[1.3] -mt-1 bg-clip-text text-transparent
-                bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
+              className="text-4xl font-extrabold leading-[1.3] -mt-1 text-[#0E6388]"
             >
               Key Strategies Implemented
             </h2>
 
-            <div className="mt-6 p-10 rounded-3xl text-white bg-gradient-to-br from-[#4BC1E8] to-[#0E6388] shadow space-y-6">
+            <div className="mt-6 p-10 rounded-3xl text-white shadow space-y-6"
+            style={{
+    background: "rgb(14, 99, 136)"
+  }}>
               <p>• Boutique hotel–focused visual storytelling</p>
               <p>• Pet-friendly content series for unique positioning</p>
               <p>• Wedding & event venue highlight reels</p>
@@ -280,12 +291,14 @@ export default function Hearthstone() {
           {/* ------------ CASE STUDIES ------------ */}
           <section id="case-studies" className="mt-16">
  <h2
-  className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-  text-transparent bg-clip-text 
-  bg-gradient-to-r from-[#0E3D55] to-[#11719A]"
->
-  Explore Our Other Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]"> Case Studies</span> 
-</h2>
+              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
+              text-[#0E6388]"
+            >
+              Explore Our Other Client{" "}
+              <span className="text-[#0E6388]">
+                Case Studies
+              </span>
+            </h2>
           <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
             
 

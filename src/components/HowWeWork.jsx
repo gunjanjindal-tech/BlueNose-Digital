@@ -28,16 +28,15 @@ export default function HowWeWork() {
 <section className="sm:py-15 md:py-20 bg-white text-[#063349]">
   <div className="max-w-7xl mx-auto px-6 text-center mb-14">
     <p className=" text-transparent bg-clip-text
-    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
     drop-shadow-[0_4px_10px_rgba(0,0,0,0.20) font-semibold tracking-wide">→ Our Process</p>
         
     <h2 className="text-3xl md:text-5xl font-extrabold  text-transparent bg-clip-text
     bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
     drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)">
       How We Work{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+      
         (Smart, Fast, ROI-Driven)
-      </span>
+  
     </h2>
   </div>
 
@@ -78,13 +77,13 @@ export default function HowWeWork() {
         transition-all duration-300 hover:shadow-[0_22px_55px_rgba(0,0,0,0.30)]
        
       "
-      style={{
-        background:"linear-gradient(to bottom right, #4BC1E8, #0E6388)"
-      }}
+     style={{
+    background: "rgb(14, 99, 136)"
+  }}
     >
       
       {/* Oversized Step Number (Soft) */}
-      <p className="text-6xl font-extrabold opacity-20">{step.num}</p>
+      <p className="text-6xl font-extrabold opacity-90">{step.num}</p>
 
       <h3 className="text-2xl font-bold mt-1">{step.title}</h3>
 

@@ -108,7 +108,7 @@ const sendMessage = (e) => {
             animate="show"
             className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]"
           >
-            Let’s <span className="bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-transparent bg-clip-text">Connect</span>
+            Let’s Connect
           </motion.h1>
 
           <p className="text-center max-w-3xl mx-auto mt-4 mb-14 text-[#0E3D55]/80 text-lg">
@@ -124,7 +124,7 @@ const sendMessage = (e) => {
           >
 
             {/* LEFT SECTION */}
-            <div className="bg-[#F5F9FF] p-10 border-r border-[#DDE8F3] flex flex-col justify-between">
+            <div className="bg-white p-10 border-r border-[#DDE8F3] flex flex-col justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-[#0E3D55] mb-4">Get in Touch</h2>
 
@@ -257,13 +257,14 @@ const sendMessage = (e) => {
   </div>
 
   {/* SUBMIT BUTTON */}
-  <button
-    type="submit"
-    className="w-full py-3 rounded-xl bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white font-semibold shadow flex items-center justify-center gap-2"
-  >
-    {loading ? "Sending..." : "Send Message"}
-    <Send size={18} />
-  </button>
+<button
+  type="submit"
+  className="w-full py-3 rounded-xl bg-[#0E6388] text-white font-semibold shadow flex items-center justify-center gap-2"
+>
+  {loading ? "Sending..." : "Send Message"}
+  <Send size={18} />
+</button>
+
 
   {/* SUCCESS MESSAGE - NOW AT THE BOTTOM */}
   {success && (
