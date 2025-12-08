@@ -27,12 +27,12 @@ export default function ClientsMarquee() {
 
         <Marquee speed={45} pauseOnHover gradient={false}>
           {logos.map((src, i) => (
-            <div key={i} className="mx-12 flex items-center justify-center">
+            <div key={i} className="mx-8 flex items-center justify-center">
 
               {/* Logo Only */}
               <img
                 src={src}
-                className="w-24 h-24 object-contain opacity-90 hover:opacity-100 transition"
+                className="w-32 h-32 object-contain opacity-90 hover:opacity-100 transition"
               />
 
             </div>

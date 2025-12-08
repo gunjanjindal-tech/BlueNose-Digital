@@ -15,12 +15,10 @@ export default function ClientsMarquee() {
       {/* Heading */}
       <h2
         className="
-        text-3xl md:text-5xl font-extrabold mb-4 leading-[1.2] pb-2
-        text-transparent bg-clip-text
-        bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
-        drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]
+        text-3xl md:text-4xl font-extrabold mb-4 leading-[1.2] pb-2
+       text-[#0E6388]
       ">
-        Brands That Chose Us —  <span  className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">And Grew With Us</span> 
+       Leading Brands Choose Us for Their Digital Growth 
       </h2>
 
       {/* Just logo marquee – NO background strip */}
@@ -28,12 +26,12 @@ export default function ClientsMarquee() {
 
         <Marquee speed={45} pauseOnHover gradient={false}>
           {logos.map((src, i) => (
-            <div key={i} className="mx-12 flex items-center justify-center">
+            <div key={i} className="mx-8 flex items-center justify-center">
 
               {/* Logo Only */}
               <img
                 src={src}
-                className="w-24 h-24 object-contain opacity-90 hover:opacity-100 transition"
+                className="w-32 h-32 object-contain opacity-90 hover:opacity-100 transition"
               />
 
             </div>
