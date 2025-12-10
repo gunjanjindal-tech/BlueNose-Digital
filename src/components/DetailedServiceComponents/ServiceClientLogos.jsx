@@ -13,13 +13,9 @@ export default function ClientsMarquee() {
     <section className="py-10 bg-white text-center">
 
       {/* Heading */}
-      <h2
-        className="
-        text-3xl md:text-4xl font-extrabold mb-4 leading-[1.2] pb-2
-        text-[#0E6388]
-        ]
-      ">
-    Leading Brands Choose Us for  <span  className="text-[#0E6388]]">Their Digital Growth</span> 
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center">
+  
+    Leading Brands Choose Us for  <span  className="text-[#0E6388]">Their Digital Growth</span> 
       </h2>
 
       {/* Just logo marquee – NO background strip */}

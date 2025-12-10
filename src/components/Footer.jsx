@@ -3,40 +3,27 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer
-      className="text-white relative overflow-hidden pt-16"
-      style={{ backgroundColor: "#000" }}
-    >
+<footer className="relative bg-white pt-16 pb-10 text-[#063349] border-t border-[#D7E6EF]">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1.4fr] gap-12">
 
-      {/* 🌌 Hero-Style Gradient Lighting */}
-      <div
-        className="absolute inset-0 opacity-25 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 30%, #0E6388 0%, transparent 60%), radial-gradient(circle at 80% 70%, #4BC1E8 0%, transparent 70%)",
-        }}
-      ></div>
+        {/* LOGO + ABOUT */}
+        <div>
+          <img src="/logo/logo.jpeg" alt="Bluenose Logo" className="w-44 mb-5" />
 
-      {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-[1.3fr_0.9fr_1fr_1.4fr] gap-12 items-start z-10">
-
-        {/* LOGO & ABOUT */}
-        <div className="col-span-1">
-          <img src="/logo/logo.jpeg" className="w-44 mb-4 object-contain" />
-          <p className="text-white/80 text-sm leading-relaxed">
-            Bluenose Digital Marketing helps brands grow through 
-            digital strategy, performance ads, brand identity & web systems.
+          <p className="text-[#063349]/70 text-sm leading-relaxed max-w-sm">
+            Bluenose Digital Marketing helps brands scale through strategy, creative execution,
+            performance marketing, and modern content systems.
           </p>
 
-          {/* Social Icons with RGB Color */}
-          <div className="flex gap-3 mt-5">
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-3 mt-6">
+            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
               <Instagram className="w-5 h-5 text-[#0E6388]" />
             </a>
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
               <Facebook className="w-5 h-5 text-[#0E6388]" />
             </a>
-            <a className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition">
+            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
               <Linkedin className="w-5 h-5 text-[#0E6388]" />
             </a>
           </div>
@@ -44,75 +31,65 @@ export default function Footer() {
 
         {/* QUICK LINKS */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-white/80">
-            <li><Link to="/" className="hover:text-[#4BC1E8] transition">Home</Link></li>
-            <li><Link to="/services" className="hover:text-[#4BC1E8] transition">Services</Link></li>
-            <li><Link to="/work-gallery" className="hover:text-[#4BC1E8] transition">Work Gallery</Link></li>
-            <li><Link to="/about" className="hover:text-[#4BC1E8] transition">About</Link></li>
-            <li><Link to="/contact" className="hover:text-[#4BC1E8] transition">Contact</Link></li>
+          <h3 className="text-lg font-semibold mb-4 text-[#063349]">Quick Links</h3>
+          <ul className="space-y-2 text-[#063349]/80 text-sm">
+            <li><Link to="/" className="hover:text-[#0E6388] transition">Home</Link></li>
+            <li><Link to="/services" className="hover:text-[#0E6388] transition">Services</Link></li>
+            <li><Link to="/work-gallery" className="hover:text-[#0E6388] transition">Work Gallery</Link></li>
+            <li><Link to="/about" className="hover:text-[#0E6388] transition">About</Link></li>
+            <li><Link to="/contact" className="hover:text-[#0E6388] transition">Contact</Link></li>
           </ul>
         </div>
 
-        {/* CONTACT WITH CLICK-ACTIONS */}
+        {/* CONTACT INFO */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <div className="space-y-4 text-white/80 text-sm">
+          <h3 className="text-lg font-semibold mb-4 text-[#063349]">Contact Us</h3>
 
-            {/* Phone */}
-            <a href="tel:+19027189007" className="flex gap-3 hover:text-white transition">
+          <div className="space-y-4 text-sm text-[#063349]/85">
+            <a href="tel:+19027189007" className="flex gap-3 items-center hover:text-[#0E6388] transition">
               <Phone className="w-5 h-5 text-[#0E6388]" />
               +1 902-718-9007
             </a>
 
-            {/* Email */}
-            <a
-              href="mailto:sales@bluenosemarketing.com"
-              className="flex gap-3 hover:text-white transition"
-            >
+            <a href="mailto:sales@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition">
               <Mail className="w-5 h-5 text-[#0E6388]" />
               sales@bluenosemarketing.com
             </a>
 
-            {/* Address */}
             <a
               href="https://maps.google.com/?q=19 Alma Crescent, Halifax, NS B3N 2C4, Canada"
               target="_blank"
-              className="flex gap-3 hover:text-white transition"
+              className="flex gap-3 items-center hover:text-[#0E6388] transition"
             >
-              <MapPin className="w-8 h-8 text-[#0E6388]" />
-              19 Alma Crescent, Halifax, NS B3N 2C4, Canada
+              <MapPin className="w-6 h-6 text-[#0E6388]" />
+              19 Alma Crescent, Halifax, NS, Canada
             </a>
-
           </div>
         </div>
 
         {/* MAP */}
-        <div className="rounded-xl overflow-hidden shadow-lg">
+        <div className="rounded-xl overflow-hidden shadow-lg border border-[#0E6388]/20 h-[230px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d45405.76519008662!2d-63.6516953!3d44.6612053!3m2!1i1024!2i768!4f13.1!2m1!1sbluenose%20marketing%20halifax%20canada!5e0!3m2!1sen!2sin!4v1764141332327!5m2!1sen!2sin"
-            width="100%"
-            height="230"
-            style={{ border: 0 }}
+            className="w-full h-full"
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            style={{ border: 0 }}
           />
         </div>
-
       </div>
 
       {/* COPYRIGHT */}
-      <div className="relative border-t border-white/10 py-5 text-center z-10">
-        <p className="text-white/70 text-sm mb-2">
+      <div className="text-center mt-10 border-t border-[#0E6388]/20 pt-5">
+        <p className="text-[#063349]/60 text-sm">
           © {new Date().getFullYear()} Bluenose Digital Marketing. All Rights Reserved.
         </p>
-        <div className="flex justify-center gap-6 text-white/70 text-sm">
-          <a href="/terms" className="hover:text-white transition">Terms & Conditions</a>
-          <a href="/privacy" className="hover:text-white transition">Privacy Policy</a>
+
+        <div className="flex justify-center gap-6 text-sm mt-2 text-[#063349]/60">
+          <Link to="/terms" className="hover:text-[#0E6388]">Terms & Conditions</Link>
+          <Link to="/privacy" className="hover:text-[#0E6388]">Privacy Policy</Link>
         </div>
       </div>
-
     </footer>
   );
 }

@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [serviceDrop, setServiceDrop] = useState(false);
+  const [servicesDrop, setServicesDrop] = useState(false);
   const [workDrop, setWorkDrop] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  const location = useLocation();
+
+  // MENU ITEMS
   const services = [
     { name: "Social Media Marketing", link: "/services/smm" },
     { name: "Branding & Identity", link: "/services/brand-identity" },
@@ -16,229 +20,236 @@ export default function Header() {
     { name: "Photography & Shoots", link: "/services/photography" },
   ];
 
-const clients = [
+  const clients = [
     { name: "The Garden Retreat", link: "/work/the-garden-retreat" },
     { name: "Adda Indian Eatery", link: "/work/adda-indian-eatery" },
     { name: "Triveeni Events", link: "/work/triveeni-events" },
     { name: "Pita Nutso", link: "/work/pita-nutso" },
     { name: "Nayya Pizza & Grill", link: "/work/nayya-Pizza" },
-  { name: "Beaver Bank Station", link: "/work/beaver-bank-station" },
-   { name: "Sake Cafe | Sushi Bar", link: "/work/sake-cafe" },
-   { name: "Hearthstone Inn", link: "/work/hearthstone" },
+    { name: "Beaver Bank Station", link: "/work/beaver-bank-station" },
+    { name: "Sake Cafe | Sushi Bar", link: "/work/sake-cafe" },
+    { name: "Hearthstone Inn", link: "/work/hearthstone" },
     { name: "Besharam Bar & Grill", link: "/work/besharam" },
     { name: "Rivaaj Resto-Bar", link: "/work/rivaaj" },
+    { name: "Desi Garden", link: "/work/desi-garden" },
   ];
+
+  // SCROLL LISTENER FOR HEADER STYLE
   useEffect(() => {
-    if (window.innerWidth >= 1024) setOpen(false);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // AUTO-CLOSE MENU ON PAGE CHANGE
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
+
+  // 🔥 FIX: LOCK BODY SCROLL WHEN MOBILE MENU IS OPEN
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
+
   return (
-    <header className="sticky top-0 left-0 w-full z-50">
-      {/* BG */}
-      <div className="absolute inset-0 bg-black"></div>
-      <div
-        className="absolute inset-0 opacity-25 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 30%, #0E6388 0%, transparent 60%), radial-gradient(circle at 80% 70%, #4BC1E8 0%, transparent 70%)",
-        }}
-      ></div>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-lg border-b border-[#E5F1F8]" : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 flex justify-between items-center">
 
-      <div className="relative z-10 max-w-[1250px] mx-auto px-4 py-3">
-        {/* TOP NAV BAR */}
-        <div className="w-full bg-white rounded-full px-5 py-3 flex justify-between items-center shadow-[0_4px_20px_rgba(0,0,0,0.40)]">
-          {/* Logo */}
-          <a href="/">
-            <img
-              src="/logo/logo.jpeg"
-              className="w-32 md:w-36 object-contain"
-              alt="Bluenose"
-            />
-          </a>
+        {/* LOGO */}
+        <Link to="/">
+          <img
+            src="/logo/logo.jpeg"
+            className="w-32 md:w-36 object-contain transition-all"
+            alt="Bluenose"
+          />
+        </Link>
 
-          {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-6 font-medium">
-                       <Link to="/" onClick={() => setOpen(false)}>
-  Home
-</Link>
+        {/* DESKTOP NAV */}
+        <nav className="hidden lg:flex items-center gap-8 font-medium text-[#063349]">
 
-            {/* SERVICES */}
-            <div className="relative group inline-block">
-              <button className="hover:text-[#4BC1E8] transition flex items-center gap-1">
-                Services <ChevronDown size={16} />
-              </button>
+          <Link to="/" className="hover:text-[#0E6388]">Home</Link>
 
-              <div
-                className="absolute left-0 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-      bg-white shadow-xl rounded-xl p-4 w-60 z-50 transition-all duration-200"
-              >
-                {services.map((s, i) => (
-                  <a
-                    key={i}
-                    href={s.link}
-                    className="block px-3 py-2 rounded-md hover:bg-[#4BC1E8]/10 hover:text-[#0E6388]"
-                  >
-                    {s.name}
-                  </a>
-                ))}
-              </div>
-            </div>
+          {/* SERVICES DROPDOWN (Label is link now) */}
+          <div className="relative group cursor-pointer">
+            <Link to="/services" className="flex items-center gap-1 hover:text-[#0E6388]">
+              Services <ChevronDown size={16} />
+            </Link>
 
-            {/* WORK GALLERY */}
-            <div className="relative group inline-block">
-              <button className="hover:text-[#4BC1E8] transition flex items-center gap-1">
-                Work Gallery <ChevronDown size={16} />
-              </button>
-
-              {/* AUTO HEIGHT, SCROLL SAFELY */}
-              <div
-                className="
-      absolute left-0 mt-3 opacity-0 invisible
-      group-hover:opacity-100 group-hover:visible
-      bg-white shadow-xl rounded-xl p-4 w-64 z-50 transition-all duration-200
-  "
-              >
-                {clients.map((c, i) => (
-                  <a
-                    key={i}
-                    href={c.link}
-                    className="block px-3 py-2 rounded-md hover:bg-[#4BC1E8]/10 hover:text-[#0E6388]"
-                  >
-                    {c.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-           <Link to="/about" onClick={() => setOpen(false)}>
-  About
-</Link>
-           <Link to="/contact" onClick={() => setOpen(false)}>
-  Contact
-</Link>
-
-            <a
-              href="/catalogue.pdf"
-              download
-              className="px-5 py-2 rounded-full text-white 
-shadow hover:opacity-90 text-sm"
-              style={{
-    background: "rgb(14, 99, 136)"
-  }}
-            >
-              E-Catalogue
-            </a>
-          </nav>
-
-          {/* MOBILE MENU ICON */}
-          <button className="lg:hidden p-2" onClick={() => setOpen(!open)}>
-            {open ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* ================= MOBILE MENU ================= */}
-        <div
-          className={`lg:hidden mt-3 overflow-y-auto transition-all duration-500 ${
-            open
-              ? "max-h-[88vh] opacity-100"
-              : "max-h-0 opacity-0 pointer-events-none"
-          }`}
-        >
-          <div
-            className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl text-white 
-    shadow-xl text-center flex flex-col divide-y divide-white/10 py-2"
-          >
-                       <Link to="/" onClick={() => setOpen(false)}>
-  Home
-</Link>
-
-            {/* SERVICES MOBILE */}
-            <div>
-              <button
-                onClick={() => {
-                  setServiceDrop(!serviceDrop);
-                  setWorkDrop(false);
-                }}
-                className="h-12 w-full flex items-center justify-center gap-2 text-[17px]"
-              >
-                Services{" "}
-                <ChevronDown
-                  size={18}
-                  className={`${serviceDrop ? "rotate-180" : ""} transition`}
-                />
-              </button>
-
-              <div
-                className={`${
-                  serviceDrop ? "max-h-[280px]" : "max-h-0"
-                } overflow-auto transition-all`}
-              >
-                {services.map((s, i) => (
-                  <a
-                    key={i}
-                    href={s.link}
-                    className="block py-2 text-[15px] hover:text-[#4BC1E8]"
-                  >
-                    {s.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* WORK MOBILE */}
-            <div>
-              <button
-                onClick={() => {
-                  setWorkDrop(!workDrop);
-                  setServiceDrop(false);
-                }}
-                className="h-12 w-full flex items-center justify-center gap-2 text-[17px]"
-              >
-                Work Gallery{" "}
-                <ChevronDown
-                  size={18}
-                  className={`${workDrop ? "rotate-180" : ""} transition`}
-                />
-              </button>
-
-              {/*  NOW SHOWS FULL 10 ITEMS */}
-              <div
-                className={`${
-                  workDrop ? "max-h-[360px]" : "max-h-0"
-                } overflow-auto transition-all`}
-              >
-                {clients.map((c, i) => (
-                  <a
-                    key={i}
-                    href={c.link}
-                    className="block py-2 text-[15px] hover:text-[#4BC1E8]"
-                  >
-                    {c.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-                       <Link to="/about" onClick={() => setOpen(false)}>
-  About
-</Link>
-                      <Link to="/contact" onClick={() => setOpen(false)}>
-  Contact
-</Link>
-
-            <div className="py-4">
-              <a
-                href="/catalogue.pdf"
-                download
-                className="block w-40 mx-auto py-2 rounded-full 
-      bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-sm font-semibold shadow"
-              >
-                E-Catalogue
-              </a>
+            <div className="absolute left-0 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+              bg-white shadow-xl rounded-xl w-64 p-3 transition-all duration-200 border border-[#EAF4FA]">
+              {services.map((s, i) => (
+                <Link
+                  key={i}
+                  to={s.link}
+                  className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
+                >
+                  {s.name}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
+
+          {/* WORK DROPDOWN (Label is link now) */}
+          <div className="relative group cursor-pointer">
+            <Link to="/work-gallery" className="flex items-center gap-1 hover:text-[#0E6388]">
+              Work Gallery <ChevronDown size={16} />
+            </Link>
+
+            <div className="absolute left-0 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+              bg-white shadow-xl rounded-xl w-64 p-3 transition-all duration-200 border border-[#EAF4FA]">
+              {clients.map((c, i) => (
+                <Link
+                  key={i}
+                  to={c.link}
+                  className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <Link to="/about" className="hover:text-[#0E6388]">About</Link>
+          <Link to="/contact" className="hover:text-[#0E6388]">Contact</Link>
+
+          <a
+            href="/catalogue.pdf"
+            download
+            className="px-5 py-2 rounded-full text-white font-semibold shadow-md hover:opacity-90"
+            style={{ background: "rgb(14, 99, 136)" }}
+          >
+            E-Catalogue
+          </a>
+        </nav>
+
+        {/* MOBILE ICON */}
+        <button onClick={() => setOpen(!open)} className="lg:hidden text-[#063349]">
+          {open ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+{/* MOBILE MENU */}
+<div
+  className={`lg:hidden bg-white border-t border-[#EAF4FA] transition-all duration-300 overflow-hidden ${
+    open ? "max-h-[85vh] py-4" : "max-h-0 py-0"
+  }`}
+>
+  {/* SCROLLABLE CONTENT */}
+  <div className="max-h-[75vh] overflow-y-auto pr-2">
+
+    <div className="flex flex-col text-[#063349]">
+      <Link to="/" className="py-3 px-6 hover:text-[#0E6388]">Home</Link>
+
+      {/* SERVICES */}
+     <div className="px-6 py-2">
+  <div className="w-full flex justify-between items-center py-2">
+
+    {/* CLICK — GO TO SERVICES PAGE */}
+    <Link 
+      to="/services"
+      className="flex-1 text-left font-medium hover:text-[#0E6388]"
+      onClick={() => setOpen(false)} // closes menu
+    >
+      Services
+    </Link>
+
+    {/* CLICK — TOGGLE DROPDOWN ONLY */}
+    <button
+      onClick={() => setServicesDrop(!servicesDrop)}
+      className="p-2"
+    >
+      <ChevronDown
+        className={`transition ${servicesDrop ? "rotate-180" : ""}`}
+      />
+    </button>
+
+  </div>
+
+  {/* DROPDOWN ITEMS */}
+  <div
+    className={`overflow-hidden transition-all ${
+      servicesDrop ? "max-h-[300px]" : "max-h-0"
+    }`}
+  >
+    {services.map((s, i) => (
+      <Link
+        key={i}
+        to={s.link}
+        className="block py-2 pl-3 text-sm hover:text-[#0E6388]"
+        onClick={() => setOpen(false)} // close menu on click
+      >
+        {s.name}
+      </Link>
+    ))}
+  </div>
+</div>
+
+
+ {/* WORK GALLERY */}
+<div className="px-6 py-2">
+
+  {/* TOP ROW: TEXT + CHEVRON */}
+  <div className="w-full flex justify-between items-center py-2">
+
+    {/* CLICK TEXT → GO TO WORK GALLERY PAGE */}
+    <Link 
+      to="/work-gallery"
+      className="font-medium text-left w-full"
+    >
+      Work Gallery
+    </Link>
+
+    {/* CHEVRON ONLY TOGGLES DROPDOWN */}
+    <button
+      type="button"
+      onClick={() => setWorkDrop(!workDrop)}
+      className="p-2"
+    >
+      <ChevronDown
+        className={`transition ${workDrop ? "rotate-180" : ""}`}
+      />
+    </button>
+
+  </div>
+
+  {/* DROPDOWN LIST */}
+  <div className={`overflow-hidden transition-all ${
+    workDrop ? "max-h-[400px]" : "max-h-0"
+  }`}>
+    {clients.map((c, i) => (
+      <Link 
+        key={i} 
+        to={c.link} 
+        className="block py-2 pl-3 text-sm hover:text-[#0E6388]"
+      >
+        {c.name}
+      </Link>
+    ))}
+  </div>
+
+</div>
+
+      <Link to="/about" className="py-3 px-6 hover:text-[#0E6388]">About</Link>
+      <Link to="/contact" className="py-3 px-6 hover:text-[#0E6388]">Contact</Link>
+
+      <a
+        href="/catalogue.pdf"
+        download
+        className="mx-6 mt-3 mb-4 py-2 rounded-full bg-[#0E6388] text-white text-center font-medium shadow"
+      >
+        E-Catalogue
+      </a>
+    </div>
+
+  </div>
+</div>
+
     </header>
   );
 }

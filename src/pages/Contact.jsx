@@ -98,20 +98,31 @@ const sendMessage = (e) => {
         <title>Contact Bluenose Digital | Work With Our Creative Marketing Team</title>
       </Helmet>
 
-      <section className="py-20">
+    <section className="pt-24 pb-10 md:pt-28 md:pb-20">
+
         <div className="max-w-7xl mx-auto px-6">
+{/* EYEBROW */}
+<p className="text-[#0E6388] font-semibold tracking-wide text-base md:text-lg text-center mb-2">
+  → Contact Us
+</p>
 
           {/* PAGE TITLE */}
-          <motion.h1
-            variants={fade}
-            initial="hidden"
-            animate="show"
-            className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]"
-          >
-            Let’s Connect
+         <motion.h1
+           variants={fade}
+           initial="hidden"
+           animate="show"
+           className="
+             text-center 
+             text-3xl md:text-5xl 
+             font-extrabold 
+             text-[#063349]
+             leading-[1.3]
+           "
+         >
+            Let’s <span className="text-[#0E6388]">Connect</span>
           </motion.h1>
 
-          <p className="text-center max-w-3xl mx-auto mt-4 mb-14 text-[#0E3D55]/80 text-lg">
+        <p className="mt-4 mb-12  text-[#063349]/80  text-lg text-center leading-relaxed">
             Building brands that stand out, scale fast, and stay unforgettable.
           </p>
 
@@ -190,7 +201,7 @@ const sendMessage = (e) => {
       type="text"
       value={form.name}
       onChange={handleChange}
-      className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] border"
+      className="mt-2 w-full p-3 rounded-lg bg-white border"
       placeholder="Enter your name"
     />
     {errors.name && <p className="text-red-500 text-xs">{errors.name}</p>}
@@ -204,7 +215,7 @@ const sendMessage = (e) => {
       type="email"
       value={form.email}
       onChange={handleChange}
-      className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] border"
+      className="mt-2 w-full p-3 rounded-lg bg-white border"
       placeholder="Enter your email"
     />
     {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
@@ -218,7 +229,7 @@ const sendMessage = (e) => {
       type="text"
       value={form.phone}
       onChange={handleChange}
-      className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] border"
+      className="mt-2 w-full p-3 rounded-lg bg-white border"
       placeholder="Enter your phone"
     />
   </div>
@@ -230,7 +241,7 @@ const sendMessage = (e) => {
       name="service"
       value={form.service}
       onChange={handleChange}
-      className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] border"
+      className="mt-2 w-full p-3 rounded-lg bg-white border"
     >
       <option value="">Select a service</option>
       <option value="Social Media Marketing">Social Media Marketing</option>
@@ -251,7 +262,7 @@ const sendMessage = (e) => {
       rows="5"
       value={form.message}
       onChange={handleChange}
-      className="mt-2 w-full p-3 rounded-lg bg-[#F8FBFF] border"
+      className="mt-2 w-full p-3 rounded-lg bg-white border"
       placeholder="Write your message..."
     ></textarea>
   </div>
@@ -282,3 +293,7 @@ const sendMessage = (e) => {
     </>
   );
 }
+
+
+
+

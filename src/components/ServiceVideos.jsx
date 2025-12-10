@@ -175,8 +175,8 @@ const iconUnmute = (
       {/* SECTION HEADER */}
      <div className="text-center mb-6 relative z-10">
   <p className="flex items-center justify-center gap-2 text-lg font-medium">
-    <span className="text-[#4BC1E8] text-2xl">→</span>
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+    <span className="text-white text-2xl">→</span>
+    <span className="text-white">
       Our Services
     </span>
   </p>
@@ -185,7 +185,7 @@ const iconUnmute = (
 
       <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-12 relative z-10">
         Explore Our{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+        <span className="text-white">
           Services
         </span>
       </h2>
@@ -194,16 +194,26 @@ const iconUnmute = (
       {/* SERVICE FILTER BUTTONS */}
       <div className="flex justify-center gap-6 mb-14 relative z-10 flex-wrap">
         {services.map((srv) => (
-          <button
-            key={srv}
-            onClick={() => setActiveService(srv)}
-            className={`px-6 py-3 rounded-full font-medium border transition duration-300
-            ${activeService === srv
-              ? "bg-gradient-to-r from-[#4BC1E8] to-[#0E6388] text-white shadow-lg scale-[1.05]"
-              : "bg-white/10 text-white border-white/20 hover:bg-white/20"}
-          `}>
-            {srv}
-          </button>
+<button
+  key={srv}
+  onClick={() => setActiveService(srv)}
+  className={`px-6 py-3 rounded-full font-medium border transition duration-300
+    ${activeService === srv
+      ? "text-white shadow-lg scale-[1.05]"
+      : "bg-white/10 text-white border-white/20 hover:bg-white/20"
+    }
+    focus:bg-white focus:text-black
+  `}
+  style={
+    activeService === srv
+      ? { background: "rgb(14, 99, 136)", color: "white" }
+      : {}
+  }
+>
+  {srv}
+</button>
+
+
         ))}
       </div>
 
@@ -228,9 +238,14 @@ const iconUnmute = (
             />
 
             {/* Views tag */}
-            <div className="absolute bottom-3 left-3 bg-black/60 px-3 py-1 rounded-full text-xs">
-              👁 {item.views}
-            </div>
+          <div className="absolute bottom-3 left-3 bg-black/60 px-3 py-1 rounded-full text-xs flex items-center gap-1">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+    <polyline points="16 7 22 7 22 13"/>
+  </svg>
+  <span>{item.views}</span>
+</div>
+
 
             {/* Sound control */}
           <button

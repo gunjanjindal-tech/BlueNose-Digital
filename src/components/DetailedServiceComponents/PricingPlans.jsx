@@ -109,12 +109,12 @@ export default function PricingPlans() {
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* Heading */}
-        <h1 className="text-4xl font-extrabold  text-[#0E6388]">
+           <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349 text-center">
           Find Your Perfect Plan for
           <span className=" text-[#0E6388]">
             {" "}Faster, Smarter Growth
           </span>
-        </h1>
+        </h2>
 
         {/* Billing Toggle */}
         <div className="flex justify-center gap-4 mt-10">
@@ -236,7 +236,7 @@ export default function PricingPlans() {
                   setForm({ ...form, service: hrs });
                   setShowModal(true);
                 }}
-                className="mt-6 w-full py-3 rounded-full bg-white text-[#0E3D55]
+                className="mt-6 w-full py-3 rounded-full bg-white text-[#063349]
                   font-semibold hover:opacity-90 transition"
               >
                 Book A Call

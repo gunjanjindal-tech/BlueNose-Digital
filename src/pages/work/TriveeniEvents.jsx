@@ -57,55 +57,58 @@ export default function TriveeniEvents() {
   }, []);
 
   return (
-    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
+         <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
+
 
 {/* -------------------------------- HERO SECTION (RIVAAJ STYLE) -------------------------------- */}
 <section className="min-h-[80vh] w-full flex items-center 
  bg-[#FAFFD7]  text-black rounded-3xl 
-px-6 py-20 mb-20">
+px-6 py-20 mb-20 ">
 
 
   <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
-    {/* LEFT TEXT */}
-    <div>
-      <div className="inline-block bg-white/20 text-black px-4 py-2 
-      rounded-full text-sm font-semibold mb-5 shadow-sm">
-        1.3M+ Views in 90 Days • Organic Cultural Event Growth
+ {/* LEFT TEXT */}
+<div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+
+  <div className="inline-block bg-white/20 text-black px-4 py-2 
+    rounded-full text-sm font-semibold mb-5 shadow-sm">
+    1.3M+ Views in 90 Days • Organic Cultural Event Growth
+  </div>
+
+  <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+    Triveeni{" "}
+    <span className="text-black">Events</span>
+  </h1>
+
+  <p className="text-xl mt-4 text-black/90 leading-relaxed max-w-xl">
+    A community-driven Instagram strategy celebrating Indian festivals, 
+    culture, and vibrant traditions with a Reels-first content approach.
+  </p>
+
+  <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-8">
+    {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
+      <div 
+        key={i}
+        className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
+        shadow text-black text-sm font-medium"
+      >
+        {tag}
       </div>
+    ))}
+  </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-        Triveeni{" "}
-        <span className="text-black
-       ">
-          Events
-        </span>
-      </h1>
+  <div className="flex justify-center sm:justify-start w-full">
+    <Link to="/contact">
+      <button className="mt-8 px-8 py-3 bg-white
+        text-black font-semibold rounded-full shadow-lg">
+        Contact Us Now →
+      </button>
+    </Link>
+  </div>
 
-      <p className="text-xl mt-4 text-black/90 leading-relaxed max-w-xl">
-        A community-driven Instagram strategy celebrating Indian festivals, 
-        culture, and vibrant traditions with a Reels-first content approach.
-      </p>
+</div>
 
-      <div className="flex flex-wrap gap-4 mt-8">
-        {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
-          <div 
-            key={i}
-            className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-            shadow text-black text-sm font-medium"
-          >
-            {tag}
-          </div>
-        ))}
-      </div>
-
-      <Link to="/contact">
-        <button className="mt-8 px-8 py-3 bg-white
-          text-black font-semibold rounded-full shadow-lg">
-          Contact Us Now →
-        </button>
-      </Link>
-    </div>
 
     {/* RIGHT LOGO */}
     <div className="flex justify-center">
@@ -289,131 +292,157 @@ px-6 py-20 mb-20">
             </div>
           </section>
 
-          {/* ------------ CASE STUDIES ------------ */}
-          <section id="case-studies" className="mt-16">
-<h2
-              className="text-4xl font-extrabold text-center leading-[1.3] -mt-2
-              text-[#0E6388]"
-            >
-              Explore Our Other Client{" "}
-              <span className="text-[#0E6388]">
-                Case Studies
-              </span>
+           {/* ---------------- CASE STUDIES ---------------- */}
+          <section id="case-studies" className="mt-16 max-w-4xl mx-auto">
+         <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
+
+              Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span> 
             </h2>
-          <div className="grid sm:grid-cols-2 gap-10 mt-10" id="case-studies">
-            
+
+            <div className="grid sm:grid-cols-2 gap-10 mt-10">
+
+              {/* CARD 1 */}
+             <CaseCard
+  background="#F7FBCF"
+  logo="/client/logo-2.png"
+  title="Triveeni Events"
+  stats={[
+    ["1.3M+", "Total Views"],
+    ["439K+", "Accounts Reached"],
+    ["89%", "Organic Reach"],
+    ["130%", "Growth Rate"],
+  ]}
+  link="/work/triveeni-events"
+/>
 
 
-  {/* CARD 1 — TRIVEENI */}
-<div className="relative bg-[#F7FBCF] px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-
-  <h3 className="text-xl font-bold">Triveeni Events</h3>
-  <p className="mt-2 text-black/70 text-sm">
-    1.3M+ Views in 90 Days
-  </p>
-
-  {/* Stats grid */}
-  <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-    <CaseStat v="1.3M+" t="Total Views" />
-  <CaseStat v="439K+" t="Accounts Reached" className="whitespace-nowrap" />
-    <CaseStat v="89%" t="Organic Reach" />
-    <CaseStat v="130%" t="Growth Rate" />
-  </div>
-
-  {/* LOGO BOTTOM RIGHT */}
-  <img 
-    src="/client/logo-2.png"
-    className="absolute left-74 bottom-2 w-[100px]"
-  />
-</div>
+              {/* CARD 2 */}
+            <CaseCardDark
+  background="#FB8C00"
+  logo="/client/logo-5.png"
+  title="Beaver Bank Station"
+  stats={[
+    ["79K+", "Total Views"],
+    ["48K+", "Accounts"],
+    ["439", "Interactions"],
+    ["39%", "Engagement"],
+  ]}
+  link="/work/beaver-bank-station"
+/>
 
 
+              {/* CARD 3 */}
+              <CaseCardDark
+                background="#142758"
+                logo="/client/logo-6.png"
+                title="Hearthstone Inn"
+                stats={[
+                  ["1.6K+", "Total Views"],
+                  ["78%", "Engagement"],
+                  ["94.6%", "ER Rate"],
+                  ["53", "Accounts"],
+                ]}
+                link="/work/Hearthstone"
+              />
 
-  {/* CARD 2 — BEAVER BANK */}
-  <div className="relative bg-[#FB8C00] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-
-    <h3 className="text-xl font-bold">Beaver Bank Station</h3>
-    <p className="mt-2 text-white/90 text-sm">79K+ Views in 90 Days</p>
-
-    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-      <CaseStatDark v="79K+" t="Total Views" />
-      <CaseStatDark v="48K+" t="Accounts Reached"/>
-      <CaseStatDark v="439" t="Interactions" />
-      <CaseStatDark v="39%" t="Engagement" />
-    </div>
-
-    <img 
-      src="/client/logo-5.png"
-      className="absolute left-74 bottom-2 w-[100px]"
-  />
- 
-  </div>
-
-
-  {/* CARD 3 — HEARTHSTONE */}
-  <div className="relative bg-[#142758] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg ">
-
-    <h3 className="text-xl font-bold">Hearthstone Inn</h3>
-    <p className="mt-2 text-white/90 text-sm">1.6K+ Views</p>
-
-    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-      <CaseStatDark v="1.6K+" t="Total Views" />
-      <CaseStatDark v="78%" t="Engagement" />
-      <CaseStatDark v="94.6%" t="ER Rate" />
-      <CaseStatDark v="53" t="Accounts" />
-    </div>
-
-    <img 
-      src="/client/logo-6.png"
-        className="absolute left-74 bottom-2 w-[100px]"
-    />
-  </div>
-
-
-  {/* CARD 4 — RIVAAJ */}
-  <div className="relative bg-[#B28829] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg ">
-
-    <h3 className="text-xl font-bold">Rivaaj Resto-Bar</h3>
-    <p className="mt-2 text-white/90 text-sm">48.9K+ Views</p>
-
-    <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-      <CaseStatDark v="48.9K" t="Total Views" />
-      <CaseStatDark v="403" t="Interactions" />
-      <CaseStatDark v="74" t="New Followers" />
-      <CaseStatDark v="17" t="Shares" />
-    </div>
-
-    <img 
-      src="/client/logo-17.png"
-       className="absolute left-72 bottom-5 w-[110px]"
-    />
-  </div>
-
-</div>
-    </section>
+              {/* CARD 4 */}
+              <CaseCardDark
+                background="#FDF1D9"
+                logo="/client/logo-3.png"
+                title="Pita Nutso"
+                stats={[
+                  ["36.1K", "Total Views"],
+                  ["52", "Comment Shares"],
+                  ["276", "Interactions"],
+                  ["66%", "Engagement"],
+                ]}
+                link="/work/pita-nutso"
+  dark={false}
+              />
+            </div>
+          </section>
 
         </div>
       </section>
     </div>
   );
 }
-/* ------------ SMALL COMPONENTS ------------ */
+
+/* CARD COMPONENTS */
+function CaseCard({ background, logo, title, stats, link }) {
+  return (
+    <Link to={link}>
+      <div
+        className="px-6 py-8 rounded-2xl shadow-lg w-full max-w-[400px] mx-auto text-center cursor-pointer hover:scale-[1.02] transition"
+        style={{ background }}
+      >
+        {/* LOGO */}
+        <div className="w-full flex justify-center mb-5 mt-2">
+          <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
+        </div>
+
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="mt-2 text-black/70 text-sm">{stats[0][0]} Views</p>
+
+        {/* STATS */}
+        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+          {stats.map(([v, t], i) => (
+            <CaseStat key={i} v={v} t={t} />
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
+  return (
+    <Link to={link}>
+      <div
+        className={`px-6 py-8 rounded-2xl shadow-lg text-center w-full max-w-[400px] mx-auto cursor-pointer hover:scale-[1.02] transition 
+          ${dark ? "text-white" : "text-black"}`}
+        style={{ background }}
+      >
+        {/* LOGO */}
+        <div className="w-full flex justify-center mb-4">
+          <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
+        </div>
+
+        {/* TITLE */}
+        <h3 className={`text-xl font-bold ${dark ? "text-white" : "text-black"}`}>
+          {title}
+        </h3>
+
+        {/* VIEWS */}
+        <p className={`mt-2 text-sm ${dark ? "text-white/90" : "text-black/70"}`}>
+          {stats[0][0]} Views
+        </p>
+
+        {/* STATS */}
+        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+          {stats.map(([v, t], i) =>
+            dark ? <CaseStatDark key={i} v={v} t={t} /> : <CaseStat key={i} v={v} t={t} />
+          )}
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 function CaseStat({ v, t }) {
   return (
-    <div className="bg-white text-black p-3 rounded-lg shadow text-center">
-      <p className="font-bold">{v}</p>
-      <p className="text-xs text-black/70">{t}</p>
+    <div className="bg-white text-black p-4 rounded-lg shadow text-center flex flex-col items-center min-h-[85px]">
+      <p className="font-bold text-lg">{v}</p>
+      <p className="text-xs text-black/70 leading-tight break-words text-center">{t}</p>
     </div>
   );
 }
 
 function CaseStatDark({ v, t }) {
   return (
-    <div className="bg-white/20 text-white p-3 rounded-lg shadow text-center">
-      <p className="font-bold">{v}</p>
-      <p className="text-xs text-white/80">{t}</p>
+    <div className="bg-white/20 text-white p-4 rounded-lg shadow text-center flex flex-col items-center min-h-[85px]">
+      <p className="font-bold text-lg">{v}</p>
+      <p className="text-xs text-white/80 leading-tight break-words text-center">{t}</p>
     </div>
   );
 }
-

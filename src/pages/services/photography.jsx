@@ -96,13 +96,15 @@ export default function PhotographyShoots() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl sm:text-3xl md:text-4xl font-extrabold 
-           text-[#0E6388]">
+
+
+                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+
             Visuals That Tell Your Story —  
             <span className="text-[#0E6388]">
               {" "}And Sell Your Brand
             </span>
-          </h1>
+          </h2>
 
           <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
             High-quality product shoots, lifestyle photography, restaurant visuals, 
@@ -169,8 +171,8 @@ export default function PhotographyShoots() {
       {/* ✦ BARRIERS SECTION */}
       <section className="pt-15 md:pt-20">
 
-        <h2 className="text-3xl sm:text-3xl md:text-4xl font-extrabold 
-         text-[#0E6388] text-center mb-14">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]
+ text-center mb-14">
           Barriers Before{" "}
           <span className="text-[#0E6388]">
             Working With Us
@@ -204,18 +206,19 @@ export default function PhotographyShoots() {
       <PricingPlans />
 
       {/* ✦ TESTIMONIALS */}
-      <section className="py-20">
+           <section className=" py-5 md:py-20">
+
         <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold 
-            text-[#0E6388]">
+                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+
             Our rating based on 2 verified
             <span className="text-[#0E6388]">
               {" "}client reviews
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">
 
             {/* LEFT CARD */}
             <div className="bg-white p-10 rounded-3xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] text-left">

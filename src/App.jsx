@@ -31,6 +31,7 @@ import AddaIndianEatery from "./pages/work/AddaIndianEatery";
 import TheGardenRetreat from "./pages/work/TheGardenRetreat";
 import RivaazRestroBar from "./pages/work/RivaazRestroBar";
 import SakeCafe from "./pages/work/SakeCafe";
+import DesiGarden from "./pages/work/DesiGarden";
 
 function App() {
   return (
@@ -68,7 +69,7 @@ function App() {
         <Route path="/work/the-garden-retreat" element={<TheGardenRetreat />} />      
         <Route path="/work/rivaaj" element={<RivaazRestroBar />} />
         <Route path="/work/sake-cafe" element={<SakeCafe />} />
-
+<Route path="/work/desi-garden" element={<DesiGarden />} />
       </Routes>
       <Footer />
       <ScrollToTop />

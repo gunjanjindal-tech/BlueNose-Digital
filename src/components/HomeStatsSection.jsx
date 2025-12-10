@@ -1,12 +1,13 @@
 export default function StatsSection() {
 
   const stats = [
-    { metric: "3x", label: "Growth", desc: "With smart strategy and creative execution" },
+{ metric: "3x", label: "ROI", desc: "Delivered by performance-focused campaign management" },
     { metric: "10.3M+", label: "Total Views", desc: "Views generated through campaigns converting into customers" },
-    { metric: "76%", label: "Brand authority & Market Share", desc: "Our content doesn't just get seen, it builds loyalty" },
-    { metric: "83%", label: "Client success & trust", desc: "Clients stay, win & scale with consistent performance" },
+   { metric: "86%", label: "Brand Lift", desc: "Strategic content that drives awareness and audience trust" },
+    { metric: "93%", label: "Client success & trust", desc: "Clients stay, win & scale with consistent performance" },
     { metric: "50+", label: "Brands", desc: "Companies who trusted us to grow their business" },
-    { metric: "24/7", label: "Support", desc: "We resolve issues across time zones without delay" },
+   { metric: "24/7", label: "Brand Presence", desc: "We keep your audience engaged even when you’re offline" }
+
   ];
   return (
     <section className="py-28 bg-white text-[#0E3D55] px-6">
@@ -15,12 +16,10 @@ export default function StatsSection() {
      <h2
   className="
     text-center text-3xl md:text-5xl font-extrabold mb-10 leading-[1.2] pb-2
-    text-transparent bg-clip-text
-    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A]
-    drop-shadow-[0_4px_10px_rgba(0,0,0,0.25)]
+    text-[#0E6388]
   "
 >
-        The Numbers  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">That Matter</span> 
+        The Numbers  <span className="text-[#0E6388]">That Matter</span> 
       </h2>
 
       
@@ -36,10 +35,10 @@ export default function StatsSection() {
               text-white
             "
             style={{
-              background:"linear-gradient(to bottom right, #4BC1E8, #0E6388)",
+              background: "rgb(14, 99, 136)",
             }}
           >
-            <h3 className="text-4xl md:text-5xl font-extrabold">{item.metric}</h3>
+            <h3 className="text-4xl md:text-5xl font-extrabold ">{item.metric}</h3>
 
             <p className="text-lg font-semibold opacity-95">
               {item.label}

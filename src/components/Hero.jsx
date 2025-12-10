@@ -30,9 +30,8 @@ export default function Hero() {
 
       {/* Premium Headline */}
       <div className="text-center">
-        <h1 className="text-5xl md:text-5xl font-extrabold text-transparent bg-clip-text
-    bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] leading-tight">
-          We Build Brands That Stand Out — <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">And Scale Fast</span>
+        <h1 className="text-5xl md:text-5xl font-extrabold text-[#0E6388] leading-tight">
+          We Build Brands That Stand Out — <span className="text-[#0E6388]">And Scale Fast</span>
         </h1>
         <p className="mt-4 text-transparent bg-clip-text
     bg-gradient-to-r from-[#0E3D55] via-[#0F587A] to-[#11719A] text-lg md:text-xl">Design · Strategy · Digital Execution · Real Results

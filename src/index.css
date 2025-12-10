@@ -3,23 +3,90 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 
-:root {
-  --bn-primary: #0E6388;
-  --bn-accent: #4BC1E8;
-  --bn-gold: #F5C248;
-  --bn-dark: #2E2E2E;
+@keyframes slideX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@keyframes rotateRing {
+@keyframes slideXReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-slideX {
+  animation: slideX 22s linear infinite;
+}
+
+.animate-slideXReverse {
+  animation: slideXReverse 26s linear infinite;
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 12s infinite ease-in-out;
+}
+
+.animate-blob2 {
+  animation: blob 14s infinite ease-in-out reverse;
+}
+
+/* Our Work in Action */
+@keyframes beamMove {
+  0% { transform: translateX(-5%) translateY(-5%); }
+  100% { transform: translateX(5%) translateY(5%); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(25px, -30px) scale(1.1); }
+}
+
+@keyframes blob2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.1); }
+}
+
+.animate-blob { animation: blob 12s infinite ease-in-out; }
+.animate-blob2 { animation: blob2 14s infinite ease-in-out; }
+
+/* WHAT WE OFFER SECTION  */
+@keyframes orbitRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-.rotate-ring {
-  animation: rotateRing 14s linear infinite;
-  transform-origin: center;
+@keyframes dotFloat {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(8px, -8px); }
+  100% { transform: translate(0,0); }
 }
 
-.ring-rotate {
-  animation: rotateRing 18s linear infinite;
+/* FLOAT ANIMATION (no tailwind needed) */
+.float-card {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* HomeClientGallery */
+@keyframes fade {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  animation: fade 0.6s ease forwards;
 }

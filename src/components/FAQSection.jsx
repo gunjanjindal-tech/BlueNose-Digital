@@ -48,14 +48,14 @@ export default function FAQSection() {
 
         {/* LEFT TITLE */}
        <div className="text-center md:text-left">
-  <p className="text-[#4BC1E8] text-sm font-medium tracking-wide mb-3">
+  <p className="text-white text-sm font-medium tracking-wide mb-3">
     → FAQ'S
   </p>
 
   <h2 className="text-3xl md:text-5xl font-extrabold">
     Everything You Should
     <br />
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4BC1E8] to-[#0E6388]">
+    <span className="text-white">
       Know Before Starting
     </span>
   </h2>
@@ -70,19 +70,19 @@ export default function FAQSection() {
               className="bg-white border border-white/20 rounded-2xl p-5 cursor-pointer shadow-md"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-[#0E6388]">
+                <h3 className="text-lg font-semibold text-black">
                   {faq.question}
                 </h3>
 
                 <ChevronDown
-                  className={`w-5 h-5 text-[#0E6388] transition-transform ${
+                  className={`w-5 h-5 text-black transition-transform ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
               </div>
 
               {openIndex === index && (
-                <p className="mt-3 text-[#0E6388] leading-relaxed text-[15px] pr-5">
+                <p className="mt-3 text-black leading-relaxed text-[15px] pr-5">
                   {faq.answer}
                 </p>
               )}

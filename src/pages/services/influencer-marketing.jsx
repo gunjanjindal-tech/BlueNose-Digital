@@ -23,7 +23,7 @@ export default function InfluencerMarketing() {
     views: "11.8K"
   },
   { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_4_yecfec.mp4",
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414126/Influencer_marketing_3_tc1zqd.mov",
     views: "4.1K"
   },
 ];
@@ -88,13 +88,12 @@ export default function InfluencerMarketing() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-          <h1 className="text-3xl sm:text-3xl md:text-4xl font-extrabold 
-            text-[#0E6388]">
+                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
             Turn Influencers Into Revenue — 
             <span className="text-[#0E6388]">
               {" "}Not Just Reach
             </span>
-          </h1>
+          </h2>
 
           <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
             We partner your brand with creators who match your voice, values, and audience —
@@ -156,8 +155,8 @@ export default function InfluencerMarketing() {
 
       {/* ✦ BARRIERS SECTION */}
       <section className="pt-15 md:pt-20">
-        <h2 className="text-3xl sm:text-3xl md:text-4xl font-extrabold text-[#0E6388]
-          text-center mb-14">
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center mb-14">
+
           Barriers Before{" "}
           <span className="text-[#0E6388]">
             Working With Us
@@ -190,18 +189,19 @@ export default function InfluencerMarketing() {
       <PricingPlans />
 
       {/* ✦ TESTIMONIALS */}
-      <section className="py-20">
+      <section className=" py-5 md:py-20">
+
         <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold 
-            text-[#0E6388]">
+                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+
             Our rating based on 2 verified
             <span className="text-[#0E6388]">
               {" "}client reviews
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">
             
             {/* Left Card */}
             <div className="bg-white p-10 rounded-3xl shadow-[0_8px_25px_rgba(0,0,0,0.08)] text-left">

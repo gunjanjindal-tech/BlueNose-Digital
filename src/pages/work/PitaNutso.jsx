@@ -1,28 +1,26 @@
-// src/pages/work/PitaNutso.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Counter from "../../components/Counter";
 import BlueSidebar from "../../components/BlueSidebar";
+import Counter from "../../components/Counter";
 
+// Icons (same style as Garden/Besharam)
 import {
   TrendingUp,
-  Sliders,
+  PenTool,
   Video,
   BarChart3,
   Users,
-  Utensils,
 } from "lucide-react";
 
 const icons = {
   strategy: <TrendingUp className="w-full h-full" />,
-  optimization: <Sliders className="w-full h-full" />,
+  pen: <PenTool className="w-full h-full" />,
+  reels: <Video className="w-full h-full" />,
   analytics: <BarChart3 className="w-full h-full" />,
   audience: <Users className="w-full h-full" />,
-  food: <Utensils className="w-full h-full" />,
-  reels: <Video className="w-full h-full" />,
 };
 
-export default function PitaNutso() {
+export default function PitaNusto() {
   const sections = [
     "overview",
     "services-provided",
@@ -34,10 +32,8 @@ export default function PitaNutso() {
 
   const [active, setActive] = useState("overview");
 
-  // scroll tracking
   useEffect(() => {
     const observers = [];
-
     sections.forEach((id) => {
       const sec = document.getElementById(id);
       if (!sec) return;
@@ -46,7 +42,7 @@ export default function PitaNutso() {
         (entries) => {
           if (entries[0].isIntersecting) setActive(id);
         },
-        { threshold: 0.35, rootMargin: "-120px 0px -200px 0px" }
+        { threshold: 0.35 }
       );
 
       obs.observe(sec);
@@ -57,73 +53,94 @@ export default function PitaNutso() {
   }, []);
 
   return (
-    <div className="bg-white text-[#063349] font-inter px-6 pt-6 pb-20">
-      {/* -------------------------------- HERO SECTION -------------------------------- */}
-    <section className="min-h-[80vh] w-full flex items-center 
- bg-[#FDF1D9] text-white rounded-3xl px-6 py-20 mb-20">
-        <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
 
-          {/* LEFT */}
-          <div>
-            <div className="inline-block bg-white/20 text-black px-4 py-2 
-            rounded-full text-sm font-semibold mb-5 shadow-sm">
-              36.1K+ Views in 90 Days • Mediterranean Brand Presence Strategy
-            </div>
+      {/* ---------------- HERO SECTION ---------------- */}
+<section
+  className="w-full bg-[#b1352e] text-white rounded-3xl px-4 
+  py-10 md:py-40 mb-20"
+>
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
 
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-black">
-              Pita{" "}
-              <span className="text-black">
-                Nutso
-              </span>
-            </h1>
+    {/* LEFT */}
+    <div className="flex flex-col items-center text-center md:items-start md:text-left w-full md:w-1/2">
 
-            <p className="text-xl mt-4 text-black leading-relaxed">
-              A Mediterranean-focused branding system built through appetizing visuals,
-              identity shaping, and organic performance-driven strategies.
-            </p>
+      {/* BADGE */}
+      <div
+        className="inline-block bg-white/20 text-white px-4 py-2 rounded-full 
+        text-sm font-semibold mb-4 shadow-sm"
+      >
+        92K+ Views • Mediterranean Fusion Brand Strategy
+      </div>
 
-            <div className="flex flex-wrap gap-4 mt-8">
-              {["Brand Roadmap", "Design Impact", "Performance Pulse"].map(
-                (tag, i) => (
-                  <div
-                    key={i}
-                    className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-                    shadow text-black text-sm font-medium"
-                  >
-                    {tag}
-                  </div>
-                )
-              )}
-            </div>
+      {/* HEADING */}
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+        Pita Nusto
+      </h1>
 
-            <Link to="/contact">
-              <button
-                className="mt-8 px-8 py-3 bg-white text-black font-semibold 
-                rounded-full shadow-lg"
-              >
-                Contact Us Now →
-              </button>
-            </Link>
-          </div>
+      {/* DESCRIPTION */}
+      <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
+        A bold Mediterranean food brand built through cinematic food visuals,
+        high-engagement storytelling and performance-driven reels.
+      </p>
 
-          {/* RIGHT LOGO */}
-          <div className="flex justify-center">
-            <div >
-              <img
-                src="/client/logo-3.png"
-                className="w-60 md:w-80 object-contain"
-                alt="Pita Nutso Logo"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ⭐ TAGS — Garden Retreat Style (One Line, No width increase) */}
+      {/* TAGS — One line like Garden Retreat */}
+<div
+  className="
+    flex flex-col items-center 
+    md:flex-row md:flex-wrap 
+    md:justify-start gap-4 mt-8
+    w-full
+  "
+>
+  {["Digital Planning", "Creative Flow", "Community Growth"].map((tag, i) => (
+    <div
+      key={i}
+      className="
+        bg-white/20 px-6 py-3 
+        rounded-full border border-white/40 
+        text-white text-sm font-medium shadow
+        w-[180px] text-center
+        md:w-auto
+      "
+    >
+      {tag}
+    </div>
+  ))}
+</div>
 
-      {/* -------------------------------- GRID LAYOUT -------------------------------- */}
-      <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-[280px_1fr] gap-12">
 
-        {/* SIDEBAR */}
+
+
+      {/* CTA */}
+      <Link to="/contact" className="mt-8">
+        <button className="px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg">
+          Contact Us Now →
+        </button>
+      </Link>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:w-1/2">
+      <img
+        src="/client/logo-3.png"
+        className="w-52 sm:w-64 md:w-80 object-contain"
+        alt="Pita Nusto Logo"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+      {/* ---------------- GRID ---------------- */}
+      <section className="max-w-7xl mx-auto grid md:grid-cols-[280px_1fr] gap-12">
+
         <BlueSidebar
+          hideMobileButton={true}
+          active={active}
           sections={[
             { name: "Overview", id: "overview" },
             { name: "Services Provided", id: "services-provided" },
@@ -132,282 +149,287 @@ export default function PitaNutso() {
             { name: "Key Strategy", id: "key-strategy" },
             { name: "Other Case Studies", id: "case-studies" },
           ]}
-          active={active}
         />
 
-        {/* -------------------------------- RIGHT CONTENT -------------------------------- */}
-        <div className="space-y-16">
+        {/* ---------------- RIGHT CONTENT ---------------- */}
+        <div className="space-y-16 max-w-4xl mx-auto w-full">
 
-          {/* ------------ OVERVIEW ------------ */}
-          <section
-            id="overview"
-            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
-          >
-            <h2 className="text-4xl font-extrabold text-[#0E6388]">
-              Overview
-            </h2>
+          {/* -------- OVERVIEW -------- */}
+          <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] text-center">
+  <h2 className="text-4xl font-extrabold text-[#0E6388]">Overview</h2>
 
-            <p className="mt-6 text-[#063349]/85 leading-relaxed">
-              Pita Nutso is a fast-casual Mediterranean restaurant serving shawarma, bowls,
-              wraps, and customizable fresh toppings with bold Middle-Eastern flavors.
-            </p>
+  <div className="text-left mt-6 space-y-4 leading-relaxed text-[#063349]/85">
 
-            <p className="mt-4 text-[#063349]/85 leading-relaxed">
-              Their audience includes students, professionals, health-conscious eaters,
-              and Mediterranean food lovers looking for fast yet high-quality meals.
-            </p>
+    <p>
+      Pita Nutso is a fast-casual restaurant specializing in fresh, flavorful Mediterranean cuisine
+      including shawarma, bowls, wraps, and sides.
+    </p>
 
-            <p className="mt-4 text-[#063349]/85 leading-relaxed">
-              Our objective was to establish Pita Nutso’s brand presence with high-performing
-              Mediterranean food content built around freshness and flavor.
-            </p>
+    <p>
+      The target audience includes young professionals seeking quick quality meals, food enthusiasts
+      exploring Mediterranean flavors, students looking for affordable dining options, and busy
+      individuals who value fresh, customizable meals.
+    </p>
 
-            <p className="mt-4 text-[#063349]/85 leading-relaxed">
-              We used engaging, appetizing visuals and crisp formats to strengthen digital identity.
-            </p>
+    <p>
+      Our goal was to establish Pita Nutso as a go-to destination on Instagram for Mediterranean
+      cuisine through authentic, engaging content that showcases the freshness, flavor, and
+      customization options of their menu.
+    </p>
 
-            {/* Stats */}
-            <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
-              {[
-                { v: 36100, t: "Total Views (90 Days)", sign: "+" },
-                { v: 52, t: "Content Shares", sign: "+" },
-                { v: 276, t: "Total Interactions", sign: "+" },
-                { v: 66, t: "Avg. Non-Follower Engagement (%)", sign: "%" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white"
-                  style={{
-    background: "rgb(14, 99, 136)"
-  }}
-                >
-                  <div className="text-2xl font-bold">
-                    <Counter end={s.v} duration={6000} />
-                    {s.sign}
-                  </div>
-                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+  </div>
 
-          {/* ------------ SERVICES PROVIDED ------------ */}
-          <section
-            id="services-provided"
-            className="p-10 rounded-3xl bg-white shadow border border-[#D7ECF6]"
-          >
-            <h2
-              className="text-4xl font-extrabold text-[#0E6388]"
-            >
-              Services Provided
-            </h2>
+  {/* STATS */}
+  <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
+    {[
+      { v: 92000, t: "Total Views", sign: "+" },
+      { v: 17000, t: "Accounts Reached", sign: "+" },
+      { v: 87, t: "Organic Reach (%)", sign: "%" },
+      { v: 112, t: "Monthly Growth (%)", sign: "%" },
+    ].map((s, i) => (
+      <div
+        key={i}
+        className="p-6 w-full max-w-[250px] rounded-2xl shadow-md text-white"
+        style={{ background: "rgb(14,99,136)" }}
+      >
+        <div className="text-2xl font-bold">
+          <Counter end={s.v} />{s.sign}
+        </div>
+        <p className="mt-2 text-sm text-white/85">{s.t}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+          {/* -------- SERVICES PROVIDED -------- */}
+          <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] text-center">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Services Provided</h2>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10">
               {[
                 { name: "Social Media Strategy", icon: icons.strategy },
-                { name: "Content Creation & Optimization", icon: icons.pen },
-                { name: "Reels Production & Editing", icon: icons.reels },
-                { name: "Analytics & Performance Tracking", icon: icons.analytics },
-                { name: "Audience Growth Management", icon: icons.audience },
-                { name: "Viral Food Content Strategy", icon: icons.food },
+                { name: "Food Styling Photography", icon: icons.pen },
+                { name: "Reels Filmmaking", icon: icons.reels },
+                { name: "Analytics Tracking", icon: icons.analytics },
+                { name: "Audience Growth", icon: icons.audience },
+                { name: "Trending Food Hooks", icon: icons.reels },
               ].map((service, i) => (
-                <div
-                  key={i}
-                  className="px-5 py-4 rounded-2xl flex items-center gap-4 text-white
-                  shadow-lg "
-                  style={{
-    background: "rgb(14, 99, 136)"
-  }}
-                >
-                  <div className="p-2 bg-white/20 rounded-xl w-8 h-8 flex items-center justify-center">
-                    {service.icon}
-                  </div>
-
-                  <p className="font-semibold text-base leading-tight">
-                    {service.name}
-                  </p>
+                <div key={i}
+                  className="px-5 py-4 flex items-center gap-4 text-white rounded-2xl shadow-lg"
+                  style={{ background: "rgb(14,99,136)" }}>
+                  <div className="w-8 h-8 p-2 bg-white/20 rounded-xl">{service.icon}</div>
+                  <p className="font-semibold">{service.name}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* ------------ CHALLENGE ------------ */}
-          <section
-            id="challenge"
-            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
-          >
-            <h2
-              className="text-4xl font-extrabold text-[#0E6388]"
-            >
-              Challenge
-            </h2>
+          {/* -------- CHALLENGE -------- */}
+          <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] max-w-4xl mx-auto">
+  <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Challenge</h2>
 
-            <div
-              className="mt-6 p-10 text-white rounded-3xl
-           "
-              style={{
-    background: "rgb(14, 99, 136)"
-  }}
-            >
-              <p>• Competing in a highly saturated Mediterranean fast-casual market</p>
-              <p>• Establishing brand recall with a smaller follower base</p>
-              <p>• Creating appetite-triggering visual storytelling</p>
+  <div className="mt-6 p-10 rounded-3xl shadow text-white" style={{ background: "rgb(14,99,136)" }}>
+    <p>
+      We started by reviewing Pita Nutso’s existing Instagram presence, brand identity, and growth objectives.
+    </p>
 
-              <p className="font-semibold text-xl pt-2">Key challenges included:</p>
+    <p>
+      The client was operating in a competitive fast-casual and Mediterranean food market and needed
+      sustainable organic growth to increase brand awareness and drive foot traffic.
+    </p>
 
-              <ul className="space-y-3 text-white/95">
-                <li>• Gaining traction without paid promotions</li>
-                <li>• Standing out among Mediterranean competitors</li>
-                <li>• Delivering visuals that trigger cravings instantly</li>
-                <li>• Optimizing low-budget content workflows</li>
-                <li>• Driving in-store footfall organically</li>
+    <ul className="space-y-3 list-disc list-inside">
+      <li>Building momentum from a smaller follower base</li>
+      <li>Standing out in competitive Mediterranean and fast-casual dining market</li>
+      <li>Showcasing menu variety (shawarma, bowls, wraps, sides) effectively</li>
+      <li>Limited budget for content production and advertising</li>
+      <li>Creating appetizing content that drives cravings and visits</li>
+      
+    </ul>
+
+  </div>
+</section>
+
+
+          {/* -------- APPROACH -------- */}
+          <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] text-center">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
+
+            <div className="mt-6 p-10 rounded-3xl text-white shadow text-left"
+              style={{ background: "rgb(14,99,136)" }}>
+              <ul className="space-y-3 list-disc list-inside text-white/95">
+                <li>Cinematic cooking + plating reels</li>
+                <li>Fresh ingredients storytelling</li>
+                <li>Trend-aligned food transitions</li>
               </ul>
             </div>
           </section>
 
-          {/* ------------ APPROACH ------------ */}
-          <section
-            id="approach"
-            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
-          >
-            <h2 className="text-4xl font-extrabold text-[#0E6388]">Approach</h2>
+          {/* -------- KEY STRATEGY -------- */}
+          <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] text-center">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]">Key Strategy</h2>
 
-            <div
-              className="mt-6 p-10 text-white rounded-3xl
-            shadow space-y-6"
-              style={{
-    background: "rgb(14, 99, 136)"
-  }}
-            >
-              <p>• Focused on high-performing Mediterranean food visuals</p>
-              <p>• Optimized content formats based on audience behavior analytics</p>
-              <p>• Strengthened brand identity using freshness-focused storytelling</p>
+            <div className="mt-6 p-10 rounded-3xl text-white shadow text-left"
+              style={{ background: "rgb(14,99,136)" }}>
+              <ul className="space-y-3 list-disc list-inside text-white/95">
+                <li>Explore page optimization</li>
+                <li>High-impact flavour visuals</li>
+                <li>Weekly performance testing</li>
+              </ul>
             </div>
           </section>
 
-          {/* ------------ KEY STRATEGIES ------------ */}
-          <section
-            id="key-strategy"
-            className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]"
-          >
-            <h2
-              className="text-4xl font-extrabold text-[#0E6388]"
-            >
-              Key Strategies Implemented
-            </h2>
-
-            <div
-              className="mt-6 p-10 rounded-3xl text-white
-             shadow space-y-6"
-              style={{
-    background: "rgb(14, 99, 136)"
-  }}
-            >
-              <p>• High-shareability Mediterranean food reels</p>
-              <p>• Strong call-to-action captions</p>
-              <p>• Ingredient-focused close-ups for visual richness</p>
-              <p>• Shawarma + bowls + wraps content pillars</p>
-            </div>
-          </section>
-
-          {/* ------------ CASE STUDIES ------------ */}
-          <section id="case-studies" className="mt-16">
-            <h2
-              className="text-4xl font-extrabold text-center text-[#0E6388]"
-            >
-              Explore Our Other Client{" "}
-              <span className="
-              text-[#0E6388]">
-                Case Studies
-              </span>
-            </h2>
-
-            <div className="grid sm:grid-cols-2 gap-10 mt-10">
-
-              {/* HEARTHSTONE */}
-              <div className="relative bg-[#142758] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold">Hearthstone Inn</h3>
-                <p className="mt-2 text-white/90 text-sm">1.6K+ Views</p>
-
-                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-                  <CaseStatDark v="1.6K+" t="Total Views" />
-                  <CaseStatDark v="78%" t="Engagement" />
-                  <CaseStatDark v="94.6%" t="ER Rate" />
-                  <CaseStatDark v="53" t="Accounts" />
-                </div>
-
-                <img src="/client/logo-6.png" className="absolute left-72 bottom-2 w-[100px]" />
-              </div>
-
-              {/* BESHARAM */}
-              <div className="relative bg-[#073B4C] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold">Besharam Bar & Grill</h3>
-                <p className="mt-2 text-white/90 text-sm">60K+ Views</p>
-
-                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-                  <CaseStatDark v="60K" t="Total Views" />
-                  <CaseStatDark v="9.6K" t="Followers" />
-                  <CaseStatDark v="59" t="Shares" />
-                  <CaseStatDark v="62%" t="Engagement" />
-                </div>
-
-                <img src="/client/logo-16.png" className="absolute left-72 bottom-2 w-[100px]" />
-              </div>
-
-              {/* RIVAAJ */}
-              <div className="relative bg-[#B28829] text-white px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold">Rivaaj Resto-Bar</h3>
-                <p className="mt-2 text-white/90 text-sm">48.9K+ Views</p>
-
-                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-                  <CaseStatDark v="48.9K" t="Total Views" />
-                  <CaseStatDark v="403" t="Interactions" />
-                  <CaseStatDark v="74" t="Followers" />
-                  <CaseStatDark v="17" t="Shares" />
-                </div>
-
-                <img src="/client/logo-17.png" className="absolute left-72 bottom-2 w-[110px]" />
-              </div>
-
-              {/* TRIVEENI */}
-              <div className="relative bg-[#F7FBCF] text-black px-6 py-6 w-[400px] rounded-2xl shadow-lg">
-                <h3 className="text-xl font-bold">Triveeni Events</h3>
-                <p className="mt-2 text-black/70 text-sm">1.3M+ Views</p>
-
-                <div className="grid grid-cols-2 gap-3 mt-5 w-[75%]">
-                  <CaseStat v="1.3M+" t="Views" />
-                  <CaseStat v="439K+" t="Accounts" />
-                  <CaseStat v="89%" t="Organic" />
-                  <CaseStat v="130%" t="Growth" />
-                </div>
-
-                <img src="/client/logo-2.png" className="absolute left-72 bottom-2 w-[100px]" />
-              </div>
-
-            </div>
-          </section>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-/* -------- CASE STAT COMPONENTS -------- */
-
-function CaseStat({ v, t }) {
-  return (
-    <div className="bg-white text-black p-3 rounded-lg shadow text-center">
-      <p className="font-bold">{v}</p>
-      <p className="text-xs text-black/70">{t}</p>
-    </div>
-  );
-}
-
-function CaseStatDark({ v, t }) {
-  return (
-    <div className="bg-white/20 text-white p-3 rounded-lg shadow text-center">
-      <p className="font-bold">{v}</p>
-      <p className="text-xs text-white/80">{t}</p>
-    </div>
-  );
-}
+            <section id="case-studies" className="mt-16 max-w-4xl mx-auto">
+                  <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
+         
+                       Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span> 
+                     </h2>
+         
+                     <div className="grid sm:grid-cols-2 gap-10 mt-10">
+         
+                       {/* CARD 1 */}
+                      <CaseCard
+           background="#F7FBCF"
+           logo="/client/logo-2.png"
+           title="Triveeni Events"
+           stats={[
+             ["1.3M+", "Total Views"],
+             ["439K+", "Accounts Reached"],
+             ["89%", "Organic Reach"],
+             ["130%", "Growth Rate"],
+           ]}
+           link="/work/triveeni-events"
+         />
+         
+         
+                       {/* CARD 2 */}
+                     <CaseCardDark
+           background="#FB8C00"
+           logo="/client/logo-5.png"
+           title="Beaver Bank Station"
+           stats={[
+             ["79K+", "Total Views"],
+             ["48K+", "Accounts"],
+             ["439", "Interactions"],
+             ["39%", "Engagement"],
+           ]}
+           link="/work/beaver-bank-station"
+         />
+         
+         
+                       {/* CARD 3 */}
+                       <CaseCardDark
+                         background="#142758"
+                         logo="/client/logo-6.png"
+                         title="Hearthstone Inn"
+                         stats={[
+                           ["1.6K+", "Total Views"],
+                           ["78%", "Engagement"],
+                           ["94.6%", "ER Rate"],
+                           ["53", "Accounts"],
+                         ]}
+                         link="/work/Hearthstone"
+                       />
+         
+                       {/* CARD 4 */}
+                       <CaseCardDark
+                         background="#FDF1D9"
+                         logo="/client/logo-3.png"
+                         title="Pita Nutso"
+                         stats={[
+                           ["36.1K", "Total Views"],
+                           ["52", "Comment Shares"],
+                           ["276", "Interactions"],
+                           ["66%", "Engagement"],
+                         ]}
+                         link="/work/pita-nutso"
+           dark={false}
+                       />
+                     </div>
+                   </section>
+                 </div>
+               </section>
+             </div>
+           );
+         }
+         
+         /* ---------- CASE CARD COMPONENTS ---------- */
+         
+         function CaseCard({ background, logo, title, stats, link }) {
+           return (
+             <Link to={link}>
+               <div
+                 className="px-6 py-8 rounded-2xl shadow-lg w-full max-w-[400px] mx-auto text-center cursor-pointer hover:scale-[1.02] transition"
+                 style={{ background }}
+               >
+                 {/* LOGO */}
+                 <div className="w-full flex justify-center mb-5 mt-2">
+                   <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
+                 </div>
+         
+                 <h3 className="text-xl font-bold">{title}</h3>
+                 <p className="mt-2 text-black/70 text-sm">{stats[0][0]} Views</p>
+         
+                 {/* STATS */}
+                 <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+                   {stats.map(([v, t], i) => (
+                     <CaseStat key={i} v={v} t={t} />
+                   ))}
+                 </div>
+               </div>
+             </Link>
+           );
+         }
+         
+         function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
+           return (
+             <Link to={link}>
+               <div
+                 className={`px-6 py-8 rounded-2xl shadow-lg text-center w-full max-w-[400px] mx-auto cursor-pointer hover:scale-[1.02] transition 
+                   ${dark ? "text-white" : "text-black"}`}
+                 style={{ background }}
+               >
+                 {/* LOGO */}
+                 <div className="w-full flex justify-center mb-4">
+                   <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
+                 </div>
+         
+                 {/* TITLE */}
+                 <h3 className={`text-xl font-bold ${dark ? "text-white" : "text-black"}`}>
+                   {title}
+                 </h3>
+         
+                 {/* VIEWS */}
+                 <p className={`mt-2 text-sm ${dark ? "text-white/90" : "text-black/70"}`}>
+                   {stats[0][0]} Views
+                 </p>
+         
+                 {/* STATS */}
+                 <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+                   {stats.map(([v, t], i) =>
+                     dark ? <CaseStatDark key={i} v={v} t={t} /> : <CaseStat key={i} v={v} t={t} />
+                   )}
+                 </div>
+               </div>
+             </Link>
+           );
+         }
+         
+         function CaseStat({ v, t }) {
+           return (
+             <div className="bg-white text-black p-4 rounded-lg shadow text-center flex flex-col items-center min-h-[85px]">
+               <p className="font-bold text-lg">{v}</p>
+               <p className="text-xs text-black/70 leading-tight break-words text-center">{t}</p>
+             </div>
+           );
+         }
+         
+         function CaseStatDark({ v, t }) {
+           return (
+             <div className="bg-white/20 text-white p-4 rounded-lg shadow text-center flex flex-col items-center min-h-[85px]">
+               <p className="font-bold text-lg">{v}</p>
+               <p className="text-xs text-white/80 leading-tight break-words text-center">{t}</p>
+             </div>
+           );
+         }
