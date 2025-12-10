@@ -160,89 +160,61 @@ export default function PricingPlans() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+ gap-8 max-w-6xl mx-auto mt-14">
 
           {["40h/mo", "80h/mo", "160h/mo", "Custom"].map((hrs, i) => (
-            <motion.div
-              key={hrs}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="relative p-8 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.10)]
-                text-white flex flex-col justify-between h-full"
-             style={{
-    background: "rgb(14, 99, 136)"
-  }}
-            >
+           <motion.div
+  key={hrs}
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.4, delay: i * 0.1 }}
+  className="relative p-6 sm:p-8 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.10)]
+             text-white flex flex-col justify-between h-full"
+  style={{ background: "rgb(14, 99, 136)" }}
+>
 
-              {/* BEST VALUE Badge */}
-              {billing === "annual" && i === 2 && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 
-                  bg-white text-[#0E6388] border-1 text-xs font-semibold px-4 py-1 rounded-full shadow-md">
-                  ⭐ Best Value
-                </span>
-              )}
+  {/* Title + Tooltip */}
+  <div className="flex items-center justify-between mb-3">
+    <p className="text-[11px] sm:text-xs md:text-sm text-white/80 leading-tight">
+      {["Get started plan","Boost plan","Full force plan","All inclusive"][i]}
+    </p>
+  </div>
 
-              {/* Title + Tooltip */}
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-white/80 text-sm">
-                  {["Get started plan", "Boost plan", "Full force plan", "All inclusive"][i]}
-                </p>
+  {/* Hours Text */}
+  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
+    {hrs}
+  </h1>
 
-                <div
-                  onMouseEnter={() => setTooltip(i)}
-                  onMouseLeave={() => setTooltip(null)}
-                  className="relative"
-                >
-                  <Info size={18} className="cursor-pointer text-white opacity-80 hover:opacity-100" />
+  {/* Price */}
+  <AnimatePresence mode="wait">
+    <motion.p
+      key={val[i]}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      className="text-lg sm:text-xl md:text-2xl mt-3"
+    >
+      {symbol}{val[i]}{" "}
+      <span className="text-white/50 text-xs sm:text-sm">/ Monthly</span>
+    </motion.p>
+  </AnimatePresence>
 
-                  {/* Tooltip */}
-                  <AnimatePresence>
-                    {tooltip === i && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -5 }}
-                        className="absolute left-6 top-0 bg-white border border-[#B5D9E8]
-                          shadow-xl p-3 rounded-xl text-xs text-[#063349] w-48 z-[50]"
-                      >
-                        {tips[i]}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </div>
+  {/* Button */}
+  <button
+    onClick={() => {
+      setSelectedPlan(hrs);
+      setForm({ ...form, service: hrs });
+      setShowModal(true);
+    }}
+    className="mt-6 w-full py-2.5 sm:py-3 rounded-full bg-white text-[#063349]
+               font-semibold text-sm sm:text-base hover:opacity-90 transition"
+  >
+    Book A Call
+  </button>
 
-              <h1 className="text-4xl font-extrabold">{hrs}</h1>
+</motion.div>
 
-              {/* Price */}
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={val[i]}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="text-xl mt-3"
-                >
-                  {symbol}{val[i]}{" "}
-                  <span className="text-white/50 text-sm">/ Monthly</span>
-                </motion.p>
-              </AnimatePresence>
-
-              {/* CTA */}
-              <button
-                onClick={() => {
-                  setSelectedPlan(hrs);
-                  setForm({ ...form, service: hrs });
-                  setShowModal(true);
-                }}
-                className="mt-6 w-full py-3 rounded-full bg-white text-[#063349]
-                  font-semibold hover:opacity-90 transition"
-              >
-                Book A Call
-              </button>
-
-            </motion.div>
           ))}
         </div>
       </div>

@@ -1,7 +1,7 @@
 // src/pages/About.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import HowWeWork from "../components/HowWeWork";
+import AboutHowWeWork from "../components/About/AboutHowWeWork";
 import CTAHome from "../components/CTAHome";
 
 // ICONS
@@ -43,6 +43,7 @@ const icons = {
   ),
 };
 
+// ANIMATION
 const fade = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -51,153 +52,186 @@ const fade = {
 export default function About() {
   return (
     <>
-      {/* PAGE WRAPPER */}
-      <section className="pt-[110px] pb-12 md:pb-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto text-center">
+      {/* PAGE TOP SECTION */}
+      <section className="pt-[120px] pb-20 px-6 bg-white w-full">
 
-          {/* EYEBROW */}
-          <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
-            → About Us
-          </p>
+        {/* EYEBROW */}
+        <p className="text-[#0E6388] font-semibold tracking-wide mb-2 text-center">
+          → About Us
+        </p>
 
-          {/* MAIN TITLE */}
-          <motion.h1
-            variants={fade}
-            initial="hidden"
-            animate="show"
-            className="text-3xl md:text-5xl font-extrabold text-[#063349] leading-[1.3]"
-          >
-            We Build Brands That Stand Out —
-            <span className="text-[#0E6388]"> And Scale Fast</span>
-          </motion.h1>
+        {/* TITLE */}
+        <motion.h1
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          className="text-3xl md:text-5xl font-extrabold text-[#063349] text-center leading-snug"
+        >
+          We Build Brands That Stand Out —
+          <span className="text-[#0E6388]"> And Scale Fast</span>
+        </motion.h1>
 
-          {/* SUBTEXT */}
-          <motion.p
-            variants={fade}
-            initial="hidden"
-            animate="show"
-            className="max-w-3xl mx-auto mt-4 text-lg md:text-xl text-[#063349]/80"
-          >
-            We build clarity, trust, and growth for modern brands through strategy,
-            creativity, and ROI-led execution.
-          </motion.p>
+        {/* SUBTEXT */}
+        <motion.p
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          className="max-w-3xl mx-auto mt-4 text-lg md:text-xl text-[#063349]/80 text-center"
+        >
+          We build clarity, trust, and growth for modern brands through
+          strategy, creativity, and ROI-led execution.
+        </motion.p>
 
-          {/* STATS */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-6xl mx-auto mt-12">
-            {[
-              { value: "120+", label: "Global Clients" },
-              { value: "5K+", label: "Campaigns Delivered" },
-              { value: "320%", label: "ROI Growth Avg." },
-              { value: "200", label: "Team Member" },
-            ].map((s, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-3xl text-white"
-                style={{ background: "rgb(14, 99, 136)" }}
-              >
-                <div className="text-4xl font-extrabold">{s.value}</div>
-                <div className="text-white/90 mt-2">{s.label}</div>
-              </div>
-            ))}
-          </div>
+        {/* STATS GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-6xl mx-auto mt-14">
+          {[
+            { value: "120+", label: "Global Clients" },
+            { value: "5K+", label: "Campaigns Delivered" },
+            { value: "320%", label: "ROI Growth Avg." },
+            { value: "200", label: "Team Member" },
+          ].map((s, i) => (
+            <div
+              key={i}
+              className="p-8 rounded-3xl text-white text-center shadow-lg"
+              style={{ background: "rgb(14, 99, 136)" }}
+            >
+              <div className="text-4xl font-extrabold">{s.value}</div>
+              <div className="text-white/90 mt-2">{s.label}</div>
+            </div>
+          ))}
+        </div>
 
-          {/* WHO WE ARE */}
-          <section className="mt-16 md:mt-24">
-            <div className="rounded-3xl p-10 md:p-14 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+        {/* WHO WE ARE */}
+        <section className="mt-20">
+          <div className="rounded-3xl p-10 md:p-14 bg-white shadow-xl grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
 
-              {/* LEFT */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]/85 mb-6">
-                  Who We Are
-                </h2>
+            {/* LEFT TEXT */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] mb-6">
+                Who We Are
+              </h2>
 
-                <p className="text-[#063349]/85 leading-relaxed mb-4">
-                  Bluenose Digital is a global creative & performance agency focused on delivering clarity, growth, and brand transformation.
-                </p>
+              <p className="text-[#063349]/85 leading-relaxed mb-4">
+                Bluenose Digital is a global creative & performance agency
+                focused on delivering clarity, growth, and brand transformation.
+              </p>
 
-                <p className="text-[#063349]/75 leading-relaxed mb-4">
-                  Our team blends strategic thinking, world-class execution, and data-backed decisions to help brands scale confidently.
-                </p>
+              <p className="text-[#063349]/75 leading-relaxed mb-4">
+                Our team blends strategic thinking, world-class execution, and
+                data-backed decisions to help brands scale confidently.
+              </p>
 
-                <p className="text-[#063349]/75 leading-relaxed">
-                  From social media to performance marketing, brand identity, and storytelling — we build digital systems that work.
-                </p>
+              <p className="text-[#063349]/75 leading-relaxed">
+                From social media to performance marketing, brand identity, and
+                storytelling — we build digital systems that work.
+              </p>
 
-                {/* Mini stats */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
-                  {[
-                    { v: "20+", t: "Team Members" },
-                    { v: "6+", t: "Countries Served" },
-                    { v: "5K+", t: "Campaigns" },
-                    { v: "120+", t: "Brands" },
-                  ].map((stat, i) => (
-                    <div key={i} className="text-center">
-                      <div className="text-2xl font-extrabold text-[#0E6388]">{stat.v}</div>
-                      <div className="text-[#0E6388] text-sm mt-1">{stat.t}</div>
+              {/* MINI STATS */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
+                {[
+                  { v: "20+", t: "Team Members" },
+                  { v: "6+", t: "Countries Served" },
+                  { v: "5K+", t: "Campaigns" },
+                  { v: "120+", t: "Brands" },
+                ].map((stat, i) => (
+                  <div key={i} className="text-center">
+                    <div className="text-2xl font-extrabold text-[#0E6388]">
+                      {stat.v}
                     </div>
-                  ))}
-                </div>
+                    <div className="text-[#0E6388] text-sm mt-1">{stat.t}</div>
+                  </div>
+                ))}
               </div>
-
-              {/* RIGHT IMAGE */}
-              <div className="rounded-2xl overflow-hidden shadow-lg max-w-sm mx-auto">
-                <img
-                  src="https://businesspartnermagazine.com/wp-content/uploads/2024/02/Why-Register-a-Company-in-Canada.jpg"
-                  className="w-full h-full object-cover"
-                  alt="Our Team"
-                />
-              </div>
-
             </div>
-          </section>
 
-          {/* FOUNDER SECTION */}
-          <section className="mt-16 md:mt-24 mb-4">
-            <div className="rounded-3xl p-10 md:p-14 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.08)] grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-
-              {/* IMAGE */}
-              <div className="rounded-2xl overflow-hidden shadow-lg max-h-[480px]">
-                <img src="/founder.png" className="w-full h-full object-cover" alt="Founder" />
-              </div>
-
-              {/* TEXT */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-[#0E6388]">Message from Our Founder</h2>
-
-                <p className="mt-4 text-[#063349]/85">
-                  The vision for Bluenose Marketing was born from a simple need: to build a digital marketing agency that effortlessly blends creativity with undeniable data-driven results.
-                </p>
-
-                <p className="mt-4 text-[#063349]/85">
-                  We established our first office in Halifax, Canada, with the goal of bringing brands closer to their audiences through impactful, solution-driven strategies.
-                </p>
-
-                <p className="mt-4 text-[#063349]/85">
-                  Our family has since grown into a thriving team of 25+ global digital experts.
-                </p>
-
-                <p className="mt-4 text-[#063349]/85 font-semibold">
-                  — Bluenose Digital Marketing, Founder & CEO
-                </p>
-              </div>
-
+            {/* RIGHT IMAGE */}
+            <div className="rounded-2xl overflow-hidden shadow-xl max-w-sm mx-auto">
+              <img
+                src="https://businesspartnermagazine.com/wp-content/uploads/2024/02/Why-Register-a-Company-in-Canada.jpg"
+                className="w-full h-full object-cover"
+                alt="Our Team"
+              />
             </div>
-          </section>
 
-          {/* TIMELINE */}
-          <Timeline />
+          </div>
+        </section>
 
-          {/* WHAT WE DO */}
-          <section className="mt-16 md:mt-24 text-center ">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-              What We <span className="text-[#0E6388]">Do</span>
+        {/* FOUNDER SECTION */}
+        <section className="mt-20 mb-10">
+          <div className="rounded-3xl p-10 md:p-14 bg-white shadow-xl grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
+
+            {/* IMAGE */}
+            <div className="rounded-2xl overflow-hidden shadow-xl max-h-[480px]">
+              <img src="/founder.png" className="w-full h-full object-cover" alt="Founder" />
+            </div>
+
+            {/* TEXT */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0E6388]">
+                Message from Our Founder
+              </h2>
+
+              <p className="mt-4 text-[#063349]/85">
+                The vision for Bluenose Marketing was born from a simple need:
+                to build a digital marketing agency that blends creativity with
+                undeniable data-driven results.
+              </p>
+
+              <p className="mt-4 text-[#063349]/85">
+                We established our first office in Halifax, Canada, with the
+                goal of bringing brands closer to their audiences through
+                impactful strategies.
+              </p>
+
+              <p className="mt-4 text-[#063349]/85">
+                Our family has since grown into a thriving team of 25+ global digital experts.
+              </p>
+
+              <p className="mt-4 text-[#063349]/85 font-semibold">
+                — Bluenose Digital Marketing, Founder & CEO
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* TIMELINE */}
+        <Timeline />
+
+        {/* WAVE SVG */}
+        <div className="w-full overflow-hidden leading-none -mt-1">
+          <svg viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path
+              fill="#1175a0"
+              d="
+                M0,80 
+                C240,140 480,0 720,60 
+                C960,120 1200,20 1440,80 
+                L1440,180 
+                L0,180 
+                Z
+              "
+            ></path>
+          </svg>
+        </div>
+
+        {/* WHAT WE DO */}
+        <section className="relative w-full bg-[#1175a0] pb-20 px-6 overflow-hidden">
+          <div className="max-w-7xl mx-auto text-center text-white relative z-10">
+
+            <p className="font-semibold tracking-wide mb-2 opacity-90">
+              → What We Do
+            </p>
+
+            <h2 className="text-3xl md:text-5xl font-extrabold">
+              What We <span className="text-white/80">Do</span>
             </h2>
 
-            <p className="text-[#063349]/85 mt-4 max-w-3xl mx-auto">
+            <p className="text-white/80 text-lg max-w-2xl mx-auto mt-4">
               Crafting growth systems through content, design, performance & storytelling.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-10 mt-14 ">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
               {[
                 { name: "SMM", icon: icons.smm },
                 { name: "Branding", icon: icons.branding },
@@ -208,23 +242,23 @@ export default function About() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="p-10 rounded-3xl text-center shadow-[0_12px_35px_rgba(0,0,0,0.18)] hover:scale-[1.03] transition duration-300 text-white"
-                  style={{ background: "rgb(14, 99, 136)" }}
+                  className="rounded-3xl p-10 bg-white/15 backdrop-blur-xl border border-white/20 shadow-xl text-white transition hover:scale-[1.03]"
                 >
                   <div className="flex justify-center mb-6">{item.icon}</div>
-                  <div className="text-xl font-bold">{item.name}</div>
-                  <p className="text-white/85 text-sm mt-2">
+                  <h3 className="text-xl font-bold">{item.name}</h3>
+                  <p className="text-white/70 text-sm mt-2 leading-relaxed">
                     High-impact execution tailored for modern brands.
                   </p>
                 </div>
               ))}
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+
       </section>
 
-      {/* BLUE COMPONENTS */}
-      <HowWeWork />
+      {/* EXTRA BLUE COMPONENTS */}
+      <AboutHowWeWork />
       <CTAHome />
     </>
   );
@@ -233,7 +267,6 @@ export default function About() {
 /*******************************
    TIMELINE COMPONENT
 *******************************/
-
 function Timeline() {
   const events = [
     {
@@ -273,17 +306,17 @@ function Timeline() {
   };
 
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section className="py-20 md:py-24 bg-white w-full">
       <h2 className="text-center text-3xl md:text-5xl font-extrabold text-[#063349] mb-16">
         Our <span className="text-[#0E6388]">Journey</span>
       </h2>
 
       <div className="relative max-w-6xl mx-auto px-4">
-        
-        {/* Center Vertical Line */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-[#D9E7F1]"></div>
 
-        <div className="space-y-16 md:space-y-6">
+        {/* CENTER LINE */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-[#D9E7F1] hidden md:block"></div>
+
+        <div className="space-y-16 md:space-y-10">
           {events.map((e, i) => (
             <motion.div
               key={i}
@@ -291,23 +324,20 @@ function Timeline() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.4 }}
-              className={`
-                relative flex 
-                ${e.side === "left" ? "md:justify-start" : "md:justify-end"} 
-                md:w-full
-              `}
+              className="relative flex md:w-full md:items-center"
             >
+
               {/* DOT */}
               <div
-                className="absolute left-1/2 -translate-x-1/2
-                w-4 h-4 rounded-full bg-[#0E6388] shadow-[0_0_12px_#0E6388]"
+                className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#0E6388] shadow-[0_0_12px_#0E6388]"
                 style={{ top: "50%" }}
               ></div>
 
               {/* CARD */}
               <div
-                className="w-full md:w-[46%] bg-[#0E6388] text-white p-6 md:p-8 
-                rounded-2xl shadow-lg"
+                className={`w-full md:w-[46%] bg-[#0E6388] text-white p-6 md:p-8 rounded-2xl shadow-lg ${
+                  e.side === "left" ? "md:mr-auto" : "md:ml-auto"
+                }`}
               >
                 <p className="text-lg font-extrabold">{e.date}</p>
                 <p className="font-semibold mt-1">{e.title}</p>

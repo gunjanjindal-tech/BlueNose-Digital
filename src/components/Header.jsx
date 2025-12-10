@@ -147,7 +147,7 @@ export default function Header() {
       <Link to="/" className="py-3 px-6 hover:text-[#0E6388]">Home</Link>
 
       {/* SERVICES */}
-     <div className="px-6 py-2">
+     <div className="px-6 ">
   <div className="w-full flex justify-between items-center py-2">
 
     {/* CLICK — GO TO SERVICES PAGE */}
@@ -192,7 +192,7 @@ export default function Header() {
 
 
  {/* WORK GALLERY */}
-<div className="px-6 py-2">
+<div className="px-6">
 
   {/* TOP ROW: TEXT + CHEVRON */}
   <div className="w-full flex justify-between items-center py-2">

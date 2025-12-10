@@ -82,7 +82,7 @@ export default function InfluencerMarketing() {
   }
 
   return (
-    <div className="bg-white text-[#0E3D55]">
+    <div className="bg-white text-[#0E3D55] pt-10">
 
       {/* ✦ HERO */}
       <section className="py-20">
@@ -107,7 +107,7 @@ export default function InfluencerMarketing() {
       <section className="pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-10 place-items-center">
 
             <GrowthChart
               title="Influencer Reach Expansion"

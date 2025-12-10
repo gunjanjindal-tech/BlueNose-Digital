@@ -127,7 +127,7 @@ link: "/work/nayya-Pizza",
   const [index, setIndex] = useState(0);
 
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-24 px-6 ">
       <Helmet>
         <title>Work Gallery | Bluenose Digital Marketing</title>
       </Helmet>
