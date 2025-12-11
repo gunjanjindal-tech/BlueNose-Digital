@@ -213,7 +213,7 @@ export default function Home() {
         views: "7.9K",
       },
       {
-        url: "https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu",
+        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454194/Photography_1_gfj6vz.mp4",
         views: "14.7K",
       },
     ],
@@ -442,7 +442,7 @@ const sendMessage = (e) => {
         clip-path-[polygon(10%_0,90%_0,100%_12%,100%_88%,90%_100%,10%_100%,0_88%,0_12%)]
       ">
        <video
-  src="https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov"
+  src="https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454194/Photography_1_gfj6vz.mp4"
   autoPlay
   loop
   muted

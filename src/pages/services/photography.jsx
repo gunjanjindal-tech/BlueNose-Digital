@@ -24,7 +24,7 @@ export default function PhotographyShoots() {
       views: "7.9K"
     },
     { 
-      url: "https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu",
+      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454194/Photography_1_gfj6vz.mp4",
       views: "14.7K"
     },
   ];
