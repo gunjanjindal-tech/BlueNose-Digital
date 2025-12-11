@@ -23,7 +23,7 @@ export default function BrandIdentity() {
     views: "4.9K"
   },
   { 
-    url: "https://drive.google.com/uc?export=download&id=16Vn70yWZxmS7zd9S1KEAk43KFKRJub0s",
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454631/branding4_bduckl.mp4",
     views: "12.2K"
   },
 ];

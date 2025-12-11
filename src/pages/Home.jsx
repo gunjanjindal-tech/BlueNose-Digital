@@ -118,7 +118,7 @@ export default function Home() {
         views: "15.2K",
       },
       {
-        url: "https://drive.google.com/uc?export=download&id=17rTp8zo1LsCUX_7ZSRmUw8n904ectYg7",
+        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765460268/SMM_1_bed8jj.mp4",
         views: "5.7K",
       },
     ],
@@ -137,7 +137,7 @@ export default function Home() {
         views: "4.9K",
       },
       {
-        url: "https://drive.google.com/uc?export=download&id=16Vn70yWZxmS7zd9S1KEAk43KFKRJub0s", 
+        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454631/branding4_bduckl.mp4", 
         views: "12.2K",
       },
     ],
