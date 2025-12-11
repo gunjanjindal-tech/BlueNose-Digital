@@ -361,10 +361,6 @@ export default function AddaIndianEatery() {
   );
 }
 
-
-
-/* ======================= SMALL COMPONENTS ======================= */
-
 /* ======================= SMALL COMPONENTS ======================= */
 
 function CaseCard({ background, logo, title, stats, link }) {
@@ -381,7 +377,11 @@ function CaseCard({ background, logo, title, stats, link }) {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="mt-2 text-black/70 text-sm">{stats[0][0]} Views</p>
 
-        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+
+
+
+
           {stats.map(([v, t], i) => (
             <CaseStat key={i} v={v} t={t} />
           ))}
@@ -418,7 +418,10 @@ function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
         </p>
 
         {/* STATS GRID */}
-        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+
+
+
           {stats.map(([v, t], i) => (
             dark ? (
               <CaseStatDark key={i} v={v} t={t} />

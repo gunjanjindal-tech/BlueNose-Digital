@@ -330,40 +330,44 @@ export default function DesiGarden() {
 </section>
 
 
-          {/* ========= CASE STUDIES ========= */}
+          {/* ======================= CASE STUDIES ======================= */}
           <section id="case-studies" className="mt-16 max-w-4xl mx-auto">
-            <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
-              Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
+         <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
+
+              Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span> 
             </h2>
 
             <div className="grid sm:grid-cols-2 gap-10 mt-10">
+
               {/* CARD 1 */}
-              <CaseCard
-                background="#F7FBCF"
-                logo="/client/logo-2.png"
-                title="Triveeni Events"
-                stats={[
-                  ["1.3M+", "Total Views"],
-                  ["439K+", "Accounts Reached"],
-                  ["89%", "Organic Reach"],
-                  ["130%", "Growth Rate"],
-                ]}
-                link="/work/triveeni-events"
-              />
+             <CaseCard
+  background="#F7FBCF"
+  logo="/client/logo-2.png"
+  title="Triveeni Events"
+  stats={[
+    ["1.3M+", "Total Views"],
+    ["439K+", "Accounts Reached"],
+    ["89%", "Organic Reach"],
+    ["130%", "Growth Rate"],
+  ]}
+  link="/work/triveeni-events"
+/>
+
 
               {/* CARD 2 */}
-              <CaseCardDark
-                background="#FB8C00"
-                logo="/client/logo-5.png"
-                title="Beaver Bank Station"
-                stats={[
-                  ["79K+", "Total Views"],
-                  ["48K+", "Accounts"],
-                  ["439", "Interactions"],
-                  ["39%", "Engagement"],
-                ]}
-                link="/work/beaver-bank-station"
-              />
+            <CaseCardDark
+  background="#FB8C00"
+  logo="/client/logo-5.png"
+  title="Beaver Bank Station"
+  stats={[
+    ["79K+", "Total Views"],
+    ["48K+", "Accounts"],
+    ["439", "Interactions"],
+    ["39%", "Engagement"],
+  ]}
+  link="/work/beaver-bank-station"
+/>
+
 
               {/* CARD 3 */}
               <CaseCardDark
@@ -391,18 +395,17 @@ export default function DesiGarden() {
                   ["66%", "Engagement"],
                 ]}
                 link="/work/pita-nutso"
-                dark={false}
+  dark={false}
               />
             </div>
           </section>
-
         </div>
       </section>
     </div>
   );
 }
 
-/* ================= SMALL COMPONENTS ================= */
+/* ======================= SMALL COMPONENTS ======================= */
 
 function CaseCard({ background, logo, title, stats, link }) {
   return (
@@ -418,7 +421,11 @@ function CaseCard({ background, logo, title, stats, link }) {
         <h3 className="text-xl font-bold">{title}</h3>
         <p className="mt-2 text-black/70 text-sm">{stats[0][0]} Views</p>
 
-        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+
+
+
+
           {stats.map(([v, t], i) => (
             <CaseStat key={i} v={v} t={t} />
           ))}
@@ -428,6 +435,7 @@ function CaseCard({ background, logo, title, stats, link }) {
   );
 }
 
+
 function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
   return (
     <Link to={link}>
@@ -436,8 +444,13 @@ function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
           ${dark ? "text-white" : "text-black"}`}
         style={{ background }}
       >
+        {/* LOGO */}
         <div className="w-full flex justify-center mb-4">
-          <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
+          <img
+            src={logo}
+            className="w-20 sm:w-24 object-contain"
+            alt={title}
+          />
         </div>
 
         <h3 className={`text-xl font-bold ${dark ? "text-white" : "text-black"}`}>
@@ -448,15 +461,24 @@ function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
           {stats[0][0]} Views
         </p>
 
-        <div className="grid grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
-          {stats.map(([v, t], i) =>
-            dark ? <CaseStatDark key={i} v={v} t={t} /> : <CaseStat key={i} v={v} t={t} />
-          )}
+        {/* STATS GRID */}
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5 w-full sm:w-[80%] mx-auto">
+
+
+
+          {stats.map(([v, t], i) => (
+            dark ? (
+              <CaseStatDark key={i} v={v} t={t} />
+            ) : (
+              <CaseStat key={i} v={v} t={t} />
+            )
+          ))}
         </div>
       </div>
     </Link>
   );
 }
+
 
 function CaseStat({ v, t }) {
   return (

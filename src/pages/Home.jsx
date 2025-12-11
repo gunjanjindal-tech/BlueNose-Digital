@@ -373,7 +373,7 @@ const sendMessage = (e) => {
   <div className="animate-slideX whitespace-nowrap font-extrabold 
                   text-[140px] md:text-[200px] lg:text-[260px]
                   text-[#063349] tracking-tight leading-none">
-    BLUENOSE • BLUENOSE • BLUENOSE • BLUENOSE •
+    BLUENOSE MARKETING • BLUENOSE MARKETING • BLUENOSE MARKETING • BLUENOSE MARKETING •
             </div>
   </div>
 
