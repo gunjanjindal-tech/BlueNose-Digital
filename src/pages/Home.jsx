@@ -442,7 +442,7 @@ const sendMessage = (e) => {
         clip-path-[polygon(10%_0,90%_0,100%_12%,100%_88%,90%_100%,10%_100%,0_88%,0_12%)]
       ">
        <video
-  src="https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu"
+  src="https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov"
   autoPlay
   loop
   muted
