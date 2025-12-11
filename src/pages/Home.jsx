@@ -118,7 +118,7 @@ export default function Home() {
         views: "15.2K",
       },
       {
-        url: "/videos/smm4.mp4",
+        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/smm4.mp4",
         views: "5.7K",
       },
     ],
@@ -137,7 +137,7 @@ export default function Home() {
         views: "4.9K",
       },
       {
-        url: "/videos/branding4.mp4", // keeping as you requested
+        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/branding4.mp4", 
         views: "12.2K",
       },
     ],
@@ -213,7 +213,7 @@ export default function Home() {
         views: "7.9K",
       },
       {
-        url: "/videos/photo4.mp4", // kept as requested
+        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/photo4.mp4",
         views: "14.7K",
       },
     ],
@@ -441,14 +441,15 @@ const sendMessage = (e) => {
         bg-white/40 backdrop-blur-xl
         clip-path-[polygon(10%_0,90%_0,100%_12%,100%_88%,90%_100%,10%_100%,0_88%,0_12%)]
       ">
-        <video
-          src="/videos/photo4.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        />
+       <video
+  src="https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/photo4.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-full h-full object-cover"
+/>
+
       </div>
     </div>
 

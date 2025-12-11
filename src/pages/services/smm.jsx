@@ -13,7 +13,7 @@ export default function SMM() {
     { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov", views: "12.4K" },
     { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414604/SMM_2_et8fyi.mov", views: "8.9K" },
     { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4", views: "15.2K" },
-    { url: "/videos/smm4.mp4", views: "5.7K" },
+    { url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/smm4.mp4", views: "5.7K" },
   ];
 
   const ecommerceData = [

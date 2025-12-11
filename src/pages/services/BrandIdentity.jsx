@@ -23,7 +23,7 @@ export default function BrandIdentity() {
     views: "4.9K"
   },
   { 
-    url: "/videos/branding4.mp4",
+    url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/branding4.mp4",
     views: "12.2K"
   },
 ];
