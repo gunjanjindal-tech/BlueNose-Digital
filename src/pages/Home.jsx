@@ -118,7 +118,7 @@ export default function Home() {
         views: "15.2K",
       },
       {
-        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/smm4.mp4",
+        url: "https://drive.google.com/uc?export=download&id=17rTp8zo1LsCUX_7ZSRmUw8n904ectYg7",
         views: "5.7K",
       },
     ],
@@ -137,7 +137,7 @@ export default function Home() {
         views: "4.9K",
       },
       {
-        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/branding4.mp4", 
+        url: "https://drive.google.com/uc?export=download&id=16Vn70yWZxmS7zd9S1KEAk43KFKRJub0s", 
         views: "12.2K",
       },
     ],
@@ -213,7 +213,7 @@ export default function Home() {
         views: "7.9K",
       },
       {
-        url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/photo4.mp4",
+        url: "https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu",
         views: "14.7K",
       },
     ],
@@ -442,7 +442,7 @@ const sendMessage = (e) => {
         clip-path-[polygon(10%_0,90%_0,100%_12%,100%_88%,90%_100%,10%_100%,0_88%,0_12%)]
       ">
        <video
-  src="https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/photo4.mp4"
+  src="https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu"
   autoPlay
   loop
   muted

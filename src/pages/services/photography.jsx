@@ -24,7 +24,7 @@ export default function PhotographyShoots() {
       views: "7.9K"
     },
     { 
-      url: "https://srv2109-files.hstgr.io/f0c1b59091281a2a/files/public_html/videos/photo4.mp4",
+      url: "https://drive.google.com/uc?export=download&id=1r2mZcvClpweS4C6YWbGKLyoWd5YSl0fu",
       views: "14.7K"
     },
   ];
