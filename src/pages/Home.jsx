@@ -308,15 +308,38 @@ const sendMessage = (e) => {
   
   return (
     <>
-      <Helmet>
-        <title>
-          Bluenose Digital — Strategy, Content, Performance & Brand Growth
-        </title>
-        <meta
-          name="description"
-          content="Bluenose Digital helps brands grow with strategic content, performance marketing, branding, and digital systems designed for long-term ROI."
-        />
-      </Helmet>
+<Helmet>
+  <title>
+    Bluenose Digital — Social Media Marketing, Branding & Growth Agency
+  </title>
+
+  <meta
+    name="description"
+    content="Bluenose Digital helps brands grow through high-impact social media marketing, branding, influencer campaigns, UGC, video editing, and ROI-driven performance systems. Trusted by 120+ global brands."
+  />
+
+  <link rel="canonical" href="https://www.bluenosedigital.ca/" />
+
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="Bluenose Digital — Social Media Marketing, Branding & Growth Agency" />
+  <meta
+    property="og:description"
+    content="Premium digital agency delivering strategy, content, branding, influencers, UGC and performance marketing for fast-scaling brands."
+  />
+  <meta property="og:url" content="https://www.bluenosedigital.ca/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.bluenosedigital.ca/og-home.jpg" />
+
+  {/* TWITTER CARD */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bluenose Digital — Social Media Marketing, Branding & Growth Agency" />
+  <meta
+    name="twitter:description"
+    content="Global creative & performance marketing agency helping brands scale with content, strategy, and ROI-focused execution."
+  />
+  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-home.jpg" />
+</Helmet>
+
 
       {/* =============================== */}
       {/*       PAGE WRAPPER (BLUE TINT) */}
@@ -519,77 +542,22 @@ const sendMessage = (e) => {
 {/* ===================================== */}
 {/*      OUR WORK IN ACTION (PREMIUM)     */}
 {/* ===================================== */}
-<div className="w-full overflow-hidden leading-none -mt-1">
-  <svg
-    viewBox="0 0 1440 180"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-full"
-  >
-    <path
-      fill="#1175a0"
-      d="
-        M0,80 
-        C240,140 480,0 720,60 
-        C960,120 1200,20 1440,80 
-        L1440,180 
-        L0,180 
-        Z
-      "
-    ></path>
-  </svg>
-</div>
-
+<div className="w-full overflow-hidden leading-none -mt-1"> <svg viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" className="w-full" > <path fill="#1175a0" d=" M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,190 L0,180 Z " ></path> </svg> </div>
 <section
   className="relative pb-20 px-6 overflow-hidden"
   style={{ background: "#1175a0" }}
->
-
-
-  {/* PREMIUM MODERN BACKGROUND */}
-  <div className="absolute inset-0 -z-10 overflow-hidden">
-
-    {/* Mesh Gradient */}
-    <div
-      className="absolute inset-0"
-      style={{
-        background:
-          "radial-gradient(circle at 20% 20%, #BFE2FF 0%, transparent 55%), radial-gradient(circle at 80% 25%, #A8D4FF 0%, transparent 60%), radial-gradient(circle at 50% 80%, #CFEAFF 0%, transparent 55%)",
-        opacity: 0.8,
-      }}
-    ></div>
-
-    {/* Light Beams */}
-    <div
-      className="absolute inset-0 opacity-[0.20]"
-      style={{
-        backgroundImage:
-          "linear-gradient(115deg, rgba(255,255,255,0.5) 0%, transparent 70%), linear-gradient(295deg, rgba(255,255,255,0.4) 0%, transparent 65%)",
-        animation: "beamMove 12s linear infinite alternate",
-      }}
-    ></div>
-
-    {/* Glass Frost Layer */}
-    <div className="absolute inset-0 bg-white/30 backdrop-blur-[18px] mix-blend-soft-light"></div>
-
-    {/* Floating Blobs */}
-    <div className="absolute top-10 left-10 w-[280px] h-[280px] bg-[#0E6388]/18 blur-[120px] rounded-full animate-blob"></div>
-    <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#4EB3D8]/22 blur-[140px] rounded-full animate-blob2"></div>
-
-    {/* Particles */}
-    <div className="pointer-events-none absolute inset-0">
-      {Array.from({ length: 22 }).map((_, i) => (
-        <span
-          key={i}
-          className="absolute w-1 h-1 bg-[#0E6388] rounded-full opacity-30 animate-pulse"
-          style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            animationDuration: `${2 + Math.random() * 3}s`,
-          }}
-        ></span>
-      ))}
+        >
+          
+          {/* VIRAL MOMENTS MOVING TEXT */}
+          
+  <div className="absolute inset-0 -z-0 pointer-events-none opacity-[0.05] overflow-hidden select-none">
+    <div className="animate-scrollX whitespace-nowrap 
+        text-[70px] md:text-[130px] font-extrabold tracking-tight text-white  -translate-y-5 md:-translate-y-0">
+      VIRAL MOMENTS • VIRAL MOMENTS • VIRAL MOMENTS • VIRAL MOMENTS •
     </div>
   </div>
+
+
 
   {/* TEXT BLOCK */}
   <div className="max-w-7xl mx-auto text-center relative z-20">
@@ -689,139 +657,184 @@ const sendMessage = (e) => {
 
 
 
-        {/* =============================== */}
-        {/*        WHAT WE OFFER SECTION     */}
-        {/* =============================== */}
+{/* =============================== */}
+{/*        WHAT WE OFFER SECTION     */}
+{/* =============================== */}
 
-        <section className="py-8 md:py-20 px-6">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
-              → Our Services
-            </p>
+<section className="py-18 md:py-24 px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
+      → Our Services
+    </p>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-              What We <span className="text-[#0E6388]">Offer</span>
-            </h2>
+    <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
+      What We <span className="text-[#0E6388]">Offer</span>
+    </h2>
 
-            <p className="text-[#063349]/80 text-lg max-w-2xl mx-auto mt-4">
-              High-performance solutions for modern brands — from content to
-              strategy.
-            </p>
+    <p className="text-[#063349]/80 text-lg max-w-2xl mx-auto mt-4">
+      High-performance solutions for modern brands — from content to strategy.
+    </p>
 
-            {/* SERVICES GRID */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
-              {[
-                {
-                  title: "Social Media Marketing",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z" />
-                      <circle cx="12" cy="12" r="3.5" />
-                    </svg>
-                  ),
-                  desc: "Monthly content, audience growth & brand positioning.",
-                },
-                {
-                  title: "Branding & Identity",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2l8 4v6c0 5-3 9-8 10-5-1-8-5-8-10V6l8-4z" />
-                    </svg>
-                  ),
-                  desc: "Logos, visual identity systems & brand tone development.",
-                },
-                {
-                  title: "Influencer Marketing",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-7 9v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1" />
-                    </svg>
-                  ),
-                  desc: "Creator collaborations designed to boost reach & trust.",
-                },
-                {
-                  title: "Video Editing",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14" />
-                      <rect x="3" y="7" width="12" height="10" rx="2" />
-                    </svg>
-                  ),
-                  desc: "Ads, reels & high-impact content crafted to convert.",
-                },
-                {
-                  title: "UGC Creation",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M4 12h2m12 0h2m-8 8v-2m0-12V4" />
-                    </svg>
-                  ),
-                  desc: "Authentic creator-led content for trust & conversion.",
-                },
-                {
-                  title: "Photography & Shoots",
-                  icon: (
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect x="3" y="5" width="18" height="14" rx="2" />
-                      <circle cx="8" cy="10" r="2.5" />
-                      <path d="M21 15l-3.5-3.5L13 16" />
-                    </svg>
-                  ),
-                  desc: "Product, food & brand shoots to elevate your visuals.",
-                },
-              ].map((service, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-3xl p-10 shadow-[0_12px_35px_rgba(0,0,0,0.15)] text-white"
-                  style={{ background: "rgb(14, 99, 136)" }}
-                >
-                  <div className="flex justify-center mb-6">{service.icon}</div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-white/85 text-sm leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+    {/* SERVICES GRID */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
+      {[
+        {
+          title: "Social Media Marketing",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9A4.5 4.5 0 0 1 16.5 21h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z" />
+              <circle cx="12" cy="12" r="3.5" />
+            </svg>
+          ),
+          desc: "Monthly content, audience growth & brand positioning.",
+          points: [
+            "Content calendars & reel planning",
+            "Brand awareness & engagement growth",
+            "Community building & retention"
+          ]
+        },
+        {
+          title: "Branding & Identity",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <path d="M12 2l8 4v6c0 5-3 9-8 10-5-1-8-5-8-10V6l8-4z" />
+            </svg>
+          ),
+          desc: "Logos, visual identity systems & brand tone development.",
+          points: [
+            "Brand strategy & storytelling",
+            "Logo, typography & color palette",
+            "Brand guidelines documentation"
+          ]
+        },
+        {
+          title: "Influencer Marketing",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm-7 9v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1" />
+            </svg>
+          ),
+          desc: "Creator collaborations designed to boost reach & trust.",
+          points: [
+            "Campaign influencer matchmaking",
+            "Negotiation & content approvals",
+            "Performance tracking & reporting"
+          ]
+        },
+        {
+          title: "Video Editing",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14" />
+              <rect x="3" y="7" width="12" height="10" rx="2" />
+            </svg>
+          ),
+          desc: "Ads, reels & high-impact content crafted to convert.",
+          points: [
+            "Short-form reels with motion graphics",
+            "UGC editing for ads",
+            "High-retention storytelling edits"
+          ]
+        },
+        {
+          title: "UGC Creation",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M4 12h2m12 0h2m-8 8v-2m0-12V4" />
+            </svg>
+          ),
+          desc: "Authentic creator-led content for trust & conversion.",
+          points: [
+            "Product demo & review videos",
+            "Story-style testimonial videos",
+            "Scripts + shooting guidance"
+          ]
+        },
+        {
+          title: "Photography & Shoots",
+          icon: (
+            <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.4" viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <circle cx="8" cy="10" r="2.5" />
+              <path d="M21 15l-3.5-3.5L13 16" />
+            </svg>
+          ),
+          desc: "Product, food & brand shoots to elevate your visuals.",
+          points: [
+            "Creative shot planning",
+            "Lifestyle + product photography",
+            "Studio & outdoor shoots"
+          ]
+        },
+      ].map((service, idx) => (
+        <div
+          key={idx}
+          className="
+            rounded-3xl p-10
+            bg-white/10 backdrop-blur-xl
+            shadow-[0_12px_35px_rgba(0,0,0,0.10)]
+            border border-white/20
+            text-white flex flex-col justify-between
+            hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)]
+            hover:-translate-y-2 transition-all duration-300
+            min-h-[400px]
+          "
+        style={{
+  background: "rgb(14, 99, 136)"
+}}
+        >
+          {/* ICON BOX */}
+          <div className=" w-16 h-16 mx-auto rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-6">
+            {service.icon}
           </div>
-        </section>
+
+          {/* TITLE */}
+          <h3 className="text-xl font-extrabold mb-3 text-center">
+            {service.title}
+          </h3>
+
+          {/* DESCRIPTION */}
+          <p className="text-white/85 text-sm text-center">
+            {service.desc}
+          </p>
+
+          {/* BULLET POINTS */}
+          <ul className="text-white/80 text-sm mt-4 space-y-1 text-left mx-auto w-[85%]">
+            {service.points.map((p, i) => (
+              <li key={i} className="flex gap-2">
+                <span>•</span> {p}
+              </li>
+            ))}
+          </ul>
+
+          {/* CTA BUTTON */}
+    <a
+  href="/contact"
+  className="
+    mt-6 w-full py-3 rounded-full text-center font-semibold relative overflow-hidden
+    bg-white text-[#063349] transition-all duration-300
+  "
+>
+  <span className="relative z-10">Start Project →</span>
+
+  {/* SLIDE BG */}
+  <span
+    className="
+      absolute inset-0 bg-gradient-to-r from-[#0E6388] to-[#4EB3D8]
+      translate-x-[-100%] transition-transform duration-300
+      group-hover:translate-x-0
+    "
+  ></span>
+</a>
+
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
         {/* =============================== */}
         {/*     CLIENT RESULTS SECTION      */}
@@ -873,6 +886,8 @@ const sendMessage = (e) => {
 
 
         </section>
+
+        
         {/* WAVE AT BOTTOM */}
 <div className="w-full overflow-hidden leading-none -mt-[1px]">
   <svg viewBox="0 0 1440 200" className="w-full">
@@ -892,7 +907,207 @@ const sendMessage = (e) => {
 
 
 
-        {/* =============================== */}
+
+
+
+{/* =============================== */}
+{/*        HOW WE WORK SECTION       */}
+{/* =============================== */}
+
+<section className="py-20 md:py-20 px-6 relative overflow-hidden">
+
+  {/* BACKGROUND BLURS */}
+  <div className="absolute top-10 left-0 w-64 h-64 bg-[#0E6388]/10 rounded-3xl blur-3xl"></div>
+  <div className="absolute bottom-10 right-0 w-80 h-80 bg-[#4EB3D8]/10 rounded-3xl blur-3xl"></div>
+
+  <div className="max-w-7xl mx-auto">
+
+    {/* HEADER */}
+    <div className="text-center mb-20">
+      <p className="text-[#0E6388] font-semibold tracking-wide">→ Our Process</p>
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
+        How We <span className="text-[#0E6388]">Work</span>
+      </h2>
+
+      <p className="text-[#063349]/70 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        A clear, structured process designed to bring out your brand’s best and scale it with consistency.
+      </p>
+    </div>
+
+    {/* ========== SECTION 1 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* IMAGE LEFT */}
+      <div className="relative">
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work1.jpg" alt="Deep Brand Understanding" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* TEXT RIGHT */}
+      <div className="relative">
+        {/* Step badge */}
+        <div className="absolute -top-10 left-0 bg-[#0E6388] text-white px-5 py-2 mb-2 rounded-full text-lg font-bold shadow-md">
+          Step 01
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Deep Brand Understanding
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We decode your brand’s voice, identity and audience to set a solid foundation for growth.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "12+ Hr Brand Study",
+            "Competitor Mapping",
+            "Brand Audit"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* ========== SECTION 2 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* TEXT LEFT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 02
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Messaging & Strategy Blueprint
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          A structured roadmap that guides messaging, content pillars and execution.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "Content Strategy Map",
+            "Channel Funnel Setup",
+            "30-Day Execution Plan",
+            "CTA + Conversion Path"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* IMAGE RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work2.jpg" alt="Strategy Blueprint" className="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+
+    {/* ========== SECTION 3 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* IMAGE LEFT */}
+      <div className="relative">
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work3.jpg" alt="Creative Execution" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* TEXT RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 03
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Creative Execution
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We transform strategy into high-performing content and storytelling.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "UGC + Reels + Graphics",
+            "Brand Story Elements",
+            "Design + Copywriting"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* ========== SECTION 4 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center">
+
+      {/* TEXT LEFT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 04
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Optimize & Scale
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We refine, improve and scale winning content for long-term growth.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "Weekly A/B Testing",
+            "Performance Tracking",
+            "Audience Insights",
+            "Scale Growth Systems"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* IMAGE RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work4.jpg" alt="Optimize & Scale" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+        </section>
+        
+
+                {/* =============================== */}
         {/*        WHY CHOOSE US SECTION     */}
         {/* =============================== */}
 
@@ -938,85 +1153,7 @@ const sendMessage = (e) => {
           </div>
         </section>
 
-        {/* =============================== */}
-        {/*        HOW WE WORK SECTION       */}
-        {/* =============================== */}
 
-        <section className="py-8 md:py-20 px-6">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
-              → Our Process
-            </p>
-
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-              How We <span className="text-[#0E6388]">Work</span>
-            </h2>
-
-            {/* PROCESS GRID */}
-            <div className="grid md:grid-cols-2 gap-10 mt-16 max-w-6xl mx-auto">
-              {[
-                {
-                  num: "01",
-                  title: "Deep Brand Understanding",
-                  points: [
-                    "12+ Hr Brand Study",
-                    "Competitor Mapping",
-                    "Tone & Persona Discovery",
-                    "Brand Audit",
-                  ],
-                },
-                {
-                  num: "02",
-                  title: "Messaging & Strategy Blueprint",
-                  points: [
-                    "Content Strategy Map",
-                    "Channel Funnel Setup",
-                    "30-Day Execution Plan",
-                    "CTA + Conversion Path",
-                  ],
-                },
-                {
-                  num: "03",
-                  title: "Creative Execution",
-                  points: [
-                    "High-Quality Creatives",
-                    "UGC + Reels + Graphics",
-                    "Brand Story Elements",
-                    "Design + Copywriting",
-                  ],
-                },
-                {
-                  num: "04",
-                  title: "Optimize & Scale",
-                  points: [
-                    "Weekly A/B Testing",
-                    "Performance Tracking",
-                    "Audience Insights",
-                    "Scale Growth Systems",
-                  ],
-                },
-              ].map((step, i) => (
-                <div
-                  key={i}
-                  className="rounded-3xl p-10 text-white shadow-lg"
-                  style={{ background: "rgb(14, 99, 136)" }}
-                >
-                  <p className="text-5xl font-extrabold opacity-90">
-                    {step.num}
-                  </p>
-
-                  <h3 className="text-2xl font-bold mt-3">{step.title}</h3>
-
-                  <ul className="mt-4 space-y-1 text-white/90 text-[15px]">
-                    {step.points.map((p, idx) => (
-                      <li key={idx}>• {p}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* =============================== */}
         {/*        FAQ SECTION               */}

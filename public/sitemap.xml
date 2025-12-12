@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.bluenosemarketing.ca/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/work-gallery</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/privacy</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluenosemarketing.ca/terms</loc>
+    <priority>0.5</priority>
+  </url>
+
+
+  <!-- SERVICES PAGES -->
+  <url><loc>https://www.bluenosemarketing.ca/services/branding-identity</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/services/influencer-marketing</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/services/photography</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/services/smm</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/services/ugc</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/services/video-editing</loc></url>
+
+
+  <!-- WORK / CLIENT CASE STUDIES -->
+  <url><loc>https://www.bluenosemarketing.ca/work/the-garden-retreat</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/adda-indian-eatery</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/triveeni-events</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/pita-nutso</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/nayya-pizza</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/beaver-bank-station</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/sake-cafe</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/hearthstone-inn</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/besharam-bar-grill</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/rivaaj-restrobar</loc></url>
+  <url><loc>https://www.bluenosemarketing.ca/work/desi-garden</loc></url>
+
+</urlset>

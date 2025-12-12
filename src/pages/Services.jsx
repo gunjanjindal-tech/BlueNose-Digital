@@ -44,18 +44,47 @@ export default function ServicesPage() {
 
   return (
     <>
-      {/* SEO */}
-      <Helmet>
-        <title>Digital Marketing Services | SMM, Branding, UGC & Video Content</title>
-        <meta
-          name="description"
-          content="Explore Bluenose Digital’s services — Social Media Marketing, Branding, UGC Creation, Influencer Marketing, Video Editing & Photography."
-        />
-        <meta
-          name="keywords"
-          content="social media marketing, branding, influencer marketing, video editing, ugc creators, photography"
-        />
-      </Helmet>
+     <Helmet>
+  {/* BASIC SEO */}
+  <title>
+    Digital Marketing Services | SMM, Branding, Influencer Marketing, UGC & Video Editing
+  </title>
+
+  <meta
+    name="description"
+    content="Explore Bluenose Digital’s premium services — Social Media Marketing, Branding & Identity, Influencer Marketing, UGC Creation, Video Editing and Photography for fast-scaling brands."
+  />
+
+  <meta
+    name="keywords"
+    content="digital marketing services, social media marketing, branding agency, influencer marketing, UGC creators, video editing company, photography services, creative agency"
+  />
+
+  <link rel="canonical" href="https://www.bluenosedigital.ca/services" />
+
+  {/* OPEN GRAPH (Facebook, Instagram, LinkedIn) */}
+  <meta property="og:title" content="Bluenose Digital — SMM, Branding, UGC, Influencer & Video Editing Services" />
+  <meta
+    property="og:description"
+    content="Full-suite creative & performance services: SMM, Branding, Influencer Marketing, UGC, Video Editing & Photography to help brands scale."
+  />
+  <meta property="og:url" content="https://www.bluenosedigital.ca/services" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.bluenosedigital.ca/og-services.jpg" />
+
+  {/* TWITTER CARD */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Bluenose Digital — Digital Marketing & Creative Services"
+  />
+  <meta
+    name="twitter:description"
+    content="SMM, Branding, Influencers, UGC, Video Editing & Photography — one agency for all your growth needs."
+  />
+  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-services.jpg" />
+</Helmet>
+
 
       {/* PAGE */}
       <section className="relative pt-[110px] pb-20 md:pt-[130px] md:pb-28 px-6 bg-white text-[#0E3D55]">

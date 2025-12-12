@@ -90,3 +90,14 @@
 .fade-in {
   animation: fade 0.6s ease forwards;
 }
+
+    /* OUR WORK IN ACTION (PREMIUM)   */
+
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scrollX {
+  animation: scrollX 22s linear infinite;
+}

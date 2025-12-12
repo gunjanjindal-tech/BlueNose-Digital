@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import AboutHowWeWork from "../components/About/AboutHowWeWork";
 import CTAHome from "../components/CTAHome";
+import Timeline from "../components/About/Timeline";
+import { Helmet } from "react-helmet";
 
 // ICONS
 const icons = {
@@ -51,7 +53,63 @@ const fade = {
 
 export default function About() {
   return (
-    <>
+  <>
+  <Helmet>
+    {/* BASIC SEO */}
+    <title>About Us | Bluenose Digital Marketing – Branding, SMM & Creative Growth Agency</title>
+    <meta
+      name="description"
+      content="Learn about Bluenose Digital — a global creative & performance marketing agency helping brands grow through strategy, storytelling, branding, SMM, influencer marketing, and ROI-led execution."
+    />
+    <meta
+      name="keywords"
+      content="digital marketing agency, branding agency, social media marketing, influencer marketing, video editing agency, Canada marketing agency, Bluenose Digital"
+    />
+    <link rel="canonical" href="https://www.bluenosedigital.ca/about" />
+
+    {/* OPEN GRAPH (SOCIAL SHARE) */}
+    <meta property="og:title" content="About Bluenose Digital – Creative & Growth Marketing Agency" />
+    <meta
+      property="og:description"
+      content="We build clarity, trust and growth for modern brands through strategy, creativity and performance-led execution. See our story."
+    />
+    <meta property="og:url" content="https://www.bluenosedigital.ca/about" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.bluenosedigital.ca/og-about.jpg" />
+
+    {/* TWITTER CARD */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Bluenose Digital – Creative & Growth Marketing Agency" />
+    <meta
+      name="twitter:description"
+      content="Global agency specializing in branding, performance, SMM, influencer marketing & digital storytelling."
+    />
+    <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-about.jpg" />
+
+    {/* SCHEMA MARKUP */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bluenose Digital Marketing",
+        "url": "https://www.bluenosedigital.ca",
+        "logo": "https://www.bluenosedigital.ca/logo.png",
+        "description":
+          "A global digital marketing agency offering SMM, branding, influencer marketing, video editing, UGC, and photography services.",
+        "founder": {
+          "@type": "Person",
+          "name": "Founder, Bluenose Digital",
+        },
+        "sameAs": [
+          "https://www.instagram.com/bluenose.digital/",
+          "https://www.linkedin.com/company/bluenose-digital",
+        ],
+      })}
+    </script>
+  </Helmet>
+
+      
+      
       {/* PAGE TOP SECTION */}
       <section className="pt-[120px] pb-20 px-6 bg-white w-full">
 
@@ -156,44 +214,67 @@ export default function About() {
           </div>
         </section>
 
-        {/* FOUNDER SECTION */}
-        <section className="mt-20 mb-10">
-          <div className="rounded-3xl p-10 md:p-14 bg-white shadow-xl grid md:grid-cols-2 gap-10 md:gap-16 items-center max-w-7xl mx-auto">
+{/* FOUNDER SECTION */}
 
-            {/* IMAGE */}
-            <div className="rounded-2xl overflow-hidden shadow-xl max-h-[480px]">
-              <img src="/founder.png" className="w-full h-full object-cover" alt="Founder" />
-            </div>
+<section className="relative mt-16 mb-10 px-6">
 
-            {/* TEXT */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0E6388]">
-                Message from Our Founder
-              </h2>
+  {/* BACKGROUND WRAPPER */}
+  <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#1175a0] py-10 md:py-14 px-6 md:px-12">
 
-              <p className="mt-4 text-[#063349]/85">
-                The vision for Bluenose Marketing was born from a simple need:
-                to build a digital marketing agency that blends creativity with
-                undeniable data-driven results.
-              </p>
+    {/* Glow */}
+    <div className="absolute inset-0 blur-3xl"></div>
 
-              <p className="mt-4 text-[#063349]/85">
-                We established our first office in Halifax, Canada, with the
-                goal of bringing brands closer to their audiences through
-                impactful strategies.
-              </p>
+    {/* CONTENT */}
+    <div className="relative z-10 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
 
-              <p className="mt-4 text-[#063349]/85">
-                Our family has since grown into a thriving team of 25+ global digital experts.
-              </p>
+      {/* IMAGE - Reduced Height */}
+      <div className="
+        rounded-3xl overflow-hidden 
+        p-2
+        max-h-[500px]  
+      ">
+        <img
+          src="/founder.png"
+          alt="Founder"
+          className="w-full h-full object-contain rounded-2xl"
+        />
+      </div>
 
-              <p className="mt-4 text-[#063349]/85 font-semibold">
-                — Bluenose Digital Marketing, Founder & CEO
-              </p>
-            </div>
+      {/* TEXT (same size) */}
+      <div className="
+        bg-white/10 backdrop-blur-xl border border-white/20
+        p-8 md:p-10 rounded-3xl shadow-xl text-white
+      ">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+          Message from Our Founder
+        </h2>
 
-          </div>
-        </section>
+        <p className="mt-4 text-white/90 leading-relaxed">
+          The vision for Bluenose Marketing was born from a simple need:
+          to build a digital marketing agency that blends creativity with
+          undeniable data-driven results.
+        </p>
+
+        <p className="mt-4 text-white/85 leading-relaxed">
+          We established our first office in Halifax, Canada, with the
+          goal of bringing brands closer to their audiences through
+          impactful strategies.
+        </p>
+
+        <p className="mt-4 text-white/85 leading-relaxed">
+          Our family has since grown into a thriving team of 25+ global digital experts.
+        </p>
+
+        <p className="mt-6 text-white font-semibold">
+          — Bluenose Digital Marketing, Founder & CEO
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
         {/* TIMELINE */}
         <Timeline />
@@ -223,8 +304,8 @@ export default function About() {
               → What We Do
             </p>
 
-            <h2 className="text-3xl md:text-5xl font-extrabold">
-              What We <span className="text-white/80">Do</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
+              What We <span className="text-white">Do</span>
             </h2>
 
             <p className="text-white/80 text-lg max-w-2xl mx-auto mt-4">
@@ -267,88 +348,3 @@ export default function About() {
 /*******************************
    TIMELINE COMPONENT
 *******************************/
-function Timeline() {
-  const events = [
-    {
-      date: "September 2024",
-      title: "The vision was born",
-      text: "To build a digital marketing agency that blends creativity with data-driven results.",
-      side: "left",
-    },
-    {
-      date: "December 2024",
-      title: "First Office: Halifax Launch",
-      text: "We opened our first office in Halifax, Canada, bringing brands closer with impactful strategies.",
-      side: "right",
-    },
-    {
-      date: "February 2025",
-      title: "Team Growth: 20+ Experts",
-      text: "Our team grew into 20+ digital experts — strategists, designers & performance marketers.",
-      side: "left",
-    },
-    {
-      date: "September 2025",
-      title: "India Launch: Global Expansion",
-      text: "We expanded to India to serve brands worldwide with scalable digital solutions.",
-      side: "right",
-    },
-  ];
-
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -50 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 50 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  };
-
-  return (
-    <section className="py-20 md:py-24 bg-white w-full">
-      <h2 className="text-center text-3xl md:text-5xl font-extrabold text-[#063349] mb-16">
-        Our <span className="text-[#0E6388]">Journey</span>
-      </h2>
-
-      <div className="relative max-w-6xl mx-auto px-4">
-
-        {/* CENTER LINE */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-[#D9E7F1] hidden md:block"></div>
-
-        <div className="space-y-16 md:space-y-10">
-          {events.map((e, i) => (
-            <motion.div
-              key={i}
-              variants={e.side === "left" ? fadeLeft : fadeRight}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.4 }}
-              className="relative flex md:w-full md:items-center"
-            >
-
-              {/* DOT */}
-              <div
-                className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#0E6388] shadow-[0_0_12px_#0E6388]"
-                style={{ top: "50%" }}
-              ></div>
-
-              {/* CARD */}
-              <div
-                className={`w-full md:w-[46%] bg-[#0E6388] text-white p-6 md:p-8 rounded-2xl shadow-lg ${
-                  e.side === "left" ? "md:mr-auto" : "md:ml-auto"
-                }`}
-              >
-                <p className="text-lg font-extrabold">{e.date}</p>
-                <p className="font-semibold mt-1">{e.title}</p>
-                <p className="text-white/90 mt-3 leading-relaxed text-sm">
-                  {e.text}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}

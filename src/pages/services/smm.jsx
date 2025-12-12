@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
+// import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
 import Testimonials from "../../components/DetailedServiceComponents/Testimonials";
 import ServiceClientLogos from "../../components/DetailedServiceComponents/ServiceClientLogos";
 import PlatformSlider from "../../components/PlatformSlider";
@@ -129,7 +129,7 @@ export default function SMM() {
       <PlatformSlider />
 
       {/* PRICING */}
-      <PricingPlans />
+      {/* <PricingPlans /> */}
 
       {/* TESTIMONIALS */}
       <section className="py-12 md:py-20 px-6">

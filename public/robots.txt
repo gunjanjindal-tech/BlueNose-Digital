@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block private folders (if any)
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /draft/
+
+# Sitemap Location
+Sitemap: https://www.bluenosedigital.ca/sitemap.xml

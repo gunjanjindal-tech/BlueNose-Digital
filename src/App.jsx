@@ -11,7 +11,6 @@ import Footer from "./components/Footer";
 // 🔽 Import all service pages
 import SMM from "./pages/services/smm";
 import BrandIdentity from "./pages/services/BrandIdentity";
-import CommercialAds from "./pages/services/commercial-ads";
 import InfluencerMarketing from "./pages/services/influencer-marketing";
 import VideoEditing from "./pages/services/video-editing";
 import UGC from "./pages/services/ugc";
@@ -52,7 +51,6 @@ function App() {
         {/* SERVICE INDIVIDUAL ROUTES */}
         <Route path="/services/smm" element={<SMM />} />
         <Route path="/services/brand-identity" element={<BrandIdentity />} />
-        <Route path="/services/commercial-ads" element={<CommercialAds />} />
         <Route path="/services/influencer-marketing" element={<InfluencerMarketing />} />
         <Route path="/services/video-editing" element={<VideoEditing />} />
         <Route path="/services/ugc-content" element={<UGC />} />

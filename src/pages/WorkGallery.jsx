@@ -101,7 +101,7 @@ export default function WorkGallery() {
       bg: "#134457",
       stats: ["214K Views", "65 Shares", "990 Saves", "4.7K Followers"],
       logo: "/client/logo-16.png",
-      grid: "/client-grid/besharam-grid.jpg",
+      grid: "/client-grid/besaharam-grid.jpg",
     },
     {
       name: "Rivaaj Resto-Bar",
@@ -110,7 +110,7 @@ export default function WorkGallery() {
       bg: "#ad863e",
       stats: ["612K Views", "78 Posts", "303 Saves", "38% Conversion"],
       logo: "/client/logo-17.png",
-      grid: "/client-grid/rivaaj-grid.jpg",
+      grid: "/client-grid/rivaaz-grid.jpg",
     },
     {
       name: "Desi Garden",
@@ -125,7 +125,45 @@ export default function WorkGallery() {
 
   return (
     <section className="py-24 px-6 bg-white">
-      <Helmet><title>Work Gallery | Bluenose Digital Marketing</title></Helmet>
+<Helmet>
+  {/* PAGE TITLE */}
+  <title>Work Gallery | Bluenose Digital Marketing – Client Results & Case Studies</title>
+
+  {/* META DESCRIPTION */}
+  <meta
+    name="description"
+    content="Explore Bluenose Digital’s work gallery — real client results, high-performing campaigns, branding, SMM, influencer marketing, UGC, and content that drives ROI."
+  />
+
+  {/* META KEYWORDS */}
+  <meta
+    name="keywords"
+    content="digital marketing case studies, SMM results, branding portfolio, influencer marketing campaigns, UGC content, video editing portfolio, client performance"
+  />
+
+  {/* CANONICAL URL */}
+  <link rel="canonical" href="https://www.bluenosedigital.ca/work-gallery" />
+
+  {/* OPEN GRAPH FOR SOCIAL MEDIA */}
+  <meta property="og:title" content="Work Gallery | Bluenose Digital – Client Results & Growth Stories" />
+  <meta
+    property="og:description"
+    content="See real client performance: branding, SMM, influencer marketing, UGC, photography, and content that scaled brands."
+  />
+  <meta property="og:url" content="https://www.bluenosedigital.ca/work-gallery" />
+  <meta property="og:image" content="https://www.bluenosedigital.ca/og-work.jpg" />
+  <meta property="og:type" content="website" />
+
+  {/* TWITTER CARD */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bluenose Digital – Work Gallery" />
+  <meta
+    name="twitter:description"
+    content="Explore our best-performing campaigns, brand transformations, and digital growth case studies."
+  />
+  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-work.jpg" />
+</Helmet>
+
 
       {/* Heading */}
       <p className="text-center text-[#0E6388] font-semibold mb-2">→ Our Work</p>
@@ -153,7 +191,6 @@ export default function WorkGallery() {
 --------------------------------------------------- */
 function WorkCard({ data }) {
   const dark = isDarkColor(data.bg);
-  const [showGrid, setShowGrid] = useState(false);
 
   return (
     <motion.div
@@ -161,31 +198,10 @@ function WorkCard({ data }) {
       className="rounded-3xl p-8 shadow-xl overflow-hidden"
       style={{ background: data.bg }}
     >
-      {/* LOGO / GRID TOGGLE */}
-      <div onClick={() => setShowGrid(!showGrid)} className="cursor-pointer mb-6">
-        <AnimatePresence mode="wait">
-          {!showGrid ? (
-            <motion.div
-              key="logo"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="h-32 w-32 mx-auto rounded-2xl  backdrop-blur-md flex items-center justify-center"
-            >
-              <img src={data.logo} className="h-30 object-contain" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="grid"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="rounded-2xl overflow-hidden shadow-lg"
-            >
-              <img src={data.grid} className="w-full h-auto" />
-            </motion.div>
-          )}
-        </AnimatePresence>
+
+      {/* ALWAYS SHOW GRID */}
+      <div className="rounded-2xl overflow-hidden shadow-lg mb-6">
+        <img src={data.grid} className="w-full h-auto" />
       </div>
 
       {/* NAME */}
@@ -218,10 +234,16 @@ function WorkCard({ data }) {
 
       {/* BUTTON */}
       <Link to={data.link}>
-        <button className="mt-6 w-full py-2 rounded-full bg-white text-black font-semibold hover:bg-black hover:text-white transition-all">
+        <button className="
+          mt-6 w-full py-2 rounded-full 
+          bg-white text-black font-semibold 
+          hover:bg-black hover:text-white 
+          transition-all duration-300
+        ">
           View Case →
         </button>
       </Link>
+
     </motion.div>
   );
 }

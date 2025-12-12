@@ -2,83 +2,193 @@ export default function AboutHowWeWork() {
   return (
     <section className="relative bg-white text-[#063349] overflow-hidden pt-12">
       
-      {/* 🌊 Top Wave (works 100% now) */}
-      <div className="absolute top-0 left-0 w-full z-0">
-        <svg
-          viewBox="0 0 1440 150"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-[110px] rotate-180 block"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#ffffff"
-            d="M0,64L48,74.7C96,85,192,107,288,112C384,117,480,107,576,96C672,85,768,75,864,80C960,85,1056,107,1152,112C1248,117,1344,107,1392,101.3L1440,96L1440,00L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          ></path>
-        </svg>
+   <div className="absolute top-10 left-0 w-64 h-64 bg-[#0E6388]/10 rounded-3xl blur-3xl"></div>
+  <div className="absolute bottom-10 right-0 w-80 h-80 bg-[#4EB3D8]/10 rounded-3xl blur-3xl"></div>
+
+  <div className="max-w-7xl mx-auto">
+
+    {/* HEADER */}
+    <div className="text-center mb-20">
+      <p className="text-[#0E6388] font-semibold tracking-wide">→ Our Process</p>
+
+      <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
+        How We <span className="text-[#0E6388]">Work</span>
+      </h2>
+
+      <p className="text-[#063349]/70 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        A clear, structured process designed to bring out your brand’s best and scale it with consistency.
+      </p>
+    </div>
+
+    {/* ========== SECTION 1 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* IMAGE LEFT */}
+      <div className="relative">
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work1.jpg" alt="Deep Brand Understanding" className="w-full h-full object-cover" />
+        </div>
       </div>
 
-      {/* Heading */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center mb-14">
-        <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
-          → Our Process
+      {/* TEXT RIGHT */}
+      <div className="relative">
+        {/* Step badge */}
+        <div className="absolute -top-10 left-0 bg-[#0E6388] text-white px-5 py-2 mb-2 rounded-full text-lg font-bold shadow-md">
+          Step 01
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Deep Brand Understanding
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We decode your brand’s voice, identity and audience to set a solid foundation for growth.
         </p>
 
-        <h2 className="text-3xl md:text-5xl font-extrabold leading-[1.3]">
-          How We Work <span className="text-[#0E6388]">(Smart, Fast, ROI-Driven)</span>
-        </h2>
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "12+ Hr Brand Study",
+            "Competitor Mapping",
+            "Brand Audit"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* ========== SECTION 2 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* TEXT LEFT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 02
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Messaging & Strategy Blueprint
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          A structured roadmap that guides messaging, content pillars and execution.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "Content Strategy Map",
+            "Channel Funnel Setup",
+            "30-Day Execution Plan",
+            "CTA + Conversion Path"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
       </div>
 
-      {/* Steps Grid */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-10 max-w-6xl mx-auto px-4">
-        {[
-          {
-            num: "01",
-            title: "Deep Brand Understanding",
-            points: ["12+ Hr Brand Study", "3 Competitor Scans", "Voice + Tone Mapping", "Persona Identification"],
-            desc:
-              "We start by deeply learning about your brand — audience, tone, performance & competitors to unlock scale-ready clarity.",
-          },
-          {
-            num: "02",
-            title: "Marketing Blueprint",
-            points: ["30-Day Strategy Map", "Content Calendar", "Channel + Funnel Setup", "CTA + Conversion Architecture"],
-            desc:
-              "A complete execution blueprint — content angles, messaging flow, channel strategy & paid funnel routing.",
-          },
-          {
-            num: "03",
-            title: "Creative Execution",
-            points: ["40+ Creatives Monthly", "UGC + Reels + Graphics", "Brand-First Visuals", "Story-Driven Hooks"],
-            desc:
-              "Thumb-stopping visuals designed to convert — where design meets psychology & brand story.",
-          },
-          {
-            num: "04",
-            title: "Monitor, Scale & Optimize",
-            points: ["Weekly A/B Testing", "ROI Tracking", "Scaling Iterations", "Continuous Improvement Loops"],
-            desc:
-              "Performance-led scaling — identify winners, cut cost, expand reach & drive revenue faster.",
-          },
-        ].map((step, i) => (
-          <div
-            key={i}
-            className="rounded-3xl p-10 text-white shadow-[0_15px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_60px_rgba(0,0,0,0.25)] transition-all duration-300"
-            style={{ background: "rgb(14, 99, 136)" }}
-          >
-            <p className="text-6xl font-extrabold opacity-90">{step.num}</p>
+      {/* IMAGE RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
 
-            <h3 className="text-2xl font-bold mt-1">{step.title}</h3>
-
-            <ul className="mt-4 space-y-1 text-white/90 text-[15px]">
-              {step.points.map((p, j) => (
-                <li key={j}>• {p}</li>
-              ))}
-            </ul>
-
-            <p className="text-white/75 text-sm mt-4 leading-relaxed">{step.desc}</p>
-          </div>
-        ))}
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work2.jpg" alt="Strategy Blueprint" className="w-full h-full object-cover" />
+        </div>
       </div>
+    </div>
+
+    {/* ========== SECTION 3 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center mb-24">
+
+      {/* IMAGE LEFT */}
+      <div className="relative">
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work3.jpg" alt="Creative Execution" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      {/* TEXT RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 03
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Creative Execution
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We transform strategy into high-performing content and storytelling.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "UGC + Reels + Graphics",
+            "Brand Story Elements",
+            "Design + Copywriting"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* ========== SECTION 4 ========== */}
+    <div className="grid md:grid-cols-2 gap-14 items-center">
+
+      {/* TEXT LEFT */}
+      <div className="relative">
+        <div className="absolute -top-10 left-0 bg-[#0E6388] mb-2 text-white px-5 py-2 rounded-full text-lg font-bold shadow-md">
+          Step 04
+        </div>
+
+        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+          Optimize & Scale
+        </h3>
+        <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
+
+        <p className="text-[#063349]/80 leading-relaxed mb-6 text-[17px]">
+          We refine, improve and scale winning content for long-term growth.
+        </p>
+
+        <ul className="space-y-3 text-[#063349]/90 text-[15px]">
+          {[
+            "Weekly A/B Testing",
+            "Performance Tracking",
+            "Audience Insights",
+            "Scale Growth Systems"
+          ].map((p, idx) => (
+            <li key={idx} className="flex items-center gap-3">
+              <span className="text-[#0E6388] text-xl">✔</span> {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* IMAGE RIGHT */}
+      <div className="relative">
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
+
+        <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
+          <img src="/work4.jpg" alt="Optimize & Scale" className="w-full h-full object-cover" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
     </section>
   );
 }

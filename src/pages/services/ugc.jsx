@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
+// import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
 import Testimonials from "../../components/DetailedServiceComponents/Testimonials";
 import ServiceClientLogos from "../../components/DetailedServiceComponents/ServiceClientLogos";
 import PlatformSlider from "../../components/PlatformSlider";
@@ -199,7 +199,7 @@ text-center mb-14">
       <PlatformSlider />
 
       {/* ✦ PRICING (same across all services) */}
-      <PricingPlans />
+      {/* <PricingPlans /> */}
 
       {/* ✦ TESTIMONIALS */}
          <section className=" py-5 md:py-20">

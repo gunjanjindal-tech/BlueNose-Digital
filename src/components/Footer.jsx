@@ -17,15 +17,24 @@ export default function Footer() {
 
           {/* SOCIAL ICONS */}
           <div className="flex gap-3 mt-6">
-            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
-              <Instagram className="w-5 h-5 text-[#0E6388]" />
-            </a>
-            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
-              <Facebook className="w-5 h-5 text-[#0E6388]" />
-            </a>
-            <a className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition">
-              <Linkedin className="w-5 h-5 text-[#0E6388]" />
-            </a>
+        <a
+  href="https://www.instagram.com/bluenose_marketing?igsh=MTg5ZjMxdHdyczRtcA%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition"
+>
+  <Instagram className="w-5 h-5 text-[#0E6388]" />
+</a>
+
+<a
+  href="https://www.linkedin.com/company/bluenose-marketing-digital-marketing-agency/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="p-2 bg-[#0E6388]/10 rounded-lg hover:bg-[#0E6388]/20 transition"
+>
+  <Linkedin className="w-5 h-5 text-[#0E6388]" />
+</a>
+
           </div>
         </div>
 
