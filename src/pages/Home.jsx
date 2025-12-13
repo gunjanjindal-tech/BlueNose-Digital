@@ -1247,14 +1247,14 @@ const sendMessage = (e) => {
   {/* Background glow */}
   <div className="absolute inset-0 bg-[#0E6388]/20 blur-3xl"></div>
 
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10 text-white">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10 text-white">
 
     {/* LEFT SIDE */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="space-y-6"
+      className="space-y-6 mt-2"
     >
       <p className="text-white font-semibold tracking-wide">→ Contact Us</p>
 
