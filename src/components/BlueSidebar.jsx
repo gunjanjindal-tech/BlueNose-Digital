@@ -2,44 +2,47 @@ import React from "react";
 
 export default function BlueSidebar({ sections, active }) {
   return (
-    <div
-  className="hidden md:block rounded-3xl p-3 mb-1 shadow-lg"
-  style={{
-    background: "rgb(14, 99, 136)"
-  }}
->
-      <aside className="sticky top-[140px] p-6 text-white space-y-8 "
-      >
-       
-        {sections.map((item) => {
-          const isActive = active === item.id;
+    <aside
+      className="
+        hidden lg:flex
+        flex-col
+        w-[260px]
+        min-h-screen
+        sticky top-[120px]
+        rounded-3xl
+        shadow-lg
+        p-6
+        text-white
+        py-20
+      "
+      style={{ background: "rgb(14, 99, 136)" }}
+    >
+      {sections.map((item) => {
+        const isActive = active === item.id;
 
-          return (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
+        return (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className={`
+              group relative py-3 pl-6 pr-3 rounded-lg mb-12 transition-all duration-300
+              block
+              ${isActive ? "font-bold scale-[1.03]" : "opacity-80 hover:opacity-100"}
+            `}
+          >
+            {/* Left Highlight Bar */}
+            <span
               className={`
-                group relative block py-2 pl-5 pr-3 rounded-lg transition-all duration-300
-                ${isActive ? "scale-[1.06] font-bold" : "opacity-80 hover:opacity-100"}
+                absolute left-0 top-0 h-full w-1.5 rounded-full bg-white 
+                transition-all duration-300
+                ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}
               `}
-            >
-              {/* Left Highlight Bar */}
-              <span
-                className={`
-                  absolute left-0 top-0 h-full w-1.5 rounded-full bg-white transition-all duration-300
-                  ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}
-                `}
-              />
+            />
 
-              {/* Text */}
-              <span className="inline-block transition-all duration-300">
-                {item.name}
-              </span>
-            </a>
-          );
-        })}
-
-      </aside>
-    </div>
+            <span className="text-base">{item.name}</span>
+          </a>
+        );
+      })}
+    </aside>
   );
 }

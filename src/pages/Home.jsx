@@ -509,16 +509,17 @@ const sendMessage = (e) => {
             transition-all
           "
         >
-          {/* ICON */}
-          <div
-            className={`
-              w-12 h-12 rounded-2xl flex items-center justify-center
-              bg-gradient-to-br ${stat.iconBg}
-              text-white text-lg font-bold
-            `}
-          >
-            ★
-          </div>
+        {/* VALUE LEFT */}
+<div
+  className={`
+    min-w-[72px] h-12 rounded-2xl flex items-center justify-center
+    bg-gradient-to-br ${stat.iconBg}
+    text-white text-xl font-extrabold
+  `}
+>
+  {stat.value}
+</div>
+
 
           {/* TEXT */}
           <div className="flex flex-col">

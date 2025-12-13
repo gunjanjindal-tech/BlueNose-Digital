@@ -7,6 +7,7 @@ export default function Header() {
   const [servicesDrop, setServicesDrop] = useState(false);
   const [workDrop, setWorkDrop] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
 
   const location = useLocation();
 
@@ -75,45 +76,81 @@ export default function Header() {
 
           <Link to="/" className="hover:text-[#0E6388]">Home</Link>
 
-          {/* SERVICES DROPDOWN (Label is link now) */}
-          <div className="relative group cursor-pointer">
-            <Link to="/services" className="flex items-center gap-1 hover:text-[#0E6388]">
-              Services <ChevronDown size={16} />
-            </Link>
+{/* SERVICES */}
+<div
+  className="relative group"
+  onMouseEnter={() => window.innerWidth >= 1024 && setServicesDrop(true)}
+  onMouseLeave={() => window.innerWidth >= 1024 && setServicesDrop(false)}
+>
 
-            <div className="absolute left-0 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-              bg-white shadow-xl rounded-xl w-64 p-3 transition-all duration-200 border border-[#EAF4FA]">
-              {services.map((s, i) => (
-                <Link
-                  key={i}
-                  to={s.link}
-                  className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
-                >
-                  {s.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+  {/* LABEL */}
+  <Link
+    to="/services"
+    onClick={() => window.innerWidth < 1024 && setServicesDrop(!servicesDrop)}
+    className="flex items-center gap-1 hover:text-[#0E6388]"
+  >
+    Services <ChevronDown size={16} />
+  </Link>
 
-          {/* WORK DROPDOWN (Label is link now) */}
-          <div className="relative group cursor-pointer">
-            <Link to="/work-gallery" className="flex items-center gap-1 hover:text-[#0E6388]">
-              Work Gallery <ChevronDown size={16} />
-            </Link>
+  {/* DROPDOWN */}
+  <div
+    className={`
+      absolute left-0 mt-3 bg-white shadow-xl rounded-xl w-64 p-3
+      border border-[#EAF4FA] transition-all duration-200
+      ${servicesDrop ? "opacity-100 visible" : "opacity-0 invisible"}
+    `}
+  >
+    {services.map((s, i) => (
+      <Link
+        key={i}
+        to={s.link}
+        className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
+        onClick={() => setServicesDrop(false)}
+      >
+        {s.name}
+      </Link>
+    ))}
+  </div>
+</div>
 
-            <div className="absolute left-0 mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-              bg-white shadow-xl rounded-xl w-64 p-3 transition-all duration-200 border border-[#EAF4FA]">
-              {clients.map((c, i) => (
-                <Link
-                  key={i}
-                  to={c.link}
-                  className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
-                >
-                  {c.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+
+
+{/* WORK */}
+<div
+  className="relative group"
+  onMouseEnter={() => window.innerWidth >= 1024 && setWorkDrop(true)}
+  onMouseLeave={() => window.innerWidth >= 1024 && setWorkDrop(false)}
+>
+
+  <Link
+    to="/work-gallery"
+    onClick={() => window.innerWidth < 1024 && setWorkDrop(!workDrop)}
+    className="flex items-center gap-1 hover:text-[#0E6388]"
+  >
+    Work Gallery <ChevronDown size={16} />
+  </Link>
+
+  <div
+    className={`
+      absolute left-0 mt-3 bg-white shadow-xl rounded-xl w-64 p-3
+      border border-[#EAF4FA] transition-all duration-200
+      ${workDrop ? "opacity-100 visible" : "opacity-0 invisible"}
+    `}
+  >
+    {clients.map((c, i) => (
+      <Link
+        key={i}
+        to={c.link}
+        className="block px-3 py-2 rounded-lg hover:bg-[#F2FAFF] hover:text-[#0E6388]"
+        onClick={() => setWorkDrop(false)}
+      >
+        {c.name}
+      </Link>
+    ))}
+  </div>
+</div>
+
+
 
           <Link to="/about" className="hover:text-[#0E6388]">About</Link>
           <Link to="/contact" className="hover:text-[#0E6388]">Contact</Link>

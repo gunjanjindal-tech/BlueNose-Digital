@@ -41,43 +41,38 @@ export default function Hero() {
 
       {/* HERO BLOB IMAGE SECTION */}
       <div className="relative mx-auto mt-10 w-[78%] md:w-[65%]">
+<motion.div
+  initial={{ opacity:0, scale:0.92 }}
+  animate={{ opacity:1, scale:1 }}
+  transition={{ duration:1 }}
+  className="relative rounded-[60px] shadow-2xl overflow-hidden"
+  style={{
+    background:"linear-gradient(145deg,#e6f9ff,#ffffff 30%,#def3ff 90%)",
+    height:"420px"
+  }}
+>
 
-        <motion.div
-          initial={{ opacity:0, scale:0.92 }}
-          animate={{ opacity:1, scale:1 }}
-          transition={{ duration:1 }}
-          className="relative rounded-[60px] shadow-2xl overflow-hidden"
-          style={{
-            background:"linear-gradient(145deg,#e6f9ff,#ffffff 30%,#def3ff 90%)",
-            height:"420px"
-          }}
-        >
-          {/* YOUR HERO IMAGE */}
- <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl">
-      {/* YouTube iframe */}
-      <iframe
-        ref={iframeRef}
-        className="w-full h-full"
-        src="https://www.youtube.com/embed/nBXBZdPK-lo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&loop=1&playlist=nBXBZdPK-lo&enablejsapi=1"
-        title="video"
-        frameBorder="0"
-        allow="autoplay; encrypted-media;"
-        allowFullScreen
-      ></iframe>
+  <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl">
+    <iframe
+      ref={iframeRef}
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/nBXBZdPK-lo?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&playsinline=1&loop=1&playlist=nBXBZdPK-lo&enablejsapi=1"
+      title="video"
+      frameBorder="0"
+      allow="autoplay; encrypted-media;"
+      allowFullScreen
+    ></iframe>
 
-      {/* Sound Toggle Icon */}
-      <button
-        onClick={toggleMute}
-        className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm"
-      >
-        {muted ? "🔇" : "🔊"}
-      </button>
-    </div>
-  );
-}
+    <button
+      onClick={toggleMute}
+      className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm"
+    >
+      {muted ? "🔇" : "🔊"}
+    </button>
+  </div>
 
+</motion.div>
 
-        </motion.div>
 
         {/* FLOATING STATS ON IMAGE */}
        <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 flex gap-10 md:gap-20 bg-white/70 backdrop-blur-xl px-10 py-5 rounded-full shadow-xl">
