@@ -945,7 +945,7 @@ const sendMessage = (e) => {
 
       {/* IMAGE LEFT */}
       <div className="relative">
-        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[-4deg]"></div>
 
         <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
           <img src="/work1.jpg" alt="Deep Brand Understanding" className="w-full h-full object-cover" />
@@ -959,7 +959,7 @@ const sendMessage = (e) => {
           Step 01
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Deep Brand Understanding
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -975,7 +975,7 @@ const sendMessage = (e) => {
             "Brand Audit"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -991,7 +991,7 @@ const sendMessage = (e) => {
           Step 02
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Messaging & Strategy Blueprint
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -1008,7 +1008,7 @@ const sendMessage = (e) => {
             "CTA + Conversion Path"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -1016,7 +1016,7 @@ const sendMessage = (e) => {
 
       {/* IMAGE RIGHT */}
       <div className="relative">
-        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[4deg]"></div>
 
         <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
           <img src="/work2.jpg" alt="Strategy Blueprint" className="w-full h-full object-cover" />
@@ -1029,7 +1029,7 @@ const sendMessage = (e) => {
 
       {/* IMAGE LEFT */}
       <div className="relative">
-        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388]/20 rounded-3xl rotate-[-4deg]"></div>
+        <div className="absolute -top-6 -left-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[-4deg]"></div>
 
         <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
           <img src="/work3.jpg" alt="Creative Execution" className="w-full h-full object-cover" />
@@ -1042,7 +1042,7 @@ const sendMessage = (e) => {
           Step 03
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Creative Execution
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -1058,7 +1058,7 @@ const sendMessage = (e) => {
             "Design + Copywriting"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -1074,7 +1074,7 @@ const sendMessage = (e) => {
           Step 04
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Optimize & Scale
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -1091,7 +1091,7 @@ const sendMessage = (e) => {
             "Scale Growth Systems"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -1099,7 +1099,7 @@ const sendMessage = (e) => {
 
       {/* IMAGE RIGHT */}
       <div className="relative">
-        <div className="absolute -top-6 -right-6 w-full h-full bg-[#4EB3D8]/20 rounded-3xl rotate-[4deg]"></div>
+        <div className="absolute -top-6 -right-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[4deg]"></div>
 
         <div className="overflow-hidden rounded-3xl shadow-xl relative z-10">
           <img src="/work4.jpg" alt="Optimize & Scale" className="w-full h-full object-cover" />
