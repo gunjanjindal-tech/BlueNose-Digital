@@ -183,7 +183,7 @@ export default function WorkGallery() {
 
 
       {/* MAIN CARD */}
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <HorizontalCard
           data={clients[index]}
           showGrid={showGrid}
