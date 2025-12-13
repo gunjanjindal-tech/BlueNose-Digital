@@ -7,4 +7,4 @@ Disallow: /temp/
 Disallow: /draft/
 
 # Sitemap Location
-Sitemap: https://www.bluenosedigital.ca/sitemap.xml
+Sitemap: https://www.bluenosemarketing.ca/sitemap.xml
