@@ -102,7 +102,7 @@ export default function SakeCafe() {
           </div>
 
           {/* RIGHT — animated logo <-> grid */}
-          <div className="flex justify-center w-full max-w-[300px] h-[260px] sm:h-[330px] md:h-[380px] mx-auto">
+          <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
             <AnimatePresence mode="wait">
               {!showGrid ? (
                 <motion.div
@@ -116,7 +116,7 @@ export default function SakeCafe() {
                   <img
                     src="/detailed-client-logos/sake.png"
                     alt="Sake logo"
-                    className="w-56 sm:w-72 md:w-96 object-contain"
+                    className="h-80 sm:h-88 object-contain"
                   />
                 </motion.div>
               ) : (

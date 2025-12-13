@@ -108,7 +108,7 @@ export default function BesharamBarGrill() {
           </div>
 
           {/* RIGHT — ANIMATED LOGO ↔ GRID */}
-          <div className="flex justify-center w-full max-w-[300px] h-[260px] sm:h-[330px] md:h-[380px] mx-auto">
+          <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
             <AnimatePresence mode="wait">
               {!showGrid ? (
                 <motion.div
@@ -119,7 +119,7 @@ export default function BesharamBarGrill() {
                   transition={{ duration: 0.6 }}
                   className="flex justify-center items-center w-full"
                 >
-                  <img src="/client/logo-16.png" className="h-52 sm:h-60 object-contain" />
+                  <img src="/client/logo-16.png" className="h-80 sm:h-88 object-contain" />
                 </motion.div>
               ) : (
                 <motion.div

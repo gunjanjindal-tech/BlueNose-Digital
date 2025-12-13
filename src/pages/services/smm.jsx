@@ -7,6 +7,7 @@ import ReviewSummaryCard from "../../components/DetailedServiceComponents/Review
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+import { Helmet } from "react-helmet";
 
 export default function SMM() {
   const smmVideos = [
@@ -39,6 +40,8 @@ export default function SMM() {
     const [open, setOpen] = useState(false);
 
     return (
+     
+        
       <div
         onClick={() => setOpen(!open)}
         className="group p-8 rounded-2xl cursor-pointer bg-[#0E6388] text-white shadow-xl transition-all duration-300 hover:-translate-y-2"
@@ -59,6 +62,64 @@ export default function SMM() {
   }
 
   return (
+    <>
+      <Helmet>
+  {/* Primary Meta */}
+  <title>
+    Social Media Marketing Services | ROI-Driven SMM Agency | Bluenose
+  </title>
+
+  <meta
+    name="description"
+    content="High-performance social media marketing that turns engagement into revenue. Data-led SMM strategies for Instagram, LinkedIn, TikTok, YouTube & more."
+  />
+
+  <meta
+    name="keywords"
+    content="social media marketing agency, SMM services, Instagram marketing, LinkedIn marketing, TikTok marketing, social media growth, digital marketing agency"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta
+    property="og:title"
+    content="Social Media Marketing Services | Bluenose Digital Marketing"
+  />
+  <meta
+    property="og:description"
+    content="ROI-driven social media marketing built for engagement, leads, and scalable growth across platforms."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://bluenosemarketing.ca/services/smm"
+  />
+  <meta
+    property="og:image"
+    content="https://bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Social Media Marketing Services | Bluenose Digital Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Social media marketing that delivers measurable growth, not vanity metrics."
+  />
+  <meta
+    name="twitter:image"
+    content="https://bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
+  />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://bluenosemarketing.ca/services/smm"
+  />
+</Helmet>
+
     <div className="bg-white text-[#0E3D55] pt-10">
 
       {/* HERO */}
@@ -149,5 +210,6 @@ export default function SMM() {
       {/* VIDEOS */}
       <ServiceVideosSection title="Social Media Marketing" videos={smmVideos} />
     </div>
+    </>
   );
 }

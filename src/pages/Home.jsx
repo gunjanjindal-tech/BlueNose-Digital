@@ -6,6 +6,7 @@ import ClientLogos from "../components/ClientLogos";
 import emailjs from "@emailjs/browser"; 
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import HomeClientGallery from "../components/HomeClientGallery.jsx";
+import SmartCounter from "../components/SmartCounter.jsx";
 
 // Premium SVG Icons
 const CheckIcon = () => (
@@ -875,7 +876,10 @@ const sendMessage = (e) => {
           className="rounded-3xl p-10 bg-white/15 backdrop-blur-xl border border-white/20 
                      shadow-xl text-white"
         >
-          <h3 className="text-4xl font-extrabold">{stat.value}</h3>
+        <h3 className="text-4xl font-extrabold">
+  <SmartCounter value={stat.value} />
+</h3>
+
           <p className="text-lg mt-1 font-semibold">{stat.label}</p>
           <p className="text-white/70 text-sm mt-3 leading-relaxed">
             {stat.desc}

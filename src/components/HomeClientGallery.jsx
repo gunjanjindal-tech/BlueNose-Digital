@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 // ---------------- DARK COLOR CHECK ----------------
 function isDarkColor(hex) {
@@ -149,7 +148,6 @@ export default function WorkGallery() {
 
   return (
     <section className="pb-20 pt-10 px-6 ">
-      <Helmet><title>Client Results | Bluenose Digital</title></Helmet>
 
        <p className="text-[#0E6388] font-semibold tracking-wide mb-2 text-center">
       → Client Results

@@ -63,17 +63,18 @@ export default function Terms() {
           className="
             max-w-4xl mx-auto 
             mt-14 p-10 md:p-14 
-            bg-white rounded-3xl 
+       rounded-3xl 
             shadow-[0_10px_40px_rgba(0,0,0,0.08)]
             border border-[#0E6388]/10
           "
+          style={{ background: "rgb(17, 117, 160)" }}
         >
           {/* INTRO */}
-          <h2 className="text-2xl font-bold mb-4 text-[#0E6388]">
-            Welcome to Bluenose Digital Marketing
+          <h2 className="text-3xl font-bold mb-4 text-[#063349]">
+            Welcome to <span className="text-white">Bluenose Digital Marketing </span>
           </h2>
 
-          <p className="text-[#063349]/80 mb-8 leading-relaxed">
+          <p className="text-white mb-8 leading-relaxed">
             By accessing our website or using our services, you agree to the following
             Terms & Conditions. These terms ensure transparency and a smooth working
             relationship.
@@ -99,39 +100,39 @@ export default function Terms() {
             },
           ].map((sec, i) => (
             <div key={i} className="mb-10">
-              <h3 className="text-xl font-semibold text-[#063349] mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {sec.title}
               </h3>
-              <p className="text-[#063349]/80 leading-relaxed">{sec.text}</p>
+              <p className="text-white leading-relaxed">{sec.text}</p>
             </div>
           ))}
 
           {/* CONTACT BOX */}
           <div className="mt-12 p-6 rounded-2xl bg-[#0E63881A] border border-[#0E6388]/20">
-            <p className="text-[#063349] font-medium">Questions about these terms?</p>
+            <p className="text-white font-medium">Questions about these terms?</p>
 
-            <p className="mt-2 text-[#063349]/80">
+            <p className="mt-2 text-white">
              Email:{" "}
-              <a href="mailto:sales@bluenosemarketing.com" className="text-[#0E6388] font-semibold">
+              <a href="mailto:sales@bluenosemarketing.com" className="text-white font-semibold">
                 sales@bluenosemarketing.com
               </a>
             </p>
 
-             <p className="text-[#063349]/80">
+             <p className="text-white">
               Address:{" "}
-              <span className="text-[#0E6388] font-semibold">
+              <span className="text-white font-semibold">
                 19 Alma Crescent, Halifax, NS B3N 2C4, Canada
               </span>
             </p>
 
-            <p className="text-[#063349]/80">
+            <p className="text-white">
               Phone:{" "}
-              <a href="tel:+190271890074" className="text-[#0E6388] font-semibold">
+              <a href="tel:+190271890074" className="text-white font-semibold">
                 +1 902-718-90074
               </a>
             </p>
 
-            <p className="text-[#063349]/60 text-sm mt-4">
+            <p className="text-white/70 text-sm mt-4">
               Effective Date: 25/11/2025
             </p>
           </div>

@@ -4,6 +4,7 @@ import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 import { Helmet } from "react-helmet";
+import { motion, AnimatePresence } from "framer-motion";
 
 // ICONS
 import {
@@ -33,7 +34,15 @@ export default function TriveeniEvents() {
     "case-studies",
   ];
 
-  const [active, setActive] = useState("overview");
+   const [active, setActive] = useState("overview");
+    const [showGrid, setShowGrid] = useState(false);
+  
+    // HERO logo <-> grid switch
+    useEffect(() => {
+      const i = setInterval(() => setShowGrid((p) => !p), 3000);
+      return () => clearInterval(i);
+    }, []);
+  
 
   // ScrollSpy Tracking (Same as Beaver)
   useEffect(() => {
@@ -104,17 +113,38 @@ export default function TriveeniEvents() {
             </Link>
           </div>
 
-          {/* RIGHT LOGO */}
-          <div className="flex justify-center">
-            <img
-              src="/client/logo-2.png"
-              className="w-72 md:w-96 object-contain"
-              alt="Triveeni Logo"
-            />
-          </div>
-
-        </div>
-      </section>
+           {/* RIGHT — Logo / Grid switch (Beaver Style) */}
+                   <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
+                     <AnimatePresence mode="wait">
+                       {!showGrid ? (
+                         <motion.div
+                           key="logo"
+                           initial={{ opacity: 0, scale: 0.7 }}
+                           animate={{ opacity: 1, scale: 1 }}
+                           exit={{ opacity: 0 }}
+                           transition={{ duration: 0.6 }}
+                           className="flex justify-center items-center w-full"
+                         >
+                           <img src="/client/logo-2.png" className="h-80 sm:h-88" />
+                         </motion.div>
+                       ) : (
+                         <motion.div
+                           key="grid"
+                           initial={{ opacity: 0 }}
+                           animate={{ opacity: 1 }}
+                           exit={{ opacity: 0 }}
+                           transition={{ duration: 0.6 }}
+                         >
+                           <img
+                             src="/client-grid/triveni-grid.jpg"
+                             className="w-full h-full object-contain rounded-xl"
+                           />
+                         </motion.div>
+                       )}
+                     </AnimatePresence>
+                   </div>
+                 </div>
+               </section>
 
       {/* ================= GRID LAYOUT (BEAVER STYLE) ================= */}
       <section className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-12">
@@ -254,17 +284,19 @@ export default function TriveeniEvents() {
             </div>
           </section>
 
-          {/* ------------ OTHER CASE STUDIES ------------ */}
-          <section id="case-studies" className="mt-16">
-            <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
+          {/* ================= CASE STUDIES ================= */}
+          <section id="case-studies" className="mt-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl font-extrabold text-[#063349] text-center mb-10">
               Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+              {/* 1 — Triveeni Events */}
               <CaseCard
                 background="#F7FBCF"
                 logo="/client/logo-2.png"
+                grid="/client-grid/triveni-grid.jpg"
                 title="Triveeni Events"
                 stats={[
                   ["1.3M+", "Total Views"],
@@ -273,11 +305,14 @@ export default function TriveeniEvents() {
                   ["130%", "Growth Rate"],
                 ]}
                 link="/work/triveeni-events"
+                dark={false}
               />
 
-              <CaseCardDark
+              {/* 2 — Beaver */}
+              <CaseCard
                 background="#FB8C00"
                 logo="/client/logo-5.png"
+                grid="/client-grid/beaver-grid.jpg"
                 title="Beaver Bank Station"
                 stats={[
                   ["79K+", "Total Views"],
@@ -286,11 +321,14 @@ export default function TriveeniEvents() {
                   ["39%", "Engagement"],
                 ]}
                 link="/work/beaver-bank-station"
+                dark={true}
               />
 
-              <CaseCardDark
+              {/* 3 — Hearthstone */}
+              <CaseCard
                 background="#142758"
                 logo="/client/logo-6.png"
+                grid="/client-grid/hearthstone-grid.jpg"
                 title="Hearthstone Inn"
                 stats={[
                   ["1.6K+", "Total Views"],
@@ -298,12 +336,15 @@ export default function TriveeniEvents() {
                   ["94.6%", "ER Rate"],
                   ["53", "Accounts"],
                 ]}
-                link="/work/Hearthstone"
+                link="/work/hearthstone"
+                dark={true}
               />
 
-              <CaseCardDark
+              {/* 4 — Pita Nutso */}
+              <CaseCard
                 background="#FDF1D9"
                 logo="/client/logo-3.png"
+                grid="/client-grid/pita-grid.jpg"
                 title="Pita Nutso"
                 stats={[
                   ["36.1K", "Total Views"],
@@ -324,75 +365,70 @@ export default function TriveeniEvents() {
   );
 }
 
-/* ======================= CASE CARD COMPONENTS ======================= */
-function CaseCard({ background, logo, title, stats, link }) {
+/* ============================================================
+   CASE STUDY CARD (SAME AS BEAVER)
+============================================================ */
+
+function CaseCard({ background, logo, grid, title, stats, link, dark }) {
+  const [showGrid, setShowGrid] = useState(false);
+
+  useEffect(() => {
+    const i = setInterval(() => setShowGrid((prev) => !prev), 3000);
+    return () => clearInterval(i);
+  }, []);
+
   return (
     <Link to={link}>
       <div
-        className="px-6 py-8 rounded-2xl shadow-lg w-full max-w-[400px] mx-auto text-center hover:scale-[1.02] transition"
-        style={{ background }}
-      >
-        <div className="w-full flex justify-center mb-4">
-          <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
-        </div>
-
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-black/70 text-sm">{stats[0][0]} Views</p>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
-          {stats.map(([v, t], i) => (
-            <CaseStat key={i} v={v} t={t} />
-          ))}
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-function CaseCardDark({ background, logo, title, stats, link, dark = true }) {
-  return (
-    <Link to={link}>
-      <div
-        className={`px-6 py-8 rounded-2xl shadow-lg text-center max-w-[400px] mx-auto hover:scale-[1.02] transition ${
+        className={`px-6 py-8 rounded-2xl shadow-lg w-full max-w-[420px] mx-auto hover:scale-[1.02] transition ${
           dark ? "text-white" : "text-black"
         }`}
         style={{ background }}
       >
-        <div className="w-full flex justify-center mb-4">
-          <img src={logo} className="w-20 sm:w-24 object-contain" alt={title} />
-        </div>
+        <AnimatePresence mode="wait">
+          {!showGrid ? (
+            <motion.div
+              key="logo"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center mb-5"
+            >
+              <img src={logo} className="w-20 sm:w-24" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="grid"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <img src={grid} className="w-full rounded-xl" />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-sm opacity-80">{stats[0][0]} Views</p>
+        <h3 className="text-xl font-bold mt-4">{title}</h3>
+        <p className={`${dark ? "text-white/90" : "text-black/70"} text-sm`}>
+          {stats[0][0]} Views
+        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
-          {stats.map(([v, t], i) =>
-            dark ? (
-              <CaseStatDark key={i} v={v} t={t} />
-            ) : (
-              <CaseStat key={i} v={v} t={t} />
-            )
-          )}
+          {stats.map(([v, t], i) => (
+            <div
+              key={i}
+              className={`p-4 rounded-lg text-center shadow ${
+                dark ? "bg-white/20 text-white" : "bg-white text-black"
+              }`}
+            >
+              <p className="font-bold text-lg">{v}</p>
+              <p className="text-xs opacity-80">{t}</p>
+            </div>
+          ))}
         </div>
       </div>
     </Link>
-  );
-}
-
-function CaseStat({ v, t }) {
-  return (
-    <div className="bg-white text-black p-4 rounded-lg shadow text-center min-h-[85px]">
-      <p className="font-bold text-lg">{v}</p>
-      <p className="text-xs text-black/70">{t}</p>
-    </div>
-  );
-}
-
-function CaseStatDark({ v, t }) {
-  return (
-    <div className="bg-white/20 text-white p-4 rounded-lg shadow text-center min-h-[85px]">
-      <p className="font-bold text-lg">{v}</p>
-      <p className="text-xs text-white/80">{t}</p>
-    </div>
   );
 }

@@ -6,6 +6,7 @@ import PlatformSlider from "../../components/PlatformSlider";
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+import { Helmet } from "react-helmet";
 
 export default function InfluencerMarketing() {
 
@@ -82,6 +83,64 @@ export default function InfluencerMarketing() {
   }
 
   return (
+    <>
+      <Helmet>
+  {/* Primary Meta */}
+  <title>
+    Influencer Marketing Services | ROI-Driven Creator Campaigns | Bluenose
+  </title>
+
+  <meta
+    name="description"
+    content="Grow sales, trust, and visibility with ROI-focused influencer marketing. Bluenose connects brands with the right creators to drive real engagement, conversions, and measurable growth."
+  />
+
+  <meta
+    name="keywords"
+    content="influencer marketing agency, creator marketing, influencer campaigns, UGC marketing, social media influencers, brand collaborations, influencer ROI"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta
+    property="og:title"
+    content="Influencer Marketing Services | Bluenose Digital Marketing"
+  />
+  <meta
+    property="og:description"
+    content="Turn influencer collaborations into measurable revenue with structured, data-led influencer marketing campaigns."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://bluenosemarketing.ca/services/influencer-marketing"
+  />
+  <meta
+    property="og:image"
+    content="https://bluenosemarketing.ca/seo/influencer-marketing-cover.jpg"
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Influencer Marketing Services | Bluenose Digital Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Strategic influencer marketing focused on ROI, trust, and long-term brand growth."
+  />
+  <meta
+    name="twitter:image"
+    content="https://bluenosemarketing.ca/seo/influencer-marketing-cover.jpg"
+  />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://bluenosemarketing.ca/services/influencer-marketing"
+  />
+</Helmet>
+
     <div className="bg-white text-[#0E3D55] pt-10">
 
       {/* ✦ HERO */}
@@ -245,6 +304,7 @@ export default function InfluencerMarketing() {
   videos={influencerVideos}
 />
 
-    </div>
+      </div>
+      </>
   );
 }

@@ -6,6 +6,7 @@ import PlatformSlider from "../../components/PlatformSlider";
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+import { Helmet } from "react-helmet";
 
 export default function PhotographyShoots() {
 
@@ -90,6 +91,64 @@ export default function PhotographyShoots() {
 
 
   return (
+    <>
+      <Helmet>
+  {/* Primary Meta */}
+  <title>
+    Professional Photography & Brand Shoots | Bluenose Digital Marketing
+  </title>
+
+  <meta
+    name="description"
+    content="Premium photography and brand shoots that elevate engagement, recall, and conversions. From product and lifestyle photography to restaurant and branding shoots — crafted for performance."
+  />
+
+  <meta
+    name="keywords"
+    content="professional photography services, brand photography, product photography, lifestyle shoots, restaurant photography, content photography, visual branding"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta
+    property="og:title"
+    content="Professional Photography & Brand Shoots | Bluenose Digital Marketing"
+  />
+  <meta
+    property="og:description"
+    content="High-quality photography that tells your brand story, boosts engagement, and drives conversions across social media, ads, and websites."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://bluenosemarketing.ca/services/photography"
+  />
+  <meta
+    property="og:image"
+    content="https://bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Professional Photography & Brand Shoots | Bluenose Digital Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Visuals that tell your story and sell your brand — premium photography for digital growth."
+  />
+  <meta
+    name="twitter:image"
+    content="https://bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
+  />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://bluenosemarketing.ca/services/photography"
+  />
+</Helmet>
+
     <div className="bg-white text-[#0E3D55] pt-10">
 
       {/* ✦ HERO */}
@@ -264,5 +323,6 @@ export default function PhotographyShoots() {
       />
 
     </div>
+    </>
   );
 }
