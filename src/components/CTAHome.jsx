@@ -4,7 +4,7 @@ export default function CTA() {
   return (
     <>
       {/* TOP WAVE (same as What We Do) */}
-      <div className="w-full overflow-hidden leading-none -mt-1">
+      <div className="w-full overflow-hidden leading-none -mt-1 pt-20">
         <svg
           viewBox="0 0 1440 180"
           xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ export default function CTA() {
               C240,140 480,0 720,60 
               C960,120 1200,20 1440,80 
               L1440,180 
-              L0,180 
+              L0,190 
               Z
             "
           ></path>
@@ -26,7 +26,7 @@ export default function CTA() {
 
       {/* CTA SECTION */}
       <section
-        className="relative w-full bg-[#1175a0] pb-30 px-6 overflow-hidden text-center"
+        className="relative w-full bg-[#1175a0] pb-30  px-6 overflow-hidden text-center"
       >
         <div className="max-w-3xl mx-auto relative z-10 text-white">
 
