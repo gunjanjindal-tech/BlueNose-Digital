@@ -215,37 +215,23 @@ export default function About() {
         </section>
 
 {/* FOUNDER SECTION */}
-
 <section className="relative mt-16 mb-10 px-6">
+  <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#1175a0] py-12 px-6 md:px-12">
 
-  {/* BACKGROUND WRAPPER */}
-  <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#1175a0] py-10 md:py-14 px-6 md:px-12">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-14 items-center rounded-3xl">
 
-    {/* Glow */}
-    <div className="absolute inset-0 blur-3xl"></div>
-
-    {/* CONTENT */}
-    <div className="relative z-10 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-
-      {/* IMAGE - Reduced Height */}
-      <div className="
-        rounded-3xl overflow-hidden 
-        p-2
-        max-h-[500px]  
-      ">
+      {/* IMAGE */}
+      <div className="w-full rounded-3xl overflow-hidden bg-[#1175a0] shadow-xl">
         <img
           src="/founder.png"
           alt="Founder"
-          className="w-full h-full object-contain rounded-2xl"
+          className="w-full h-[340px] sm:h-[400px] object-contain rounded-3xl"
         />
       </div>
 
-      {/* TEXT (same size) */}
-      <div className="
-        bg-white/10 backdrop-blur-xl border border-white/20
-        p-8 md:p-10 rounded-3xl shadow-xl text-white
-      ">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+      {/* TEXT */}
+      <div className="w-full bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-3xl shadow-xl text-white">
+        <h2 className="text-3xl md:text-4xl font-extrabold">
           Message from Our Founder
         </h2>
 
@@ -256,16 +242,14 @@ export default function About() {
         </p>
 
         <p className="mt-4 text-white/85 leading-relaxed">
-          We established our first office in Halifax, Canada, with the
-          goal of bringing brands closer to their audiences through
-          impactful strategies.
+          We established our first office in Halifax, Canada.
         </p>
 
         <p className="mt-4 text-white/85 leading-relaxed">
           Our family has since grown into a thriving team of 25+ global digital experts.
         </p>
 
-        <p className="mt-6 text-white font-semibold">
+        <p className="mt-6 font-semibold">
           — Bluenose Digital Marketing, Founder & CEO
         </p>
       </div>
@@ -273,6 +257,9 @@ export default function About() {
     </div>
   </div>
 </section>
+
+
+
 
 
 

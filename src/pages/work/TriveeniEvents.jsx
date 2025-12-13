@@ -94,12 +94,11 @@ export default function TriveeniEvents() {
             </p>
 
             {/* TAGS */}
-            <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-8">
+             <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
               {["Strategic Planning", "Data Insights", "Community Building"].map((tag, i) => (
-                <div 
+               <div
                   key={i}
-                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 
-                  shadow text-black text-sm font-medium"
+                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-black text-sm"
                 >
                   {tag}
                 </div>

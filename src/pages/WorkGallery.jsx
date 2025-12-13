@@ -60,7 +60,7 @@ export default function WorkGallery() {
     },
     {
       name: "Nayya Pizza & Grill",
-      link: "/work/nayya",
+      link: "/work/nayya-pizza",
       desc: "High-performing campaigns with strong traction.",
       bg: "#FF6B01",
       stats: ["312K Views", "47 Posts", "900+ Followers", "54% Engagement"],
@@ -78,7 +78,7 @@ export default function WorkGallery() {
     },
     {
       name: "Sake Cafe | Sushi Bar",
-      link: "/work/sake",
+      link: "/work/sake-cafe",
       desc: "Premium brand visuals with strong returns.",
       bg: "#b2222b",
       stats: ["189K Views", "64 Content", "1.5K Saves", "42% Return Audience"],

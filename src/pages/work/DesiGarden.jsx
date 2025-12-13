@@ -91,11 +91,11 @@ export default function DesiGarden() {
               we grew their organic reach with highly relatable, Reels-first food content.
             </p>
 
-            <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-start gap-4 mt-8 w-full">
+<div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
               {["Strategic Planning", "Performance Pulse", "Content Power"].map((tag, i) => (
                 <div
                   key={i}
-                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 text-white text-sm font-medium shadow w-[180px] text-center md:w-auto"
+                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-white text-sm"
                 >
                   {tag}
                 </div>

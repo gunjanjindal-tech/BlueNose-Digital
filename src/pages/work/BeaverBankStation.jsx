@@ -89,9 +89,9 @@ export default function BeaverBankStation() {
               We elevated Beaver Bank’s historic 1872 pub with high-impact organic reels and storytelling.
             </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
               {["Smart Social Moves", "Reel Perfection", "Growth Metrics"].map((t, i) => (
-                <div
+                 <div
                   key={i}
                   className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-white text-sm"
                 >

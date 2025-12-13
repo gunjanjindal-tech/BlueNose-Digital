@@ -6,6 +6,7 @@ import PlatformSlider from "../../components/PlatformSlider";
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+import ReviewSummaryCard from "../../components/DetailedServiceComponents/ReviewSummaryCard";
 
 export default function UGCContentCreation() {
 
@@ -180,14 +181,10 @@ export default function UGCContentCreation() {
             <span className="text-[#0E6388]"> client reviews</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
-            <div className="bg-white p-10 rounded-3xl shadow text-left">
-              <h2 className="text-3xl font-bold text-[#111]">Bluenose</h2>
-              <p className="mt-2 text-xl font-bold">4.9 ★★★★★</p>
-            </div>
-
-            <Testimonials />
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">
+                     <ReviewSummaryCard />
+                     <Testimonials />
+                   </div>
         </div>
       </section>
 
