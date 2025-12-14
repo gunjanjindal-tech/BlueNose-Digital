@@ -215,8 +215,8 @@ export default function About() {
         </section>
 
 {/* FOUNDER SECTION */}
-<section className="relative mt-16 mb-10 px-6">
-  <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#1175a0] py-12 px-6 md:px-12">
+<section className="relative mt-16 mb-10 px-0">
+  <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-[#1175a0] py-12 px-4 md:px-12">
 
     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-14 items-center rounded-3xl">
 
