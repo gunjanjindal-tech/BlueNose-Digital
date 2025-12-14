@@ -282,7 +282,7 @@ export default function PitaNusto() {
               Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
 
               <CaseCard
                 background="#F7FBCF"

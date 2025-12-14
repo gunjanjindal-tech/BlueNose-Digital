@@ -278,7 +278,7 @@ export default function DesiGarden() {
               Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-10">
+            <div className="grid sm:grid-cols-2 gap-10 text-center">
 
               {/* CARD 1 */}
               <CaseCard

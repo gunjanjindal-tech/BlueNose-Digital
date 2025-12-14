@@ -259,7 +259,7 @@ export default function Hearthstone() {
               Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-2 gap-10 text-center">
 
               <CaseCard
                 background="#F7FBCF"

@@ -368,7 +368,7 @@ function CaseCard({ background, logo, grid, title, stats, link, dark }) {
   return (
     <Link to={link}>
       <div
-        className={`px-6 py-8 rounded-2xl shadow-lg w-full max-w-[420px] mx-auto hover:scale-[1.02] transition ${
+        className={`px-6 py-8 rounded-2xl text-center shadow-lg w-full max-w-[420px] mx-auto hover:scale-[1.02] transition ${
           dark ? "text-white" : "text-black"
         }`}
         style={{ background }}
