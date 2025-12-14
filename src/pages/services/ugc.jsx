@@ -69,40 +69,63 @@ export default function UGCContentCreation() {
     <div className="bg-white text-[#0E3D55] pt-10">
 
       {/* ================= SEO META ================= */}
-      <Helmet>
-        <title>
-          UGC Content Creation Services | High-Converting UGC Ads | Bluenose
-        </title>
+<Helmet>
+  {/* PRIMARY SEO */}
+  <title>
+    UGC Content Creation Services | High-Converting UGC Ads | Bluenose Marketing
+  </title>
 
-        <meta
-          name="description"
-          content="High-converting UGC content built for ads and social media. Native creator-style videos with hooks, storytelling, and CTAs that drive real conversions."
-        />
+  <meta
+    name="description"
+    content="High-converting UGC content by Bluenose Marketing built for ads and social media. Native creator-style videos with strong hooks, storytelling, and CTAs that drive real conversions."
+  />
 
-        <meta
-          name="keywords"
-          content="UGC content creation, UGC ads, user generated content services, creator content, TikTok UGC, Instagram UGC, short form video ads"
-        />
+  <meta
+    name="keywords"
+    content="UGC content creation, UGC ads, user generated content services, creator content, TikTok UGC, Instagram UGC, short form video ads, Bluenose Marketing"
+  />
 
-        <meta property="og:title" content="UGC Content Creation Services | Bluenose Digital Marketing" />
-        <meta
-          property="og:description"
-          content="Authentic UGC that looks native and converts like ads. Built for modern buyer behavior."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bluenosemarketing.ca/services/ugc-content" />
-        <meta property="og:image" content="https://bluenosemarketing.ca/seo/ugc-content-cover.jpg" />
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/ugc-content"
+  />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="UGC Content Creation Services | Bluenose" />
-        <meta
-          name="twitter:description"
-          content="Native UGC-style videos designed for ads, engagement, and conversions."
-        />
-        <meta name="twitter:image" content="https://bluenosemarketing.ca/seo/ugc-content-cover.jpg" />
+  {/* OPEN GRAPH */}
+  <meta
+    property="og:title"
+    content="UGC Content Creation Services | Bluenose Marketing"
+  />
+  <meta
+    property="og:description"
+    content="Authentic UGC that looks native and converts like ads — built for modern buyer behavior."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://www.bluenosemarketing.ca/services/ugc-content"
+  />
+  <meta
+    property="og:image"
+    content="https://www.bluenosemarketing.ca/seo/ugc-content-cover.jpg"
+  />
 
-        <link rel="canonical" href="https://bluenosemarketing.ca/services/ugc-content" />
-      </Helmet>
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="UGC Content Creation Services | Bluenose Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Native UGC-style videos designed for ads, engagement, and conversions."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.bluenosemarketing.ca/seo/ugc-content-cover.jpg"
+  />
+</Helmet>
+
 
       {/* ================= HERO ================= */}
       <section className="py-20">

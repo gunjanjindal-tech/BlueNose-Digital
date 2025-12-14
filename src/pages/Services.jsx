@@ -44,46 +44,48 @@ export default function ServicesPage() {
 
   return (
     <>
-     <Helmet>
+<Helmet>
   {/* BASIC SEO */}
   <title>
-    Digital Marketing Services | SMM, Branding, Influencer Marketing, UGC & Video Editing
+    Digital Marketing Services | Bluenose Marketing — SMM, Branding, Influencer, UGC & Video
   </title>
 
   <meta
     name="description"
-    content="Explore Bluenose Digital’s premium services — Social Media Marketing, Branding & Identity, Influencer Marketing, UGC Creation, Video Editing and Photography for fast-scaling brands."
+    content="Explore Bluenose Marketing’s premium digital marketing services — Social Media Marketing, Branding & Identity, Influencer Marketing, UGC Creation, Video Editing and Photography for fast-scaling brands."
   />
 
   <meta
     name="keywords"
-    content="digital marketing services, social media marketing, branding agency, influencer marketing, UGC creators, video editing company, photography services, creative agency"
+    content="digital marketing services, social media marketing, branding agency, influencer marketing, UGC creators, video editing company, photography services, creative agency, Bluenose Marketing"
   />
 
-  <link rel="canonical" href="https://www.bluenosedigital.ca/services" />
+  {/* CANONICAL */}
+  <link rel="canonical" href="https://www.bluenosemarketing.ca/services" />
 
-  {/* OPEN GRAPH (Facebook, Instagram, LinkedIn) */}
-  <meta property="og:title" content="Bluenose Digital — SMM, Branding, UGC, Influencer & Video Editing Services" />
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="Bluenose Marketing — Digital Marketing & Creative Services" />
   <meta
     property="og:description"
     content="Full-suite creative & performance services: SMM, Branding, Influencer Marketing, UGC, Video Editing & Photography to help brands scale."
   />
-  <meta property="og:url" content="https://www.bluenosedigital.ca/services" />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/services" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.bluenosedigital.ca/og-services.jpg" />
+  <meta property="og:image" content="https://www.bluenosemarketing.ca/og-services.jpg" />
 
-  {/* TWITTER CARD */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta
     name="twitter:title"
-    content="Bluenose Digital — Digital Marketing & Creative Services"
+    content="Bluenose Marketing — Digital Marketing & Creative Services"
   />
   <meta
     name="twitter:description"
     content="SMM, Branding, Influencers, UGC, Video Editing & Photography — one agency for all your growth needs."
   />
-  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-services.jpg" />
+  <meta name="twitter:image" content="https://www.bluenosemarketing.ca/og-services.jpg" />
 </Helmet>
+
 
 
       {/* PAGE */}

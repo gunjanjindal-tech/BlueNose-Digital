@@ -92,46 +92,55 @@ export default function PhotographyShoots() {
 
   return (
     <>
-      <Helmet>
-  {/* Primary Meta */}
+<Helmet>
+  {/* PRIMARY SEO */}
   <title>
-    Professional Photography & Brand Shoots | Bluenose Digital Marketing
+    Professional Photography & Brand Shoots | Bluenose Marketing
   </title>
 
   <meta
     name="description"
-    content="Premium photography and brand shoots that elevate engagement, recall, and conversions. From product and lifestyle photography to restaurant and branding shoots — crafted for performance."
+    content="Premium photography and brand shoots by Bluenose Marketing that elevate engagement, recall, and conversions. From product and lifestyle photography to restaurant and branding shoots — crafted for performance."
   />
 
   <meta
     name="keywords"
-    content="professional photography services, brand photography, product photography, lifestyle shoots, restaurant photography, content photography, visual branding"
+    content="professional photography services, brand photography, product photography, lifestyle shoots, restaurant photography, content photography, visual branding, Bluenose Marketing"
   />
 
-  {/* Open Graph / Facebook */}
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/photography"
+  />
+
+  {/* OPEN GRAPH */}
   <meta
     property="og:title"
-    content="Professional Photography & Brand Shoots | Bluenose Digital Marketing"
+    content="Professional Photography & Brand Shoots | Bluenose Marketing"
   />
   <meta
     property="og:description"
     content="High-quality photography that tells your brand story, boosts engagement, and drives conversions across social media, ads, and websites."
   />
-  <meta property="og:type" content="website" />
+  <meta
+    property="og:type"
+    content="website"
+  />
   <meta
     property="og:url"
-    content="https://bluenosemarketing.ca/services/photography"
+    content="https://www.bluenosemarketing.ca/services/photography"
   />
   <meta
     property="og:image"
-    content="https://bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
+    content="https://www.bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
   />
 
-  {/* Twitter */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta
     name="twitter:title"
-    content="Professional Photography & Brand Shoots | Bluenose Digital Marketing"
+    content="Professional Photography & Brand Shoots | Bluenose Marketing"
   />
   <meta
     name="twitter:description"
@@ -139,15 +148,10 @@ export default function PhotographyShoots() {
   />
   <meta
     name="twitter:image"
-    content="https://bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
-  />
-
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://bluenosemarketing.ca/services/photography"
+    content="https://www.bluenosemarketing.ca/seo/photography-shoots-cover.jpg"
   />
 </Helmet>
+
 
     <div className="bg-white text-[#0E3D55] pt-10">
 

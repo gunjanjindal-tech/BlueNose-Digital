@@ -127,42 +127,63 @@ export default function WorkGallery() {
     <section className="py-24 px-6 bg-white">
 <Helmet>
   {/* PAGE TITLE */}
-  <title>Work Gallery | Bluenose Digital Marketing – Client Results & Case Studies</title>
+  <title>
+    Work Gallery | Bluenose Marketing — Client Results & Case Studies
+  </title>
 
   {/* META DESCRIPTION */}
   <meta
     name="description"
-    content="Explore Bluenose Digital’s work gallery — real client results, high-performing campaigns, branding, SMM, influencer marketing, UGC, and content that drives ROI."
+    content="Explore Bluenose Marketing’s work gallery — real client results, high-performing campaigns, branding, SMM, influencer marketing, UGC, and content that drives ROI."
   />
 
   {/* META KEYWORDS */}
   <meta
     name="keywords"
-    content="digital marketing case studies, SMM results, branding portfolio, influencer marketing campaigns, UGC content, video editing portfolio, client performance"
+    content="digital marketing case studies, SMM results, branding portfolio, influencer marketing campaigns, UGC content, video editing portfolio, client performance, Bluenose Marketing"
   />
 
-  {/* CANONICAL URL */}
-  <link rel="canonical" href="https://www.bluenosedigital.ca/work-gallery" />
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/work-gallery"
+  />
 
-  {/* OPEN GRAPH FOR SOCIAL MEDIA */}
-  <meta property="og:title" content="Work Gallery | Bluenose Digital – Client Results & Growth Stories" />
+  {/* OPEN GRAPH */}
+  <meta
+    property="og:title"
+    content="Work Gallery | Bluenose Marketing — Client Results & Growth Stories"
+  />
   <meta
     property="og:description"
     content="See real client performance: branding, SMM, influencer marketing, UGC, photography, and content that scaled brands."
   />
-  <meta property="og:url" content="https://www.bluenosedigital.ca/work-gallery" />
-  <meta property="og:image" content="https://www.bluenosedigital.ca/og-work.jpg" />
+  <meta
+    property="og:url"
+    content="https://www.bluenosemarketing.ca/work-gallery"
+  />
+  <meta
+    property="og:image"
+    content="https://www.bluenosemarketing.ca/og-work.jpg"
+  />
   <meta property="og:type" content="website" />
 
-  {/* TWITTER CARD */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bluenose Digital – Work Gallery" />
+  <meta
+    name="twitter:title"
+    content="Bluenose Marketing — Work Gallery"
+  />
   <meta
     name="twitter:description"
     content="Explore our best-performing campaigns, brand transformations, and digital growth case studies."
   />
-  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-work.jpg" />
+  <meta
+    name="twitter:image"
+    content="https://www.bluenosemarketing.ca/og-work.jpg"
+  />
 </Helmet>
+
 
 
       {/* Heading */}

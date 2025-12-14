@@ -68,6 +68,9 @@ export default function Hearthstone() {
 
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
+ <Helmet>
+        <title>HearthStone Case Study | Bluenose Digital Marketing</title>
+      </Helmet>
 
       {/* ================= HERO (Beaver style) ================= */}
       <section className="min-h-[80vh] w-full flex items-center bg-[#233369] text-white rounded-3xl px-6 py-10 md:py-20 mb-20">

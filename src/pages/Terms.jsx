@@ -10,18 +10,47 @@ export default function Terms() {
 
   return (
     <>
-      <Helmet>
-        <title>Terms & Conditions | Bluenose Digital Marketing</title>
-        <meta
-          name="description"
-          content="Read Bluenose Digital's Terms & Conditions — payments, deliverables, usage policy, and intellectual property guidelines."
-        />
-        <meta
-          name="keywords"
-          content="terms and conditions Bluenose Digital, service agreement, digital marketing terms, usage policy"
-        />
-        <link rel="canonical" href="https://bluenosedigital.com/terms" />
-      </Helmet>
+<Helmet>
+  {/* BASIC SEO */}
+  <title>Terms & Conditions | Bluenose Marketing</title>
+
+  <meta
+    name="description"
+    content="Read Bluenose Marketing’s Terms & Conditions covering payments, deliverables, usage policies, intellectual property, and service agreements."
+  />
+
+  <meta
+    name="keywords"
+    content="Bluenose Marketing terms and conditions, service agreement, digital marketing terms, usage policy"
+  />
+
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/terms"
+  />
+
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="Terms & Conditions | Bluenose Marketing" />
+  <meta
+    property="og:description"
+    content="Review Bluenose Marketing’s service terms, policies, and usage guidelines."
+  />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/terms" />
+  <meta property="og:type" content="website" />
+
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Terms & Conditions | Bluenose Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Understand Bluenose Marketing’s service terms, payments, and policies."
+  />
+</Helmet>
+
 
       {/* PAGE WRAPPER */}
       <section className="pt-[110px] pb-16 md:pb-24 px-6 bg-white text-[#063349]">

@@ -54,59 +54,62 @@ const fade = {
 export default function About() {
   return (
   <>
-  <Helmet>
-    {/* BASIC SEO */}
-    <title>About Us | Bluenose Digital Marketing – Branding, SMM & Creative Growth Agency</title>
-    <meta
-      name="description"
-      content="Learn about Bluenose Digital — a global creative & performance marketing agency helping brands grow through strategy, storytelling, branding, SMM, influencer marketing, and ROI-led execution."
-    />
-    <meta
-      name="keywords"
-      content="digital marketing agency, branding agency, social media marketing, influencer marketing, video editing agency, Canada marketing agency, Bluenose Digital"
-    />
-    <link rel="canonical" href="https://www.bluenosedigital.ca/about" />
+<Helmet>
+  <title>About Us | Bluenose Marketing – Branding, SMM & Creative Growth Agency</title>
 
-    {/* OPEN GRAPH (SOCIAL SHARE) */}
-    <meta property="og:title" content="About Bluenose Digital – Creative & Growth Marketing Agency" />
-    <meta
-      property="og:description"
-      content="We build clarity, trust and growth for modern brands through strategy, creativity and performance-led execution. See our story."
-    />
-    <meta property="og:url" content="https://www.bluenosedigital.ca/about" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.bluenosedigital.ca/og-about.jpg" />
+  <meta
+    name="description"
+    content="Learn about Bluenose Marketing — a global creative & performance marketing agency helping brands grow through strategy, storytelling, branding, SMM, influencer marketing, and ROI-led execution."
+  />
 
-    {/* TWITTER CARD */}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About Bluenose Digital – Creative & Growth Marketing Agency" />
-    <meta
-      name="twitter:description"
-      content="Global agency specializing in branding, performance, SMM, influencer marketing & digital storytelling."
-    />
-    <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-about.jpg" />
+  <meta
+    name="keywords"
+    content="digital marketing agency, branding agency, social media marketing, influencer marketing, video editing agency, Canada marketing agency, Bluenose Marketing"
+  />
 
-    {/* SCHEMA MARKUP */}
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Bluenose Digital Marketing",
-        "url": "https://www.bluenosedigital.ca",
-        "logo": "https://www.bluenosedigital.ca/logo.png",
-        "description":
-          "A global digital marketing agency offering SMM, branding, influencer marketing, video editing, UGC, and photography services.",
-        "founder": {
-          "@type": "Person",
-          "name": "Founder, Bluenose Digital",
-        },
-        "sameAs": [
-          "https://www.instagram.com/bluenose.digital/",
-          "https://www.linkedin.com/company/bluenose-digital",
-        ],
-      })}
-    </script>
-  </Helmet>
+  <link rel="canonical" href="https://www.bluenosemarketing.ca/about" />
+
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="About Bluenose Marketing – Creative & Growth Marketing Agency" />
+  <meta
+    property="og:description"
+    content="We build clarity, trust and growth for modern brands through strategy, creativity and performance-led execution. See our story."
+  />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.bluenosemarketing.ca/og-about.jpg" />
+
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Bluenose Marketing – Creative & Growth Marketing Agency" />
+  <meta
+    name="twitter:description"
+    content="Global agency specializing in branding, performance, SMM, influencer marketing & digital storytelling."
+  />
+  <meta name="twitter:image" content="https://www.bluenosemarketing.ca/og-about.jpg" />
+
+  {/* SCHEMA */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bluenose Marketing",
+      "url": "https://www.bluenosemarketing.ca",
+      "logo": "https://www.bluenosemarketing.ca/logo.png",
+      "description":
+        "A global digital marketing agency offering SMM, branding, influencer marketing, video editing, UGC, and photography services.",
+      "founder": {
+        "@type": "Person",
+        "name": "Founder, Bluenose Marketing"
+      },
+      "sameAs": [
+        "https://www.instagram.com/bluenose.marketing/",
+        "https://www.linkedin.com/company/bluenose-marketing"
+      ]
+    })}
+  </script>
+</Helmet>
+
 
       
       

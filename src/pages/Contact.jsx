@@ -94,9 +94,20 @@ const sendMessage = (e) => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Bluenose Digital | Work With Our Creative Marketing Team</title>
-      </Helmet>
+    <Helmet>
+  <title>Contact Bluenose Marketing | Work With Our Creative Marketing Team</title>
+
+  <meta
+    name="description"
+    content="Get in touch with Bluenose Marketing for social media marketing, branding, influencer marketing, video editing, UGC and photography services."
+  />
+
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/contact"
+  />
+</Helmet>
+
 
     <section className="pt-24 pb-10 md:pt-28 md:pb-20">
 

@@ -310,36 +310,35 @@ const sendMessage = (e) => {
   return (
     <>
 <Helmet>
-  <title>
-    Bluenose Digital — Social Media Marketing, Branding & Growth Agency
-  </title>
+  <title>Bluenose Marketing — Social Media Marketing, Branding & Growth Agency</title>
 
   <meta
     name="description"
-    content="Bluenose Digital helps brands grow through high-impact social media marketing, branding, influencer campaigns, UGC, video editing, and ROI-driven performance systems. Trusted by 120+ global brands."
+    content="Bluenose Marketing helps brands grow through high-impact social media marketing, branding, influencer campaigns, UGC, video editing, and ROI-driven performance systems. Trusted by 120+ global brands."
   />
 
-  <link rel="canonical" href="https://www.bluenosedigital.ca/" />
+  <link rel="canonical" href="https://www.bluenosemarketing.ca/" />
 
   {/* OPEN GRAPH */}
-  <meta property="og:title" content="Bluenose Digital — Social Media Marketing, Branding & Growth Agency" />
+  <meta property="og:title" content="Bluenose Marketing — Social Media Marketing, Branding & Growth Agency" />
   <meta
     property="og:description"
-    content="Premium digital agency delivering strategy, content, branding, influencers, UGC and performance marketing for fast-scaling brands."
+    content="Premium marketing agency delivering strategy, content, branding, influencers, UGC and performance marketing for fast-scaling brands."
   />
-  <meta property="og:url" content="https://www.bluenosedigital.ca/" />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.bluenosedigital.ca/og-home.jpg" />
+  <meta property="og:image" content="https://www.bluenosemarketing.ca/og-home.jpg" />
 
-  {/* TWITTER CARD */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bluenose Digital — Social Media Marketing, Branding & Growth Agency" />
+  <meta name="twitter:title" content="Bluenose Marketing — Social Media Marketing, Branding & Growth Agency" />
   <meta
     name="twitter:description"
     content="Global creative & performance marketing agency helping brands scale with content, strategy, and ROI-focused execution."
   />
-  <meta name="twitter:image" content="https://www.bluenosedigital.ca/og-home.jpg" />
+  <meta name="twitter:image" content="https://www.bluenosemarketing.ca/og-home.jpg" />
 </Helmet>
+
 
 
       {/* =============================== */}

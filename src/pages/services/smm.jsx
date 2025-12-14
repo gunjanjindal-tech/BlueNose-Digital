@@ -63,46 +63,55 @@ export default function SMM() {
 
   return (
     <>
-      <Helmet>
-  {/* Primary Meta */}
+<Helmet>
+  {/* PRIMARY SEO */}
   <title>
-    Social Media Marketing Services | ROI-Driven SMM Agency | Bluenose
+    Social Media Marketing Services | ROI-Driven SMM Agency | Bluenose Marketing
   </title>
 
   <meta
     name="description"
-    content="High-performance social media marketing that turns engagement into revenue. Data-led SMM strategies for Instagram, LinkedIn, TikTok, YouTube & more."
+    content="High-performance social media marketing by Bluenose Marketing that turns engagement into revenue. Data-led SMM strategies for Instagram, LinkedIn, TikTok, YouTube & more."
   />
 
   <meta
     name="keywords"
-    content="social media marketing agency, SMM services, Instagram marketing, LinkedIn marketing, TikTok marketing, social media growth, digital marketing agency"
+    content="social media marketing agency, SMM services, Instagram marketing, LinkedIn marketing, TikTok marketing, social media growth, digital marketing agency, Bluenose Marketing"
   />
 
-  {/* Open Graph / Facebook */}
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/smm"
+  />
+
+  {/* OPEN GRAPH */}
   <meta
     property="og:title"
-    content="Social Media Marketing Services | Bluenose Digital Marketing"
+    content="Social Media Marketing Services | Bluenose Marketing"
   />
   <meta
     property="og:description"
     content="ROI-driven social media marketing built for engagement, leads, and scalable growth across platforms."
   />
-  <meta property="og:type" content="website" />
+  <meta
+    property="og:type"
+    content="website"
+  />
   <meta
     property="og:url"
-    content="https://bluenosemarketing.ca/services/smm"
+    content="https://www.bluenosemarketing.ca/services/smm"
   />
   <meta
     property="og:image"
-    content="https://bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
+    content="https://www.bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
   />
 
-  {/* Twitter */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta
     name="twitter:title"
-    content="Social Media Marketing Services | Bluenose Digital Marketing"
+    content="Social Media Marketing Services | Bluenose Marketing"
   />
   <meta
     name="twitter:description"
@@ -110,15 +119,10 @@ export default function SMM() {
   />
   <meta
     name="twitter:image"
-    content="https://bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
-  />
-
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://bluenosemarketing.ca/services/smm"
+    content="https://www.bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
   />
 </Helmet>
+
 
     <div className="bg-white text-[#0E3D55] pt-10">
 

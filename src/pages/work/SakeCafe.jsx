@@ -60,7 +60,7 @@ export default function SakeCafe() {
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
       <Helmet>
-        <title>Sake Café Case Study | Bluenose Digital Marketing</title>
+        <title>Sake Cafe Case Study | Bluenose Digital Marketing</title>
       </Helmet>
 
       {/* ================= HERO ================= */}

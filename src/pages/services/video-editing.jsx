@@ -68,39 +68,63 @@ export default function VideoEditing() {
   return (
     <div className="bg-white text-[#0E3D55] pt-10">
 
-      {/* ================= SEO META ================= */}
-      <Helmet>
-        <title>Professional Video Editing Services | High-Converting Videos | Bluenose</title>
+   {/* ================= SEO META ================= */}
+<Helmet>
+  {/* PRIMARY SEO */}
+  <title>
+    Professional Video Editing Services | High-Converting Videos | Bluenose Marketing
+  </title>
 
-        <meta
-          name="description"
-          content="Professional video editing services for social media, ads, and brands. High-retention edits optimized for Instagram, TikTok, YouTube & conversions."
-        />
+  <meta
+    name="description"
+    content="Professional video editing services by Bluenose Marketing for social media, ads, and brands. High-retention edits optimized for Instagram, TikTok, YouTube, and conversions."
+  />
 
-        <meta
-          name="keywords"
-          content="video editing services, social media video editing, reels editing, TikTok video editing, YouTube editing, ad video editing"
-        />
+  <meta
+    name="keywords"
+    content="video editing services, social media video editing, reels editing, TikTok video editing, YouTube editing, ad video editing, Bluenose Marketing"
+  />
 
-        <meta property="og:title" content="Video Editing Services | Bluenose Digital Marketing" />
-        <meta
-          property="og:description"
-          content="Turn raw footage into high-impact videos that retain viewers and convert."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bluenosemarketing.ca/services/video-editing" />
-        <meta property="og:image" content="https://bluenosemarketing.ca/seo/video-editing-cover.jpg" />
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/video-editing"
+  />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Video Editing Services | Bluenose" />
-        <meta
-          name="twitter:description"
-          content="High-retention video editing for social, ads & brand growth."
-        />
-        <meta name="twitter:image" content="https://bluenosemarketing.ca/seo/video-editing-cover.jpg" />
+  {/* OPEN GRAPH */}
+  <meta
+    property="og:title"
+    content="Professional Video Editing Services | Bluenose Marketing"
+  />
+  <meta
+    property="og:description"
+    content="Turn raw footage into high-impact, high-retention videos that engage audiences and drive conversions."
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://www.bluenosemarketing.ca/services/video-editing"
+  />
+  <meta
+    property="og:image"
+    content="https://www.bluenosemarketing.ca/seo/video-editing-cover.jpg"
+  />
 
-        <link rel="canonical" href="https://bluenosemarketing.ca/services/video-editing" />
-      </Helmet>
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Professional Video Editing Services | Bluenose Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="High-retention video editing for social media, ads, and scalable brand growth."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.bluenosemarketing.ca/seo/video-editing-cover.jpg"
+  />
+</Helmet>
 
       {/* ================= HERO ================= */}
       <section className="py-20">

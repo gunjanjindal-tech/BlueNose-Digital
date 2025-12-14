@@ -10,18 +10,47 @@ export default function Privacy() {
 
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | Bluenose Digital Marketing</title>
-        <meta
-          name="description"
-          content="Learn how Bluenose Digital collects, protects, and uses your personal information with full transparency."
-        />
-        <meta
-          name="keywords"
-          content="Bluenose Digital privacy policy, data protection, user privacy, marketing data policy"
-        />
-        <link rel="canonical" href="https://bluenosedigital.com/privacy" />
-      </Helmet>
+<Helmet>
+  {/* BASIC SEO */}
+  <title>Privacy Policy | Bluenose Marketing</title>
+
+  <meta
+    name="description"
+    content="Learn how Bluenose Marketing collects, uses, stores, and protects your personal information with full transparency and compliance."
+  />
+
+  <meta
+    name="keywords"
+    content="Bluenose Marketing privacy policy, data protection, user privacy, marketing data policy"
+  />
+
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/privacy"
+  />
+
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="Privacy Policy | Bluenose Marketing" />
+  <meta
+    property="og:description"
+    content="Read Bluenose Marketing’s privacy policy to understand how we protect your personal data and ensure transparency."
+  />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/privacy" />
+  <meta property="og:type" content="website" />
+
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Privacy Policy | Bluenose Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Understand how Bluenose Marketing safeguards your personal information."
+  />
+</Helmet>
+
 
       {/* PAGE WRAPPER */}
       <section className="pt-[110px] pb-16 md:pb-24 px-6 bg-white text-[#063349]">

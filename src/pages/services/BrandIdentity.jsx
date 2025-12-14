@@ -93,48 +93,66 @@ export default function BrandIdentity() {
 
   return (
     <>
-    <Helmet>
-  {/* Primary Meta */}
+<Helmet>
+  {/* PRIMARY SEO */}
   <title>
-    Brand Identity & Branding Services | Bluenose Digital Marketing
+    Brand Identity & Branding Services | Bluenose Marketing
   </title>
 
   <meta
     name="description"
-    content="Build a powerful brand identity with Bluenose Digital Marketing. We design logos, visual systems, brand messaging, and identity strategies that boost recognition, trust, and engagement."
+    content="Build a powerful brand identity with Bluenose Marketing. We design logos, visual systems, brand messaging, and identity strategies that boost recognition, trust, and engagement."
   />
 
-  {/* Keywords */}
   <meta
     name="keywords"
-    content="brand identity services, branding agency, logo design, brand strategy, visual identity, brand positioning, brand storytelling, digital branding"
+    content="brand identity services, branding agency, logo design, brand strategy, visual identity, brand positioning, brand storytelling, digital branding, Bluenose Marketing"
   />
 
-  {/* Open Graph / Facebook */}
-  <meta property="og:title" content="Brand Identity & Branding Services | Bluenose Digital Marketing" />
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/brand-identity"
+  />
+
+  {/* OPEN GRAPH */}
+  <meta
+    property="og:title"
+    content="Brand Identity & Branding Services | Bluenose Marketing"
+  />
   <meta
     property="og:description"
     content="Strategic brand identity design combining visuals, storytelling, and psychology to help brands stand out and grow."
   />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bluenosemarketing.ca/services/brand-identity" />
-  <meta property="og:image" content="https://bluenosemarketing.ca/seo/brand-identity-cover.jpg" />
+  <meta
+    property="og:type"
+    content="website"
+  />
+  <meta
+    property="og:url"
+    content="https://www.bluenosemarketing.ca/services/brand-identity"
+  />
+  <meta
+    property="og:image"
+    content="https://www.bluenosemarketing.ca/seo/brand-identity-cover.jpg"
+  />
 
-  {/* Twitter */}
+  {/* TWITTER */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Brand Identity & Branding Services | Bluenose Digital Marketing" />
+  <meta
+    name="twitter:title"
+    content="Brand Identity & Branding Services | Bluenose Marketing"
+  />
   <meta
     name="twitter:description"
     content="Create a memorable brand identity that builds trust, recognition, and long-term growth."
   />
-  <meta name="twitter:image" content="https://bluenosemarketing.ca/seo/brand-identity-cover.jpg" />
-
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://bluenosemarketing.ca/services/brand-identity"
+  <meta
+    name="twitter:image"
+    content="https://www.bluenosemarketing.ca/seo/brand-identity-cover.jpg"
   />
 </Helmet>
+
 
     <div className="bg-white text-[#0E3D55] pt-10">
 
