@@ -1,5 +1,28 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "bluenosemarketing.com" }],
+      "destination": "https://www.bluenosemarketing.ca/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.bluenosemarketing.com" }],
+      "destination": "https://www.bluenosemarketing.ca/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "bluenosemarketing.ca" }],
+      "destination": "https://www.bluenosemarketing.ca/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
