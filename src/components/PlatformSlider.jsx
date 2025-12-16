@@ -77,14 +77,6 @@ export default function PlatformShowcase() {
 
   const [active, setActive] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % platforms.length);
-    }, 2000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="py-20">
   <div className="max-w-7xl mx-auto px-6 text-center">

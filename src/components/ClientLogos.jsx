@@ -23,8 +23,8 @@ export default function ClientsMarquee() {
               <img
                 src={src}
                 className="
-                  h-20 md:h-24 w-auto object-contain
-                  opacity-80 hover:opacity-100 transition duration-300
+                  h-30 md:h-30 w-auto object-contain
+                  opacity-100 hover:opacity-100 transition duration-300
                 "
                 alt="client logo"
               />

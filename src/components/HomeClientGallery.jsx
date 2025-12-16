@@ -119,30 +119,20 @@ export default function WorkGallery() {
 
   const [index, setIndex] = useState(0);
   const [showGrid, setShowGrid] = useState(false);
-  const [auto, setAuto] = useState(true);
 
-  // ---------------- AUTO ROTATE ----------------
   useEffect(() => {
-    if (!auto) return;
+  setShowGrid(false);
 
-    setShowGrid(false);
+  const timer = setTimeout(() => {
+    setShowGrid(true);
+  }, 3000); 
 
-    const gridTimer = setTimeout(() => setShowGrid(true), 3000);
-    const nextTimer = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % clients.length);
-    }, 7000);
+  return () => clearTimeout(timer);
+}, [index]);
 
-    return () => {
-      clearTimeout(gridTimer);
-      clearTimeout(nextTimer);
-    };
-  }, [index, auto]);
 
   const openClient = (i) => {
-    setAuto(false);
     setIndex(i);
-    setShowGrid(false);
-    setTimeout(() => setShowGrid(true), 2000);
   };
 
 
