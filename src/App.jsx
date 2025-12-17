@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopOnRoute from "./components/ScrollToTopOnRoute"; 
 import Home from "./pages/Home";
@@ -7,6 +8,8 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+
 
 // 🔽 Import all service pages
 import SMM from "./pages/services/smm";
@@ -67,7 +70,9 @@ function App() {
         <Route path="/work/the-garden-retreat" element={<TheGardenRetreat />} />      
         <Route path="/work/rivaaj" element={<RivaazRestroBar />} />
         <Route path="/work/sake-cafe" element={<SakeCafe />} />
-<Route path="/work/desi-garden" element={<DesiGarden />} />
+        <Route path="/work/desi-garden" element={<DesiGarden />} />
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
       <Footer />
       <ScrollToTop />
