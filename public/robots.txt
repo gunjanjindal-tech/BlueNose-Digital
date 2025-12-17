@@ -1,10 +1,12 @@
 User-agent: *
 Allow: /
 
-# Block private folders (if any)
-Disallow: /admin/
-Disallow: /temp/
-Disallow: /draft/
+# Block legacy Google sitelinks sources
+Disallow: /studio
+Disallow: /social
+Disallow: /media
+Disallow: /portfolio
+Disallow: /photos
 
-# Sitemap Location
+# Sitemap
 Sitemap: https://www.bluenosemarketing.ca/sitemap.xml
