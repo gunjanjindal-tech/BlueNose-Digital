@@ -1,21 +1,26 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "bluenosemarketing.com" }],
-      "destination": "https://www.bluenosemarketing.ca/$1",
+      "source": "/studio/:path*",
+      "destination": "/",
       "permanent": true
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "bluenosemarketing.com" }],
+      "destination": "https://www.bluenosemarketing.ca/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "www.bluenosemarketing.com" }],
-      "destination": "https://www.bluenosemarketing.ca/$1",
+      "destination": "https://www.bluenosemarketing.ca/:path*",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/index.html"
     }
   ]
