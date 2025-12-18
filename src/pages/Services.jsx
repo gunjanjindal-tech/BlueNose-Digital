@@ -6,7 +6,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: "Social Media Marketing (SMM)",
-      desc: "From page management to content calendars, we create viral, engaging, brand-aligned content that grows visibility, trust, and conversions.",
+      desc: "Strategic content planning, platform management, audience engagement, paid campaigns, analytics, and consistent brand growth across social platforms.",
       video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
       link: "/services/smm",
     },
@@ -24,7 +24,7 @@ export default function ServicesPage() {
     },
     {
       title: "Video Editing",
-      desc: "High-quality cinematic edits, short-form reels, transitions, promotional clips & storytelling-driven video editing.",
+      desc: "High-quality edits, reels, long and short-form videos, motion graphics, storytelling, transitions, captions, and platform-optimized formats.",
       video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
       link: "/services/video-editing",
     },
@@ -36,7 +36,7 @@ export default function ServicesPage() {
     },
     {
       title: "Photography & Creative Shoots",
-      desc: "Product shoots, event coverage, lifestyle visuals & creative brand photography for premium presentation.",
+      desc: "Product photography, lifestyle shoots, event coverage, creative direction, editing & retouching, high‑resolution delivery.",
       video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
       link: "/services/photography",
     },

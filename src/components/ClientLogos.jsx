@@ -10,7 +10,7 @@ export default function ClientsMarquee() {
   ];
 
   return (
-    <section className="pt-10 bg-white text-center"
+    <section className="pt-6 bg-white text-center"
     >
 
       {/* LOGO MARQUEE */}

@@ -43,37 +43,34 @@ const logos = [
   "/client/logo-16.png",
 ];
 
-function Counter({ target }) {
-  const [value, setValue] = useState(0);
+function Counter({ target, duration = 1200 }) {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (typeof target !== "number") return;
+
     let start = 0;
-    const end = parseInt(target.replace(/\D/g, "")); // remove + or %
-    if (start === end) return;
+    const increment = target / (duration / 16);
 
-    let totalMs = 1600; // animation time
-    let increment = end / (totalMs / 30);
-
-    let timer = setInterval(() => {
+    const timer = setInterval(() => {
       start += increment;
-      if (start >= end) {
+
+      if (start >= target) {
+        setCount(target);
         clearInterval(timer);
-        setValue(end);
       } else {
-        setValue(Math.floor(start));
+        setCount(start);
       }
-    }, 30);
+    }, 16);
 
     return () => clearInterval(timer);
-  }, [target]);
+  }, [target, duration]);
 
-  return (
-    <span>
-      {value}
-      {target.includes("+") && "+"}
-      {target.includes("%") && "%"}
-    </span>
-  );
+  // ✅ format decimals cleanly
+  const formatted =
+    target % 1 !== 0 ? count.toFixed(1) : Math.floor(count);
+
+  return <>{formatted}</>;
 }
 
 export default function Home() {
@@ -408,24 +405,24 @@ const sendMessage = (e) => {
 
 
   {/* HERO CONTENT */}
-  <div className="relative z-20 max-w-7xl mx-auto grid lg:grid-cols-3 gap-14 items-center">
+  <div className="relative z-20 max-w-7xl mx-auto grid lg:grid-cols-3 gap-10 items-center">
 
     {/* LEFT TEXT */}
-    <div className="space-y-6">
+    <div className="space-y-5">
       <p className="text-[#0E6388] font-semibold tracking-wide">
         → Digital Growth Agency
       </p>
 
       <h1 className="text-4xl md:text-5xl font-extrabold text-[#063349] leading-tight">
-        We Help Brands Grow With{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0E6388] to-[#1E8FB9]">
-          Strategy, Content & Performance
+        We Design Marketing Experiences  That
+{" "} 
+        <span className="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#0E6388] to-[#1E8FB9]">
+          Turn  Attention Into Long-Term Brand Value.
         </span>
       </h1>
 
       <p className="text-[#063349]/80 text-lg max-w-md">
-        A premium agency crafting high-impact content, performance-led
-        campaigns, and branding systems that scale with consistency.
+        A premium agency crafting high-impact content, performance-led campaigns, and branding systems that scale with consistency.
       </p>
 
       <div className="flex gap-4">
@@ -477,61 +474,72 @@ const sendMessage = (e) => {
     </div>
 
     {/* STATS */}
-    <div className="space-y-5 z-20">
-      {[
-        {
-          value: "120+",
-          label: "Global Clients",
-          desc: "Across 7+ industries",
-          iconBg: "from-[#7DD3FC] to-[#0E6388]",
-        },
-        {
-          value: "5K+",
-          label: "Campaigns Delivered",
-          desc: "Content • Ads • Branding",
-          iconBg: "from-[#93C5FD] to-[#0E6388]",
-        },
-        {
-          value: "320%",
-          label: "Avg Performance Lift",
-          desc: "ROI-driven execution",
-          iconBg: "from-[#A5F3FC] to-[#0E6388]",
-        },
-      ].map((stat, i) => (
-        <div
-          key={i}
-          className="
-            flex items-center gap-4 p-5 rounded-3xl
-            bg-white/60 backdrop-blur-xl
-            shadow-[0_8px_30px_rgba(0,0,0,0.10)]
-            border border-white/40
-            hover:shadow-[0_12px_45px_rgba(0,0,0,0.15)]
-            transition-all
-          "
-        >
-        {/* VALUE LEFT */}
-<div
-  className={`
-    min-w-[72px] h-12 rounded-2xl flex items-center justify-center
-    bg-gradient-to-br ${stat.iconBg}
-    text-white text-xl font-extrabold
-  `}
->
-  {stat.value}
+<div className="space-y-8 z-20">
+  {[
+    {
+      value: 480,
+      suffix: "+",
+      label: "High-impact videos",
+      desc: "UGC • Influencer Marketing",
+      iconBg: "from-[#7DD3FC] to-[#0E6388]",
+    },
+    {
+      value: 12.3,
+      suffix: "M+",
+      label: "Viewers reached",
+      desc: "Content • Ads • Branding",
+      iconBg: "from-[#93C5FD] to-[#0E6388]",
+    },
+    {
+      value: 3.4,
+      suffix: "M",
+      label: "Views on top-performing content",
+      desc: "ROI-driven execution",
+      iconBg: "from-[#A5F3FC] to-[#0E6388]",
+    },
+  ].map((stat, i) => (
+    <div
+      key={i}
+      className="
+        flex items-center gap-4 p-5 rounded-3xl
+        bg-white/60 backdrop-blur-xl
+        shadow-[0_8px_30px_rgba(0,0,0,0.10)]
+        border border-white/40
+        hover:shadow-[0_12px_45px_rgba(0,0,0,0.15)]
+        transition-all
+      "
+    >
+      {/* VALUE ICON */}
+      <div
+        className={`
+          min-w-[76px] h-14 rounded-2xl flex items-center justify-center
+          bg-gradient-to-br ${stat.iconBg}
+          text-white text-xl font-extrabold
+        `}
+      >
+        {stat.value}
+        {stat.suffix}
+      </div>
+
+      {/* TEXT */}
+      <div className="flex flex-col">
+        <h3 className="text-3xl font-extrabold text-[#063349] flex items-baseline">
+          <Counter target={stat.value} />
+          <span className="ml-1 text-xl">{stat.suffix}</span>
+        </h3>
+
+        <p className="text-[#063349] font-semibold text-sm">
+          {stat.label}
+        </p>
+
+        <p className="text-[#063349]/60 text-xs">
+          {stat.desc}
+        </p>
+      </div>
+    </div>
+  ))}
 </div>
 
-
-          {/* TEXT */}
-          <div className="flex flex-col">
-            <h3 className="text-3xl font-extrabold text-[#063349]">
-              <Counter target={stat.value} />
-            </h3>
-            <p className="text-[#063349] font-semibold text-sm">{stat.label}</p>
-            <p className="text-[#063349]/60 text-xs">{stat.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
 
   </div>
 
@@ -669,11 +677,13 @@ const sendMessage = (e) => {
     </p>
 
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-      What We <span className="text-[#0E6388]">Offer</span>
+     What We Bring
+ <span className="text-[#0E6388]">  to the Table</span>
     </h2>
 
     <p className="text-[#063349]/80 text-lg max-w-2xl mx-auto mt-4">
-      High-performance solutions for modern brands — from content to strategy.
+      Innovation, design, and marketing that work together for you.
+
     </p>
 
     {/* SERVICES GRID */}
@@ -854,21 +864,23 @@ const sendMessage = (e) => {
     </p>
 
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-      The Numbers <span className="text-white/90">That Matter</span>
+      Impact in
+ <span className="text-white/90"> Every Digit</span>
     </h2>
 
-    <p className="text-white/80 text-lg max-w-2xl mx-auto mt-4">
-      Numbers that reflect our consistency, creativity and ROI-focused execution.
+    <p className="text-white/80 text-lg max-w-3xl mx-auto mt-4">
+      Powerful insights, measurable growth, and undeniable results for your brand.
+
     </p>
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
       {[
-        { value: "3x", label: "Average ROI Increase", desc: "Achieved through data-led content systems." },
-        { value: "10.3M+", label: "Total Views", desc: "Generated across campaigns and brand content." },
-        { value: "86%", label: "Brand Lift", desc: "Stronger brand presence through quality creative." },
-        { value: "93%", label: "Client Satisfaction", desc: "Long-term growth partners, not vendors." },
-        { value: "50+", label: "Brands Served", desc: "Across restaurants, events, lifestyle & tech." },
-        { value: "24/7", label: "Brand Presence", desc: "Your audience stays engaged around the clock." }
+        { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands." },
+        { value: "7K+", label: "Comments & Interactions", desc: " Real engagement, not just likes." },
+        { value: "320%", label: "Avg viewers Lift", desc: "Measurable growth beyond ." },
+        { value: "20+", label: "Content Formats Delivered", desc: "From Reels and Stories to Carousels and Ads ." },
+        { value: "370+", label: "Social Posts Published", desc: "Consistent presence, creative messaging." },
+        { value: "12.3M+", label: "Accounts Reached", desc: "Generated across campaigns and brand content." }
       ].map((stat, i) => (
         <div
           key={i}
@@ -936,8 +948,8 @@ const sendMessage = (e) => {
         How We <span className="text-[#0E6388]">Work</span>
       </h2>
 
-      <p className="text-[#063349]/70 mt-4 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-        A clear, structured process designed to bring out your brand’s best and scale it with consistency.
+      <p className="text-[#063349]/70 mt-4 max-w-4xl mx-auto text-base sm:text-lg leading-relaxed">
+        From discovery to delivery, our step‑by‑step approach ensures your brand grows with confidence.
       </p>
     </div>
 
@@ -994,7 +1006,8 @@ const sendMessage = (e) => {
         </div>
 
         <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Messaging & Strategy Blueprint
+          Communication & Strategy Framework
+
         </h3>
 
         <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
@@ -1055,7 +1068,8 @@ const sendMessage = (e) => {
         </div>
 
         <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Creative Execution
+          Impactful Execution
+
         </h3>
 
         <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
@@ -1087,7 +1101,8 @@ const sendMessage = (e) => {
         </div>
 
         <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Optimize & Scale
+          Streamline & Scale Up
+
         </h3>
 
         <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
@@ -1141,23 +1156,24 @@ const sendMessage = (e) => {
             </p>
 
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-              Why Brands <span className="text-[#0E6388]">Trust Us</span>
+              The Trust Behind 
+ <span className="text-[#0E6388]"> Our Work</span>
             </h2>
 
             {/* CARDS */}
             <div className="grid md:grid-cols-3 gap-10 mt-16">
               {[
                 {
-                  title: "Strategic Content Systems",
-                  desc: "We create content that aligns with your brand strategy, tone, and audience psychology.",
+                  title: "Proven Expertise",
+                  desc: "Years of experience and a track record of delivering measurable results across industries.",
                 },
                 {
-                  title: "Performance-Driven Execution",
-                  desc: "Data-led creative decisions designed to maximize reach, engagement & ROI.",
+                  title: " Reliable Partnerships",
+                  desc: "We build long‑term relationships based on transparency, consistency, and mutual growth..",
                 },
                 {
-                  title: "Brand-First Approach",
-                  desc: "We ensure your identity stays strong, memorable and consistent across platforms.",
+                  title: "Data‑Driven Approach",
+                  desc: "Every decision is backed by insights, ensuring strategies that perform and scale effectively.",
                 },
               ].map((card, i) => (
                 <div

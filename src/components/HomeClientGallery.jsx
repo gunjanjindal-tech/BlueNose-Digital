@@ -148,8 +148,8 @@ export default function WorkGallery() {
       </h2>
 
 
-    <p className="text-[#063349]/80 text-lg max-w-2xl mx-auto mt-2 mb-8">
-      High-performance solutions for modern brands — from content to strategy.
+    <p className="text-[#063349]/80 text-lg max-w-3xl mx-auto mt-2 mb-8 ">
+     Clear metrics and transparent reporting that demonstrate the effectiveness of our work.
     </p>
 
 

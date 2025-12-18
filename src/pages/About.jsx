@@ -128,8 +128,8 @@ export default function About() {
           animate="show"
           className="text-3xl md:text-5xl font-extrabold text-[#063349] text-center leading-snug"
         >
-          We Build Brands That Stand Out —
-          <span className="text-[#0E6388]"> And Scale Fast</span>
+          Grow Brands with 
+          <span className="text-[#0E6388]"> Creative Digital Strategies </span>
         </motion.h1>
 
         {/* SUBTEXT */}
@@ -137,19 +137,19 @@ export default function About() {
           variants={fade}
           initial="hidden"
           animate="show"
-          className="max-w-3xl mx-auto mt-4 text-lg md:text-xl text-[#063349]/80 text-center"
+          className="max-w-5xl mx-auto mt-4 text-lg md:text-xl text-[#063349]/80 text-center"
         >
-          We build clarity, trust, and growth for modern brands through
-          strategy, creativity, and ROI-led execution.
+         At Bluenose Marketing, Halifax’s leading social marketing agency, we help modern brands achieve clarity, trust, and rapid growth through proven strategy, creative excellence, and ROI-driven execution.
+
         </motion.p>
 
         {/* STATS GRID */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-6xl mx-auto mt-14">
           {[
-            { value: "120+", label: "Global Clients" },
-            { value: "5K+", label: "Campaigns Delivered" },
-            { value: "320%", label: "ROI Growth Avg." },
-            { value: "200", label: "Team Member" },
+            { value: "7K+", label: "Comments & Interactions" },
+            { value: "320%", label: "Average Viewer Growth" },
+            { value: "12.3M+", label: " Accounts Reached" },
+            { value: "370+ ", label: "Social Posts Published" },
           ].map((s, i) => (
             <div
               key={i}
@@ -169,40 +169,43 @@ export default function About() {
             {/* LEFT TEXT */}
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] mb-6">
-                Who We Are
+               Why Choose         <span className="text-[#0E6388]"> Bluenose? </span> 
+
               </h2>
 
               <p className="text-[#063349]/85 leading-relaxed mb-4">
-                Bluenose Digital is a global creative & performance agency
-                focused on delivering clarity, growth, and brand transformation.
+               Bluenose Marketing is a Halifax digital marketing agency specializing in creative branding, performance marketing, and business growth for modern brands in Nova Scotia and beyond.
+
               </p>
 
               <p className="text-[#063349]/75 leading-relaxed mb-4">
-                Our team blends strategic thinking, world-class execution, and
-                data-backed decisions to help brands scale confidently.
+                Our digital marketing experts blend strategic planning, innovative content creation, and data-driven advertising to help businesses boost online visibility, generate leads, and scale revenue.
+
               </p>
 
               <p className="text-[#063349]/75 leading-relaxed">
-                From social media to performance marketing, brand identity, and
-                storytelling — we build digital systems that work.
+                From social media marketing and paid advertising to brand identity design and digital storytelling, we deliver integrated digital marketing solutions that drive real results for your business.
+
               </p>
 
               {/* MINI STATS */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8">
-                {[
-                  { v: "20+", t: "Team Members" },
-                  { v: "6+", t: "Countries Served" },
-                  { v: "5K+", t: "Campaigns" },
-                  { v: "120+", t: "Brands" },
-                ].map((stat, i) => (
-                  <div key={i} className="text-center">
-                    <div className="text-2xl font-extrabold text-[#0E6388]">
-                      {stat.v}
-                    </div>
-                    <div className="text-[#0E6388] text-sm mt-1">{stat.t}</div>
-                  </div>
-                ))}
-              </div>
+<div className="grid grid-cols-2 sm:grid-cols-4 gap-x-12 gap-y-6 mt-8">
+  {[
+    { v: "10+", t: "Team Members" },
+    { v: "12.3M+", t: "Impressions Generated" },
+    { v: "50+", t: "Clients" },
+  ].map((stat, i) => (
+    <div key={i} className="text-center px-4">
+      <div className="text-2xl font-extrabold text-[#0E6388]">
+        {stat.v}
+      </div>
+      <div className="text-[#0E6388] text-sm mt-1">
+        {stat.t}
+      </div>
+    </div>
+  ))}
+</div>
+
             </div>
 
             {/* RIGHT IMAGE */}
@@ -298,8 +301,8 @@ export default function About() {
               What We <span className="text-white">Do</span>
             </h2>
 
-            <p className="text-white/80 text-lg max-w-2xl mx-auto mt-4">
-              Crafting growth systems through content, design, performance & storytelling.
+            <p className="text-white/80 text-lg max-w-3xl mx-auto mt-4">
+              Crafting growth systems for brands through content, design, performance marketing, and digital storytelling.
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
