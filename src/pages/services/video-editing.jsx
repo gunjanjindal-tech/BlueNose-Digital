@@ -130,13 +130,13 @@ export default function VideoEditing() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Turn Raw Footage Into High-Impact
-            <span className="text-[#0E6388]"> Converting Videos</span>
+            Transform Raw Footage Into High-Converting 
+
+            <span className="text-[#0E6388]"> Video Content</span>
           </h2>
 
-          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-            From cinematic edits to social-first content — we edit videos that retain viewers,
-            boost conversions, and strengthen your brand across platforms.
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+           From cinematic edits to social-ready clips, we craft videos that capture attention, increase conversions, and elevate your brand on every platform.
           </p>
         </div>
       </section>
@@ -171,25 +171,58 @@ export default function VideoEditing() {
 
       {/* ================= BARRIERS ================= */}
       <section className="pt-20">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center mb-14">
-          Barriers Before <span className="text-[#0E6388]">Working With Us</span>
+                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]
+ text-center mb-14">
+        Challenges Brands Faced Before Partnering 
+{" "}
+          <span className="text-[#0E6388]">
+            With Bluenose Marketing
+          </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-8">
-          {[
-            "Editing that failed to capture brand tone or personality.",
-            "Low retention due to weak pacing and storytelling.",
-            "Inconsistent quality from multiple editors.",
-            "Videos that looked good but didn’t convert.",
-            "Poor audio mixing and cluttered visuals.",
-            "Missed deadlines and unreliable workflows.",
-            "No platform-specific optimization.",
-            "No strategy behind edits.",
-            "High costs with no measurable ROI.",
-          ].map((text, idx) => (
-            <BarrierCard key={idx} title={text} desc={text} />
-          ))}
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-8">
+  {[
+    {
+      title: "Editing that failed to capture brand tone or personality",
+      desc: "We deliver custom video edits tailored to your brand’s voice.",
+    },
+    {
+      title: "Low retention due to weak pacing and storytelling",
+      desc: "We use proven pacing and narrative techniques to boost viewer retention.",
+    },
+    {
+      title: "Inconsistent quality from multiple editors",
+      desc: "Our in-house team ensures consistent, high-quality video production.",
+    },
+    {
+      title: "Videos that looked good but didn’t convert",
+      desc: "We optimize every video for conversions and measurable business results.",
+    },
+    {
+      title: "Poor audio mixing and cluttered visuals",
+      desc: "We provide professional audio mixing and clean, visually engaging edits.",
+    },
+    {
+      title: "Missed deadlines and unreliable workflows",
+      desc: "We guarantee timely delivery with streamlined editing processes.",
+    },
+    {
+      title: "No platform-specific optimization",
+      desc: "We edit videos for each platform’s best practices and algorithms.",
+    },
+    {
+      title: "No strategy behind edits",
+      desc: "We apply data-driven strategies to every video project.",
+    },
+    {
+      title: "High costs with no measurable ROI",
+      desc: "We offer transparent pricing and focus on ROI-driven video solutions.",
+    },
+  ].map((item, idx) => (
+    <BarrierCard key={idx} title={item.title} desc={item.desc} />
+  ))}
+</div>
+
       </section>
 
       {/* ================= PLATFORM SLIDER ================= */}
@@ -198,11 +231,14 @@ export default function VideoEditing() {
       {/* ================= TESTIMONIALS ================= */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Our rating based on 2 verified
-            <span className="text-[#0E6388]"> client reviews</span>
-          </h2>
+                               <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
 
+           Reviews That Speak.
+
+            <span className="text-[#0E6388]">
+              {" "} Ratings That Shine.
+            </span>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">
                      <ReviewSummaryCard />
                      <Testimonials />

@@ -305,27 +305,62 @@ export default function About() {
               Crafting growth systems for brands through content, design, performance marketing, and digital storytelling.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
-              {[
-                { name: "SMM", icon: icons.smm },
-                { name: "Branding", icon: icons.branding },
-                { name: "Influencer Marketing", icon: icons.influencer },
-                { name: "Video Editing", icon: icons.video },
-                { name: "UGC", icon: icons.ugc },
-                { name: "Photography", icon: icons.photo },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="rounded-3xl p-10 bg-white/15 backdrop-blur-xl border border-white/20 shadow-xl text-white transition hover:scale-[1.03]"
-                >
-                  <div className="flex justify-center mb-6">{item.icon}</div>
-                  <h3 className="text-xl font-bold">{item.name}</h3>
-                  <p className="text-white/70 text-sm mt-2 leading-relaxed">
-                    High-impact execution tailored for modern brands.
-                  </p>
-                </div>
-              ))}
-            </div>
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+  {[
+    {
+      name: "SMM",
+      icon: icons.smm,
+      desc: "Grow brand awareness with social media marketing.",
+    },
+    {
+      name: "Branding",
+      icon: icons.branding,
+      desc: "Build a memorable, standout brand identity.",
+    },
+    {
+      name: "Influencer Marketing",
+      icon: icons.influencer,
+      desc: "Expand reach through targeted influencer partnerships.",
+    },
+    {
+      name: "Video Editing",
+      icon: icons.video,
+      desc: "Engage audiences with professional video content.",
+    },
+    {
+      name: "UGC",
+      icon: icons.ugc,
+      desc: "Boost trust using authentic customer-generated content.",
+    },
+    {
+      name: "Photography",
+      icon: icons.photo,
+      desc: "Showcase your brand with high-quality photography.",
+    },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="
+        rounded-3xl p-10 bg-white/15 backdrop-blur-xl
+        border border-white/20 shadow-xl text-white
+        transition hover:scale-[1.03]
+      "
+    >
+      <div className="flex justify-center mb-6">
+        {item.icon}
+      </div>
+
+      <h3 className="text-xl font-bold text-center">
+        {item.name}
+      </h3>
+
+      <p className="text-white/70 text-sm mt-3 leading-relaxed text-center">
+        {item.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
           </div>
         </section>
 

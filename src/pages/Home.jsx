@@ -1156,8 +1156,9 @@ const sendMessage = (e) => {
             </p>
 
             <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-              The Trust Behind 
- <span className="text-[#0E6388]"> Our Work</span>
+            Why Brands
+ 
+ <span className="text-[#0E6388]">  Trust Us:</span>
             </h2>
 
             {/* CARDS */}

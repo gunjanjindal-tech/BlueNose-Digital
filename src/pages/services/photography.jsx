@@ -163,15 +163,16 @@ export default function PhotographyShoots() {
 
                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
 
-            Visuals That Tell Your Story —  
+           Visuals That Capture Attention 
+
             <span className="text-[#0E6388]">
-              {" "}And Sell Your Brand
+              {" "}and Elevate Your Brand
             </span>
           </h2>
 
-          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-            High-quality product shoots, lifestyle photography, restaurant visuals, 
-            branding images & more crafted to elevate your brand’s online presence.
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+           High-quality product shoots, lifestyle photography, restaurant visuals, branding images & more crafted to elevate your brand’s online presence.
+
           </p>
 
         </div>
@@ -236,29 +237,56 @@ export default function PhotographyShoots() {
 
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]
  text-center mb-14">
-          Barriers Before{" "}
+        Challenges Brands Faced Before Partnering 
+{" "}
           <span className="text-[#0E6388]">
-            Working With Us
+            With Bluenose Marketing
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mt-10 px-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-8">
+  {[
+    {
+      title: "Your visuals didn’t match the quality of your brand",
+      desc: "We deliver premium photography that elevates your brand’s visual presence.",
+    },
+    {
+      title: "Product photos lacked detail, lighting, or consistency",
+      desc: "We capture high-detail, consistent product images with expert lighting every time.",
+    },
+    {
+      title: "You couldn’t build a strong identity across social platforms",
+      desc: "We unify your brand’s visuals for a cohesive identity across all social channels.",
+    },
+    {
+      title: "Shoots were delayed, unorganized, or poorly executed",
+      desc: "We ensure every shoot is timely, organized, and professionally managed.",
+    },
+    {
+      title: "Photos weren’t optimized for reels, ads, or website usage",
+      desc: "We deliver images in platform-ready formats for web, ads, and social media.",
+    },
+    {
+      title: "Lifestyle visuals didn’t feel authentic or brand-aligned",
+      desc: "We create authentic lifestyle photography that matches your brand’s tone and audience.",
+    },
+    {
+      title: "No clear creative direction or shot planning",
+      desc: "We provide creative direction and strategic shot lists for every session.",
+    },
+    {
+      title: "Low-quality images hurt engagement and conversions",
+      desc: "We produce high-resolution, conversion-focused visuals to boost engagement and sales.",
+    },
+    {
+      title: "Hard to find reliable photographers who deliver monthly",
+      desc: "We offer consistent, reliable monthly photography from our trusted creative team.",
+    },
+  ].map((item, idx) => (
+    <BarrierCard key={idx} title={item.title} desc={item.desc} />
+  ))}
+</div>
 
-          {[
-            "Your visuals didn’t match the quality of your brand.",
-            "Product photos lacked detail, lighting or consistency.",
-            "You couldn’t build a strong identity across social platforms.",
-            "Shoots were delayed, unorganized, or poorly executed.",
-            "Photos weren’t optimized for reels, ads, or website usage.",
-            "Lifestyle visuals didn’t feel authentic or brand-aligned.",
-            "No clear creative direction or shot planning.",
-            "Low-quality images hurt engagement and conversions.",
-            "Hard to find reliable photographers who deliver monthly.",
-          ].map((t, i) => (
-            <BarrierCard key={i} title={t} desc={t} />
-          ))}
-
-        </div>
       </section>
 
 
@@ -273,11 +301,12 @@ export default function PhotographyShoots() {
 
         <div className="max-w-7xl mx-auto px-8 text-center">
 
-                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
 
-            Our rating based on 2 verified
+           Reviews That Speak.
+
             <span className="text-[#0E6388]">
-              {" "}client reviews
+              {" "} Ratings That Shine.
             </span>
           </h2>
 

@@ -161,14 +161,14 @@ export default function BrandIdentity() {
         <div className="max-w-7xl mx-auto px-6 text-center">
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Build a Brand Identity That People  <span className="text-[#0E6388]">
-              {" "} Instantly Recognize </span>
+           Brand Identity That Gets Noticed 
+ <span className="text-[#0E6388]">
+              {" "} Across All Platforms </span>
           </h2>
 
-          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-            A strategic blend of design, storytelling, and psychology — we craft 
-            brand identities that look premium, feel memorable, and create 
-            emotional connection with your audience.
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+            Through expert design, compelling storytelling, and proven brand psychology, we create premium brand identities that are unforgettable and build strong emotional connections.
+
           </p>
 
         </div>
@@ -230,29 +230,55 @@ export default function BrandIdentity() {
       <section className="pt-15 md:pt-20">
                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center mb-14">
 
-          Barriers to Strong Branding Before{" "}
+         Challenges Brands Faced Before Partnering {" "}
           <span className=" text-[#0E6388]">
-            Working With Us
+            With Bluenose Marketing
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mt-10 px-8">
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-8">
+  {[
+    {
+      title: "Brand lacked a clear and consistent identity across platforms",
+      desc: "We develop cohesive brand identities for seamless, cross-platform recognition.",
+    },
+    {
+      title: "Logo didn’t reflect the business personality or positioning",
+      desc: "Our designers create logos that capture your brand’s unique values and market position.",
+    },
+    {
+      title: "No unified color palette or typography system",
+      desc: "We establish strategic color palettes and typography for consistent brand visuals.",
+    },
+    {
+      title: "Messaging felt generic and didn’t resonate with the audience",
+      desc: "We craft targeted brand messaging that connects with your ideal customers.",
+    },
+    {
+      title: "Low brand recall due to inconsistent visual assets",
+      desc: "We standardize visual assets for strong, memorable brand recognition.",
+    },
+    {
+      title: "Outdated or DIY branding limiting credibility",
+      desc: "We deliver modern, professional branding that builds trust and authority.",
+    },
+    {
+      title: "Visual identity disconnected from target audience expectations",
+      desc: "We align brand visuals with audience insights for maximum relevance.",
+    },
+    {
+      title: "No proper brand guidelines for internal or external alignment",
+      desc: "We create comprehensive brand guidelines for consistent team and partner use.",
+    },
+    {
+      title: "Competitors appeared more premium and memorable",
+      desc: "We elevate your brand with premium design and standout differentiation.",
+    },
+  ].map((item, idx) => (
+    <BarrierCard key={idx} title={item.title} desc={item.desc} />
+  ))}
+</div>
 
-          {[
-            "Brand lacked a clear and consistent identity across platforms.",
-            "Logo didn’t reflect the business personality or positioning.",
-            "No unified color palette or typography system.",
-            "Messaging felt generic and didn’t resonate with the audience.",
-            "Low brand recall due to inconsistent visual assets.",
-            "Outdated or DIY branding limiting credibility.",
-            "Visual identity disconnected from target audience expectations.",
-            "No proper brand guidelines for internal or external alignment.",
-            "Competitors appeared more premium and memorable.",
-          ].map((item, idx) => (
-            <BarrierCard key={idx} title={item} desc={item} />
-          ))}
-
-        </div>
       </section>
 
       {/* ===================== WHAT SETS US APART ========================= */}
@@ -267,9 +293,10 @@ export default function BrandIdentity() {
         <div className="max-w-7xl mx-auto px-8 text-center">
                       <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
 
-            Our rating based on 2 verified{" "}
+          Reviews That Speak. 
+{" "}
             <span className="text-[#0E6388]">
-              client reviews
+             Ratings That Shine.
             </span>
           </h2>
 

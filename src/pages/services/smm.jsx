@@ -129,12 +129,12 @@ export default function SMM() {
       {/* HERO */}
       <section className="py-16 md:py-20 px-6 text-center max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-          SMM That Turns Engagement
-          <span className="text-[#0E6388]"> Into Growth</span>
+          SMM That Powers Engagement Into
+          <span className="text-[#0E6388]">  Brand Growth</span>
         </h2>
-        <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-          Instagram, LinkedIn, TikTok, YouTube & more. Data-led campaigns,
-          creative execution & full-funnel systems built to scale.
+        <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+          Instagram, LinkedIn, TikTok, YouTube & beyond data‑driven campaigns, creative execution, and scalable full‑funnel systems.
+
         </p>
       </section>
 
@@ -168,22 +168,22 @@ export default function SMM() {
 
       {/* BARRIERS */}
       <section className="pt-10 md:pt-16 px-6">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center pb-6">
-          Barriers to Success Before
-          <span className="text-[#0E6388]"> Working With Us</span>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center pb-6 ">
+          Challenges Brands Faced Before Partnering 
+          <span className="text-[#0E6388]"> With Bluenose Marketing</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6">
           {[
-            { title: "Social media wasn’t delivering measurable results.", desc: "We build result-led systems using content, analytics, and weekly optimisation." },
-            { title: "Uncertainty around which campaigns converted", desc: "Every campaign includes reporting so clients always know what drives performance." },
-            { title: "Low engagement despite consistent posting.", desc: "We create content built for reach: storytelling, hooks, and platform-led formats." },
-            { title: "Limited time/expertise to manage social media", desc: "We take full ownership—strategy, content, posting, analytics, everything." },
-            { title: "Brand presence wasn’t consistent across platforms", desc: "We unify your brand voice across all platforms with a structured content system." },
-            { title: "Generic agency solutions that didn't convert", desc: "Every strategy is custom for your niche & customer behavior." },
-            { title: "Needed scalable growth systems", desc: "Our systems scale month-over-month using organic + paid integration." },
-            { title: "Operating in niche/complex industries", desc: "We specialise in strategies for high-complexity markets." },
-            { title: "Didn’t know which platforms to prioritise", desc: "We map the right platforms using actual audience data." },
+            { title: "Social media wasn’t delivering measurable results.", desc: "We build result-driven systems using content, analytics, and weekly optimization." },
+            { title: "Uncertainty around which campaigns converted", desc: "Every campaign includes transparent reporting—always see what drives results." },
+            { title: "Low engagement despite consistent posting.", desc: "We craft platform-first content with storytelling, hooks, and proven reach tactics." },
+            { title: "Limited time/expertise to manage social media", desc: "We handle everything—strategy, content, posting, analytics, and optimization." },
+            { title: "Brand presence wasn’t consistent across platforms", desc: "We unify your brand voice with a structured, cross-platform content system." },
+            { title: "Generic agency solutions that didn't convert", desc: "Every strategy is custom-built for your niche and audience." },
+            { title: "Needed scalable growth systems", desc: "Our integrated systems scale monthly with organic and paid marketing." },
+            { title: "Operating in niche/complex industries", desc: "We specialize in tailored strategies for high-complexity markets." },
+            { title: "Didn’t know which platforms to prioritise", desc: "We identify and prioritize platforms using real audience data." },
           ].map((item, idx) => (
             <BarrierCard key={idx} title={item.title} desc={item.desc} />
           ))}
@@ -200,8 +200,9 @@ export default function SMM() {
       <section className="py-12 md:py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Our rating based on 2 verified
-            <span className="text-[#0E6388]"> client reviews</span>
+           Reviews That Speak. 
+
+            <span className="text-[#0E6388]"> Ratings That Shine.</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">

@@ -152,15 +152,16 @@ export default function InfluencerMarketing() {
         <div className="max-w-7xl mx-auto px-6 text-center">
 
                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Turn Influencers Into Revenue — 
+            Transform Influencers Into 
+
             <span className="text-[#0E6388]">
-              {" "}Not Just Reach
+              {" "}Real Business Growth
             </span>
           </h2>
 
-          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-            We partner your brand with creators who match your voice, values, and audience —
-            delivering measurable results through strategic collaborations, UGC, and high-trust storytelling.
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+            We connect your brand with creators who align with your values and audience, driving measurable ROI through strategic partnerships, authentic UGC, and trusted influencer storytelling.
+
           </p>
 
         </div>
@@ -220,29 +221,55 @@ export default function InfluencerMarketing() {
       <section className="pt-15 md:pt-20">
                   <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center mb-14">
 
-          Barriers Before{" "}
+         Challenges Brands Faced Before Partnering {" "}
           <span className="text-[#0E6388]">
-            Working With Us
+            With Bluenose Marketing
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:mt-10 px-8">
-          
-          {[
-            "Collaborations with influencers who didn’t match the brand.",
-            "Paying high fees but getting low or no measurable returns.",
-            "Creators delivering late or inconsistent content.",
-            "No clarity on which influencers actually drove conversions.",
-            "Difficulty finding authentic creators in the right niche.",
-            "Engagement looked good, but sales didn’t move.",
-            "Campaigns lacked structure, tracking, or creative direction.",
-            "Overwhelmed by influencer outreach, negotiation, and contracts.",
-            "Brand messaging not consistent across creators."
-          ].map((text, idx) => (
-            <BarrierCard key={idx} title={text} desc={text} />
-          ))}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-8">
+  {[
+    {
+      title: "Collaborations with influencers who didn’t match the brand",
+      desc: "We vet and align influencers who authentically fit your brand values.",
+    },
+    {
+      title: "Paying high fees but getting low or no measurable returns",
+      desc: "We negotiate value-driven partnerships and optimize for ROI-focused results.",
+    },
+    {
+      title: "Creators delivering late or inconsistent content",
+      desc: "We manage timelines and enforce quality standards for every deliverable.",
+    },
+    {
+      title: "No clarity on which influencers actually drove conversions",
+      desc: "We provide transparent tracking and detailed conversion analytics for every campaign.",
+    },
+    {
+      title: "Difficulty finding authentic creators in the right niche",
+      desc: "We source vetted, niche-specific creators to reach your target audience.",
+    },
+    {
+      title: "Engagement looked good, but sales didn’t move",
+      desc: "We focus on conversion-driven influencer campaigns that impact revenue.",
+    },
+    {
+      title: "Campaigns lacked structure, tracking, or creative direction",
+      desc: "We deliver structured campaigns with clear briefs, tracking, and creative oversight.",
+    },
+    {
+      title: "Overwhelmed by influencer outreach, negotiation, and contracts",
+      desc: "We handle all influencer outreach, negotiations, and contract management on your behalf.",
+    },
+    {
+      title: "Brand messaging not consistent across creators",
+      desc: "We ensure all creators follow unified brand messaging and campaign guidelines.",
+    },
+  ].map((item, idx) => (
+    <BarrierCard key={idx} title={item.title} desc={item.desc} />
+  ))}
+</div>
 
-        </div>
       </section>
 
       {/* ✦ WHAT SETS US APART */}
@@ -258,9 +285,10 @@ export default function InfluencerMarketing() {
 
                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
 
-            Our rating based on 2 verified
+           Reviews That Speak.
+
             <span className="text-[#0E6388]">
-              {" "}client reviews
+              {" "} Ratings That Shine.
             </span>
           </h2>
 

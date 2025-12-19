@@ -16,7 +16,7 @@ export default function AboutHowWeWork() {
       </h2>
 
       <p className="text-[#063349]/70 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
-        A clear, structured process designed to bring out your brand’s best and scale it with consistency.
+        From discovery to delivery, our step‑by‑step approach ensures your brand grows with confidence.
       </p>
     </div>
 
@@ -72,7 +72,7 @@ export default function AboutHowWeWork() {
         </div>
 
         <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
-          Messaging & Strategy Blueprint
+         Communication & Strategy Framework
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
 
@@ -123,7 +123,7 @@ export default function AboutHowWeWork() {
         </div>
 
         <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
-          Creative Execution
+           Impactful Execution
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
 
@@ -155,7 +155,7 @@ export default function AboutHowWeWork() {
         </div>
 
         <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
-          Optimize & Scale
+          Streamline & Scale Up
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
 

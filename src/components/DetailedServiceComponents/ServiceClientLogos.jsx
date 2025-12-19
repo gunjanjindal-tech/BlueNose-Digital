@@ -15,7 +15,8 @@ export default function ClientsMarquee() {
       {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center">
   
-    Leading Brands Choose Us for  <span  className="text-[#0E6388]">Their Digital Growth</span> 
+    The Choice of Visionary Brands 
+  <span  className="text-[#0E6388]"> for Digital Excellence</span> 
       </h2>
 
       {/* Just logo marquee – NO background strip */}

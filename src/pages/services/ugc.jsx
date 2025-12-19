@@ -131,13 +131,14 @@ export default function UGCContentCreation() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            UGC That Looks Native —
-            <span className="text-[#0E6388]"> And Converts Like Ads</span>
+            UGC That Feels Authentic and 
+
+            <span className="text-[#0E6388]"> Drives Real Sales</span>
           </h2>
 
-          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-            Authentic creator-style content for ads & socials. High-retention scripts,
-            product demonstrations, storytelling hooks — built for modern buying behavior.
+          <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+           Creator-style content for ads and social media;featuring engaging scripts, product demos, and storytelling that matches today’s buying habits.
+
           </p>
         </div>
       </section>
@@ -172,25 +173,58 @@ export default function UGCContentCreation() {
 
       {/* ================= BARRIERS ================= */}
       <section className="pt-20">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center mb-14">
-          Barriers Before <span className="text-[#0E6388]">Working With Us</span>
+                      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]
+ text-center mb-14">
+        Challenges Brands Faced Before Partnering 
+{" "}
+          <span className="text-[#0E6388]">
+            With Bluenose Marketing
+          </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-8">
-          {[
-            "Creators didn’t understand the product properly.",
-            "UGC looked staged or low-quality — not native.",
-            "Zero structure: no hooks, no story, no CTA.",
-            "Videos were aesthetic but didn't convert.",
-            "Brands struggled to find reliable creators monthly.",
-            "Revisions took forever and delayed ad launches.",
-            "No data-backed scripts built for high retention.",
-            "Content didn’t match brand tone or voice.",
-            "Hard to scale UGC production consistently.",
-          ].map((t, i) => (
-            <BarrierCard key={i} title={t} desc={t} />
-          ))}
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6 px-8">
+  {[
+    {
+      title: "Creators didn’t understand the product properly",
+      desc: "We onboard creators with product training for authentic, informed content.",
+    },
+    {
+      title: "UGC looked staged or low-quality, not native",
+      desc: "We deliver high-quality, native-style UGC that feels organic and platform-first.",
+    },
+    {
+      title: "Zero structure: no hooks, no story, no CTA",
+      desc: "We script every UGC with strong hooks, storylines, and clear CTAs.",
+    },
+    {
+      title: "Videos were aesthetic but didn’t convert",
+      desc: "We optimize UGC for conversions using proven direct-response techniques.",
+    },
+    {
+      title: "Brands struggled to find reliable creators monthly",
+      desc: "We provide a vetted network of consistent, dependable UGC creators.",
+    },
+    {
+      title: "Revisions took forever and delayed ad launches",
+      desc: "We offer fast turnaround times with efficient revision workflows.",
+    },
+    {
+      title: "No data-backed scripts built for high retention",
+      desc: "We craft scripts using data-driven insights for maximum viewer retention.",
+    },
+    {
+      title: "Content didn’t match brand tone or voice",
+      desc: "We ensure all UGC aligns perfectly with your brand’s voice and messaging.",
+    },
+    {
+      title: "Hard to scale UGC production consistently",
+      desc: "We manage scalable UGC pipelines for ongoing, reliable content delivery.",
+    },
+  ].map((item, idx) => (
+    <BarrierCard key={idx} title={item.title} desc={item.desc} />
+  ))}
+</div>
+
       </section>
 
       {/* ================= PLATFORM SLIDER ================= */}
@@ -199,9 +233,13 @@ export default function UGCContentCreation() {
       {/* ================= TESTIMONIALS ================= */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
-            Our rating based on 2 verified
-            <span className="text-[#0E6388]"> client reviews</span>
+                             <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+
+           Reviews That Speak.
+
+            <span className="text-[#0E6388]">
+              {" "} Ratings That Shine.
+            </span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">

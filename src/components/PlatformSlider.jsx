@@ -81,13 +81,15 @@ export default function PlatformShowcase() {
     <section className="py-20">
   <div className="max-w-7xl mx-auto px-6 text-center">
      <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349 text-center">
-        What Sets Us  <span className=" text-[#0E6388]">
-          {" "}Apart{" "}
+    The Distinction Behind 
+ <span className=" text-[#0E6388]">
+          {" "}Our Results{" "}
         </span>
       </h2>
 
-     <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-2xl mx-auto">
-        Creative, data-driven social media campaigns for all platforms.
+     <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+        From LinkedIn to TikTok insight‑driven campaigns, creative execution, and scalable systems for growth.
+
       </p>
 
       {/* LOGOS NAVIGATION */}
