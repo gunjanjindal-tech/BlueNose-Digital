@@ -1379,20 +1379,46 @@ const sendMessage = (e) => {
       {/* SERVICE */}
       <div>
         <label className="text-white text-sm">Service Needed *</label>
-        <select
-          name="service"
-          value={form.service}
-          onChange={handleChange}
-          className="mt-1 w-full p-3 rounded-xl bg-white/20 text-white/90 outline-none"
-        >
-          <option value="">Select a service</option>
-          <option value="Social Media Marketing">Social Media Marketing</option>
-          <option value="Branding">Branding</option>
-          <option value="Influencer Marketing">Influencer Marketing</option>
-          <option value="Video Editing">Video Editing</option>
-          <option value="UGC Content">UGC Content</option>
-          <option value="Photography">Photography</option>
-        </select>
+  <select
+  name="service"
+  value={form.service}
+  onChange={handleChange}
+  className="
+    mt-1 w-full p-3 rounded-xl 
+    bg-white/20 text-white 
+    outline-none
+    focus:bg-white/30
+  "
+>
+  <option value="" className="text-gray-800 bg-white">
+    Select a service
+  </option>
+
+  <option value="Social Media Marketing" className="text-gray-800 bg-white">
+    Social Media Marketing
+  </option>
+
+  <option value="Branding" className="text-gray-800 bg-white">
+    Branding
+  </option>
+
+  <option value="Influencer Marketing" className="text-gray-800 bg-white">
+    Influencer Marketing
+  </option>
+
+  <option value="Video Editing" className="text-gray-800 bg-white">
+    Video Editing
+  </option>
+
+  <option value="UGC Content" className="text-gray-800 bg-white">
+    UGC Content
+  </option>
+
+  <option value="Photography" className="text-gray-800 bg-white">
+    Photography
+  </option>
+</select>
+
         {errors.service && <p className="text-red-300 text-xs">{errors.service}</p>}
       </div>
 
