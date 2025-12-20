@@ -166,7 +166,7 @@ const sendMessage = (e) => {
     </h2>
 
     <p className="text-[#0E3D55]/80 leading-relaxed mb-8 text-sm">
-      Share your goals with us — our team responds within <span className="font-semibold">24 hours</span>.
+      Share your goals with us — our team will get back to you shortly.
     </p>
 
     {/* CONTACT DETAILS */}
@@ -229,7 +229,7 @@ const sendMessage = (e) => {
 
             {/* RIGHT CONTACT FORM */}
             <div className="p-10 bg-white">
-              <h2 className="text-2xl font-bold text-[#0A3346] mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-[#0A3346] mb-6">Send Us a Message</h2>
 
           <form className="grid grid-cols-1 gap-6" onSubmit={sendMessage}>
 
