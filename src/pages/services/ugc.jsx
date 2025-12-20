@@ -190,7 +190,7 @@ export default function UGCContentCreation() {
     },
     {
       title: "UGC looked staged or low-quality, not native",
-      desc: "We deliver high-quality, native-style UGC that feels organic and platform-first.",
+      desc: "We deliver high-quality, native-style UGC that feels organic.",
     },
     {
       title: "Zero structure: no hooks, no story, no CTA",
@@ -206,7 +206,7 @@ export default function UGCContentCreation() {
     },
     {
       title: "Revisions took forever and delayed ad launches",
-      desc: "We offer fast turnaround times with efficient revision workflows.",
+      desc: "We offer fast turnaround and efficient revision workflows for UGC.",
     },
     {
       title: "No data-backed scripts built for high retention",
