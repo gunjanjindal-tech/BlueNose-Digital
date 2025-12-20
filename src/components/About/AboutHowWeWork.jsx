@@ -39,7 +39,7 @@ export default function AboutHowWeWork() {
           Step 01
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Deep Brand Understanding
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -55,7 +55,7 @@ export default function AboutHowWeWork() {
             "Brand Audit"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -71,7 +71,7 @@ export default function AboutHowWeWork() {
           Step 02
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
          Communication & Strategy Framework
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -88,7 +88,7 @@ export default function AboutHowWeWork() {
             "CTA + Conversion Path"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -122,7 +122,7 @@ export default function AboutHowWeWork() {
           Step 03
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
            Impactful Execution
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -138,7 +138,7 @@ export default function AboutHowWeWork() {
             "Design + Copywriting"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>
@@ -154,7 +154,7 @@ export default function AboutHowWeWork() {
           Step 04
         </div>
 
-        <h3 className="text-3xl font-extrabold text-[#063349] mb-3 mt-3">
+        <h3 className="text-3xl font-extrabold text-[#0E6388] mb-3 mt-3">
           Streamline & Scale Up
         </h3>
         <div className="w-20 h-1 bg-[#0E6388] rounded-full mb-6"></div>
@@ -171,7 +171,7 @@ export default function AboutHowWeWork() {
             "Scale Growth Systems"
           ].map((p, idx) => (
             <li key={idx} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">✔</span> {p}
+              <span className="text-[#0E6388] text-xl">·</span> {p}
             </li>
           ))}
         </ul>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-<footer className="relative bg-white pt-16 pb-10 text-[#063349] border-t border-[#D7E6EF]">
+<footer className="relative bg-white pt-16 pb-2 text-[#063349] border-t border-[#D7E6EF]">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1.4fr] gap-12">
 
         {/* LOGO + ABOUT */}
@@ -62,7 +62,7 @@ export default function Footer() {
 
             <a href="mailto:sales@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition">
               <Mail className="w-5 h-5 text-[#0E6388]" />
-              sales@bluenosemarketing.com
+              info@bluenosemarketing.com
             </a>
 
             <a
@@ -88,17 +88,32 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* COPYRIGHT */}
-      <div className="text-center mt-10 border-t border-[#0E6388]/20 pt-5">
-        <p className="text-[#063349]/60 text-sm">
-          © {new Date().getFullYear()} Bluenose Digital Marketing. All Rights Reserved.
-        </p>
 
-        <div className="flex justify-center gap-6 text-sm mt-2 text-[#063349]/60">
-          <Link to="/terms" className="hover:text-[#0E6388]">Terms & Conditions</Link>
-          <Link to="/privacy" className="hover:text-[#0E6388]">Privacy Policy</Link>
-        </div>
-      </div>
+{/* COPYRIGHT */}
+<div className="mt-10 border-t border-[#0E6388]/20 w-full">
+  <div className="pt-5 px-6 max-w-7xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-[#063349]/60">
+
+      {/* LEFT */}
+      <Link to="/privacy" className="hover:text-[#0E6388]">
+        Privacy Policy
+      </Link>
+
+      {/* CENTER */}
+      <p className="text-center">
+        © {new Date().getFullYear()} Bluenose Digital Marketing. All Rights Reserved.
+      </p>
+
+      {/* RIGHT */}
+      <Link to="/terms" className="hover:text-[#0E6388]">
+        Terms & Conditions
+      </Link>
+
+    </div>
+  </div>
+</div>
+
+
     </footer>
   );
 }

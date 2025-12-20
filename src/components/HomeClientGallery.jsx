@@ -284,9 +284,9 @@ function HorizontalCard({ data, showGrid, clients, openClient, index }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl overflow-hidden shadow-xl"
+  
           >
-            <img src={data.grid} className="w-full h-auto object-cover" />
+            <img src={data.grid} className="w-full  h-40 sm:h-68 md:h-100 object-contain rounded-2xl" />
           </motion.div>
         )}
       </AnimatePresence>
