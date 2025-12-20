@@ -155,9 +155,9 @@ const sendMessage = (e) => {
             {/* LEFT SECTION */}
 <div className="
   p-12 
-  bg-gradient-to-br from-[#0E6388]/5 to-transparent
+  bg-white
   border-r border-[#0E6388]/15
-  flex flex-col justify-center
+
 ">
 
   <div>
@@ -170,7 +170,7 @@ const sendMessage = (e) => {
     </p>
 
     {/* CONTACT DETAILS */}
-    <div className="space-y-5 text-left">
+    <div className="space-y-8 text-left">
 
       <a className="flex items-center gap-4 group">
   <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
@@ -203,8 +203,8 @@ const sendMessage = (e) => {
                       <MapPin className="w-5 h-5 text-[#0E6388]" />
                       </span>
         <span className="text-sm leading-relaxed">
-          19 Alma Crescent,<br />
-          Halifax, Nova Scotia, Canada
+          19 Alma Crescent, Halifax,
+          Nova Scotia, Canada
         </span>
       </div>
     </div>
