@@ -142,61 +142,88 @@ const sendMessage = (e) => {
             variants={fade}
             initial="hidden"
             animate="show"
-            className="grid md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-xl border border-[#DDE8F3] overflow-hidden"
-          >
+            className="
+  grid md:grid-cols-2 gap-0 
+  bg-white
+  rounded-3xl 
+  shadow-[0_20px_60px_rgba(14,99,136,0.15)]
+  border border-[#DDE8F3]
+  overflow-hidden
+">
+
 
             {/* LEFT SECTION */}
-            <div className="bg-white p-10 border-r border-[#DDE8F3] flex flex-col justify-between">
-              <div>
-                <h2 className="text-2xl font-bold text-[#0E3D55] mb-4">Get in Touch</h2>
+<div className="
+  p-12 
+  bg-gradient-to-br from-[#0E6388]/5 to-transparent
+  border-r border-[#0E6388]/15
+  flex flex-col justify-center
+">
 
-                <p className="text-[#0E3D55]/80 leading-relaxed mb-10 text-sm">
-                  Have a project in mind? Let's bring your brand to life.
-                </p>
+  <div>
+    <h2 className="text-3xl font-extrabold text-[#063349] mb-4 leading-tight">
+      Let’s Build Something Powerful
+    </h2>
 
-                <div className="space-y-6 text-left">
-                  {/* EMAIL */}
-                  <a href="mailto:sales@bluenosemarketing.com" className="flex items-center gap-4">
-                    <Mail className="w-6 h-6 text-[#0E3D55]" />
-                    <span className="text-sm text-[#0E3D55]/90">sales@bluenosemarketing.com</span>
-                  </a>
+    <p className="text-[#0E3D55]/80 leading-relaxed mb-8 text-sm">
+      Share your goals with us — our team responds within <span className="font-semibold">24 hours</span>.
+    </p>
 
-                  {/* PHONE */}
-                  <a href="tel:+19027189007" className="flex items-center gap-4">
-                    <Phone className="w-6 h-6 text-[#0E3D55]" />
-                    <span className="text-sm text-[#0E3D55]/90">+1 902-718-9007</span>
-                  </a>
+    {/* CONTACT DETAILS */}
+    <div className="space-y-5 text-left">
 
-                  {/* ADDRESS */}
-                  <a
-                    href="https://maps.google.com/?q=19 Alma Crescent, Halifax, Canada"
-                    target="_blank"
-                    className="flex items-center gap-4"
+      <a className="flex items-center gap-4 group">
+  <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
+    <Mail className="w-5 h-5 text-[#0E6388]" />
+  </span>
+  <span className="text-sm font-medium text-[#063349]">
+    info@bluenosemarketing.com
+  </span>
+</a>
+
+
+      <a
+        href="tel:+19027189007"
+        className="flex items-center gap-4 hover:text-[#0E6388] transition"
                   >
-                    <MapPin className="w-6 h-6 text-[#0E3D55]" />
-                    <span className="text-sm text-[#0E3D55]/90">19 Alma Crescent, Halifax, Canada</span>
-                  </a>
-                </div>
+  <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
+                    
+                      <Phone className="w-5 h-5 text-[#0E6388]" />
+                      </span>
+        <span className="text-sm font-medium">
+          +1 902-718-9007
+        </span>
+      </a>
 
-                {/* SOCIAL ICONS */}
-                <div className="flex gap-4 mt-10">
-                  <Instagram className="w-6 h-6 text-[#0E3D55]" />
-                  <Facebook className="w-6 h-6 text-[#0E3D55]" />
-                  <Linkedin className="w-6 h-6 text-[#0E3D55]" />
-                </div>
-              </div>
+                  <div className="flex items-start gap-4">
+  <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
+                    
+                      <MapPin className="w-5 h-5 text-[#0E6388]" />
+                      </span>
+        <span className="text-sm text-[#0E3D55]/90 leading-relaxed">
+          19 Alma Crescent,<br />
+          Halifax, Nova Scotia, Canada
+        </span>
+      </div>
+    </div>
 
-              {/* MAP — Increased Height */}
-              <div className="mt-10 rounded-xl overflow-hidden shadow-md border border-[#DDE8F3] h-[350px]">
-                <iframe
-                  title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d45405.76519008662!2d-63.6516953!3d44.6612053!3m2!1i1024!2i768!4f13.1!2m1!1sbluenose%20marketing%20halifax%20canada!5e0!3m2!1sen!2sin!4v1764141332327!5m2!1sen!2sin"
-                  className="w-full h-full border-0"
-                  loading="lazy"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
+    {/* SOCIAL */}
+    <div className="flex gap-4 mt-10">
+      <a href="https://www.instagram.com/bluenose_marketing?igsh=MTg5ZjMxdHdyczRtcA%3D%3D" target="_blank" rel="noreferrer">
+        <Instagram className="w-6 h-6 text-[#0E3D55] hover:text-[#0E6388] transition" />
+      </a>
+      <a href="https://www.linkedin.com/company/bluenose-marketing-digital-marketing-agency/" target="_blank" rel="noreferrer">
+        <Linkedin className="w-6 h-6 text-[#0E3D55] hover:text-[#0E6388] transition" />
+      </a>
+    </div>
+
+    {/* TRUST NOTE */}
+    <p className="text-xs text-[#0E3D55]/60 mt-6">
+      Trusted by brands across Canada & beyond.
+    </p>
+  </div>
+</div>
+
 
             {/* RIGHT CONTACT FORM */}
             <div className="p-10 bg-white">

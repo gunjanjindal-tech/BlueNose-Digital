@@ -60,7 +60,7 @@ export default function Footer() {
               +1 902-718-9007
             </a>
 
-            <a href="mailto:sales@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition">
+            <a href="mailto:info@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition">
               <Mail className="w-5 h-5 text-[#0E6388]" />
               info@bluenosemarketing.com
             </a>
