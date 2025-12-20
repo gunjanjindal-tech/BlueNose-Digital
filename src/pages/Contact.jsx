@@ -176,9 +176,11 @@ const sendMessage = (e) => {
   <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
     <Mail className="w-5 h-5 text-[#0E6388]" />
   </span>
-  <span className="text-sm font-medium text-[#063349]">
-    info@bluenosemarketing.com
-  </span>
+    <a href="mailto:info@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition">
+              
+              info@bluenosemarketing.com
+            </a>
+
 </a>
 
 
@@ -200,7 +202,7 @@ const sendMessage = (e) => {
                     
                       <MapPin className="w-5 h-5 text-[#0E6388]" />
                       </span>
-        <span className="text-sm text-[#0E3D55]/90 leading-relaxed">
+        <span className="text-sm leading-relaxed">
           19 Alma Crescent,<br />
           Halifax, Nova Scotia, Canada
         </span>

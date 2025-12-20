@@ -480,21 +480,18 @@ const sendMessage = (e) => {
       value: 480,
       suffix: "+",
       label: "High-impact videos",
-      desc: "UGC • Influencer Marketing",
       iconBg: "from-[#7DD3FC] to-[#0E6388]",
     },
     {
       value: 12.3,
       suffix: "M+",
       label: "Viewers reached",
-      desc: "Content • Ads • Branding",
       iconBg: "from-[#93C5FD] to-[#0E6388]",
     },
     {
       value: 3.4,
       suffix: "M",
       label: "Views on top-performing content",
-      desc: "ROI-driven execution",
       iconBg: "from-[#A5F3FC] to-[#0E6388]",
     },
   ].map((stat, i) => (
