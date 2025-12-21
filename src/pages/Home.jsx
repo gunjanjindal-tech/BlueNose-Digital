@@ -381,34 +381,52 @@ const [activeStat, setActiveStat] = React.useState(0);
 React.useEffect(() => {
   const interval = setInterval(() => {
     setActiveStat((prev) => (prev + 1) % stats.length);
-  }, 10000);
+  }, 4000);
 
   return () => clearInterval(interval);
 }, []);
   
   
-  const sliderRef = useRef(null);
+ const sliderRef = useRef(null);
+const servicesSectionRef = useRef(null);
+const autoSlideRef = useRef(null);
+
 
 useEffect(() => {
   const slider = sliderRef.current;
-  if (!slider) return;
+  const section = servicesSectionRef.current;
+  if (!slider || !section) return;
 
-  const isMobile = window.innerWidth < 768;
-  if (!isMobile) return;
+  if (window.innerWidth >= 768) return; // mobile only
 
-  let index = 0;
-  const cards = slider.children;
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        let index = 0;
+        const cards = slider.children;
 
-  const interval = setInterval(() => {
-    index = (index + 1) % cards.length;
-    cards[index].scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-    });
-  }, 5000);
+        autoSlideRef.current = setInterval(() => {
+          index = (index + 1) % cards.length;
+          cards[index].scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+          });
+        }, 5000);
+      } else {
+        clearInterval(autoSlideRef.current);
+      }
+    },
+    { threshold: 0.5 }
+  );
 
-  return () => clearInterval(interval);
+  observer.observe(section);
+
+  return () => {
+    clearInterval(autoSlideRef.current);
+    observer.disconnect();
+  };
 }, []);
+
 
 
   
@@ -792,7 +810,7 @@ useEffect(() => {
 {/*        WHAT WE OFFER SECTION     */}
 {/* =============================== */}
 
-<section className="py-18 md:py-24 px-6">
+<section ref={servicesSectionRef} className="py-18 md:py-24 px-6">
   <div className="max-w-7xl mx-auto text-center">
     <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
       → Our Services
@@ -972,85 +990,78 @@ useEffect(() => {
 {/*   THE NUMBERS THAT MATTER       */}
 {/* =============================== */}
 <section className="relative py-20 pb-12 px-6 bg-[#1175a0] overflow-hidden">
-
-
   <div className="max-w-7xl mx-auto text-center text-white relative z-10">
+    
     <p className="font-semibold tracking-wide mb-2 opacity-90">
       → Performance Stats
     </p>
 
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-      Impact in
- <span className="text-white/90"> Every Digit</span>
+      Impact in <span className="text-white/90">Every Digit</span>
     </h2>
 
     <p className="text-white/80 text-lg max-w-3xl mx-auto mt-4">
       Powerful insights, measurable growth, and undeniable results for your brand.
-
-            </p>
-            
-            {/* MOBILE — AUTO SLIDER */}
-<div className="sm:hidden mt-14 overflow-hidden">
-  <motion.div
-    key={activeStat}
-    initial={{ opacity: 0, x: 40 }}
-    animate={{ opacity: 1, x: 0 }}
-    exit={{ opacity: 0, x: -40 }}
-    transition={{ duration: 0.8 }}
-    className="
-      rounded-3xl p-10
-      bg-white/15 backdrop-blur-xl
-      border border-white/20
-      shadow-xl text-white
-      text-center
-    "
-  >
-    <h3 className="text-4xl font-extrabold">
-      <SmartCounter value={stats[activeStat].value} />
-    </h3>
-
-    <p className="text-lg mt-2 font-semibold">
-      {stats[activeStat].label}
     </p>
 
-    <p className="text-white/70 text-sm mt-3 leading-relaxed">
-      {stats[activeStat].desc}
-    </p>
-  </motion.div>
-</div>
+    {/* ================= MOBILE ONLY — AUTO SLIDE ================= */}
+    <div className="sm:hidden mt-14 flex justify-center">
+      <motion.div
+        key={activeStat}
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        className="
+          w-full max-w-[320px]
+          rounded-3xl p-8
+          bg-white/15 backdrop-blur-xl
+          border border-white/20
+          shadow-xl text-white
+          text-center
+        "
+      >
+        <h3 className="text-4xl font-extrabold">
+          {stats[activeStat].value}
+        </h3>
 
+        <p className="text-lg mt-2 font-semibold">
+          {stats[activeStat].label}
+        </p>
 
-    {/* DESKTOP — GRID */}
-<div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+        <p className="text-white/70 text-sm mt-3 leading-relaxed">
+          {stats[activeStat].desc}
+        </p>
+      </motion.div>
+    </div>
 
-      {[
-        { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands." },
-        { value: "7K+", label: "Comments & Interactions", desc: " Real engagement, not just likes." },
-        { value: "320%", label: "Avg viewers Lift", desc: "Measurable growth beyond ." },
-        { value: "20+", label: "Content Formats Delivered", desc: "From Reels and Stories to Carousels and Ads ." },
-        { value: "370+", label: "Social Posts Published", desc: "Consistent presence, creative messaging." },
-        { value: "12.3M+", label: "Accounts Reached", desc: "Generated across campaigns and brand content." }
-      ].map((stat, i) => (
+    {/* ================= DESKTOP ONLY — GRID ================= */}
+    <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+      {stats.map((stat, i) => (
         <div
           key={i}
-          className="rounded-3xl p-10 bg-white/15 backdrop-blur-xl border border-white/20 
-                     shadow-xl text-white"
+          className="
+            rounded-3xl p-10
+            bg-white/15 backdrop-blur-xl
+            border border-white/20
+            shadow-xl text-white
+          "
         >
-        <h3 className="text-4xl font-extrabold">
-  <SmartCounter value={stat.value} />
-</h3>
+          <h3 className="text-4xl font-extrabold">
+            <SmartCounter value={stat.value} />
+          </h3>
 
           <p className="text-lg mt-1 font-semibold">{stat.label}</p>
+
           <p className="text-white/70 text-sm mt-3 leading-relaxed">
             {stat.desc}
           </p>
         </div>
       ))}
     </div>
+
   </div>
+</section>
 
-
-        </section>
 
         
         {/* WAVE AT BOTTOM */}
@@ -1079,218 +1090,218 @@ useEffect(() => {
 {/*        HOW WE WORK SECTION       */}
 {/* =============================== */}
 
-<section className="relative overflow-hidden py-16 md:py-20 px-4 sm:px-6">
+{/* ================= MOBILE — HOW WE WORK SLIDER ================= */}
+<section className="sm:hidden py-14 px-4 relative overflow-hidden">
 
-  {/* BACKGROUND BLURS */}
-  <div className="absolute top-10 left-0 w-60 h-60 bg-[#0E6388]/10 rounded-3xl blur-3xl"></div>
+  {/* Header */}
+  <div className="text-center mb-10">
+    <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
+      → Our Process
+    </p>
+
+    <h2 className="text-3xl font-extrabold text-[#063349]">
+      How We <span className="text-[#0E6388]">Work</span>
+    </h2>
+
+    <p className="text-[#063349]/70 mt-3 text-sm leading-relaxed">
+      A simple, structured process that drives real growth.
+    </p>
+  </div>
+
+  {/* Slider */}
+  <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+
+    {[
+      {
+        step: "01",
+        title: "Deep Brand Understanding",
+        img: "/work1.jpg",
+        points: ["12+ Hr Brand Study", "Competitor Mapping", "Brand Audit"],
+      },
+      {
+        step: "02",
+        title: "Strategy Framework",
+        img: "/work2.jpg",
+        points: [
+          "Content Strategy Map",
+          "Channel Funnel Setup",
+          "30-Day Execution Plan",
+        ],
+      },
+      {
+        step: "03",
+        title: "Impactful Execution",
+        img: "/work3.jpg",
+        points: [
+          "UGC + Reels + Graphics",
+          "Brand Storytelling",
+          "Design & Copy",
+        ],
+      },
+      {
+        step: "04",
+        title: "Scale & Optimize",
+        img: "/work4.jpg",
+        points: [
+          "Weekly A/B Testing",
+          "Performance Tracking",
+          "Audience Insights",
+        ],
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="
+          min-w-[88%]
+          snap-center
+          bg-white
+          rounded-3xl
+          shadow-xl
+          overflow-hidden
+        "
+      >
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-full h-[220px] object-cover"
+        />
+
+        <div className="p-6">
+          <span className="inline-block bg-[#0E6388] text-white text-xs font-bold px-4 py-1 rounded-full mb-3">
+            Step {item.step}
+          </span>
+
+          <h3 className="text-xl font-extrabold text-[#0E6388] mb-3">
+            {item.title}
+          </h3>
+
+          <ul className="space-y-2 text-[#063349]/85 text-sm">
+            {item.points.map((p, idx) => (
+              <li key={idx} className="flex gap-2">
+                <span className="text-[#0E6388]">•</span>
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+        
+        {/* ================= DESKTOP / TABLET — HOW WE WORK ================= */}
+<section className="hidden sm:block relative overflow-hidden py-20 px-6">
+
+  {/* Background blurs */}
+  <div className="absolute top-10 left-0 w-64 h-64 bg-[#0E6388]/10 rounded-3xl blur-3xl"></div>
   <div className="absolute bottom-10 right-0 w-72 h-72 bg-[#4EB3D8]/10 rounded-3xl blur-3xl"></div>
 
   <div className="max-w-7xl mx-auto relative z-10">
 
-    {/* HEADER */}
-    <div className="text-center mb-16 md:mb-20">
+    {/* Header */}
+    <div className="text-center mb-20">
       <p className="text-[#0E6388] font-semibold tracking-wide mb-2">
         → Our Process
       </p>
 
-      <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#063349]">
         How We <span className="text-[#0E6388]">Work</span>
       </h2>
 
-      <p className="text-[#063349]/70 mt-4 max-w-4xl mx-auto text-base sm:text-lg leading-relaxed">
-        From discovery to delivery, our step‑by‑step approach ensures your brand grows with confidence.
+      <p className="text-[#063349]/70 mt-4 max-w-3xl mx-auto text-lg">
+        From discovery to delivery, our proven workflow ensures clarity,
+        creativity, and measurable growth.
       </p>
     </div>
 
-    {/* ================= SECTION 1 ================= */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-24">
+    {[
+      {
+        step: "01",
+        title: "Deep Brand Understanding",
+        img: "/work1.jpg",
+        points: ["12+ Hr Brand Study", "Competitor Mapping", "Brand Audit"],
+      },
+      {
+        step: "02",
+        title: "Communication & Strategy Framework",
+        img: "/work2.jpg",
+        points: [
+          "Content Strategy Map",
+          "Channel Funnel Setup",
+          "30-Day Execution Plan",
+          "CTA Path",
+        ],
+        reverse: true,
+      },
+      {
+        step: "03",
+        title: "Impactful Execution",
+        img: "/work3.jpg",
+        points: [
+          "UGC + Reels + Graphics",
+          "Brand Storytelling",
+          "Design & Copywriting",
+        ],
+      },
+      {
+        step: "04",
+        title: "Streamline & Scale Up",
+        img: "/work4.jpg",
+        points: [
+          "Weekly A/B Testing",
+          "Performance Tracking",
+          "Scale Growth Systems",
+        ],
+        reverse: true,
+      },
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="grid md:grid-cols-2 gap-14 items-center mb-24"
+      >
+        {/* IMAGE */}
+        <div
+          className={`relative ${
+            item.reverse ? "md:order-2" : "md:order-1"
+          }`}
+        >
+          <div
+            className={`absolute inset-0 bg-[#0E6388] rounded-3xl ${
+              item.reverse ? "rotate-[4deg]" : "rotate-[-4deg]"
+            }`}
+          ></div>
 
-      {/* IMAGE */}
-      <div className="relative">
-        <div className="absolute -top-4 -left-1 md:-top-6 md:-left-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[-4deg]"></div>
-
-        <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
           <img
-            src="/work1.jpg"
-            alt="Deep Brand Understanding"
-            className="w-full h-[220px] sm:h-[300px] md:h-full object-cover"
+            src={item.img}
+            alt={item.title}
+            className="relative z-10 rounded-3xl shadow-xl object-cover"
           />
         </div>
-      </div>
 
-      {/* TEXT */}
-      <div className="relative">
-        <div className="inline-block md:absolute md:-top-10 left-0 bg-[#0E6388] text-white px-4 py-1.5 rounded-full text-sm md:text-lg font-bold shadow-md mb-4">
-          Step 01
-        </div>
+        {/* TEXT */}
+        <div
+          className={`${item.reverse ? "md:order-1" : "md:order-2"}`}
+        >
+          <span className="inline-block bg-[#0E6388] text-white px-4 py-1.5 rounded-full font-bold mb-4">
+            Step {item.step}
+          </span>
 
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Deep Brand Understanding
-        </h3>
+          <h3 className="text-3xl font-extrabold text-[#0E6388] mb-4">
+            {item.title}
+          </h3>
 
-        <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
-
-        <p className="text-[#063349]/80 leading-relaxed mb-6 text-sm sm:text-[17px]">
-          We decode your brand’s voice, identity and audience to set a solid foundation for growth.
-        </p>
-
-        <ul className="space-y-3 text-[#063349]/90 text-sm sm:text-[15px]">
-          {["12+ Hr Brand Study", "Competitor Mapping", "Brand Audit"].map((item, i) => (
-            <li key={i} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">·</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    {/* ================= SECTION 2 ================= */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-24">
-
-      {/* TEXT */}
-      <div className="relative order-2 md:order-1">
-        <div className="inline-block md:absolute md:-top-10 left-0 bg-[#0E6388] text-white px-4 py-1.5 rounded-full text-sm md:text-lg font-bold shadow-md mb-4">
-          Step 02
-        </div>
-
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Communication & Strategy Framework
-
-        </h3>
-
-        <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
-
-        <p className="text-[#063349]/80 leading-relaxed mb-6 text-sm sm:text-[17px]">
-          A structured roadmap that guides messaging, content pillars and execution.
-        </p>
-
-        <ul className="space-y-3 text-[#063349]/90 text-sm sm:text-[15px]">
-          {[
-            "Content Strategy Map",
-            "Channel Funnel Setup",
-            "30-Day Execution Plan",
-            "CTA + Conversion Path",
-          ].map((item, i) => (
-            <li key={i} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">·</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* IMAGE */}
-      <div className="relative order-1 md:order-2">
-        <div className="absolute -top-4 -right-1 md:-top-6 md:-right-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[4deg]"></div>
-
-        <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
-          <img
-            src="/work2.jpg"
-            alt="Strategy Blueprint"
-            className="w-full h-[220px] sm:h-[300px] md:h-full object-cover"
-          />
+          <ul className="space-y-3 text-[#063349]/85 text-base">
+            {item.points.map((p, idx) => (
+              <li key={idx}>• {p}</li>
+            ))}
+          </ul>
         </div>
       </div>
-    </div>
-
-    {/* ================= SECTION 3 ================= */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-24">
-
-      {/* IMAGE */}
-      <div className="relative">
-        <div className="absolute -top-4 -left-1 md:-top-6 md:-left-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[-4deg]"></div>
-
-        <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
-          <img
-            src="/work3.jpg"
-            alt="Creative Execution"
-            className="w-full h-[220px] sm:h-[300px] md:h-full object-cover"
-          />
-        </div>
-      </div>
-
-      {/* TEXT */}
-      <div className="relative">
-        <div className="inline-block md:absolute md:-top-10 left-0 bg-[#0E6388] text-white px-4 py-1.5 rounded-full text-sm md:text-lg font-bold shadow-md mb-4">
-          Step 03
-        </div>
-
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Impactful Execution
-
-        </h3>
-
-        <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
-
-        <p className="text-[#063349]/80 leading-relaxed mb-6 text-sm sm:text-[17px]">
-          We transform strategy into high-performing content and storytelling.
-        </p>
-
-        <ul className="space-y-3 text-[#063349]/90 text-sm sm:text-[15px]">
-          {["UGC + Reels + Graphics", "Brand Story Elements", "Design + Copywriting"].map(
-            (item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <span className="text-[#0E6388] text-xl">·</span>
-                {item}
-              </li>
-            )
-          )}
-        </ul>
-      </div>
-    </div>
-
-    {/* ================= SECTION 4 ================= */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
-
-      {/* TEXT */}
-      <div className="relative order-2 md:order-1">
-        <div className="inline-block md:absolute md:-top-10 left-0 bg-[#0E6388] text-white px-4 py-1.5 rounded-full text-sm md:text-lg font-bold shadow-md mb-4">
-          Step 04
-        </div>
-
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0E6388] mb-3">
-          Streamline & Scale Up
-
-        </h3>
-
-        <div className="w-16 sm:w-20 h-1 bg-[#0E6388] rounded-full mb-5"></div>
-
-        <p className="text-[#063349]/80 leading-relaxed mb-6 text-sm sm:text-[17px]">
-          We refine, improve and scale winning content for long-term growth.
-        </p>
-
-        <ul className="space-y-3 text-[#063349]/90 text-sm sm:text-[15px]">
-          {[
-            "Weekly A/B Testing",
-            "Performance Tracking",
-            "Audience Insights",
-            "Scale Growth Systems",
-          ].map((item, i) => (
-            <li key={i} className="flex items-center gap-3">
-              <span className="text-[#0E6388] text-xl">·</span>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* IMAGE */}
-      <div className="relative order-1 md:order-2">
-        <div className="absolute -top-4 -right-1 md:-top-6 md:-right-6 w-full h-full bg-[#0E6388] rounded-3xl rotate-[4deg]"></div>
-
-        <div className="relative z-10 overflow-hidden rounded-3xl shadow-xl">
-          <img
-            src="/work4.jpg"
-            alt="Optimize & Scale"
-            className="w-full h-[220px] sm:h-[300px] md:h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-
+    ))}
   </div>
 </section>
+
 
         
 
@@ -1311,35 +1322,55 @@ useEffect(() => {
  <span className="text-[#0E6388]">  Our Work</span>
             </h2>
 
-            {/* CARDS */}
-            <div className="grid md:grid-cols-3 gap-10 mt-16">
-              {[
-                {
-                  title: "Proven Expertise",
-                  desc: "Years of experience and a track record of delivering measurable results across industries.",
-                },
-                {
-                  title: " Reliable Partnerships",
-                  desc: "We build long‑term relationships based on transparency, consistency, and mutual growth..",
-                },
-                {
-                  title: "Data‑Driven Approach",
-                  desc: "Every decision is backed by insights, ensuring strategies that perform and scale effectively.",
-                },
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className="rounded-3xl p-10 bg-white shadow-[0_10px_35px_rgba(0,0,0,0.12)] border border-[#E2EFF7]"
-                >
-                  <h3 className="text-xl font-bold text-[#063349] mb-3">
-                    {card.title}
-                  </h3>
-                  <p className="text-[#063349]/80 text-sm leading-relaxed">
-                    {card.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+         {/* CARDS */}
+<div
+  className="
+    flex md:grid
+    gap-6 md:gap-8
+    mt-12 md:mt-16
+    overflow-x-auto md:overflow-visible
+    snap-x snap-mandatory
+    md:grid-cols-3
+    scrollbar-hide
+  "
+>
+  {[
+    {
+      title: "Proven Expertise",
+      desc: "Years of experience and a track record of delivering measurable results across industries.",
+    },
+    {
+      title: "Reliable Partnerships",
+      desc: "We build long-term relationships based on transparency, consistency, and mutual growth.",
+    },
+    {
+      title: "Data-Driven Approach",
+      desc: "Every decision is backed by insights, ensuring strategies that perform and scale effectively.",
+    },
+  ].map((card, i) => (
+    <div
+      key={i}
+      className="
+        min-w-[90%] sm:min-w-[70%] md:min-w-0
+        snap-center
+        rounded-3xl p-8 md:p-10
+        bg-white
+        md:shadow-[0_8px_25px_rgba(0,0,0,0.1)]
+        border border-[#E2EFF7]
+        transition-transform duration-300
+      "
+    >
+      <h3 className="text-xl font-bold text-[#063349] mb-3">
+        {card.title}
+      </h3>
+
+      <p className="text-[#063349]/80 text-sm leading-relaxed">
+        {card.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
           </div>
         </section>
 
