@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -385,6 +385,31 @@ React.useEffect(() => {
 
   return () => clearInterval(interval);
 }, []);
+  
+  
+  const sliderRef = useRef(null);
+
+useEffect(() => {
+  const slider = sliderRef.current;
+  if (!slider) return;
+
+  const isMobile = window.innerWidth < 768;
+  if (!isMobile) return;
+
+  let index = 0;
+  const cards = slider.children;
+
+  const interval = setInterval(() => {
+    index = (index + 1) % cards.length;
+    cards[index].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+    });
+  }, 5000);
+
+  return () => clearInterval(interval);
+}, []);
+
 
   
   return (
@@ -557,28 +582,16 @@ React.useEffect(() => {
     </div>
 
 {/* STATS */}
-<div className="space-y-8 z-20">
+<div className="space-y-6 sm:space-y-8 z-20">
   {[
-    {
-      value: 480,
-      suffix: "+",
-      label: "High-impact videos",
-    },
-    {
-      value: 12.3,
-      suffix: "M+",
-      label: "Viewers reached",
-    },
-    {
-      value: 3.4,
-      suffix: "M",
-      label: "Views on top-performing content",
-    },
+    { value: 480, suffix: "+", label: "High-impact videos" },
+    { value: 12.3, suffix: "M+", label: "Viewers reached" },
+    { value: 3.4, suffix: "M", label: "Views on top-performing content" },
   ].map((stat, i) => (
     <div
       key={i}
       className="
-        flex items-center gap-5
+        flex items-center
         p-4 sm:p-5 rounded-3xl
         bg-white/60 backdrop-blur-xl
         shadow-[0_6px_24px_rgba(0,0,0,0.10)]
@@ -588,23 +601,23 @@ React.useEffect(() => {
       {/* LEFT — NUMBER */}
       <div
         className="
-          flex items-baseline
+          basis-[50%] sm:basis-[45%] lg:basis-[45%]
+          flex items-baseline gap-1
           text-[#0E6388] font-extrabold
           tabular-nums leading-none
-          min-w-[40px] p-1 
         "
       >
-        <span className="text-4xl sm:text-5xl leading-none">
+        <span className="text-3xl sm:text-4xl lg:text-5xl">
           <CounterHero target={stat.value} />
         </span>
-        <span className="text-lg sm:text-xl leading-none">
+        <span className="text-base sm:text-lg lg:text-xl">
           {stat.suffix}
         </span>
       </div>
 
       {/* RIGHT — TEXT */}
-      <div className="flex-1 min-w-0">
-        <p className="text-[#063349] font-semibold text-sm sm:text-base ">
+      <div className="basis-[50%] sm:basis-[55%] lg:basis-[55%]">
+        <p className="text-[#063349] font-semibold text-sm sm:text-base">
           {stat.label}
         </p>
       </div>
@@ -786,17 +799,27 @@ React.useEffect(() => {
     </p>
 
     <h2 className="text-3xl md:text-5xl font-extrabold text-[#063349]">
-     What We Bring
- <span className="text-[#0E6388]">  to the Table</span>
+      What We Bring
+      <span className="text-[#0E6388]"> to the Table</span>
     </h2>
 
     <p className="text-[#063349]/80 text-lg max-w-2xl mx-auto mt-4">
       Innovation, design, and marketing that work together for you.
-
     </p>
 
-    {/* SERVICES GRID */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
+    {/* SERVICES */}
+    <div
+      ref={sliderRef}
+      className="
+        flex md:grid
+        gap-6 md:gap-12
+        mt-16
+        overflow-x-auto md:overflow-visible
+        snap-x snap-mandatory
+        md:grid-cols-2 lg:grid-cols-3
+        scrollbar-hide
+      "
+    >
       {[
         {
           title: "Social Media Marketing",
@@ -810,8 +833,8 @@ React.useEffect(() => {
           points: [
             "Content calendars & reel planning",
             "Brand awareness & engagement growth",
-            "Community building & retention"
-          ]
+            "Community building & retention",
+          ],
         },
         {
           title: "Branding & Identity",
@@ -824,8 +847,8 @@ React.useEffect(() => {
           points: [
             "Brand strategy & storytelling",
             "Logo, typography & color palette",
-            "Brand guidelines documentation"
-          ]
+            "Brand guidelines documentation",
+          ],
         },
         {
           title: "Influencer Marketing",
@@ -838,8 +861,8 @@ React.useEffect(() => {
           points: [
             "Campaign influencer matchmaking",
             "Negotiation & content approvals",
-            "Performance tracking & reporting"
-          ]
+            "Performance tracking & reporting",
+          ],
         },
         {
           title: "Video Editing",
@@ -853,8 +876,8 @@ React.useEffect(() => {
           points: [
             "Short-form reels with motion graphics",
             "UGC editing for ads",
-            "High-retention storytelling edits"
-          ]
+            "High-retention storytelling edits",
+          ],
         },
         {
           title: "UGC Creation",
@@ -868,8 +891,8 @@ React.useEffect(() => {
           points: [
             "Product demo & review videos",
             "Story-style testimonial videos",
-            "Scripts + shooting guidance"
-          ]
+            "Scripts + shooting guidance",
+          ],
         },
         {
           title: "Photography & Shoots",
@@ -884,13 +907,15 @@ React.useEffect(() => {
           points: [
             "Creative shot planning",
             "Lifestyle + product photography",
-            "Studio & outdoor shoots"
-          ]
+            "Studio & outdoor shoots",
+          ],
         },
       ].map((service, idx) => (
         <div
           key={idx}
           className="
+            min-w-[85%] sm:min-w-[70%] md:min-w-0
+            snap-center
             rounded-3xl p-10
             bg-white/10 backdrop-blur-xl
             shadow-[0_12px_35px_rgba(0,0,0,0.10)]
@@ -900,26 +925,21 @@ React.useEffect(() => {
             hover:-translate-y-2 transition-all duration-300
             min-h-[400px]
           "
-        style={{
-  background: "rgb(14, 99, 136)"
-}}
+          style={{ background: "rgb(14, 99, 136)" }}
         >
-          {/* ICON BOX */}
-          <div className=" w-16 h-16 mx-auto rounded-2xl bg-white/20 backdrop-blur flex items-center justify-center mb-6">
+          {/* ICON */}
+          <div className="w-16 h-16 mx-auto rounded-2xl bg-white/20 flex items-center justify-center mb-6">
             {service.icon}
           </div>
 
-          {/* TITLE */}
           <h3 className="text-xl font-extrabold mb-3 text-center">
             {service.title}
           </h3>
 
-          {/* DESCRIPTION */}
           <p className="text-white/85 text-sm text-center">
             {service.desc}
           </p>
 
-          {/* BULLET POINTS */}
           <ul className="text-white/80 text-sm mt-4 space-y-1 text-left mx-auto w-[85%]">
             {service.points.map((p, i) => (
               <li key={i} className="flex gap-2">
@@ -928,31 +948,18 @@ React.useEffect(() => {
             ))}
           </ul>
 
-          {/* CTA BUTTON */}
-    <a
-  href="/contact"
-  className="
-    mt-6 w-full py-3 rounded-full text-center font-semibold relative overflow-hidden
-    bg-white text-[#063349] transition-all duration-300
-  "
->
-  <span className="relative z-10">Start Project →</span>
-
-  {/* SLIDE BG */}
-  <span
-    className="
-      absolute inset-0 bg-gradient-to-r from-[#0E6388] to-[#4EB3D8]
-      translate-x-[-100%] transition-transform duration-300
-      group-hover:translate-x-0
-    "
-  ></span>
-</a>
-
+          <a
+            href="/contact"
+            className="mt-6 w-full py-3 rounded-full text-center font-semibold bg-white text-[#063349]"
+          >
+            Start Project →
+          </a>
         </div>
       ))}
     </div>
   </div>
 </section>
+
 
 
 
