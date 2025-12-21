@@ -134,6 +134,14 @@ export default function WorkGallery() {
   const openClient = (i) => {
     setIndex(i);
   };
+  const prevClient = () => {
+  setIndex((prev) => (prev === 0 ? clients.length - 1 : prev - 1));
+};
+
+const nextClient = () => {
+  setIndex((prev) => (prev === clients.length - 1 ? 0 : prev + 1));
+};
+
 
 
   return (
@@ -154,21 +162,32 @@ export default function WorkGallery() {
 
 
 {/* CLIENT SELECTOR — SHOW ONLY ON SMALL SCREENS (≤763px) */}
-<div className="flex flex-wrap gap-3 mb-6 col-span-2 justify-center md:hidden">
-  {clients.map((c, i) => (
-    <button
-      key={i}
-      onClick={() => openClient(i)}
-      className={`px-4 py-1.5 text-sm rounded-full border transition ${
-        i === index
-          ? "bg-white text-[#063349] border-black shadow-sm"
-          : "bg-transparent text-black border-black/40 hover:bg-white/20"
-      }`}
-    >
-      {c.name}
-    </button>
-  ))}
+{/* MOBILE CLIENT SLIDER */}
+<div className="md:hidden flex items-center justify-center gap-4 mb-6">
+  
+  {/* LEFT ARROW */}
+  <button
+    onClick={prevClient}
+    className="h-9 w-9 flex items-center justify-center rounded-full border border-[#063349] text-[#063349]"
+  >
+    ←
+  </button>
+
+  {/* CLIENT NAME */}
+  <div className="px-4 py-2 rounded-full border border-[#063349] text-[#063349] text-sm font-semibold text-center max-w-[220px] truncate">
+    {clients[index].name}
+  </div>
+
+  {/* RIGHT ARROW */}
+  <button
+    onClick={nextClient}
+    className="h-9 w-9 flex items-center justify-center rounded-full border border-[#063349] text-[#063349]"
+  >
+    →
+  </button>
+
 </div>
+
 
 
 
@@ -189,6 +208,12 @@ export default function WorkGallery() {
 // ---------------- HORIZONTAL CARD ----------------
 function HorizontalCard({ data, showGrid, clients, openClient, index }) {
   const dark = isDarkColor(data.bg);
+const forceWhiteText = [
+  "Nayya Pizza & Grill",
+  "Beaver Bank Station",
+  "Rivaaj Resto-Bar",
+  "Desi Garden",
+].includes(data.name);
 
   return (
     <motion.div
@@ -236,23 +261,47 @@ function HorizontalCard({ data, showGrid, clients, openClient, index }) {
 
       {/* LEFT TEXT CONTENT */}
       <div className="flex flex-col justify-center">
-        <h3 className="text-3xl font-extrabold mb-2" style={{ color: dark ? "#fff" : "#063349" }}>
+      <h3
+  className="text-4xl font-extrabold mb-2"
+  style={{ color: dark || forceWhiteText ? "#fff" : "#063349" }}
+        >
           {data.name}
-        </h3>
+</h3>
 
-        <p className="text-lg mb-6" style={{ color: dark ? "#fff" : "#063349" }}>
+     <p
+  className="text-lg mb-6"
+  style={{ color: dark || forceWhiteText ? "#fff" : "#063349" }}
+        >
           {data.desc}
-        </p>
+</p>
 
-        <div className="grid grid-cols-2 gap-4 mb-6 max-w-md">
+        <div className="grid grid-cols-2 gap-4 mb-6 max-w-2xl">
           {data.stats.map((item, i) => (
-            <div
-              key={i}
-              className="bg-white text-black rounded-xl p-4 text-center font-semibold shadow"
-            >
-              {item}
-            </div>
-          ))}
+<div
+  key={i}
+  className="bg-white text-black rounded-2xl p-4 sm:p-6 text-center shadow flex flex-col  justify-center items-center" 
+>
+  <p className="sm:text-2xl md:text-4xl font-extrabold leading-tight tracking-wide">
+    {item.split(" ")[0]}
+  </p>
+
+  <p className="
+    text-sm
+    sm:text-base
+    font-semibold
+    opacity-80
+    mt-1
+    leading-snug
+    tracking-normal
+    break-words
+    
+  ">
+    {item.split(" ").slice(1).join(" ")}
+  </p>
+</div>
+
+
+          ))} 
         </div>
 
         <Link to={data.link}>
@@ -273,8 +322,8 @@ function HorizontalCard({ data, showGrid, clients, openClient, index }) {
             transition={{ duration: 0.6 }}
             className="flex justify-center items-center"
           >
-            <div className="h-68 w-68 bg-white/40 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
-              <img src={data.logo} className="h-62 object-cover" />
+            <div className="h-78 w-78 bg-white/40 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-lg">
+              <img src={data.logo} className="h-72 object-cover" />
             </div>
           </motion.div>
         ) : (
@@ -286,7 +335,7 @@ function HorizontalCard({ data, showGrid, clients, openClient, index }) {
             transition={{ duration: 0.6 }}
   
           >
-            <img src={data.grid} className="w-full  h-40 sm:h-68 md:h-100 object-contain rounded-2xl" />
+            <img src={data.grid} className="w-full h-40 sm:h-68 md:h-120 object-contain rounded-2xl" />
           </motion.div>
         )}
       </AnimatePresence>

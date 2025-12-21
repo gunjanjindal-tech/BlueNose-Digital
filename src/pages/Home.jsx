@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -43,11 +44,12 @@ const logos = [
   "/client/logo-16.png",
 ];
 
-function Counter({ target, duration = 1200 }) {
+function Counter({ target, duration = 100 }) {
   const [count, setCount] = useState(0);
+  const { ref, inView } = useInView({ once: true, margin: "-50px" });
 
   useEffect(() => {
-    if (typeof target !== "number") return;
+    if (!inView || typeof target !== "number") return;
 
     let start = 0;
     const increment = target / (duration / 16);
@@ -64,18 +66,88 @@ function Counter({ target, duration = 1200 }) {
     }, 16);
 
     return () => clearInterval(timer);
-  }, [target, duration]);
+  }, [inView, target, duration]);
 
-  // ✅ format decimals cleanly
   const formatted =
     target % 1 !== 0 ? count.toFixed(1) : Math.floor(count);
 
-  return <>{formatted}</>;
+  return <span ref={ref}>{formatted}</span>;
 }
+
+function CounterHero({ target, duration = 1200 }) {
+  const [count, setCount] = React.useState(0);
+  const ref = React.useRef(null);
+  const startedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !startedRef.current) {
+          startedRef.current = true;
+          startCounting();
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const startCounting = () => {
+    let start = 0;
+    const step = target / (duration / 16);
+
+    const timer = setInterval(() => {
+      start += step;
+
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(start);
+      }
+    }, 16);
+  };
+
+  const isDecimal = target % 1 !== 0;
+
+  return (
+    <span ref={ref} className="tabular-nums">
+      {isDecimal ? count.toFixed(1) : Math.round(count)}
+    </span>
+  );
+}
+
+
 
 export default function Home() {
 
-     const [activeService, setActiveService] = useState("SMM");
+    const services = [
+    "SMM",
+    "Branding",
+    "Influencer Marketing",
+    "Video Editing",
+    "UGC",
+    "Photography",
+  ];
+
+
+  const [activeService, setActiveService] = useState("SMM");
+  const serviceIndex = services.indexOf(activeService);
+
+const prevService = () => {
+  const prev =
+    serviceIndex === 0 ? services.length - 1 : serviceIndex - 1;
+  setActiveService(services[prev]);
+};
+
+const nextService = () => {
+  const next =
+    serviceIndex === services.length - 1 ? 0 : serviceIndex + 1;
+  setActiveService(services[next]);
+};
+
   const [soundOn, setSoundOn] = useState({});
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState("right");
@@ -92,14 +164,6 @@ export default function Home() {
 
 
 
-  const services = [
-    "SMM",
-    "Branding",
-    "Influencer Marketing",
-    "Video Editing",
-    "UGC",
-    "Photography",
-  ];
 
   const serviceVideos = {
     SMM: [
@@ -297,11 +361,30 @@ const sendMessage = (e) => {
     .then(() => {
       setSuccess("Thanks! We will contact you shortly.");
       setForm({ name: "", email: "", phone: "", service: "", message: "" });
-      setTimeout(() => setSuccess(""), 5000);
+      setTimeout(() => setSuccess(""), 3000);
     })
     .catch(() => alert("Unable to send message. Try again later."))
     .finally(() => setLoading(false));
 };
+  
+  const stats = [
+  { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands." },
+  { value: "7K+", label: "Comments & Interactions", desc: "Real engagement, not just likes." },
+  { value: "320%", label: "Avg viewers Lift", desc: "Measurable growth beyond." },
+  { value: "20+", label: "Content Formats Delivered", desc: "From Reels to Ads." },
+  { value: "370+", label: "Social Posts Published", desc: "Consistent creative presence." },
+  { value: "12.3M+", label: "Accounts Reached", desc: "Across campaigns & content." },
+];
+
+const [activeStat, setActiveStat] = React.useState(0);
+
+React.useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveStat((prev) => (prev + 1) % stats.length);
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
 
   
   return (
@@ -473,69 +556,62 @@ const sendMessage = (e) => {
       </div>
     </div>
 
-    {/* STATS */}
+{/* STATS */}
 <div className="space-y-8 z-20">
   {[
     {
       value: 480,
       suffix: "+",
       label: "High-impact videos",
-      iconBg: "from-[#7DD3FC] to-[#0E6388]",
     },
     {
       value: 12.3,
       suffix: "M+",
       label: "Viewers reached",
-      iconBg: "from-[#93C5FD] to-[#0E6388]",
     },
     {
       value: 3.4,
       suffix: "M",
       label: "Views on top-performing content",
-      iconBg: "from-[#A5F3FC] to-[#0E6388]",
     },
   ].map((stat, i) => (
     <div
       key={i}
       className="
-        flex items-center gap-4 p-5 rounded-3xl
+        flex items-center gap-5
+        p-4 sm:p-5 rounded-3xl
         bg-white/60 backdrop-blur-xl
-        shadow-[0_8px_30px_rgba(0,0,0,0.10)]
+        shadow-[0_6px_24px_rgba(0,0,0,0.10)]
         border border-white/40
-        hover:shadow-[0_12px_45px_rgba(0,0,0,0.15)]
-        transition-all
       "
     >
-      {/* VALUE ICON */}
+      {/* LEFT — NUMBER */}
       <div
-        className={`
-          min-w-[76px] h-14 rounded-2xl flex items-center justify-center
-          bg-gradient-to-br ${stat.iconBg}
-          text-white text-xl font-extrabold
-        `}
+        className="
+          flex items-baseline
+          text-[#0E6388] font-extrabold
+          tabular-nums leading-none
+          min-w-[40px] p-1 
+        "
       >
-        {stat.value}
-        {stat.suffix}
+        <span className="text-4xl sm:text-5xl leading-none">
+          <CounterHero target={stat.value} />
+        </span>
+        <span className="text-lg sm:text-xl leading-none">
+          {stat.suffix}
+        </span>
       </div>
 
-      {/* TEXT */}
-      <div className="flex flex-col">
-        <h3 className="text-3xl font-extrabold text-[#063349] flex items-baseline">
-          <Counter target={stat.value} />
-          <span className="ml-1 text-xl">{stat.suffix}</span>
-        </h3>
-
-        <p className="text-[#063349] font-semibold text-sm">
+      {/* RIGHT — TEXT */}
+      <div className="flex-1 min-w-0">
+        <p className="text-[#063349] font-semibold text-sm sm:text-base ">
           {stat.label}
-        </p>
-
-        <p className="text-[#063349]/60 text-xs">
-          {stat.desc}
         </p>
       </div>
     </div>
   ))}
 </div>
+
 
 
   </div>
@@ -580,7 +656,7 @@ const sendMessage = (e) => {
     </p>
 
     {/* SERVICE FILTERS */}
-    <div className="flex justify-center gap-4 md:gap-6 mt-12 mb-12 flex-wrap">
+    <div className="hidden md:flex justify-center gap-4 md:gap-6 mt-12 mb-12 flex-wrap">
       {services.map((srv) => (
         <button
           key={srv}
@@ -607,7 +683,43 @@ const sendMessage = (e) => {
         </button>
       ))}
     </div>
-  </div>
+          </div>
+          
+          {/* MOBILE SERVICE SLIDER */}
+<div className="md:hidden flex items-center justify-center gap-4 mt-10 mb-8">
+
+  {/* LEFT */}
+  <button
+    onClick={prevService}
+    className="h-9 w-9 flex items-center justify-center rounded-full 
+               border border-white text-white"
+  >
+    ←
+  </button>
+
+  {/* ACTIVE SERVICE */}
+  <motion.div
+    key={activeService}
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.25 }}
+    className="px-5 py-2 rounded-full bg-white text-[#063349]
+               text-sm font-semibold text-center min-w-[180px]"
+  >
+    {activeService}
+  </motion.div>
+
+  {/* RIGHT */}
+  <button
+    onClick={nextService}
+    className="h-9 w-9 flex items-center justify-center rounded-full 
+               border border-white text-white"
+  >
+    →
+  </button>
+
+</div>
+
 
   {/* VIDEO GRID */}
   <div
@@ -868,9 +980,42 @@ const sendMessage = (e) => {
     <p className="text-white/80 text-lg max-w-3xl mx-auto mt-4">
       Powerful insights, measurable growth, and undeniable results for your brand.
 
+            </p>
+            
+            {/* MOBILE — AUTO SLIDER */}
+<div className="sm:hidden mt-14 overflow-hidden">
+  <motion.div
+    key={activeStat}
+    initial={{ opacity: 0, x: 40 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -40 }}
+    transition={{ duration: 0.8 }}
+    className="
+      rounded-3xl p-10
+      bg-white/15 backdrop-blur-xl
+      border border-white/20
+      shadow-xl text-white
+      text-center
+    "
+  >
+    <h3 className="text-4xl font-extrabold">
+      <SmartCounter value={stats[activeStat].value} />
+    </h3>
+
+    <p className="text-lg mt-2 font-semibold">
+      {stats[activeStat].label}
     </p>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+    <p className="text-white/70 text-sm mt-3 leading-relaxed">
+      {stats[activeStat].desc}
+    </p>
+  </motion.div>
+</div>
+
+
+    {/* DESKTOP — GRID */}
+<div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+
       {[
         { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands." },
         { value: "7K+", label: "Comments & Interactions", desc: " Real engagement, not just likes." },
@@ -1379,46 +1524,20 @@ const sendMessage = (e) => {
       {/* SERVICE */}
       <div>
         <label className="text-white text-sm">Service Needed *</label>
-  <select
-  name="service"
-  value={form.service}
-  onChange={handleChange}
-  className="
-    mt-1 w-full p-3 rounded-xl 
-    bg-white/20 text-white 
-    outline-none
-    focus:bg-white/30
-  "
->
-  <option value="" className="text-gray-800 bg-white">
-    Select a service
-  </option>
-
-  <option value="Social Media Marketing" className="text-gray-800 bg-white">
-    Social Media Marketing
-  </option>
-
-  <option value="Branding" className="text-gray-800 bg-white">
-    Branding
-  </option>
-
-  <option value="Influencer Marketing" className="text-gray-800 bg-white">
-    Influencer Marketing
-  </option>
-
-  <option value="Video Editing" className="text-gray-800 bg-white">
-    Video Editing
-  </option>
-
-  <option value="UGC Content" className="text-gray-800 bg-white">
-    UGC Content
-  </option>
-
-  <option value="Photography" className="text-gray-800 bg-white">
-    Photography
-  </option>
-</select>
-
+        <select
+          name="service"
+          value={form.service}
+          onChange={handleChange}
+          className="mt-1 w-full p-3 rounded-xl bg-white/20 text-white/90 outline-none"
+        >
+          <option value="">Select a service</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="Branding">Branding</option>
+          <option value="Influencer Marketing">Influencer Marketing</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="UGC Content">UGC Content</option>
+          <option value="Photography">Photography</option>
+        </select>
         {errors.service && <p className="text-red-300 text-xs">{errors.service}</p>}
       </div>
 

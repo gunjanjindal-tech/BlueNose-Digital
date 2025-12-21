@@ -3,10 +3,10 @@ import Marquee from "react-fast-marquee";
 
 export default function ClientsMarquee() {
   const logos = [
-    "/client/logo-1.png","/client/logo-2.png","/client/logo-3.png","/client/logo-4.png",
+    "/client/nayya-logo-2.png","/client/logo-2.png","/client/logo-3.png","/client/adda-2.png",
     "/client/logo-5.png","/client/logo-6.png","/client/logo-7.png","/client/logo-8.png",
     "/client/logo-9.png","/client/logo-10.png","/client/logo-11.png","/client/logo-12.png",
-    "/client/logo-13.png","/client/logo-14.png","/client/logo-15.png","/client/logo-16.png",
+    "/client/logo-13.png","/client/logo-14.png","/client/logo-15.png","/client/besharam-logo-2.jpeg",
   ];
 
   return (

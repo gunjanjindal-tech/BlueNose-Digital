@@ -4,6 +4,7 @@ import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 import { AnimatePresence, motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 import {
   TrendingUp,
@@ -47,6 +48,9 @@ export default function Hearthstone() {
   }, []);
 
   // Scroll detection for sidebar
+  useEffect(() => {
+  document.title = "Hearthstone Case Study | Bluenose Digital Marketing";
+}, []);
   useEffect(() => {
     const obsList = [];
     sections.forEach((sec) => {
@@ -158,6 +162,7 @@ export default function Hearthstone() {
             />
           </aside>
         </div>
+        
 
         {/* RIGHT CONTENT */}
         <div className="space-y-16 max-w-4xl w-full mx-auto">
@@ -326,7 +331,7 @@ export default function Hearthstone() {
 }
 
 /* ============================================================
-   CASE STUDY CARD (Animated) — SAME AS BEAVER
+   CASE STUDY CARD (SAME AS BEAVER)
 ============================================================ */
 
 function CaseCard({ background, logo, grid, title, stats, link, dark }) {
@@ -340,7 +345,7 @@ function CaseCard({ background, logo, grid, title, stats, link, dark }) {
   return (
     <Link to={link}>
       <div
-        className={`px-6 py-8 rounded-2xl shadow-lg hover:scale-[1.02] transition ${
+        className={`px-6 py-8 rounded-2xl text-center shadow-lg w-full max-w-[420px] mx-auto hover:scale-[1.02] transition ${
           dark ? "text-white" : "text-black"
         }`}
         style={{ background }}
@@ -379,7 +384,7 @@ function CaseCard({ background, logo, grid, title, stats, link, dark }) {
           {stats.map(([v, t], i) => (
             <div
               key={i}
-              className={`p-4 rounded-lg shadow text-center ${
+              className={`p-4 rounded-lg text-center shadow ${
                 dark ? "bg-white/20 text-white" : "bg-white text-black"
               }`}
             >
@@ -392,3 +397,4 @@ function CaseCard({ background, logo, grid, title, stats, link, dark }) {
     </Link>
   );
 }
+
