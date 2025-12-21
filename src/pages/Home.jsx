@@ -381,7 +381,7 @@ const [activeStat, setActiveStat] = React.useState(0);
 React.useEffect(() => {
   const interval = setInterval(() => {
     setActiveStat((prev) => (prev + 1) % stats.length);
-  }, 1000);
+  }, 10000);
 
   return () => clearInterval(interval);
 }, []);
