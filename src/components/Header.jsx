@@ -60,7 +60,7 @@ export default function Header() {
         scrolled ? "bg-white shadow-lg border-b border-[#E5F1F8]" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto sm:px-6 md:px-0 py-3 flex justify-between items-center">
 
         {/* LOGO */}
         <Link to="/">
