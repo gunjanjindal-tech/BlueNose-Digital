@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Counter from "../../components/Counter";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 // ICONS

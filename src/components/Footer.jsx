@@ -92,10 +92,20 @@ export default function Footer() {
 {/* COPYRIGHT */}
 <div className="mt-10 border-t border-[#0E6388]/20 w-full">
   <div className="pt-5 px-6 max-w-7xl mx-auto">
-    <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-[#063349]/60">
 
+    <div
+      className="
+        flex flex-col
+        sm:flex-row
+        items-center
+        justify-between
+        gap-3
+        text-sm
+        text-[#063349]/60
+      "
+    >
       {/* LEFT */}
-      <Link to="/privacy" className="hover:text-[#0E6388]">
+      <Link to="/privacy" className="hover:text-[#0E6388] transition">
         Privacy Policy
       </Link>
 
@@ -105,13 +115,14 @@ export default function Footer() {
       </p>
 
       {/* RIGHT */}
-      <Link to="/terms" className="hover:text-[#0E6388]">
+      <Link to="/terms" className="hover:text-[#0E6388] transition">
         Terms & Conditions
       </Link>
-
     </div>
+
   </div>
 </div>
+
 
 
     </footer>

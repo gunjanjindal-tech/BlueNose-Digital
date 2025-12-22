@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 import Testimonials from "../../components/DetailedServiceComponents/Testimonials";
 import ServiceClientLogos from "../../components/DetailedServiceComponents/ServiceClientLogos";
 import PlatformSlider from "../../components/PlatformSlider";

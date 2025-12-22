@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Phone, Mail, MapPin, Send, Instagram, Facebook, Linkedin } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 export default function Contact() {
   const fade = {

@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import AboutHowWeWork from "../components/About/AboutHowWeWork";
 import CTAHome from "../components/CTAHome";
 import Timeline from "../components/About/Timeline";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 // ICONS
 const icons = {

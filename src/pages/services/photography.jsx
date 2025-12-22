@@ -6,7 +6,8 @@ import PlatformSlider from "../../components/PlatformSlider";
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 export default function PhotographyShoots() {
 

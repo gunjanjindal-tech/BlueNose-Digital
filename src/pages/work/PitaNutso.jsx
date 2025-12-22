@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 import Counter from "../../components/Counter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 import {
   TrendingUp,

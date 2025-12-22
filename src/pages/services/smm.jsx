@@ -7,7 +7,8 @@ import ReviewSummaryCard from "../../components/DetailedServiceComponents/Review
 import { Link } from "react-router-dom";
 import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
 import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 export default function SMM() {
   const smmVideos = [

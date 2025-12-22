@@ -1,48 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ClientLogos from "../components/ClientLogos";
 import emailjs from "@emailjs/browser"; 
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import HomeClientGallery from "../components/HomeClientGallery.jsx";
 import SmartCounter from "../components/SmartCounter.jsx";
 
-// Premium SVG Icons
-const CheckIcon = () => (
-  <svg
-    width="22"
-    height="22"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    className="text-[#0E6388]"
-  >
-    <path d="M5 13l4 4L19 7" />
-  </svg>
-);
-
-
-
-const logos = [
-  "/client/logo-1.png",
-  "/client/logo-2.png",
-  "/client/logo-3.png",
-  "/client/logo-4.png",
-  "/client/logo-5.png",
-  "/client/logo-6.png",
-  "/client/logo-7.png",
-  "/client/logo-8.png",
-  "/client/logo-9.png",
-  "/client/logo-10.png",
-  "/client/logo-11.png",
-  "/client/logo-12.png",
-  "/client/logo-13.png",
-  "/client/logo-14.png",
-  "/client/logo-15.png",
-  "/client/logo-16.png",
-];
 
 function Counter({ target, duration = 100 }) {
   const [count, setCount] = useState(0);
@@ -155,14 +120,6 @@ const nextService = () => {
   const toggleSound = (index) => {
     setSoundOn((prev) => ({ ...prev, [index]: !prev[index] }));
   };
-
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-
 
 
   const serviceVideos = {
@@ -592,7 +549,8 @@ useEffect(() => {
   autoPlay
   loop
   muted
-  playsInline
+                  playsInline
+                  loading="lazy"
   className="w-full h-full object-cover"
 />
 
@@ -1618,122 +1576,5 @@ useEffect(() => {
         {/* =============================== */}
       </div>
     </>
-  );
-}
-
-// INTERNAL COMPONENT (no export)
-function HowWeWorkSlider() {
-  const steps = [
-    {
-      num: "01",
-      title: "Deep Brand Understanding",
-      points: [
-        "12+ Hr Brand Study",
-        "Competitor Mapping",
-        "Tone & Persona Discovery",
-        "Brand Audit",
-      ],
-    },
-    {
-      num: "02",
-      title: "Messaging & Strategy Blueprint",
-      points: [
-        "Content Strategy Map",
-        "Channel Funnel Setup",
-        "30-Day Execution Plan",
-        "CTA + Conversion Path",
-      ],
-    },
-    {
-      num: "03",
-      title: "Creative Execution",
-      points: [
-        "High-Quality Creatives",
-        "UGC + Reels + Graphics",
-        "Brand Story Elements",
-        "Design + Copywriting",
-      ],
-    },
-    {
-      num: "04",
-      title: "Optimize & Scale",
-      points: [
-        "Weekly A/B Testing",
-        "Performance Tracking",
-        "Audience Insights",
-        "Scale Growth Systems",
-      ],
-    },
-  ];
-
-  const [current, setCurrent] = React.useState(0);
-
-  const next = () => setCurrent((prev) => (prev + 1) % steps.length);
-  const prev = () =>
-    setCurrent((prev) => (prev - 1 + steps.length) % steps.length);
-
-  return (
-    <div className="max-w-6xl mx-auto mt-16 relative">
-      {/* Arrows */}
-      <div className="absolute -left-4 top-1/2 -translate-y-1/2 hidden md:block">
-        <button
-          onClick={prev}
-          className="p-4 rounded-full bg-[#0E6388] text-white shadow-lg hover:bg-[#0c5473]"
-        >
-          ←
-        </button>
-      </div>
-
-      <div className="absolute -right-4 top-1/2 -translate-y-1/2 hidden md:block">
-        <button
-          onClick={next}
-          className="p-4 rounded-full bg-[#0E6388] text-white shadow-lg hover:bg-[#0c5473]"
-        >
-          →
-        </button>
-      </div>
-
-      {/* CARD */}
-      <div className="overflow-hidden">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -60 }}
-          transition={{ duration: 0.5 }}
-          className="
-            rounded-3xl p-12
-            bg-[#0E6388]
-            text-white
-            shadow-[0_12px_35px_rgba(0,0,0,0.15)]
-          "
-        >
-          <p className="text-6xl font-extrabold opacity-90">
-            {steps[current].num}
-          </p>
-
-          <h3 className="text-3xl font-bold mt-3">{steps[current].title}</h3>
-
-          <ul className="mt-6 space-y-2 text-white/90 text-[16px]">
-            {steps[current].points.map((p, i) => (
-              <li key={i}>• {p}</li>
-            ))}
-          </ul>
-        </motion.div>
-      </div>
-
-      {/* DOTS */}
-      <div className="flex justify-center gap-3 mt-8">
-        {steps.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition ${
-              current === i ? "bg-[#0E6388]" : "bg-[#A7C9DA]"
-            }`}
-          ></button>
-        ))}
-      </div>
-    </div>
   );
 }
