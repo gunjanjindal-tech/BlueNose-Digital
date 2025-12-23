@@ -104,24 +104,30 @@ export default function Footer() {
         text-[#063349]/60
       "
     >
-      {/* LEFT */}
-      <Link to="/privacy" className="hover:text-[#0E6388] transition">
-        Privacy Policy
-      </Link>
 
-      {/* CENTER */}
+      {/* LEFT */}
+      <div className="flex items-center gap-2">
+        <Link to="/privacy" className="hover:text-[#0E6388] transition">
+          Privacy Policy
+        </Link>
+
+        <span className="text-[#063349]/40">|</span>
+
+        <Link to="/terms" className="hover:text-[#0E6388] transition">
+          Terms & Conditions
+        </Link>
+      </div>
+
+      {/* RIGHT */}
       <p className="text-center">
         © {new Date().getFullYear()} Bluenose Digital Marketing. All Rights Reserved.
       </p>
 
-      {/* RIGHT */}
-      <Link to="/terms" className="hover:text-[#0E6388] transition">
-        Terms & Conditions
-      </Link>
     </div>
 
   </div>
 </div>
+
 
 
 
