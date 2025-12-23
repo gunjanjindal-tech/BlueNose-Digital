@@ -145,7 +145,7 @@ const nextClient = () => {
 
 
   return (
-    <section className="pb-20 pt-10 px-6 ">
+    <section className="pb-20 pt-6 px-6 ">
 
        <p className="text-[#0E6388] font-semibold tracking-wide mb-2 text-center">
       → Client Results
@@ -335,7 +335,7 @@ const forceWhiteText = [
             transition={{ duration: 0.6 }}
   
           >
-            <img src={data.grid} className="w-full h-40 sm:h-68 md:h-120 object-contain rounded-2xl" />
+            <img src={data.grid} className="w-full h-68 sm:h-68 md:h-120 object-contain rounded-2xl" />
           </motion.div>
         )}
       </AnimatePresence>

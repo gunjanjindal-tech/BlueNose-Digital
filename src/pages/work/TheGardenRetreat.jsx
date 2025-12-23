@@ -1,11 +1,10 @@
 // src/pages/work/TheGardenRetreat.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import BlueSidebar from "../../components/BlueSidebar";
 import Counter from "../../components/Counter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet-async";
-
 
 // ICONS
 import {
@@ -23,6 +22,43 @@ const icons = {
   analytics: <BarChart3 className="w-full h-full" />,
   audience: <Users className="w-full h-full" />,
 };
+
+function HeroCounter({ value, suffix = "", duration = 3000 }) {
+  const [count, setCount] = useState(0);
+  const startTime = useRef(null);
+  const frame = useRef(null);
+
+  useEffect(() => {
+    function animate(timestamp) {
+      if (!startTime.current) startTime.current = timestamp;
+
+      const progress = Math.min(
+        (timestamp - startTime.current) / duration,
+        1
+      );
+
+      const current = Math.floor(progress * value);
+      setCount(current);
+
+      if (progress < 1) {
+        frame.current = requestAnimationFrame(animate);
+      } else {
+        setCount(value); // 🔒 stop exactly at final value
+      }
+    }
+
+    frame.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame.current);
+  }, [value, duration]);
+
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
+}
+
 
 export default function TheGardenRetreat() {
   const sections = [
@@ -43,6 +79,8 @@ export default function TheGardenRetreat() {
     return () => clearInterval(i);
   }, []);
 
+  
+
   // ScrollSpy
   useEffect(() => {
     const observers = [];
@@ -61,6 +99,10 @@ export default function TheGardenRetreat() {
 
     return () => observers.forEach((o) => o.disconnect());
   }, []);
+  
+  
+
+
 
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
@@ -69,77 +111,115 @@ export default function TheGardenRetreat() {
       </Helmet>
 
       {/* ================= HERO (Beaver Style) ================= */}
-      <section
-        className="min-h-[80vh] w-full flex items-center bg-[#2e5c2e] text-white rounded-3xl px-6 py-10 md:py-20 mb-20"
-      >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<section className="min-h-[80vh] md:min-h-[70vh] w-full flex items-center bg-[#2e5c2e] text-white rounded-3xl px-4 sm:px-6 py-10 mb-20">
+  <div className="w-full md:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT */}
-          <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-            <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5">
-              67K+ Views in 60 Days • Premium Continental Dining Strategy
-            </div>
 
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              The Garden <span className="text-white">Retreat</span>
-            </h1>
+    {/* ================= LEFT ================= */}
+    <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left mr-12">
+     <div className="inline-block bg-white/20 px-5 py-2 rounded-full text-sm font-semibold mb-5 ">
 
-            <p className="text-xl mt-4 text-white/90 leading-relaxed max-w-xl">
-              Establishing Halifax’s premium continental dining identity through elegant visuals,
-              refined storytelling and high-performing strategies.
-            </p>
+        67K+ Views in 60 Days • Premium Continental Dining Strategy
+      </div>
 
-            {/* TAGS */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8 w-full">
-              {["Digital Planning", "Creative Flow", "Community Growth"].map((t, i) => (
-                <div
-                  key={i}
-                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 text-white text-sm shadow"
-                >
-                  {t}
-                </div>
-              ))}
-            </div>
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+        The Garden <span className="text-white">Retreat</span>
+      </h1>
 
-            <Link to="/contact">
-              <button className="mt-8 px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg">
-                Contact Us Now →
-              </button>
-            </Link>
+      <p className="text-xl mt-6 text-white/90 leading-relaxed max-w-xl">
+        Establishing Halifax’s premium continental dining identity through
+        elegant visuals, refined storytelling and high-performing strategies.
+      </p>
+
+      {/* TAGS */}
+      <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8 w-full">
+        {["Digital Planning", "Creative Flow", "Community Growth"].map((t, i) => (
+          <div
+            key={i}
+            className="bg-white/20 px-8 py-4 rounded-full border border-white/40 text-white text-sm shadow"
+          >
+            {t}
           </div>
+        ))}
+      </div>
 
-          {/* RIGHT — Logo / Grid switch (Beaver Style) */}
-          <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
-            <AnimatePresence mode="wait">
-              {!showGrid ? (
-                <motion.div
-                  key="logo"
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="flex justify-center items-center w-full"
-                >
-                  <img src="/client/logo-8.png" className="h-80 sm:h-88" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <img
-                    src="/client-grid/graden-retreat-grid.jpg"
-                    className="w-full h-full object-contain rounded-xl"
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+      <Link to="/contact">
+        <button className="mt-10 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-lg">
+          Contact Us Now →
+        </button>
+      </Link>
+    </div>
+
+    {/* ================= RIGHT ================= */}
+    <div className="w-full flex justify-center">
+      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
+
+        {/* COUNTERS — DESKTOP ONLY */}
+        <div className="hidden lg:flex flex-col gap-6">
+          {[
+            { value: 67, suffix: "K", label: "Views" },
+            { value: 74, suffix: "", label: "Posts" },
+            { value: 13, suffix: "K", label: "Followers" },
+            { value: 49, suffix: "%", label: "Engagement" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white text-black rounded-2xl px-6 py-6 w-[180px] shadow-lg text-center"
+            >
+              <div className="text-3xl font-extrabold">
+                <HeroCounter value={item.value} suffix={item.suffix} />
+              </div>
+              <div className="text-sm mt-1 text-gray-800 font-medium">
+                {item.label}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+
+        {/* IMAGE / LOGO */}
+        <div className="flex justify-center items-center w-full max-w-[800px] h-[300px] sm:h-[420px] lg:h-[600px]">
+          <AnimatePresence mode="wait">
+            {!showGrid ? (
+              <motion.div
+                key="logo"
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex justify-center items-center w-full h-full"
+              >
+                <img
+                  src="/client/logo-8.png"
+                  className="h-64 sm:h-72 lg:h-80 object-contain"
+                  alt="Client Logo"
+                />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="grid"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex justify-center items-center w-full h-full"
+              >
+                <img
+                  src="/client-grid/graden-retreat-grid.jpg"
+                  className="rounded-xl object-contain w-full h-full"
+                  style={{ maxWidth: "800px", maxHeight: "600px" }}
+                  alt="Garden Retreat Grid"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
       {/* ================= MAIN GRID ================= */}
       <section className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-12">

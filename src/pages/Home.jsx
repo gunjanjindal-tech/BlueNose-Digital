@@ -892,14 +892,14 @@ useEffect(() => {
           className="
             min-w-[85%] sm:min-w-[70%] md:min-w-0
             snap-center
-            rounded-3xl p-10
+            rounded-3xl p-6
             bg-white/10 backdrop-blur-xl
             shadow-[0_12px_35px_rgba(0,0,0,0.10)]
             border border-white/20
             text-white flex flex-col justify-between
             hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)]
-            hover:-translate-y-2 transition-all duration-300
-            min-h-[400px]
+            hover:-translate-y-1 transition-all duration-300
+            min-h-[350px]
           "
           style={{ background: "rgb(14, 99, 136)" }}
         >
