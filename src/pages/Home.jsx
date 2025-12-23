@@ -896,8 +896,8 @@ useEffect(() => {
           
             border border-white/20
             text-white flex flex-col justify-between
-            hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)]
-            hover:-translate-y-1 transition-all duration-300
+            md:hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)]
+            md:hover:-translate-y-1 transition-all duration-300
             min-h-[350px]
           "
           style={{ background: "rgb(14, 99, 136)" }}
