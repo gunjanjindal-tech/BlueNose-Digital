@@ -613,7 +613,7 @@ useEffect(() => {
 {/* ===================================== */}
 {/*      OUR WORK IN ACTION (PREMIUM)     */}
 {/* ===================================== */}
-<div className="w-full overflow-hidden leading-none -mt-1"> <svg viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" className="w-full" > <path fill="#1175a0" d=" M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,190 L0,180 Z " ></path> </svg> </div>
+<div className="w-full overflow-hidden leading-none -mt-1"> <svg viewBox="0 0 1440 170" xmlns="http://www.w3.org/2000/svg" className="w-full" > <path fill="#1175a0" d=" M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,190 L0,180 Z " ></path> </svg> </div>
 <section
   className="relative pb-20 px-6 overflow-hidden"
   style={{ background: "#1175a0" }}
@@ -893,8 +893,7 @@ useEffect(() => {
             min-w-[85%] sm:min-w-[70%] md:min-w-0
             snap-center
             rounded-3xl p-6
-            bg-white/10 backdrop-blur-xl
-            shadow-[0_12px_35px_rgba(0,0,0,0.10)]
+          
             border border-white/20
             text-white flex flex-col justify-between
             hover:shadow-[0_20px_45px_rgba(0,0,0,0.18)]

@@ -103,7 +103,7 @@ export default function ServicesPage() {
   </h1>
 
   {/* SUBTEXT */}
-  <p className="text-center text-lg md:text-xl text-[#063349]/80 max-w-2xl mx-auto mt-4 mb-20 leading-relaxed">
+  <p className="text-center text-lg md:text-xl text-[#063349]/80 max-w-2xl mx-auto mt-2 mb-10  md:mb-20 leading-relaxed">
     Smart marketing, powerful storytelling & results that speak.
   </p>
 
