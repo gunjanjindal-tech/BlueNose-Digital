@@ -112,7 +112,7 @@ export default function RivaajRestoBar() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center justify-items-center text-center md:text-left">
 
           {/* LEFT */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start mr-12">
             <div className="inline-block bg-white/20 px-4 py-2 font-semibold rounded-full text-sm mb-5 shadow">
               48.9K+ Views • Cultural Dining Launch Strategy
             </div>

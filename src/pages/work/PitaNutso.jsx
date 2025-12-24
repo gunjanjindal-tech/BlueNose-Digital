@@ -111,7 +111,7 @@ export default function PitaNusto() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center justify-items-center text-center md:text-left">
 
           {/* LEFT */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left mr-12">
 
             <div className="inline-block bg-black/10 px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm text-black">
               92K+ Views • Mediterranean Fusion Brand Strategy

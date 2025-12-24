@@ -117,7 +117,7 @@ export default function TriveeniEvents() {
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
-          <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left mr-12">
             <div className="inline-block bg-white/20 text-black px-4 py-2 
               rounded-full text-sm font-semibold mb-5 shadow-sm">
               1.3M+ Views in 90 Days • Organic Cultural Event Growth

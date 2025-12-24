@@ -108,7 +108,7 @@ export default function AddaIndianEatery() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center justify-items-center text-center md:text-left">
 
           {/* LEFT TEXT */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left mr-12">
             <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
               214K+ Views in 90 Days • Emotional Storytelling Strategy
             </div>
