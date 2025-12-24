@@ -23,10 +23,11 @@ const icons = {
   audience: <Users className="w-full h-full" />,
 };
 
+
 function HeroCounter({ value, suffix = "", duration = 3000 }) {
   const [count, setCount] = useState(0);
-  const startTime = useRef(null);
-  const frame = useRef(null);
+  const startTime = React.useRef(null);
+  const frame = React.useRef(null);
 
   useEffect(() => {
     function animate(timestamp) {
@@ -43,7 +44,7 @@ function HeroCounter({ value, suffix = "", duration = 3000 }) {
       if (progress < 1) {
         frame.current = requestAnimationFrame(animate);
       } else {
-        setCount(value); // 🔒 stop exactly at final value
+        setCount(value);
       }
     }
 
@@ -58,6 +59,7 @@ function HeroCounter({ value, suffix = "", duration = 3000 }) {
     </>
   );
 }
+
 
 
 export default function TheGardenRetreat() {

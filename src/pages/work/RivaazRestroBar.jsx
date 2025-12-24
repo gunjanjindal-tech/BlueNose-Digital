@@ -24,6 +24,43 @@ const icons = {
   audience: <Users className="w-full h-full" />,
 };
 
+function HeroCounter({ value, suffix = "", duration = 3000 }) {
+  const [count, setCount] = useState(0);
+  const startTime = React.useRef(null);
+  const frame = React.useRef(null);
+
+  useEffect(() => {
+    function animate(timestamp) {
+      if (!startTime.current) startTime.current = timestamp;
+
+      const progress = Math.min(
+        (timestamp - startTime.current) / duration,
+        1
+      );
+
+      const current = Math.floor(progress * value);
+      setCount(current);
+
+      if (progress < 1) {
+        frame.current = requestAnimationFrame(animate);
+      } else {
+        setCount(value);
+      }
+    }
+
+    frame.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame.current);
+  }, [value, duration]);
+
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
+}
+
+
 export default function RivaajRestoBar() {
   const sections = [
     "overview",
@@ -108,34 +145,64 @@ export default function RivaajRestoBar() {
           </div>
 
           {/* RIGHT — LOGO/GRID ANIMATION */}
-          <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
-            <AnimatePresence mode="wait">
-              {!showGrid ? (
-                <motion.div
-                  key="logo"
-                  initial={{ opacity: 0, scale: 0.7 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <img src="/client/logo-17.png" className="h-80 sm:h-88 object-contain" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <img
+<div className="w-full flex justify-center">
+  <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
+
+    {/* COUNTERS — DESKTOP ONLY */}
+    <div className="hidden lg:flex flex-col gap-6">
+      {[
+        { value: 612, suffix: "K", label: "Views" },
+        { value: 78, suffix: "", label: "Posts" },
+        { value: 303, suffix: "", label: "Saves" },
+        { value: 38, suffix: "%", label: "Conversion" },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="bg-white text-black rounded-2xl px-6 py-6 w-[180px] shadow-lg text-center"
+        >
+          <div className="text-3xl font-extrabold">
+            <HeroCounter value={item.value} suffix={item.suffix} />
+          </div>
+          <div className="text-sm mt-1 text-gray-800 font-medium">
+            {item.label}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* LOGO / GRID SWITCH */}
+    <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
+      <AnimatePresence mode="wait">
+        {!showGrid ? (
+          <motion.div
+            key="logo"
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center items-center w-full"
+          >
+            <img src="/client/logo-17.png" className="h-80 sm:h-88 object-contain" />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="grid"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
                     src="/client-grid/rivaaz-grid.jpg"
                     className="w-full h-full object-contain rounded-xl"
                   />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+
+  </div>
+</div>
 
         </div>
       </section>
