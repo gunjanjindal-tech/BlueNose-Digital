@@ -117,6 +117,33 @@ export default function About() {
       {/* PAGE TOP SECTION */}
       <section className="pt-[120px] pb-20 px-6 bg-white w-full">
 
+         <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute top-14 left-0 flex w-max animate-brandSlide">
+    {[...Array(2)].map((_, groupIndex) => (
+      <div key={groupIndex} className="flex gap-24">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={`${groupIndex}-${i}`}
+            className="
+              text-[8rem]
+              md:text-[10rem]
+              font-extrabold
+              uppercase
+              tracking-widest
+              text-[#0E6388]/5
+              whitespace-nowrap
+            "
+          >
+            Bluenose Marketing
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+        </div>
+
         {/* EYEBROW */}
         <p className="text-[#0E6388] font-semibold tracking-wide mb-2 text-center">
           → About Us

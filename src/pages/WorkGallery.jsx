@@ -185,7 +185,30 @@ export default function WorkGallery() {
   />
 </Helmet>
 
-
+ <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute top-9 left-0 flex w-max animate-brandSlide">
+    {[...Array(2)].map((_, groupIndex) => (
+      <div key={groupIndex} className="flex gap-24">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={`${groupIndex}-${i}`}
+            className="
+              text-[8rem]
+              md:text-[10rem]
+              font-extrabold
+              uppercase
+              tracking-widest
+              text-[#0E6388]/5
+              whitespace-nowrap
+            "
+          >
+            Bluenose Marketing
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
 
       {/* Heading */}
       <p className="text-center text-[#0E6388] font-semibold mb-2">→ Our Work</p>

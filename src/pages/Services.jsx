@@ -90,8 +90,31 @@ export default function ServicesPage() {
 
 
       {/* PAGE */}
-      <section className="relative pt-[110px] pb-20 md:pt-[130px] md:pb-28 px-6 bg-white text-[#0E3D55]">
-
+      <section className="relative pt-[110px] pb-20 md:pt-24 md:pb-28 px-6 bg-white text-[#0E3D55]">
+ <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute top-9 left-0 flex w-max animate-brandSlide">
+    {[...Array(2)].map((_, groupIndex) => (
+      <div key={groupIndex} className="flex gap-24">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={`${groupIndex}-${i}`}
+            className="
+              text-[8rem]
+              md:text-[10rem]
+              font-extrabold
+              uppercase
+              tracking-widest
+              text-[#0E6388]/5
+              whitespace-nowrap
+            "
+          >
+            Bluenose Marketing
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* MAIN HEADING */}
         <p className="text-[#0E6388] font-semibold tracking-wide text-base md:text-lg text-center mb-2">

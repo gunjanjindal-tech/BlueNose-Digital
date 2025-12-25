@@ -110,8 +110,31 @@ const sendMessage = (e) => {
 </Helmet>
 
 
-    <section className="pt-24 pb-10 md:pt-28 md:pb-20">
-
+      <section className="pt-24 pb-10 md:pt-28 md:pb-20">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute top-13 left-0 flex w-max animate-brandSlide">
+    {[...Array(2)].map((_, groupIndex) => (
+      <div key={groupIndex} className="flex gap-24">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={`${groupIndex}-${i}`}
+            className="
+              text-[8rem]
+              md:text-[10rem]
+              font-extrabold
+              uppercase
+              tracking-widest
+              text-[#0E6388]/5
+              whitespace-nowrap
+            "
+          >
+            Bluenose Marketing
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
         <div className="max-w-7xl mx-auto px-6">
 {/* EYEBROW */}
 <p className="text-[#0E6388] font-semibold tracking-wide text-base md:text-lg text-center mb-2">

@@ -106,3 +106,18 @@
 .wmain{
   width: 1800px !important;
 }
+
+
+/* Contact Page */
+@keyframes brandSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-brandSlide {
+  animation: brandSlide 30s linear infinite;
+}
