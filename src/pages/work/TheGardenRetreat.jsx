@@ -114,21 +114,21 @@ export default function TheGardenRetreat() {
 
       {/* ================= HERO (Beaver Style) ================= */}
 <section className="min-h-[80vh] md:min-h-[70vh] w-full flex items-center bg-[#2e5c2e] text-white rounded-3xl px-4 sm:px-6 py-10 mb-20">
-  <div className="w-full md:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <div className="w-full md:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center 2xl:max-w-none 2xl:px-32 ">
 
 
     {/* ================= LEFT ================= */}
     <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left mr-12">
-     <div className="inline-block bg-white/20 px-5 py-2 rounded-full text-sm font-semibold mb-5 ">
+     <div className="inline-block bg-white/20 px-5 py-2 rounded-full text-sm font-semibold mb-5 2xl:text-xl">
 
         67K+ Views in 60 Days • Premium Continental Dining Strategy
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight 2xl:text-6xl ">
         The Garden <span className="text-white">Retreat</span>
       </h1>
 
-      <p className="text-xl mt-6 text-white/90 leading-relaxed max-w-xl">
+      <p className="text-xl mt-6 text-white/90 leading-relaxed max-w-xl 2xl:text-xl">
         Establishing Halifax’s premium continental dining identity through
         elegant visuals, refined storytelling and high-performing strategies.
       </p>
@@ -138,7 +138,7 @@ export default function TheGardenRetreat() {
         {["Digital Planning", "Creative Flow", "Community Growth"].map((t, i) => (
           <div
             key={i}
-            className="bg-white/20 px-8 py-4 rounded-full border border-white/40 text-white text-sm shadow"
+            className="bg-white/20 px-8 py-4 rounded-full border border-white/40 text-white text-sm shadow 2xl:text-xl"
           >
             {t}
           </div>
@@ -146,7 +146,7 @@ export default function TheGardenRetreat() {
       </div>
 
       <Link to="/contact">
-        <button className="mt-10 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-lg">
+        <button className="mt-10 px-8 py-4 2xl:text-xl bg-white text-black font-semibold rounded-full shadow-lg">
           Contact Us Now →
         </button>
       </Link>
@@ -168,10 +168,10 @@ export default function TheGardenRetreat() {
               key={i}
               className="bg-white text-black rounded-2xl px-6 py-6 w-[180px] shadow-lg text-center"
             >
-              <div className="text-3xl font-extrabold">
+              <div className="text-3xl font-extrabold 2xl:text-5xl">
                 <HeroCounter value={item.value} suffix={item.suffix} />
               </div>
-              <div className="text-sm mt-1 text-gray-800 font-medium">
+              <div className="text-sm mt-1 text-gray-800 font-medium 2xl:text-2xl">
                 {item.label}
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function TheGardenRetreat() {
 
 
       {/* ================= MAIN GRID ================= */}
-      <section className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-12">
+      <section className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-12 ">
 
    {/* SIDEBAR — SAME AS BEAVER */}
 <div className="hidden lg:block">

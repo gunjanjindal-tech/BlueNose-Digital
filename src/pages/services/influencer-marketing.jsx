@@ -166,7 +166,13 @@ export default function InfluencerMarketing() {
           </p>
 
         </div>
-      </section>
+        </section>
+        
+                      <ServiceVideosSection 
+  
+  videos={influencerVideos}
+/>
+
 
       {/* ✦ GROWTH CHARTS */}
       <section className="pb-20 bg-white">
@@ -209,7 +215,8 @@ export default function InfluencerMarketing() {
           </div>
 
         </div>
-      </section>
+        </section>
+        
 
       {/* ✦ CLIENT LOGOS */}
       <section className="w-full bg-white flex justify-center">
@@ -333,10 +340,7 @@ export default function InfluencerMarketing() {
           </div>
         </div>
       </section>
-      <ServiceVideosSection 
-  title="Influencer Marketing"
-  videos={influencerVideos}
-/>
+
 
       </div>
       </>

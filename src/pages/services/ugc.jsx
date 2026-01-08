@@ -144,6 +144,9 @@ export default function UGCContentCreation() {
         </div>
       </section>
 
+            {/* ================= VIDEOS ================= */}
+      <ServiceVideosSection title="UGC Content Creation" videos={ugcVideos} />
+
       {/* ================= GROWTH CHARTS ================= */}
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-6  2xl:max-w-none 2xl:px-32 ">
@@ -286,8 +289,7 @@ export default function UGCContentCreation() {
             </div>
           </section>
 
-      {/* ================= VIDEOS ================= */}
-      <ServiceVideosSection title="UGC Content Creation" videos={ugcVideos} />
+
     </div>
   );
 }

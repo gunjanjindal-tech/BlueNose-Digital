@@ -173,7 +173,12 @@ export default function BrandIdentity() {
           </p>
 
         </div>
-      </section>
+        </section>
+        
+        <ServiceVideosSection 
+ 
+  videos={brandingVideos}
+/>
 
       {/* ===================== GROWTH CHARTS ========================= */}
       <section className="pb-20 bg-white">
@@ -342,10 +347,7 @@ export default function BrandIdentity() {
           </div>
         </div>
       </section>
-<ServiceVideosSection 
-  title="Branding & Identity"
-  videos={brandingVideos}
-/>
+
 
       </div>
       </>

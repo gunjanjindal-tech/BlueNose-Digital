@@ -220,7 +220,7 @@ const forceWhiteText = [
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="grid grid-cols-1 md:grid-cols-2 gap-10 rounded-3xl p-12 shadow-xl"
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 rounded-3xl p-12 shadow-xl font-bold"
       style={{ background: data.bg }}
     >
 

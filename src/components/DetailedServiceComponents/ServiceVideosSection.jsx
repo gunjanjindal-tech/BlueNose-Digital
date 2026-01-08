@@ -32,14 +32,10 @@ export default function ServiceVideosSection({ title, videos }) {
   );
 
   return (
-    <section className="py-15 bg-white text-[#0E6388]">
+    <section className="pb-15 bg-white text-[#0E6388]">
       <div className="max-w-7xl mx-auto px-6 2xl:max-w-none 2xl:px-32">
 
-        {/* Heading */}
-             <h2 className="text-3xl md:text-4xl 2xl:text-6xl font-extrabold text-[#063349] text-center mb-14">
-
-          {title} <span className="text-[#0E6388]">Videos</span>
-        </h2>
+       
 
         {/* Videos Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

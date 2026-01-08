@@ -137,8 +137,11 @@ export default function SMM() {
           Instagram, LinkedIn, TikTok, YouTube & beyond data‑driven campaigns, creative execution, and scalable full‑funnel systems.
 
         </p>
-      </section>
-
+        </section>
+        
+ 
+        <ServiceVideosSection videos={smmVideos} />
+        
       {/* GROWTH CHARTS */}
       <section className="pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 2xl:max-w-none 2xl:px-32 ">
@@ -165,7 +168,10 @@ export default function SMM() {
         <div className="w-full">
           <ServiceClientLogos />
         </div>
-      </section>
+        </section>
+
+          
+        
 
       {/* BARRIERS */}
       <section className="pt-10 md:pt-16 px-6">
@@ -253,7 +259,7 @@ export default function SMM() {
       </section>
 
       {/* VIDEOS */}
-      <ServiceVideosSection title="Social Media Marketing" videos={smmVideos} />
+      
     </div>
     </>
   );

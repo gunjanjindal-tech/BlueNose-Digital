@@ -141,6 +141,9 @@ export default function VideoEditing() {
         </div>
       </section>
 
+ {/* ================= VIDEOS ================= */}
+      <ServiceVideosSection videos={videoEditingVideos} />
+
       {/* ================= GROWTH CHARTS ================= */}
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-6  2xl:max-w-none 2xl:px-32 ">
@@ -246,8 +249,7 @@ export default function VideoEditing() {
         </div>
       </section>
 
-      {/* ================= VIDEOS ================= */}
-      <ServiceVideosSection title="Video Editing" videos={videoEditingVideos} />
+     
     </div>
   );
 }

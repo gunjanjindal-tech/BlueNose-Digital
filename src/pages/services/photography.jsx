@@ -177,7 +177,13 @@ export default function PhotographyShoots() {
           </p>
 
         </div>
-      </section>
+        </section>
+        
+         {/* ✦ PHOTOGRAPHY VIDEOS SECTION */}
+      <ServiceVideosSection 
+        title="Photography & Shoots"
+        videos={photographyVideos}
+      />
 
 
       {/* ✦ GROWTH CHARTS */}
@@ -353,11 +359,7 @@ export default function PhotographyShoots() {
       </section>
 
 
-      {/* ✦ PHOTOGRAPHY VIDEOS SECTION */}
-      <ServiceVideosSection 
-        title="Photography & Shoots"
-        videos={photographyVideos}
-      />
+     
 
     </div>
     </>
