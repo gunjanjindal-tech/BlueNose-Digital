@@ -1,0 +1,195 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
+
+export default function ServicesPage() {
+  const services = [
+    {
+      title: "Social Media Marketing (SMM)",
+      desc: "Strategic content planning, platform management, audience engagement, paid campaigns, analytics, and consistent brand growth across social platforms.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
+      link: "/services/smm",
+    },
+    {
+      title: "Branding & Identity",
+      desc: "Logo, color palette, tone, visual direction & narrative — we craft a brand that people remember and emotionally connect with.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
+      link: "/services/brand-identity",
+    },
+    {
+      title: "Influencer Marketing",
+      desc: "We collaborate with niche-specific creators, execute performance campaigns & track results to build trust and drive conversions.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
+      link: "/services/influencer-marketing",
+    },
+    {
+      title: "Video Editing",
+      desc: "High-quality edits, reels, long and short-form videos, motion graphics, storytelling, transitions, captions, and platform-optimized formats.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
+      link: "/services/video-editing",
+    },
+    {
+      title: "UGC Content Creation",
+      desc: "Authentic conversion-focused content by real creators for ads, branding, storytelling & product promotions.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov",
+      link: "/services/ugc-content",
+    },
+    {
+      title: "Photography & Creative Shoots",
+      desc: "Product photography, lifestyle shoots, event coverage, creative direction, editing & retouching, high‑resolution delivery.",
+      video: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
+      link: "/services/photography",
+    },
+  ];
+
+  return (
+    <>
+<Helmet>
+  {/* BASIC SEO */}
+  <title>
+    Digital Marketing Services | Bluenose Marketing — SMM, Branding, Influencer, UGC & Video
+  </title>
+
+  <meta
+    name="description"
+    content="Explore Bluenose Marketing’s premium digital marketing services — Social Media Marketing, Branding & Identity, Influencer Marketing, UGC Creation, Video Editing and Photography for fast-scaling brands."
+  />
+
+  <meta
+    name="keywords"
+    content="digital marketing services, social media marketing, branding agency, influencer marketing, UGC creators, video editing company, photography services, creative agency, Bluenose Marketing"
+  />
+
+  {/* CANONICAL */}
+  <link rel="canonical" href="https://www.bluenosemarketing.ca/services" />
+
+  {/* OPEN GRAPH */}
+  <meta property="og:title" content="Bluenose Marketing — Digital Marketing & Creative Services" />
+  <meta
+    property="og:description"
+    content="Full-suite creative & performance services: SMM, Branding, Influencer Marketing, UGC, Video Editing & Photography to help brands scale."
+  />
+  <meta property="og:url" content="https://www.bluenosemarketing.ca/services" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.bluenosemarketing.ca/og-services.jpg" />
+
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Bluenose Marketing — Digital Marketing & Creative Services"
+  />
+  <meta
+    name="twitter:description"
+    content="SMM, Branding, Influencers, UGC, Video Editing & Photography — one agency for all your growth needs."
+  />
+  <meta name="twitter:image" content="https://www.bluenosemarketing.ca/og-services.jpg" />
+</Helmet>
+
+
+
+      {/* PAGE */}
+      <section className="relative pt-[110px] pb-20 md:pt-24 md:pb-28 px-6 bg-white text-[#0E3D55]">
+ <div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div className="absolute top-9 left-0 flex w-max animate-brandSlide">
+    {[...Array(2)].map((_, groupIndex) => (
+      <div key={groupIndex} className="flex gap-24">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <span
+            key={`${groupIndex}-${i}`}
+            className="
+              text-[8rem]
+              md:text-[10rem]
+              font-extrabold
+              uppercase
+              tracking-widest
+              text-[#0E6388]/5
+              whitespace-nowrap
+            "
+          >
+            Bluenose Marketing
+          </span>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+        {/* MAIN HEADING */}
+        <p className="text-[#0E6388] font-semibold tracking-wide text-base md:text-lg text-center mb-2 ">
+  → Our Services
+</p>
+
+  <h1 className="text-center text-3xl md:text-5xl 2xl:text-6xl font-extrabold  text-[#063349] leading-[1.3]">
+    Our <span className="text-[#0E6388]">Services</span>
+  </h1>
+
+  {/* SUBTEXT */}
+  <p className="text-center text-lg md:text-xl xl:text-3xl text-[#063349]/80 max-w-3xl mx-auto mt-2 mb-10  md:mb-20 leading-relaxed">
+    Smart marketing, powerful storytelling & results that speak.
+  </p>
+
+
+        {/* CARDS */}
+        <div className="max-w-7xl mx-auto space-y-20 md:space-y-28 2xl:max-w-none 2xl:px-32">
+
+          {services.map((s, i) => {
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className={`
+                grid md:grid-cols-2 gap-12 p-10 md:p-14 rounded-3xl shadow-xl 
+                text-white relative
+                `}
+                style={{
+                  background: "#0E6388",
+                  border: "1px solid #0E6388",
+                }}
+              >
+                {/* VIDEO */}
+                <div className={`${i % 2 !== 0 ? "md:order-2" : ""}`}>
+                  <div className="rounded-3xl overflow-hidden h-[360px] md:h-[430px] shadow-lg border border-white/20">
+                    <video
+                      src={s.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* TEXT CONTENT */}
+                <div className="flex flex-col justify-center space-y-6">
+                  <h2 className="text-3xl md:text-4xl font-extrabold text-white 2xl:text-5xl">
+                    {s.title}
+                  </h2>
+
+                  <p className="text-lg leading-relaxed text-white/90 2xl:text-2xl">
+                    {s.desc}
+                  </p>
+
+                  <Link to={s.link}>
+                    <button
+                      className="px-7 py-3 rounded-full font-semibold bg-white text-black 
+                       hover:bg-black hover:text-white transition shadow-lg 2xl:text-3xl"
+                    >
+                      Learn More →
+                    </button>
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
+
+        </div>
+      </section>
+    </>
+  );
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block legacy Google sitelinks sources
+Disallow: /studio
+Disallow: /social
+Disallow: /media
+Disallow: /portfolio
+Disallow: /photos
+
+# Sitemap
+Sitemap: https://www.bluenosemarketing.ca/sitemap.xml
