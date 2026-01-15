@@ -201,9 +201,9 @@ const sendMessage = (e) => {
   <span className="p-2 rounded-full bg-[#0E6388]/10 group-hover:bg-[#0E6388]/20 transition">
     <Mail className="w-5 h-5 text-[#0E6388] 2xl:w-8 2xl:h-8 " />
   </span>
-    <a href="mailto:info@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition 2xl:text-xl">
+    <a href="mailto:sales@bluenosemarketing.com" className="flex gap-3 items-center hover:text-[#0E6388] transition 2xl:text-xl">
               
-              info@bluenosemarketing.com
+              sales@bluenosemarketing.com
             </a>
 
 </a>
