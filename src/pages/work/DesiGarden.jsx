@@ -93,7 +93,7 @@ export default function DesiGarden() {
         (e) => {
           if (e[0].isIntersecting) setActive(sec);
         },
-        { threshold: 0.35, rootMargin: "-120px 0px -200px 0px" }
+        { threshold: 0.2, rootMargin: "-120px 0px -100px 0px" }
       );
 
       obs.observe(el);
@@ -105,25 +105,38 @@ export default function DesiGarden() {
 
   return (
     <div className="bg-white text-[#063349] font-inter px-6 pt-[110px] pb-20">
+
+
        <Helmet>
         <title>Desi Garden Case Study | Bluenose Digital Marketing</title>
       </Helmet>
 
       {/* ================= HERO SECTION ================= */}
       <section className="min-h-[80vh] w-full flex items-center bg-[#fa6709] text-white rounded-3xl px-6 py-10 md:py-20 mb-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div
+  className="
+    max-w-7xl mx-auto
+    grid md:grid-cols-2 gap-12 items-center
+
+    2xl:max-w-none
+    2xl:px-32
+  "
+>
+
 
           {/* LEFT */}
           <div className="flex flex-col items-center text-center sm:items-start sm:text-left mr-12">
-            <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm text-white/80">
+            <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm text-white/80 2xl:text-lg">
               2.1M+ Views in 90 Days • Explosive Viral Growth
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
+            <h1 className=" text-4xl md:text-5xl font-extrabold leading-tight
+    min-[1800px]:text-7xl
+  ">
               Desi Garden
             </h1>
 
-            <p className="text-lg md:text-xl mt-4 text-white leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl mt-4 text-white leading-relaxed max-w-xl 2xl:text-2xl">
               Desi Garden is a takeout kitchen known for authentic home-style Indian meals —
               we grew their organic reach with highly relatable, Reels-first food content.
             </p>
@@ -132,7 +145,16 @@ export default function DesiGarden() {
               {["Strategic Planning", "Performance Pulse", "Content Power"].map((tag, i) => (
                 <div
                   key={i}
-                  className="bg-white/20 px-6 py-3 rounded-full border border-white/40 shadow text-white text-sm"
+                  className=" bg-white/20
+        px-6 py-3
+        rounded-full
+        border border-white/40
+        shadow
+        text-white
+
+        text-sm
+        min-[1600px]:text-lg
+        min-[1800px]:text-xl"
                 >
                   {tag}
                 </div>
@@ -140,7 +162,7 @@ export default function DesiGarden() {
             </div>
 
             <Link to="/contact">
-              <button className="mt-8 px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg">
+              <button className="mt-8 px-8 py-3 bg-white text-black font-semibold rounded-full shadow-lg  2xl:text-xl">
                 Contact Us Now →
               </button>
             </Link>
@@ -162,10 +184,10 @@ export default function DesiGarden() {
           key={i}
           className="bg-white text-black rounded-2xl px-6 py-6 w-[180px] shadow-lg text-center"
         >
-          <div className="text-3xl font-extrabold">
+          <div className="text-3xl font-extrabold 2xl:text-5xl">
             <HeroCounter value={item.value} suffix={item.suffix} />
           </div>
-          <div className="text-sm mt-1 text-gray-800 font-medium">
+          <div className="text-sm mt-1 text-gray-800 font-medium 2xl:text-xl">
             {item.label}
           </div>
         </div>
@@ -173,7 +195,7 @@ export default function DesiGarden() {
     </div>
 
     {/* LOGO / GRID SWITCH */}
-    <div className="flex justify-center w-full max-w-[400px] h-[260px] sm:h-[330px] md:h-[480px] mx-auto">
+        <div className="flex justify-center items-center w-full max-w-[800px] h-[300px] sm:h-[420px] lg:h-[600px]">
       <AnimatePresence mode="wait">
         {!showGrid ? (
           <motion.div
@@ -184,7 +206,8 @@ export default function DesiGarden() {
             transition={{ duration: 0.6 }}
             className="flex justify-center items-center w-full"
           >
-            <img src="/client/logo-18.png" className="h-80 sm:h-88 object-contain" />
+            <img src="/client/logo-18.png" className="h-80 sm:h-88 object-contain" 
+            />
 
           </motion.div>
         ) : (
@@ -195,7 +218,9 @@ export default function DesiGarden() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-             <img src="/client-grid/desi-garden-grid.jpg" className="w-full h-full object-contain rounded-xl" />
+             <img src="/client-grid/desi-garden-grid.jpg" className="w-full h-full object-contain rounded-xl"
+             style={{ maxWidth: "800px", maxHeight: "600px" }}
+             alt="desi-garden grid" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -208,35 +233,70 @@ export default function DesiGarden() {
       </section>
 
     {/* MAIN GRID */}
-<section className="max-w-7xl mx-auto grid lg:grid-cols-[280px_1fr] gap-12">
+      {/* ================= LAYOUT WRAPPER ================= */}
+  <section
+  className="
+    max-w-7xl mx-auto
+    grid lg:grid-cols-[300px_1fr]
+    gap-14
+
+    2xl:max-w-none
+    2xl:px-32
+    2xl:gap-16
+  "
+>
+
+
+
 
   {/* SIDEBAR — SAME AS BEAVER */}
-  <div className="hidden lg:block">
-    <aside className="sticky top-24 w-[260px]">
-      <BlueSidebar
-        sections={[
-          { name: "Overview", id: "overview" },
-          { name: "Services Provided", id: "services-provided" },
-          { name: "Challenge", id: "challenge" },
-          { name: "Approach", id: "approach" },
-          { name: "Key Strategy", id: "key-strategy" },
-          { name: "Other Case Studies", id: "case-studies" },
-        ]}
-        active={active}
-        hideMobileButton={true}
-      />
-    </aside>
-  </div>
+ <div className="hidden lg:block">
+<aside className="sticky top-24 w-[300px] 2xl:w-[340px]">
+
+
+
+    <BlueSidebar
+      sections={[
+        { name: "Overview", id: "overview" },
+        { name: "Services Provided", id: "services-provided" },
+        { name: "Challenge", id: "challenge" },
+        { name: "Approach", id: "approach" },
+        { name: "Key Strategy", id: "key-strategy" },
+        { name: "Other Case Studies", id: "case-studies" },
+      ]}
+      active={active}
+      hideMobileButton={true}
+    />
+  </aside>
+</div>
+
   
 
         {/* RIGHT CONTENT */}
-        <div className="space-y-16">
+<div className="space-y-16 max-w-4xl w-full mx-auto 2xl:max-w-none">
 
           {/* ================= OVERVIEW ================= */}
-          <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Overview</h2>
+<section
+ id="overview"
+  className="
+    p-6 sm:p-10 bg-white rounded-3xl border shadow border-[#D7ECF6]
 
-            <div className="mt-6 space-y-4 leading-relaxed text-[#063349]/85">
+    2xl:px-16
+  "
+>
+<h2
+  className="
+    text-4xl md:text-5xl 2xl:text-5xl
+    font-extrabold
+    text-[#0E6388]
+    mb-6
+  "
+>
+              Overview
+            </h2>
+
+
+<div className="mt-6 space-y-4 leading-relaxed text-[#063349]/85 text-base 2xl:text-xl">
               <p>
                 Desi Garden is an Indian takeout kitchen specializing in authentic home-style Indian meals.
               </p>
@@ -248,30 +308,32 @@ export default function DesiGarden() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
-              {[
-                { v: 943000, t: "Views (Last 30 Days)", sign: "+" },
+             <div className="grid sm:grid-cols-2 gap-6 mt-10 place-items-center">
+                         {[
+                            { v: 943000, t: "Views (Last 30 Days)", sign: "+" },
                 { v: 74, t: "Content Shared (30 Days)", sign: "+" },
                 { v: 10800, t: "Total Interactions", sign: "+" },
                 { v: 99.0, t: "Avg. Non-Follower Engagement (%)", sign: "%" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="p-6 w-[250px] rounded-2xl shadow-md text-white"
-                  style={{ background: "rgb(14,99,136)" }}
-                >
-                  <div className="text-2xl font-bold">
-                    <Counter end={s.v} duration={3500} />{s.sign}
-                  </div>
-                  <p className="mt-2 text-white/85 text-sm">{s.t}</p>
-                </div>
-              ))}
-            </div>
+                         ].map((s, i) => (
+                           <div
+                             key={i}
+                             className="p-6 rounded-2xl shadow-md text-white w-full 2xl:text-xl"
+                             style={{ background: "rgb(14,99,136)" }}
+                           >
+                             <div className="text-2xl font-bold">
+                               <Counter end={s.v} />{s.sign}
+                             </div>
+                             <p className="text-white/85 text-sm mt-2 2xl:text-xl">{s.t}</p>
+                           </div>
+                         ))}
+                       </div>
           </section>
 
           {/* ================= SERVICES PROVIDED ================= */}
-          <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border-[#D7ECF6] max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Services Provided</h2>
+<section
+  id="services-provided" className=" p-10 bg-white rounded-3xl shadow border-[#D7ECF6] 
+  max-w-4xl mx-auto text-[#0E6388] 2xl:max-w-[1300px] 2xl:p-12">
+                 <h2 className="text-4xl font-extrabold text-[#0E6388] text-center sm:text-left 2xl:text-5xl"> Services Provided</h2>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10">
               {[
@@ -284,24 +346,37 @@ export default function DesiGarden() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="px-5 py-4 flex items-center gap-4 rounded-2xl shadow-lg text-white"
+                  className="px-5 py-4 flex items-center gap-4 rounded-2xl shadow-lg text-white 2xl:px-7
+      2xl:py-6
+      2xl:gap-5
+      2xl:text-lg"
                   style={{ background: "rgb(14,99,136)" }}
                 >
-                  <div className="p-2 bg-white/20 rounded-xl w-10 h-10 flex items-center justify-center">
+                <div
+  className="
+    p-2 bg-white/20 rounded-xl
+    w-10 h-10
+    flex items-center justify-center
+
+    2xl:w-12
+    2xl:h-12
+  "
+>
+
                     {item.icon}
                   </div>
-                  <p className="font-semibold text-white">{item.name}</p>
+                  <p className="font-semibold text-white 2xl:text-xl">{item.name}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* ================= CHALLENGE ================= */}
-          <section id="challenge" className="p-10 bg-white rounded-3xl border shadow border-[#D7ECF6] max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-[#0E6388] text-center">Challenge</h2>
+         <section id="challenge" className="p-6 sm:p-10 bg-white rounded-3xl border shadow border-[#D7ECF6]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388]  2xl:text-5xl">Challenge</h2>
 
             <div className="mt-6 p-10 rounded-3xl shadow text-white" style={{ background: "rgb(14,99,136)" }}>
-              <ul className="space-y-3 list-disc list-inside text-white/95">
+              <ul className="space-y-3 list-disc list-inside text-white/95 2xl:text-xl">
                 <li>Stand out in Halifax’s Indian takeout market</li>
                 <li>Show true home-style authenticity visually</li>
                 <li>Create emotional brand connection</li>
@@ -312,11 +387,13 @@ export default function DesiGarden() {
           </section>
 
           {/* ================= APPROACH ================= */}
-          <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-[#0E6388] text-center">Approach</h2>
+         <section id="approach" className="p-6 sm:p-10 bg-white rounded-3xl border shadow border-[#D7ECF6]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388] text-center sm:text-left 2xl:text-5xl">
+              Approach
+            </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white shadow" style={{ background: "rgb(14,99,136)" }}>
-              <ul className="space-y-3 list-disc list-inside text-white/95">
+              <ul className="space-y-3 list-disc list-inside text-white/95 2xl:text-xl">
                 <li>Reels-first strategy using short, high-retention content.</li>
                 <li>Emotional identity built around “Tastes Like Home”.</li>
                 <li>Optimized posting cycles, hooks & captions.</li>
@@ -325,11 +402,13 @@ export default function DesiGarden() {
           </section>
 
           {/* ================= KEY STRATEGY ================= */}
-          <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6] max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold text-[#0E6388] text-center">Key Strategies Implemented</h2>
+           <section id="key-strategy" className="p-6 sm:p-10 bg-white rounded-3xl border shadow border-[#D7ECF6]">
+            <h2 className="text-4xl font-extrabold text-[#0E6388] text-center sm:text-left 2xl:text-5xl">
+              Key Strategies Implemented
+            </h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white shadow" style={{ background: "rgb(14,99,136)" }}>
-              <ul className="space-y-3 list-disc list-inside text-white/95">
+              <ul className="space-y-3 list-disc list-inside text-white/95 2xl:text-xl">
                 <li>Authenticity-first viral formula</li>
                 <li>Nostalgia-driven food storytelling</li>
                 <li>SEO-optimized posts</li>
@@ -340,90 +419,108 @@ export default function DesiGarden() {
           </section>
 
           {/* ================= CASE STUDIES ================= */}
-          <section id="case-studies" className="mt-16 max-w-4xl mx-auto">
-            <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#063349] mb-10">
-              Explore Our Other Client <span className="text-[#0E6388]">Case Studies</span>
-            </h2>
+             <section
+                      id="case-studies"
+                      className="
+                        mt-16 max-w-4xl mx-auto
+                    
+                        min-[1800px]:max-w-none
+                        min-[1800px]:px-24
+                      "
+                    >
+                      <h2
+                        className="
+                          text-4xl font-extrabold text-[#063349] text-center mb-10
+                          2xl:text-5xl
+                        "
+                      >
+                        Explore Our Other Client{" "}
+                        <span className="text-[#0E6388]">Case Studies</span>
+                      </h2>
+                    
+                      <div
+                        className="
+                          grid grid-cols-1 md:grid-cols-2 gap-8 text-center
+                    
+                          min-[1800px]:grid-cols-3
+                          min-[1800px]:gap-12
+                        "
+                      >
+                        {/* CARD 1 */}
+                        <CaseCard
+                          background="#F7FBCF"
+                          logo="/client/logo-2.png"
+                          grid="/client-grid/triveni-grid.jpg"
+                          title="Triveeni Events"
+                          stats={[
+                            ["1.3M+", "Total Views"],
+                            ["439K+", "Accounts Reached"],
+                            ["89%", "Organic Reach"],
+                            ["130%", "Growth Rate"],
+                          ]}
+                          link="/work/triveeni-events"
+                          dark={false}
+                        />
+                    
+                        {/* CARD 2 */}
+                        <CaseCard
+                          background="#FB8C00"
+                          logo="/client/logo-5.png"
+                          grid="/client-grid/beaver-grid.jpg"
+                          title="Beaver Bank Station"
+                          stats={[
+                            ["79K+", "Total Views"],
+                            ["48K+", "Accounts"],
+                            ["439", "Interactions"],
+                            ["39%", "Engagement"],
+                          ]}
+                          link="/work/beaver-bank-station"
+                          dark={true}
+                        />
+                    
+                        {/* CARD 3 */}
+                        <CaseCard
+                          background="#142758"
+                          logo="/client/logo-6.png"
+                          grid="/client-grid/hearthstone-grid.jpg"
+                          title="Hearthstone Inn"
+                          stats={[
+                            ["1.6K+", "Total Views"],
+                            ["78%", "Engagement"],
+                            ["94.6%", "ER Rate"],
+                            ["53", "Accounts"],
+                          ]}
+                          link="/work/hearthstone"
+                          dark={true}
+                        />
+                    
+                        {/* CARD 4 */}
+                        <CaseCard
+                          background="#FDF1D9"
+                          logo="/client/logo-3.png"
+                          grid="/client-grid/pita-grid.jpg"
+                          title="Pita Nutso"
+                          stats={[
+                            ["36.1K", "Total Views"],
+                            ["52", "Comment Shares"],
+                            ["276", "Interactions"],
+                            ["66%", "Engagement"],
+                          ]}
+                          link="/work/pita-nutso"
+                          dark={false}
+                        />
+                      </div>
+                    </section>
+                    
+                                      </div>
+                                    </section>
+                                  </div>
+                                );
+                              }
 
-            <div className="grid sm:grid-cols-2 gap-10 text-center">
-
-              {/* CARD 1 */}
-              <CaseCard
-                background="#F7FBCF"
-                logo="/client/logo-2.png"
-                grid="/client-grid/triveni-grid.jpg"
-                title="Triveeni Events"
-                stats={[
-                  ["1.3M+", "Total Views"],
-                  ["439K+", "Accounts Reached"],
-                  ["89%", "Organic Reach"],
-                  ["130%", "Growth Rate"],
-                ]}
-                link="/work/triveeni-events"
-                dark={false}
-              />
-
-              {/* CARD 2 */}
-              <CaseCard
-                background="#FB8C00"
-                logo="/client/logo-5.png"
-                grid="/client-grid/beaver-grid.jpg"
-                title="Beaver Bank Station"
-                stats={[
-                  ["79K+", "Total Views"],
-                  ["48K+", "Accounts"],
-                  ["439", "Interactions"],
-                  ["39%", "Engagement"],
-                ]}
-                link="/work/beaver-bank-station"
-                dark={true}
-              />
-
-              {/* CARD 3 */}
-              <CaseCard
-                background="#142758"
-                logo="/client/logo-6.png"
-                grid="/client-grid/hearthstone-grid.jpg"
-                title="Hearthstone Inn"
-                stats={[
-                  ["1.6K+", "Total Views"],
-                  ["78%", "Engagement"],
-                  ["94.6%", "ER Rate"],
-                  ["53", "Accounts"],
-                ]}
-                link="/work/hearthstone"
-                dark={true}
-              />
-
-              {/* CARD 4 */}
-              <CaseCard
-                background="#FDF1D9"
-                logo="/client/logo-3.png"
-                grid="/client-grid/pita-grid.jpg"
-                title="Pita Nutso"
-                stats={[
-                  ["36.1K", "Total Views"],
-                  ["52", "Comment Shares"],
-                  ["276", "Interactions"],
-                  ["66%", "Engagement"],
-                ]}
-                link="/work/pita-nutso"
-                dark={false}
-              />
-
-            </div>
-          </section>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-/* ============================================================
-   CASE CARD COMPONENT (Animated)
-============================================================ */
-
-function CaseCard({ background, logo, grid, title, stats, link, dark }) {
+                              
+                              
+                           function CaseCard({ background, logo, grid, title, stats, link, dark }) {
   const [showGrid, setShowGrid] = useState(false);
 
   useEffect(() => {
@@ -434,52 +531,107 @@ function CaseCard({ background, logo, grid, title, stats, link, dark }) {
   return (
     <Link to={link}>
       <div
-        className={`px-6 py-8 rounded-2xl shadow-lg w-full max-w-[420px] mx-auto hover:scale-[1.02] transition ${
-          dark ? "text-white" : "text-black"
-        }`}
+        className={`
+          px-6 py-8 rounded-2xl shadow-lg w-full max-w-[420px]
+          mx-auto hover:scale-[1.02] transition
+          ${dark ? "text-white" : "text-black"}
+
+          min-[1800px]:max-w-[520px]
+          min-[1800px]:px-10
+          min-[1800px]:py-10
+        `}
         style={{ background }}
       >
-        {/* ANIMATION */}
         <AnimatePresence mode="wait">
           {!showGrid ? (
+            /* ---------- LOGO ---------- */
             <motion.div
               key="logo"
-              initial={{ opacity: 0, scale: 0.75 }}
+              initial={{ opacity: 0, scale: 0.7 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex justify-center mb-5"
+              className="flex justify-center mb-6"
             >
-              <img src={logo} className="w-20 sm:w-24" />
+              <img
+                src={logo}
+                alt={title}
+                className="
+                  w-20 sm:w-24
+                  min-[1800px]:w-32
+                "
+              />
             </motion.div>
           ) : (
+            /* ---------- GRID ---------- */
             <motion.div
               key="grid"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
+              className="
+                mb-4
+                min-[1800px]:mb-10
+              "
             >
-              <img src={grid} className="w-full rounded-xl" />
+              <img
+                src={grid}
+                alt={title}
+                className="
+                  w-full rounded-xl
+                  min-[1800px]:scale-[1.08]
+                "
+              />
             </motion.div>
           )}
         </AnimatePresence>
 
-        <h3 className="text-xl font-bold mt-4">{title}</h3>
-        <p className={`${dark ? "text-white/90" : "text-black/70"} text-sm`}>
+        {/* ---------- TITLE ---------- */}
+        <h3
+          className="
+            text-xl font-bold
+            mt-4
+
+            min-[1800px]:mt-8
+            min-[1800px]:text-2xl
+          "
+        >
+          {title}
+        </h3>
+
+        {/* ---------- VIEWS ---------- */}
+        <p
+          className={`
+            ${dark ? "text-white/90" : "text-black/70"}
+            text-sm
+            mt-1
+
+            min-[1800px]:mt-3
+            min-[1800px]:text-lg
+          `}
+        >
           {stats[0][0]} Views
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-5">
+        {/* ---------- STATS ---------- */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-6">
           {stats.map(([v, t], i) => (
             <div
               key={i}
-              className={`p-4 rounded-lg text-center shadow ${
-                dark ? "bg-white/20 text-white" : "bg-white text-black"
-              }`}
+              className={`
+                p-4 rounded-lg text-center shadow
+                ${dark ? "bg-white/20 text-white" : "bg-white text-black"}
+
+                min-[1800px]:p-6
+              `}
             >
-              <p className="font-bold text-lg">{v}</p>
-              <p className="text-xs opacity-80">{t}</p>
+              <p className="font-bold text-lg min-[1800px]:text-2xl">
+                {v}
+              </p>
+              <p className="text-xs opacity-80 min-[1800px]:text-base">
+                {t}
+              </p>
             </div>
           ))}
         </div>

@@ -2,21 +2,20 @@ import React from "react";
 
 export default function BlueSidebar({ sections, active }) {
   return (
-    <aside
-      className="
-        hidden lg:flex
-        flex-col
-        w-[260px]
-        min-h-screen
-        sticky top-[120px]
-        rounded-3xl
-        shadow-lg
-        p-6
-        text-white
-        py-20
-      "
-      style={{ background: "rgb(14, 99, 136)" }}
-    >
+<aside
+  className="
+    hidden lg:flex flex-col
+    w-[260px] 2xl:w-[340px]
+    sticky top-[120px]
+    rounded-3xl shadow-lg
+    p-6 py-20
+    text-white
+    text-sm
+    2xl:text-lg "
+  style={{ background: "rgb(14, 99, 136)" }}
+>
+
+
       {sections.map((item) => {
         const isActive = active === item.id;
 
@@ -39,7 +38,10 @@ export default function BlueSidebar({ sections, active }) {
               `}
             />
 
-            <span className="text-base">{item.name}</span>
+            <span className=" block
+    text-sm
+    min-[1600px]:text-base
+    min-[1800px]:text-xl">{item.name}</span>
           </a>
         );
       })}
