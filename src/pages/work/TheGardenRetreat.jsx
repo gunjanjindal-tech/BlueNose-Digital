@@ -250,7 +250,7 @@ export default function TheGardenRetreat() {
 
           {/* ================= OVERVIEW ================= */}
           <section id="overview" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">
+            <h2 className="text-4xl font-extrabold  text-[#0E6388]">
               Overview
             </h2>
 
@@ -285,7 +285,7 @@ export default function TheGardenRetreat() {
 
           {/* ================= SERVICES PROVIDED ================= */}
           <section id="services-provided" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Services Provided</h2>
+            <h2 className="text-4xl font-extrabold  text-[#0E6388]">Services Provided</h2>
 
             <div className="grid sm:grid-cols-2 gap-6 mt-10">
               {[
@@ -307,7 +307,7 @@ export default function TheGardenRetreat() {
 
           {/* ================= CHALLENGE ================= */}
           <section id="challenge" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Challenge</h2>
+            <h2 className="text-4xl font-extrabold  text-[#0E6388]">Challenge</h2>
 
             <div className="mt-6 p-10 rounded-3xl shadow text-white"
               style={{ background: "rgb(14,99,136)" }}>
@@ -321,7 +321,7 @@ export default function TheGardenRetreat() {
 
           {/* ================= APPROACH ================= */}
           <section id="approach" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Approach</h2>
+            <h2 className="text-4xl font-extrabold  text-[#0E6388]">Approach</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white shadow"
               style={{ background: "rgb(14,99,136)" }}>
@@ -335,7 +335,7 @@ export default function TheGardenRetreat() {
 
           {/* ================= KEY STRATEGY ================= */}
           <section id="key-strategy" className="p-10 bg-white rounded-3xl shadow border border-[#D7ECF6]">
-            <h2 className="text-4xl font-extrabold text-center text-[#0E6388]">Key Strategy</h2>
+            <h2 className="text-4xl font-extrabold  text-[#0E6388]">Key Strategy</h2>
 
             <div className="mt-6 p-10 rounded-3xl text-white shadow"
               style={{ background: "rgb(14,99,136)" }}>
