@@ -270,18 +270,19 @@ export default function About() {
         </h2>
 
         <p className="mt-4 text-white/90 leading-relaxed">
-          The vision for Bluenose Marketing was born from a simple need:
-          to build a digital marketing agency that blends creativity with
-          undeniable data-driven results.
+          Bluenose Marketing was built on a simple belief: creativity means nothing without measurable results.
         </p>
 
         <p className="mt-4 text-white/85 leading-relaxed">
-          We established our first office in Halifax, Canada.
+When we launched in Halifax, Nova Scotia, our goal was to create a digital marketing agency that blends bold creative execution with data-driven performance. Too many agencies were focused on vanity metrics. We focused on growth, clarity, and ROI.
         </p>
 
         <p className="mt-4 text-white/85 leading-relaxed">
-          Our family has since grown into a thriving team of 25+ global digital experts.
-        </p>
+What started as a vision in Atlantic Canada has grown into a performance-focused marketing team serving brands across Canada and internationally.        </p>
+
+
+<p className="mt-4 text-white/85 leading-relaxed">
+Today, Bluenose Marketing stands as a Halifax-based digital marketing agency helping modern brands scale through strategy, storytelling, and analytics-backed execution.</p>
 
         <p className="mt-6 font-semibold">
           — Bluenose Digital Marketing, Founder & CEO

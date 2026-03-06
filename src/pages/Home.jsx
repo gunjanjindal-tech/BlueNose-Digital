@@ -325,12 +325,12 @@ const sendMessage = (e) => {
 };
   
   const stats = [
-  { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands." },
-  { value: "7K+", label: "Comments & Interactions", desc: "Real engagement, not just likes." },
-  { value: "320%", label: "Avg viewers Lift", desc: "Measurable growth beyond." },
-  { value: "20+", label: "Content Formats Delivered", desc: "From Reels to Ads." },
-  { value: "370+", label: "Social Posts Published", desc: "Consistent creative presence." },
-  { value: "12.3M+", label: "Accounts Reached", desc: "Across campaigns & content." },
+  { value: "50+", label: "Clients", desc: "Trusted us to elevate their brands" },
+  { value: "7K+", label: "Comments & Interactions", desc: "Real engagement, not just likes" },
+  { value: "320%", label: "Avg viewers Lift", desc: "Measurable growth beyond" },
+  { value: "20+", label: "Content Formats Delivered", desc: "From Reels and Stories to Carousels and Ads" },
+  { value: "370+", label: "Social Posts Published", desc: "Consistent presence, creative messaging" },
+  { value: "12.3M+", label: "Accounts Reached", desc: "Generated across campaigns and brand content" },
 ];
 
 const [activeStat, setActiveStat] = React.useState(0);
@@ -497,15 +497,15 @@ useEffect(() => {
       </p>
 
       <h1 className="text-4xl md:text-5xl font-extrabold text-[#063349] leading-tight">
-        We Design Marketing Experiences  That
+        Nova Scotia's Digital Marketing Agency 
 {" "} 
         <span className="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#0E6388] to-[#1E8FB9]">
-          Turn  Attention Into Long-Term Brand Value.
+          Driving Measurable Brand Growth
         </span>
       </h1>
 
       <p className="text-[#063349]/80 text-lg max-w-md">
-        A premium agency crafting high-impact content, performance-led campaigns, and branding systems that scale with consistency.
+As a Halifax-based digital marketing agency, we deliver social media marketing, performance campaigns, branding, and content systems that scale across Canada and North America.
       </p>
 
       <div className="flex gap-4">
@@ -560,7 +560,7 @@ useEffect(() => {
 {/* STATS */}
 <div className="space-y-6 sm:space-y-8 z-20">
   {[
-    { value: 480, suffix: "+", label: "High-impact videos" },
+    { value: 480, suffix: "+", label: "High-Performing Videos" },
     { value: 12.3, suffix: "M+", label: "Viewers reached" },
     { value: 3.4, suffix: "M", label: "Views on top-performing content" },
   ].map((stat, i) => (
@@ -1061,8 +1061,7 @@ useEffect(() => {
     </h2>
 
     <p className="text-[#063349]/70 mt-3 text-sm leading-relaxed">
-      A simple, structured process that drives real growth.
-    </p>
+From discovery to delivery, our step‑by‑step approach ensures your brand grows with confidence.    </p>
   </div>
 
   {/* Slider */}
@@ -1077,7 +1076,7 @@ useEffect(() => {
       },
       {
         step: "02",
-        title: "Strategy Framework",
+        title: "Communication & Strategy Framework",
         img: "/work2.jpg",
         points: [
           "Content Strategy Map",
@@ -1097,7 +1096,7 @@ useEffect(() => {
       },
       {
         step: "04",
-        title: "Scale & Optimize",
+        title: "Streamline & Scale Up",
         img: "/work4.jpg",
         points: [
           "Weekly A/B Testing",
@@ -1167,8 +1166,7 @@ useEffect(() => {
       </h2>
 
       <p className="text-[#063349]/70 mt-4 max-w-3xl mx-auto text-lg">
-        From discovery to delivery, our proven workflow ensures clarity,
-        creativity, and measurable growth.
+       From discovery to delivery, our step‑by‑step approach ensures your brand grows with confidence.
       </p>
     </div>
 
