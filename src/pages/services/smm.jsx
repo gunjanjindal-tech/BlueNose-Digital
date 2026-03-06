@@ -1,0 +1,221 @@
+import { useState } from "react";
+// import PricingPlans from "../../components/DetailedServiceComponents/PricingPlans";
+import Testimonials from "../../components/DetailedServiceComponents/Testimonials";
+import ServiceClientLogos from "../../components/DetailedServiceComponents/ServiceClientLogos";
+import PlatformSlider from "../../components/PlatformSlider";
+import ReviewSummaryCard from "../../components/DetailedServiceComponents/ReviewSummaryCard";
+import { Link } from "react-router-dom";
+import GrowthChart from "../../components/DetailedServiceComponents/GrowthChart";
+import ServiceVideosSection from "../../components/DetailedServiceComponents/ServiceVideosSection";
+import { Helmet } from "react-helmet-async";
+
+
+export default function SMM() {
+  const smmVideos = [
+    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov", views: "12.4K" },
+    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414604/SMM_2_et8fyi.mov", views: "8.9K" },
+    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4", views: "15.2K" },
+    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765460268/SMM_1_bed8jj.mp4", views: "5.7K" },
+  ];
+
+  const ecommerceData = [
+    { name: "Jan", value: 20 },
+    { name: "Feb", value: 32 },
+    { name: "Mar", value: 45 },
+    { name: "Apr", value: 60 },
+  ];
+  const realEstateData = [
+    { name: "Jan", value: 5 },
+    { name: "Feb", value: 12 },
+    { name: "Mar", value: 28 },
+    { name: "Apr", value: 40 },
+  ];
+  const restaurantData = [
+    { name: "Jan", value: 10 },
+    { name: "Feb", value: 18 },
+    { name: "Mar", value: 26 },
+    { name: "Apr", value: 31 },
+  ];
+
+  function BarrierCard({ title, desc }) {
+    const [open, setOpen] = useState(false);
+
+    return (
+     
+        
+      <div
+        onClick={() => setOpen(!open)}
+        className="group p-8 rounded-2xl cursor-pointer bg-[#0E6388] text-white shadow-xl transition-all duration-300 hover:-translate-y-2"
+      >
+        <p className="font-semibold text-lg">{title}</p>
+
+        <div
+          className={`
+            mt-4 overflow-hidden rounded-xl bg-white text-[#063349] p-4 transition-all duration-300
+            md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100
+            ${open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+          `}
+        >
+          <p className="text-sm">{desc}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+<Helmet>
+  {/* PRIMARY SEO */}
+  <title>
+    Social Media Marketing Services | ROI-Driven SMM Agency | Bluenose Marketing
+  </title>
+
+  <meta
+    name="description"
+    content="High-performance social media marketing by Bluenose Marketing that turns engagement into revenue. Data-led SMM strategies for Instagram, LinkedIn, TikTok, YouTube & more."
+  />
+
+  <meta
+    name="keywords"
+    content="social media marketing agency, SMM services, Instagram marketing, LinkedIn marketing, TikTok marketing, social media growth, digital marketing agency, Bluenose Marketing"
+  />
+
+  {/* CANONICAL */}
+  <link
+    rel="canonical"
+    href="https://www.bluenosemarketing.ca/services/smm"
+  />
+
+  {/* OPEN GRAPH */}
+  <meta
+    property="og:title"
+    content="Social Media Marketing Services | Bluenose Marketing"
+  />
+  <meta
+    property="og:description"
+    content="ROI-driven social media marketing built for engagement, leads, and scalable growth across platforms."
+  />
+  <meta
+    property="og:type"
+    content="website"
+  />
+  <meta
+    property="og:url"
+    content="https://www.bluenosemarketing.ca/services/smm"
+  />
+  <meta
+    property="og:image"
+    content="https://www.bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
+  />
+
+  {/* TWITTER */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Social Media Marketing Services | Bluenose Marketing"
+  />
+  <meta
+    name="twitter:description"
+    content="Social media marketing that delivers measurable growth, not vanity metrics."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.bluenosemarketing.ca/seo/social-media-marketing-cover.jpg"
+  />
+</Helmet>
+
+
+    <div className="bg-white text-[#0E3D55] pt-10">
+
+      {/* HERO */}
+      <section className="py-16 md:py-20 px-6 text-center max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+          SMM That Powers Engagement Into
+          <span className="text-[#0E6388]">  Brand Growth</span>
+        </h2>
+        <p className="text-[#0A3A53]/80 text-lg mt-4 max-w-4xl mx-auto">
+          Instagram, LinkedIn, TikTok, YouTube & beyond data‑driven campaigns, creative execution, and scalable full‑funnel systems.
+
+        </p>
+      </section>
+
+      {/* GROWTH CHARTS */}
+      <section className="pb-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-10 place-items-center">
+            <GrowthChart title="E-commerce Revenue" percent="+60%" data={ecommerceData} gradientId="ecomGradient" />
+            <GrowthChart title="Real Estate Leads" percent="+40%" data={realEstateData} gradientId="realEstateGradient" />
+            <GrowthChart title="Restaurant & Retail" percent="+32%" data={restaurantData} gradientId="foodGradient" />
+          </div>
+
+          <div className="flex justify-center mt-14">
+            <Link
+              to="/contact"
+              className="px-7 py-3 text-lg rounded-full text-white hover:opacity-90"
+              style={{ background: "rgb(14, 99, 136)" }}
+            >
+              Contact Us Now →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT LOGOS */}
+      <section className="w-full bg-white flex justify-center">
+        <div className="w-full">
+          <ServiceClientLogos />
+        </div>
+      </section>
+
+      {/* BARRIERS */}
+      <section className="pt-10 md:pt-16 px-6">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349] text-center pb-6 ">
+          Challenges Brands Faced Before Partnering 
+          <span className="text-[#0E6388]"> With Bluenose Marketing</span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-6">
+          {[
+            { title: "Social media wasn’t delivering measurable results.", desc: "We build result-driven systems using content, analytics, and weekly optimization." },
+            { title: "Uncertainty around which campaigns converted", desc: "Every campaign includes transparent reporting—always see what drives results." },
+            { title: "Low engagement despite consistent posting.", desc: "We craft platform-first content with storytelling, hooks, and proven reach tactics." },
+            { title: "Limited time/expertise to manage social media", desc: "We handle everything—strategy, content, posting, analytics, and optimization." },
+            { title: "Brand presence wasn’t consistent across platforms", desc: "We unify your brand voice with a structured, cross-platform content system." },
+            { title: "Generic agency solutions that didn't convert", desc: "Every strategy is custom-built for your niche and audience." },
+            { title: "Needed scalable growth systems", desc: "Our integrated systems scale monthly with organic and paid marketing." },
+            { title: "Operating in niche/complex industries", desc: "We specialize in tailored strategies for high-complexity markets." },
+            { title: "Didn’t know which platforms to prioritise", desc: "We identify and prioritize platforms using real audience data." },
+          ].map((item, idx) => (
+            <BarrierCard key={idx} title={item.title} desc={item.desc} />
+          ))}
+        </div>
+      </section>
+
+      {/* WHAT SETS US APART */}
+      <PlatformSlider />
+
+      {/* PRICING */}
+      {/* <PricingPlans /> */}
+
+      {/* TESTIMONIALS */}
+      <section className="py-12 md:py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#063349]">
+           Reviews That Speak. 
+
+            <span className="text-[#0E6388]"> Ratings That Shine.</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 md:mt-16">
+            <ReviewSummaryCard />
+            <Testimonials />
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEOS */}
+      <ServiceVideosSection title="Social Media Marketing" videos={smmVideos} />
+    </div>
+    </>
+  );
+}
