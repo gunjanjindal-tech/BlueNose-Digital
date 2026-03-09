@@ -122,122 +122,120 @@ const nextService = () => {
   };
 
 
-  const serviceVideos = {
+const serviceVideos = {
     SMM: [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov",
-        views: "12.4K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414604/SMM_2_et8fyi.mov",
-        views: "8.9K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4",
-        views: "15.2K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765460268/SMM_1_bed8jj.mp4",
-        views: "5.7K",
-      },
-    ],
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051490/Smm_2_tqv7iv.mp4",
+    views: "15.7K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051370/Smm_pm1ejk.mov",
+    views: "6.6K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773076796/13_1_rvyrlg.mp4",
+    views: "10.2K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051386/SMM_1_qfnggy.mp4",
+    views: "13.3K",
+  },
+],
 
     Branding: [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
-        views: "10.1K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_2_ejoaet.mov",
-        views: "7.3K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414240/Personal_Branding_3_rvlgjk.mov",
-        views: "4.9K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454631/branding4_bduckl.mp4", 
-        views: "12.2K",
-      },
-    ],
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051839/Personal_branding_spfdbw.mov",
+    views: "78K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773083026/Libra_compatibility_xzlgat.mp4",
+    views: "114K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773078000/KIRTIDAN_FINAL_WITH_LOGO_BANDW_1_1_1_panzxs.mp4",
+    views: "102K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051805/Personal_Branding_1_ba5ygs.mov",
+    views: "19.7K",
+  },
+],
 
-    "Influencer Marketing": [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
-        views: "9.2K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414146/Influencer_marketing_2_dd0qqy.mov",
-        views: "6.4K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_4_yecfec.mp4",
-        views: "11.8K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414126/Influencer_marketing_3_tc1zqd.mov",
-        views: "4.1K",
-      },
-    ],
+   "Influencer Marketing": [
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053207/nayya_2_3rd_edition_pqttvs.mp4",
+    views: "223K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773076895/video_3_fmndoa.mp4",
+    views: "15.8K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053220/Influencer_Marketing_gwdpxg.mp4",
+    views: "64.4K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051805/Personal_Branding_1_ba5ygs.mov",
+    views: "19.7K",
+  },
+],
+   "Video Editing": [
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052376/Video_editing_aavwaz.mp4",
+    views: "30K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052372/Video_Editing_1_buwrl5.mp4",
+    views: "221K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052366/Video_editing_2_apou0l.mp4",
+    views: "14.8K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773084288/Photography_2_1_betklc.mp4",
+    views: "35.4K",
+  },
+],
 
-    "Video Editing": [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4",
-        views: "14.3K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414820/Video_Production_2_slp4ms.mp4",
-        views: "3.7K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_production_4_ha90ws.mp4",
-        views: "16.5K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_Production_1_xiz4sn.mov",
-        views: "5.2K",
-      },
-    ],
+   UGC: [
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414723/UGC_4_ssejjv.mp4",
+    views: "4.2M",
+  },
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414748/UGC_2_t04guj.mov",
+    views: "670K",
+  },
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414787/UGC_3_oif38l.mov",
+    views: "3.1M",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053627/UGC_vlwfz1.mov",
+    views: "995K",
+  },
+],
 
-    UGC: [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov",
-        views: "18.1K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414748/UGC_2_t04guj.mov",
-        views: "9.9K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414787/UGC_3_oif38l.mov",
-        views: "6.2K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414723/UGC_4_ssejjv.mp4",
-        views: "12.6K",
-      },
-    ],
-
-    Photography: [
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
-        views: "20.2K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414455/photography_2_bttpuu.mov",
-        views: "11.4K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414452/photography_3_kgb9it.mov",
-        views: "7.9K",
-      },
-      {
-        url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454194/Photography_1_gfj6vz.mp4",
-        views: "14.7K",
-      },
-    ],
+   Photography: [
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
+    views: "45.7K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773054607/Photography_jiwbwu.mp4",
+    views: "14.6K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773084288/Photography_2_1_betklc.mp4",
+    views: "35.4K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773054709/Rayna_naach_video_h5q1if.mp4",
+    views: "10.7K",
+  },
+],
   };
-
   const iconMute = (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
       <path d="M4 9V15H8L13 20V4L8 9H4Z" />
