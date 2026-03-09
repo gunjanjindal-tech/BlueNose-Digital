@@ -12,10 +12,22 @@ export default function VideoEditing() {
 
   // ----------------- VIDEO EDITING VIDEOS -----------------
   const videoEditingVideos = [
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414823/Video_Production_3_mbldqf.mp4", views: "14.3K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414820/Video_Production_2_slp4ms.mp4", views: "3.7K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_production_4_ha90ws.mp4", views: "16.5K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414818/Video_Production_1_xiz4sn.mov", views: "5.2K" },
+    {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052376/Video_editing_aavwaz.mp4",
+    views: "30K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052372/Video_Editing_1_buwrl5.mp4",
+    views: "221K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773052366/Video_editing_2_apou0l.mp4",
+    views: "14.8K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773084288/Photography_2_1_betklc.mp4",
+    views: "35.4K",
+  },
   ];
 
   // ----------------- GROWTH CHART DATA -----------------

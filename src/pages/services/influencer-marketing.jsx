@@ -12,21 +12,21 @@ import { Helmet } from "react-helmet-async";
 export default function InfluencerMarketing() {
 
   const influencerVideos = [
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_1_lq9d3z.mov",
-    views: "9.2K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053207/nayya_2_3rd_edition_pqttvs.mp4",
+    views: "223K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414146/Influencer_marketing_2_dd0qqy.mov",
-    views: "6.4K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773076895/video_3_fmndoa.mp4",
+    views: "15.8K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414144/Influencer_marketing_4_yecfec.mp4",
-    views: "11.8K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053220/Influencer_Marketing_gwdpxg.mp4",
+    views: "64.4K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414126/Influencer_marketing_3_tc1zqd.mov",
-    views: "4.1K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051805/Personal_Branding_1_ba5ygs.mov",
+    views: "19.7K",
   },
 ];
 

@@ -12,10 +12,22 @@ import { Helmet } from "react-helmet-async";
 
 export default function SMM() {
   const smmVideos = [
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414584/SMM_1_ew5mpu.mov", views: "12.4K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414604/SMM_2_et8fyi.mov", views: "8.9K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414663/SMM_5_vlimnn.mp4", views: "15.2K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765460268/SMM_1_bed8jj.mp4", views: "5.7K" },
+    {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051490/Smm_2_tqv7iv.mp4",
+    views: "15.7K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051370/Smm_pm1ejk.mov",
+    views: "6.6K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773076796/13_1_rvyrlg.mp4",
+    views: "10.2K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051386/SMM_1_qfnggy.mp4",
+    views: "13.3K",
+  },
   ];
 
   const ecommerceData = [

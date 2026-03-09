@@ -13,21 +13,21 @@ import { Helmet } from "react-helmet-async";
 export default function BrandIdentity() {
 
   const brandingVideos = [
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_1_abmcg7.mov",
-    views: "10.1K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051839/Personal_branding_spfdbw.mov",
+    views: "78K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414238/Personal_Branding_2_ejoaet.mov",
-    views: "7.3K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773083026/Libra_compatibility_xzlgat.mp4",
+    views: "114K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414240/Personal_Branding_3_rvlgjk.mov",
-    views: "4.9K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773078000/KIRTIDAN_FINAL_WITH_LOGO_BANDW_1_1_1_panzxs.mp4",
+    views: "102K",
   },
-  { 
-    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454631/branding4_bduckl.mp4",
-    views: "12.2K"
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773051805/Personal_Branding_1_ba5ygs.mov",
+    views: "19.7K",
   },
 ];
 

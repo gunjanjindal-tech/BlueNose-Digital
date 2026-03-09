@@ -13,10 +13,22 @@ export default function UGCContentCreation() {
 
   // ----------------- VIDEOS -----------------
   const ugcVideos = [
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414731/UGC_1_tqmfnt.mov", views: "18.1K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414748/UGC_2_t04guj.mov", views: "9.9K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414787/UGC_3_oif38l.mov", views: "6.2K" },
-    { url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414723/UGC_4_ssejjv.mp4", views: "12.6K" },
+   {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414723/UGC_4_ssejjv.mp4",
+    views: "4.2M",
+  },
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414748/UGC_2_t04guj.mov",
+    views: "670K",
+  },
+  {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414787/UGC_3_oif38l.mov",
+    views: "3.1M",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773053627/UGC_vlwfz1.mov",
+    views: "995K",
+  },
   ];
 
   // ----------------- GROWTH DATA -----------------

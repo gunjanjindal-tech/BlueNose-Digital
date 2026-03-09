@@ -13,22 +13,22 @@ export default function PhotographyShoots() {
 
   // ----------------- VIDEOS -----------------
   const photographyVideos = [
-    { 
-      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
-      views: "20.2K"
-    },
-    { 
-      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414455/photography_2_bttpuu.mov",
-      views: "11.4K"
-    },
-    { 
-      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414452/photography_3_kgb9it.mov",
-      views: "7.9K"
-    },
-    { 
-      url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1765454194/Photography_1_gfj6vz.mp4",
-      views: "14.7K"
-    },
+    {
+    url: "https://res.cloudinary.com/dy4vqfwmi/video/upload/f_auto,q_auto/v1764414450/Photography_1_xp1wud.mov",
+    views: "45.7K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773054607/Photography_jiwbwu.mp4",
+    views: "14.6K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773084288/Photography_2_1_betklc.mp4",
+    views: "35.4K",
+  },
+  {
+    url: "https://res.cloudinary.com/dijsl5wkv/video/upload/f_auto,q_auto/v1773054709/Rayna_naach_video_h5q1if.mp4",
+    views: "10.7K",
+  },
   ];
 
   // ----------------- GROWTH CHARTS -----------------
